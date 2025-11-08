@@ -33,6 +33,8 @@ $$\sigma_p(S) = \{\lambda : \lambda \text{ es un autovalor de } S\}, \quad \rho(
 >[!Remark]
 >Ahora consideramos el caso $\lambda\neq0$ primero introduzcamos algunos resultados
 
+^063913
+
 >[!Theorem]
 >Si $\lambda \neq 0$ entonces $\text{Ker}(T - \lambda I)$ tiene dimensión finita.
 >>[!Proof]-
@@ -107,6 +109,9 @@ $$\sigma_p(S) = \{\lambda : \lambda \text{ es un autovalor de } S\}, \quad \rho(
 >>[!Proof]-
 >>1. Escribimos $$\sigma_{p}(T)=\bigcup_{r\in \mathbb{N} }\left\{  \lambda\in \sigma_{p}(T):\lvert \lambda \rvert\geq \frac{1}{r}  \right\}$$ que es union numerable de conjuntos finitos por [[Teórico 18#^301f9e]]
 >>2. Si son distintos tienden a 0 se deduce tambien de [[Teórico 18#^301f9e]] si no fueran a 0 entonces tengo numerables autovalores distintos todos mayores que algun numero mayor que 0, lo que es absurdo. Entonces necesariamente tienden a 0 si son distintos y son una sucesion (osea numerables) 
+
+^64b388
+
  
 >[!Remark]
 >Notamos que es posible para un operador compacto $T$ en un espacio de dimensión infinita no tener autovalores en absoluto, ver el Ejercicio 7.17. En ese caso, por el [[Teórico 18#^5d2cfe]] y el Teorema 7.25 más abajo, $\sigma(T) = \{0\}$.
