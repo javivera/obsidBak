@@ -47,8 +47,8 @@ dateCreated: 2024-11-10,19:55
 >$$S_\lambda p + \text{Ker}(T - \lambda I). \quad \text{(7.7)}$$
 >>[!Proof]-
 >>1. Como $p \in \text{Im}(T - \lambda I)$, existe una solución $x_0$ de (7.5). 
->>2. Sea $P$ la proyección ortogonal de $H$ sobre $\text{Ker}(T - \lambda I)^\perp$, y sea $u_0 = Px_0$. 
->>3. Entonces $x_0 - u_0 \in \text{Ker}(T - \lambda I)$, y por lo tanto $(T - \lambda I)(x_0 - u_0) = (T - \lambda I)x_0 = p$.
+>>2. Sea $P$ la proyección ortogonal de $H$ sobre $\text{Ker}(T - \lambda I)^\perp$, y sea $u_0 = Px_0$
+>>3. Entonces $x_0 - u_0 = (I-P)x_{0}\in \text{Ker}(T - \lambda I)$, y por lo tanto $$(T - \lambda I)u_0 = (T - \lambda I)x_0 = p$$
 >>4. Por lo tanto, $u_0$ también es una solución de (7.5), y cualquier vector de la forma $u_0 + z$, con $z \in \text{Ker}(T - \lambda I)$, es una solución de (7.5).
 >>5. Por otro lado, si $x$ es una solución de (7.5), entonces $(T - \lambda I)(u_0 - x) = p - p = 0$, por lo que $u_0 - x \in \text{Ker}(T - \lambda I)$, y por lo tanto $x = u_0 + z$, con $z \in \text{Ker}(T - \lambda I)$. 
 >>6. Así que el conjunto de soluciones de (7.5) tiene la forma (7.7).
