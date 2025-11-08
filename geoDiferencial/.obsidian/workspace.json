@@ -1,0 +1,200 @@
+{
+  "main": {
+    "id": "6e82182ecde0cddd",
+    "type": "split",
+    "children": [
+      {
+        "id": "36abdb87a26e65ac",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "36b3ac1e25590571",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f5e3212262af9cb3",
+    "type": "split",
+    "children": [
+      {
+        "id": "c8f8cc38d172d877",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cd5a7202445e1d7a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "07959d6318812caf",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "8f7ab7701f4ac23d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "e4c509da46b3a57e",
+    "type": "split",
+    "children": [
+      {
+        "id": "4fec29e115b1feff",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5358f9e818f8be04",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Practicos/jpgs/GD - Pr2-2.png",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for GD - Pr2-2"
+            }
+          },
+          {
+            "id": "fb8fdb19a6e22ee0",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Practicos/jpgs/GD - Pr2-2.png",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from GD - Pr2-2"
+            }
+          },
+          {
+            "id": "b0f6604a739f3bf1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "fc3e6d55eb179ff0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Practicos/jpgs/GD - Pr2-2.png",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of GD - Pr2-2"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false,
+      "copilot:Open Copilot Chat": false,
+      "terminal:Open terminal": false
+    }
+  },
+  "active": "36b3ac1e25590571",
+  "lastOpenFiles": [
+    "Definiciones.md",
+    "Resueltos/solutions.md",
+    "GD - Apunte.pdf",
+    "Practicos/jpgs/GD - Pr2-2.png",
+    "Practicos/jpgs/GD - Pr2-1.png",
+    "Practicos/GD - Pr3.pdf",
+    "Practicos/GD - Pr2.pdf",
+    "Practicos/GD - Pr1.pdf",
+    "solution.md",
+    "Untitled.md",
+    "Practicos/GD-Pr2-Ej4-solucion.md",
+    "Practicos/jpgs/GD - Pr2.-2.png",
+    "Practicos/jpgs/GD - Pr2.png-2.png",
+    "Practicos/jpgs/GD - Pr2.png-1.png",
+    "GDPr2.jpg-1.jpg",
+    "Practicos/GD - Pr8.pdf",
+    "Practicos/GD - Pr7.pdf",
+    "Practicos/GD - Pr6.pdf",
+    "Practicos/GD - Pr5.pdf",
+    "Practicos/GD - Pr4.pdf",
+    "Practicos/jpgs/GD - Pr3.jpg-1.jpg",
+    "Practicos/jpgs/GD - Pr2.jpg-2.jpg",
+    "Practicos/jpgs/GD - Pr2.jpg-1.jpg",
+    "Practicos/jpgs/GD - Pr1.jpg-1.jpg",
+    "Practicos/jpgs"
+  ]
+}
