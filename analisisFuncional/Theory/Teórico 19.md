@@ -10,7 +10,7 @@ dateCreated: 2024-11-10,19:55
 
 >[!Theorem] Alternativa de Fredholm
 >Si $\lambda \neq 0$ entonces uno u otro de los siguientes casos se cumple:
->- (a) Cada una de las ecuaciones homogéneas (7.1) tiene solo la solución $x = 0, y = 0$, respectivamente, en este caso las correspondientes ecuaciones inhomogéneas (7.2) tienen soluciones únicas $x, y$ para cualquier $p, q \in H$.
+>- (a) Cada una de las ecuaciones homogéneas (H) tiene solo la solución $x = 0, y = 0$, respectivamente, en este caso las correspondientes ecuaciones inhomogéneas (7.2) tienen soluciones únicas $x, y$ para cualquier $p, q \in H$.
 >- (b) Existe un número finito $m_\lambda > 0$ tal que cada una de las ecuaciones homogéneas (7.1) tiene exactamente $m_\lambda$ soluciones linealmente independientes, digamos $x_n, y_n$, para $n = 1, \dots, m_\lambda$, respectivamente, mientras que las correspondientes ecuaciones inhomogéneas (7.2) tienen soluciones si y solo si $p, q \in H$ satisfacen las condiciones
 >$$(p, y_n) = 0, \quad (q, x_n) = 0, \quad n = 1, \dots, m_\lambda. \quad \text{(7.3)}$$
 >>[!Proof]-
@@ -21,8 +21,10 @@ dateCreated: 2024-11-10,19:55
 >>5. Ademas se sigue de [[Teórico 18#^937fe3]] que las condiciones sobre $p, q$ en (b) aseguran que $$\begin{align}\text{ La ecuacion no homogenea tiene solucion } x &\iff p \in \text{Im}(T - \lambda I)=\ker(T^{*}-\lambda I)^{\perp}\\ & \iff(p,w) \quad\forall w\in Ker(T^{*}-\lambda I )\in \mathbb{N}\\ & \iff (p,y_{n})\quad n=1,\ldots,m_{\lambda}\end{align}$$
 >>6. Analogamente sale $(q,x_{n})=0$ 
 
+^23a090
+
 >[!Remark]
->La dicotomía expresada en el Teorema 7.26 entre la solvencia única de las ecuaciones y la solvencia si y solo si se cumple un conjunto finito de condiciones se conoce como la alternativa de Fredholm; esta dicotomía fue descubierta por Fredholm en su investigación sobre ciertas ecuaciones integrales (que dan lugar a ecuaciones del tipo anterior con operadores integrales compactos, ver el Capítulo 8). Más generalmente, si el operador $T - \lambda I$ en (7.1) y (7.2) se reemplaza por un operador lineal acotado $S$ entonces se dice que $S$ satisface la alternativa de Fredholm si las correspondientes ecuaciones nuevamente satisfacen las alternativas del Teorema 7.26. Una característica particularmente importante de la alternativa de Fredholm es el siguiente reformulación de la alternativa (a)
+>La dicotomía expresada en [[Teórico 19#^23a090]] entre la solvencia única de las ecuaciones y la solvencia si y solo si se cumple un conjunto finito de condiciones se conoce como la alternativa de Fredholm; esta dicotomía fue descubierta por Fredholm en su investigación sobre ciertas ecuaciones integrales (que dan lugar a ecuaciones del tipo anterior con operadores integrales compactos, ver el Capítulo 8). Más generalmente, si el operador $T - \lambda I$ en (7.1) y (7.2) se reemplaza por un operador lineal acotado $S$ entonces se dice que $S$ satisface la alternativa de Fredholm si las correspondientes ecuaciones nuevamente satisfacen las alternativas del Teorema 7.26. Una característica particularmente importante de la alternativa de Fredholm es el siguiente reformulación de la alternativa (a)
 
 >[!Remark]
 >Si $\lambda\neq 0$ entonces $T-\lambda I$ es inyectiva $\iff$ $T-\lambda I$ sobreyectiva.
@@ -32,18 +34,20 @@ dateCreated: 2024-11-10,19:55
 
 >[!Corollary]
 >Si $\lambda \neq 0$ y la ecuación
->$$(T - \lambda I) x = 0 \quad \text{(7.4)}$$
->tiene solo la solución $x = 0$ entonces $T - \lambda I$ es invertible, y la ecuación $$(T - \lambda I) x = p \quad \text{(7.5)}$$
+>$$(T - \lambda I) x = 0 \quad \text{(H)}$$
+>tiene solo la solución $x = 0$ entonces $T - \lambda I$ es invertible, y la ecuación $$(T - \lambda I) x = p \quad \text{(NH)}$$
 >tiene la solución única $x = (T - \lambda I)^{-1} p$ para cualquier $p \in H$. Esta solución depende continuamente de $p$.
 >>[!Proof]-
 >>1. La hipótesis asegura que $\lambda$ no es un autovalor de $T$ entonces por [[Teórico 18#^3f6266]] tenemos $\lambda \in \rho(T)$ y por lo tanto $T - \lambda I$ es invertible. 
 >>2. Como es invertible dado un $p$ fijo claramente podemos encontrar solucion $x= (T-\lambda I)^{-1}p$  que es unica por unicidad de inversa
 
+^92f1c2
+
 >[!Remark]
->En esencia, el Corolario 7.27 establece que "la unicidad de las soluciones de la ecuación (7.5) implica la existencia de soluciones". Este es un resultado extremadamente útil. En muchas aplicaciones es relativamente fácil probar la unicidad de las soluciones de una ecuación dada. Si la ecuación tiene la forma (7.5) y sabemos que el operador $T$ es compacto, entonces podemos deducir inmediatamente la existencia de una solución.
+>En esencia, el [[Teórico 19#^92f1c2]] establece que "la unicidad de las soluciones de la ecuación (NH) implica la existencia de soluciones". Este es un resultado extremadamente útil. En muchas aplicaciones es relativamente fácil probar la unicidad de las soluciones de una ecuación dada. Si la ecuación tiene la forma (NH) y sabemos que el operador $T$ es compacto, entonces podemos deducir inmediatamente la existencia de una solución.
 
 >[!Theorem]
->Supongamos que $\lambda \neq 0$ es un autovalor de $T$. Si $p \in \text{Im}(T - \lambda I)$ (es decir, si $p$ satisface (7.3)), entonces la ecuación (7.5) tiene una solución única $S_\lambda(p) \in \text{Ker}(T - \lambda I)^\perp$. La función $S_\lambda : \text{Im}(T - \lambda I) \to \text{Ker}(T - \lambda I)^\perp$ es lineal y acotada, y el conjunto de soluciones de (7.5) tiene la forma
+>Supongamos que $\lambda \neq 0$ es un autovalor de $T$. Si $p \in \text{Im}(T - \lambda I)$ (es decir, si $p$ satisface (7.3)), entonces la ecuación (NH) tiene una solución única $S_\lambda(p) \in \text{Ker}(T - \lambda I)^\perp$. La función $S_\lambda : \text{Im}(T - \lambda I) \to \text{Ker}(T - \lambda I)^\perp$ es lineal y acotada, y el conjunto de soluciones de (NH) tiene la forma
 >$$S_\lambda p + \text{Ker}(T - \lambda I). \quad \text{(7.7)}$$
 >>[!Proof]-
 >>1. Como $p \in \text{Im}(T - \lambda I)$, existe una solución $x_0$ de (7.5). 
@@ -116,7 +120,7 @@ dateCreated: 2024-11-10,19:55
 ^840d86
 
 >[!Theorem]
->El número de valores propios no nulos de $T$ (repetidos según multiplicidad) es igual a $r(T)$. El conjunto de autovectores $\{e_n\}_{n=1}^{r(T)}$ construido anteriormente es una base ortonormal para $\overline{ImT}$ y el operador $T$ tiene la representación
+>El número de valores propios no nulos de $T$ (repetidos según multiplicidad) es igual a $r(T)$. El conjunto de autovectores $\{e_n\}_{n=1}^{r(T)}$ construido arriba (osea de autovalor no nulo) es una base ortonormal para $\overline{ImT}$ y el operador $T$ tiene la representación
 >$$ T x = \sum_{n=1}^{r(T)} \lambda_n (x, e_n) e_n, \quad \text{donde} \quad \{\lambda_n\}_{n=1}^{r(T)} \text{ es el conjunto de valores propios no nulos de } T. \tag{7.10} $$
 >>[!Proof]-
 >>1. Sea $M = \overline{Sp} \{e_n\}_{n=1}^{J}$, tal que $\{e_n\}_{n=1}^{J}$ es una base ortonormal para $M$ (por definicion de BON). Mostraremos que $M = \text{Im}T$, y por lo tanto, debemos tener $J = r(T)$ (en el caso finito o infinito). 
@@ -135,7 +139,7 @@ dateCreated: 2024-11-10,19:55
 >> 11. Sin embargo, esto implica que $\lambda$ es un valor propio no nulo de $T$, por lo que $\lambda=\lambda_{n}$ para algun $n<r(T)$
 >> 12. Ademas $\tilde{e}$ debe pertenecer al subespacio de autovectores correspondientes a $\lambda_{n}$ que esta metido en $M$ por definicion que es absurdo por que $\tilde{e}\in M^{\perp}$  
 >> 13. Así que $T_N$ debe ser el operador cero. En otras palabras, $T v = T_N v = 0$ para todo $v \in N$, lo que hemos afirmado antes, y por lo tanto completa la prueba de que $M = \text{Im}T$.
->> 14. Finalmente, para cualquier $x \in \mathcal{H}$ tenemos que $(I - P)x \in M^\perp$ entonces $T((I-P)x)=0$ por 14. ademas $((I-P)x,e_{n})=0$ por lo tanto $(Px,e_{n})=(x,e_{n})$  
+>> 14. Finalmente, para cualquier $x \in \mathcal{H}$ tenemos que $(I - P)x \in M^\perp$ entonces $T((I-P)x)=0$ por 13. Ademas $((I-P)x,e_{n})=0$ por lo tanto $(Px,e_{n})=(x,e_{n})$  
 >> 15. Por lo tanto $$Tx = T(Px + (I - P)x) =T(Px)=\sum^{J}_{n=1}\lambda_{n}(Px,e_{n})e_{n} = \sum_{n=1}^{J} \lambda_n (x, e_n)e_n$$ según el cálculo anterior.
 
 ^e7a5da
