@@ -50,15 +50,16 @@ dateCreated: 2024-11-10,19:55
 >>2. Sea $P$ la proyección ortogonal de $H$ sobre $\ker(T - \lambda I)^\perp$, y sea $u_p = Px_0$
 >>3. Entonces $I-P$ proyeccion sobre $\ker(T-\lambda I)^{\perp\perp}=\ker(T-\lambda I)$ luego $x_0 - u_p = (I-P)x_{0}\in \text{Ker}(T - \lambda I)$, y por lo tanto $$(T - \lambda I)u_p = (T - \lambda I)x_0 = p$$
 >>4. Por lo tanto, $u_p\in \ker(T-\lambda I)^{\perp}$ y es solucion de (7.5)
->>5. Supongamos hubiera otra $v\in \ker(T-\lambda I)^{\perp}$ entonces $(T - \lambda I)(u_p - v) = p - p = 0$, por lo que $u_p - x \in \text{Ker}(T - \lambda I)$
->>6. Pero obviamente $u_{p}-v\in \ker(T-\lambda I)^{\perp}$ entonces $u_{p}-v=0$. 
+>>5. Supongamos hubiera otra $v\in \ker(T-\lambda I)^{\perp}$ entonces $(T - \lambda I)(u_p - v) = p - p = 0$, por lo que $u_p - v \in \text{Ker}(T - \lambda I)$
+>>6. Pero por linealidad $u_{p}-v\in \ker(T-\lambda I)^{\perp}$ entonces $u_{p}-v=0$. 
 >>7. Por lo tanto la solucion en $\ker(T-\lambda I)^{\perp}$ es unica y entonces podemos definir $S_{\lambda}p=u_{p}$ 
 >>8. Veamos linealidad $(T-\lambda I)(\alpha S_{\lambda}p)=\alpha (T-\lambda I)u_{p}=\alpha p$ pero entonces $\alpha S_{\lambda}p$ es solucion para la ecuacion para el punto $\alpha p$ por unicidad tiene que ser igual a la solucion generica $S_{\lambda}\alpha p$.
 >>9. Analogamente vemos la suma.
 >>10. Finalmente, supongamos que $S_\lambda$ no es acotada. Entonces existe una secuencia de vectores unitarios $\{p_n\}$, tal que $\|S_\lambda p_n\| \neq 0$ para todo $n \in \mathbb{N}$, y que $\lim_{n \to \infty} \|S_\lambda p_n\| = \infty$. 
 >>11. Al poner $w_n = \|S_\lambda p_n\|^{-1} S_\lambda p_n$, vemos que $w_n \in \text{Ker}(T - \lambda I)^\perp$, $\|w_n\| = 1$ y que
->>$$(T - \lambda I)w_n = \|S_\lambda p_n\|^{-1} (T - \lambda I) S_\lambda p_n \to 0 \quad \text{a medida que} \quad n \to \infty.$$
+>>$(T - \lambda I)w_n = \|S_\lambda p_n\|^{-1} (T - \lambda I) S_\lambda p_n =\lVert S_{\lambda}p_{n} \rVert ^{-1}p_{n}$ por lo tanto $$\lVert (T-\lambda I)w_{n} \rVert =\lVert S_{\lambda}p_{n} \rVert ^{-1}\lVert p_{n} \rVert =\lVert S_{\lambda} p_{n} \rVert^{-1}\xrightarrow{n\rightarrow \infty} 0 $$  
 >>12. Ahora, exactamente como en el segundo párrafo de la prueba del [[Teórico 18#^3b2c2f]], podemos mostrar que estas propiedades conducen a una contradicción, lo que prueba el resultado.
+>>13. Y obviamente sea $x\in \ker(T-\lambda I)$ entonces $(T-\lambda I)(S_{\lambda}p+x)=(T-\lambda I)u_{p}=p$ osea es solucion   
 
 >[!Remark]-
 >El Teorema 7.29 establece que la solución $S_\lambda p$ satisface $\|S_\lambda p\| \leq C\|p\|$, para alguna constante $C > 0$. Sin embargo, tal desigualdad no puede sostenerse para todas las soluciones $x$ de (7.5) que tienen la forma $x = S_\lambda p + z$, con $z \in \text{Ker}(T - \lambda I)$ teniendo arbitrariamente grandes $\|z\|$.
@@ -73,30 +74,34 @@ dateCreated: 2024-11-10,19:55
 
 >[!Lemma]
 >Sea $K$ un espacio de Hilbert y $S \in B(K)$ sea autoadjunto. Si $\mathcal{M}$ es un subespacio lineal cerrado de $K$ que es invariante bajo $S$, entonces $\mathcal{M}^\perp$ también es invariante bajo $S$.
->>[!Proof]
->>- [ ] Para cualquier $u \in \mathcal{M}$ y $v \in \mathcal{M}^\perp$ tenemos $(S v, u) = (v, S u) = 0$ (ya que $S$ es autoadjunto y $S u \in \mathcal{M}$), por lo que $S v \in \mathcal{M}^\perp$, y por lo tanto $S(\mathcal{M}^\perp) \subset \mathcal{M}^\perp$, lo que prueba el lema.
+>>[!Proof]-
+>>1. Para cualquier $u \in \mathcal{M}$ y $v \in \mathcal{M}^\perp$ tenemos $(S v, u) = (v, S u) = 0$ ($S u \in \mathcal{M}$ por invarianza)
+>>2. Entonces $S v \in \mathcal{M}^\perp$, y por lo tanto $S(\mathcal{M}^\perp) \subset \mathcal{M}^\perp$
+
+^9f9d7c
 
 >[!Remark]-
->Este lema nos permitirá "dividir" o descomponer un operador autoadjunto en diferentes subespacios lineales $M \subset H$, y también en los complementos ortogonales $\mathcal{M}^\perp$. Para un operador general $S \in B(H)$, incluso si $S$ es invariante en $\mathcal{M}$ no tiene que ser invariante en $\mathcal{M}^\perp$, por lo que esta estrategia falla en general. Sin embargo, el Lema 7.31 asegura que esto funciona para operadores autoadjuntos $T$. Los subespacios principales que usamos para descomponer $T$ serán $\text{Ker} T$ y $\text{Im} T$ (ya que $0 \in \text{Ker} T$ e $\text{Im} T \subset \text{Im} T$ se sigue que ambos espacios son invariantes bajo $T$). Dado que $T$ es autoadjunto, se sigue de la Corolario 3.36 y el Lema 6.11 que $$\text{Im} T = (\text{Ker} T)^\perp.$$
-
->[!Remark]-
->A partir de ahora, $P$ denotará la proyección ortogonal de $H$ sobre $\text{Im} T$. Entonces, de (7.8) se sigue que $I - P$ es la proyección ortogonal sobre $\text{Ker} T$. Además, el espacio $\text{Im} T$ es un espacio de Hilbert separable (la separabilidad sigue del Teorema 7.8). Veremos que podemos construir una base ortonormal de $\text{Im} T$ formada por los autovectores de $T$ (independientemente de si $H$ es separable o no). Dado que la restricción de $T$ al $\ker T$ es trivial, esto nos dara una representacion completa de $T$ en $\mathcal{H}$
+>Este lema nos permitirá "dividir" o descomponer un operador autoadjunto en diferentes subespacios lineales $M \subset H$, y también en los complementos ortogonales $\mathcal{M}^\perp$. Para un operador general $S \in B(H)$, incluso si $S$ es invariante en $\mathcal{M}$ no tiene que ser invariante en $\mathcal{M}^\perp$, por lo que esta estrategia falla en general. Sin embargo [[Teórico 19#^9f9d7c]] asegura que esto funciona para operadores autoadjuntos $T$.
+>Los subespacios principales que usamos para descomponer $T$ serán $\text{Ker} T$ y $\overline{Im(T)}$ (ya que $0 \in \text{Ker} T$ e $\text{Im} T \subset \overline{ImT}$ se sigue que ambos espacios son invariantes bajo $T$). Dado que $T$ es autoadjunto, $$Ker(T)=Im(T^{*} )^{\perp}=Im(T)^{\perp}\quad\Longrightarrow  \quad \overline{Im(T)}  = (\text{Ker} T)^\perp.$$
+>A partir de ahora, $P$ denotará la proyección ortogonal de $\mathcal{H}$ sobre $\overline{Im(T)}$.Entonces  se sigue de la igualdad recien dad que $I - P$ es la proyección ortogonal sobre $\text{Ker} T$. 
+>Además, el espacio $\overline{Im(T)}$ es un espacio de Hilbert separable (la separabilidad sigue del Teorema 7.8). 
+>Veremos que podemos construir una base ortonormal de $\overline{Im(T)}$ formada por los autovectores de $T$ (independientemente de si $\mathcal{H}$ es separable o no). Dado que la restricción de $T$ al $\ker T$ es trivial, esto nos dara una representacion completa de $T$ en $\mathcal{H}$
 >
 
 >[!Theorem]
 >Si $\lambda \neq 0$ entonces uno de los números $\|T\|$, $-\|T\|$ es un valor propio de $T$.
 >>[!Proof]
->>1. Si $T$ es el operador cero el resultado es trivial, por lo que podemos suponer que $T$ es no nulo. 
->>2. Por el Teorema 6.43, al menos uno de $\|T\|$ o $-\|T\|$ está en $\sigma(T)$, por lo que por el Teorema 7.25 este punto debe pertenecer a $\sigma_p(T)$.
+>>3. Si $T$ es el operador cero el resultado es trivial, por lo que podemos suponer que $T$ es no nulo. 
+>>4. Por el Teorema 6.43, al menos uno de $\|T\|$ o $-\|T\|$ está en $\sigma(T)$, por lo que por el Teorema 7.25 este punto debe pertenecer a $\sigma_p(T)$.
 
 >[!Theorem]
 >El conjunto de los valores propios no nulos de $T$ no está vacío y es finito o consiste en una secuencia que tiende a cero. Cada valor propio no nulo es real y tiene multiplicidad finita. Los autovectores correspondientes a diferentes valores propios son ortogonales.
 >>[!Proof]
->>1. La mayor parte del teorema se sigue del Corolario 7.23 y los Teoremas 6.43, 7.19 y 7.32. 
->>2. Para probar el resultado final, supongamos que $\lambda_1, \lambda_2 \in \mathbb{R}$ son valores propios distintos con los autovectores correspondientes $e_1, e_2$. 
->>3. Entonces, como $T$ es autoadjunto, tenemos
+>>5. La mayor parte del teorema se sigue del Corolario 7.23 y los Teoremas 6.43, 7.19 y 7.32. 
+>>6. Para probar el resultado final, supongamos que $\lambda_1, \lambda_2 \in \mathbb{R}$ son valores propios distintos con los autovectores correspondientes $e_1, e_2$. 
+>>7. Entonces, como $T$ es autoadjunto, tenemos
 >>$$\lambda_1(e_1, e_2) = (T e_1, e_2) = (e_1, T e_2) = \lambda_2(e_1, e_2)$$
->>4. lo que, como $\lambda_1 \neq \lambda_2$, implica que $(e_1, e_2) = 0$.
+>>8. lo que, como $\lambda_1 \neq \lambda_2$, implica que $(e_1, e_2) = 0$.
 
 >[!Remark]-
 >En vista del Teorema 7.33, ahora podemos ordenar los valores propios de $T$ en la forma de una lista no vacía, finita o una lista numerable infinita $\lambda_1, \lambda_2, \dots$, de manera que $|\lambda_n|$ disminuye a medida que $n$ aumenta y cada valor propio $\lambda_n$ se repite en la lista según su multiplicidad (más precisamente, si $\lambda$ es un valor propio de $T$ con multiplicidad $m_\lambda > 0$, entonces $\lambda$ se repite exactamente $m_\lambda$ veces en la lista). Además, para cada $n$ podemos usar el algoritmo de Gram-Schmidt para construir una base ortonormal de cada espacio Ker$(T - \lambda_n I)$ que consista en exactamente $m_\lambda$ autovectores. Así, listando los autovectores construidos en el mismo orden que los valores propios, obtenemos una lista de autovectores correspondientes de la forma $e_1, \dots, e_J$ o $e_1, e_2, \dots$. Por la construcción, los autovectores en esta lista correspondientes al mismo valor propio son ortogonales, mientras que por el Teorema 7.33, los autovectores correspondientes a valores propios diferentes son ortogonales. Por lo tanto, la lista completa es un conjunto ortonormal.
@@ -106,26 +111,26 @@ dateCreated: 2024-11-10,19:55
 >El número de valores propios no nulos de $T$ (repetidos según multiplicidad) es igual a $r(T)$. El conjunto de autovectores $\{e_n\}_{n=1}^{r(T)}$ construido anteriormente es una base ortonormal para Im$T$ y el operador $T$ tiene la representación
 >$$ T x = \sum_{n=1}^{r(T)} \lambda_n (x, e_n) e_n, \quad \text{donde} \quad \{\lambda_n\}_{n=1}^{r(T)} \text{ es el conjunto de valores propios no nulos de } T. \tag{7.10} $$
 >>[!Proof]
->>1. Sea $M = \text{Sp} \{e_n\}_{n=1}^{J}$, tal que $\{e_n\}_{n=1}^{J}$ es una base ortonormal para $M$ (por el Teorema 3.47). Mostraremos que $M = \text{Im}T$, y por lo tanto, debemos tener $J = r(T)$ (en el caso finito o infinito). 
->>2. Recordemos que si $r(T) < \infty$ entonces $M$ es cerrado, por lo que Im$T$ = Im$T$. 
->>3. Por el Teorema 3.47, para cualquier $u \in M$ tenemos que $u = \sum_{n=1}^{J} \alpha_n e_n$, donde $\alpha_n = (u, e_n), n = 1, \dots, J$. Así, si $J = \infty$, tenemos
+>>9. Sea $M = \text{Sp} \{e_n\}_{n=1}^{J}$, tal que $\{e_n\}_{n=1}^{J}$ es una base ortonormal para $M$ (por el Teorema 3.47). Mostraremos que $M = \text{Im}T$, y por lo tanto, debemos tener $J = r(T)$ (en el caso finito o infinito). 
+>>10. Recordemos que si $r(T) < \infty$ entonces $M$ es cerrado, por lo que Im$T$ = Im$T$. 
+>>11. Por el Teorema 3.47, para cualquier $u \in M$ tenemos que $u = \sum_{n=1}^{J} \alpha_n e_n$, donde $\alpha_n = (u, e_n), n = 1, \dots, J$. Así, si $J = \infty$, tenemos
 >>$$ u = \lim_{k \to \infty} \sum_{n=1}^k \alpha_n \lambda_n^{-1} T e_n = \lim_{k \to \infty} T \left( \sum_{n=1}^k \alpha_n \lambda_n^{-1} e_n \right) \in \text{Im}T,$$
->>4. y por lo tanto, $M \subset \text{Im}T$; 
->>5. un argumento similar se aplica cuando $J$ es finito (sin los límites). 
->>6. De aquí obtenemos que Ker$T = \text{Im}T^{\perp}$ por (7.8) y el Lemma 3.29.
->>7. Ahora mostraremos que $M^{\perp} \subset \text{Ker}T$, lo que implica que $M^{\perp} = \text{Ker}T$, y por lo tanto $M = M^{\perp\perp} = \text{Im}T$ (por el Corolario 3.35 y (7.8)), lo que es el resultado deseado.
->>8. Si $J = \infty$ y $u \in M$, tenemos
+>>12. y por lo tanto, $M \subset \text{Im}T$; 
+>>13. un argumento similar se aplica cuando $J$ es finito (sin los límites). 
+>>14. De aquí obtenemos que Ker$T = \text{Im}T^{\perp}$ por (7.8) y el Lemma 3.29.
+>>15. Ahora mostraremos que $M^{\perp} \subset \text{Ker}T$, lo que implica que $M^{\perp} = \text{Ker}T$, y por lo tanto $M = M^{\perp\perp} = \text{Im}T$ (por el Corolario 3.35 y (7.8)), lo que es el resultado deseado.
+>>16. Si $J = \infty$ y $u \in M$, tenemos
 >>$$ T u = T \left( \lim_{k \to \infty} \sum_{n=1}^k \alpha_n e_n \right) = \lim_{k \to \infty} \sum_{n=1}^k \lambda_n \alpha_n e_n \in M$$
 >> y de nuevo, un cálculo similar se aplica (sin los límites) si $J < \infty$. 
->> 9. Así, $M$ es invariante bajo $T$. El Lemma 7.31 ahora implica que $N = M^{\perp}$ es invariante bajo $T$.
->> 10. Denotemos por $T_N$ la restricción de $T$ a $N$. 
->> 11. Es fácil verificar que $T_N$ es un operador compacto en el espacio de Hilbert $N$, vea el Ejercicio 7.24. 
->> 12. Ahora supongamos que $T_N$ no es el operador cero en $N$. Por el Teorema 7.32, $T_N$ debe tener un valor propio no nulo, digamos $\lambda$, con un autovector no nulo correspondiente $\vec{e} \in N$, así que por definición, $T_N \vec{e} = \lambda \vec{e}$. 
->> 13. Sin embargo, esto implica que $\lambda$ es un valor propio no nulo de $T$, por lo que debe pertenecer al subespacio generado por los autovectores correspondientes a $\lambda$.
->> 14. Pero este subespacio está en $M$, por lo que $\vec{e} \in M$ lo que contradice que $\vec{e} \in N = M^{\perp}$ (ya que $\vec{e} \notin M$). 
->> 15. Así que $T_N$ debe ser el operador cero. En otras palabras, $T v = T_N v = 0$ para todo $v \in M$, lo que hemos afirmado antes, y por lo tanto completa la prueba de que $M = \text{Im}T$.
->> 16. Finalmente, para cualquier $x \in \mathcal{H}$ tenemos que $(I - P)x \in \mathcal{M}^\perp$ por lo que $(x, e_n) = (Px + (I - P)x, e_n) = (Px, e_n),$ para todo $n$ (ya que $e_n \in \mathcal{M}$), 
->> 17. y por lo tanto $Tx = T(Px + (I - P)x) = TPx = \sum_{n=1}^{J} \lambda_n (Px, e_n)e_n = \sum_{n=1}^{J} \lambda_n (x, e_n)e_n,$ según el cálculo anterior.
+>> 17. Así, $M$ es invariante bajo $T$. El Lemma 7.31 ahora implica que $N = M^{\perp}$ es invariante bajo $T$.
+>> 18. Denotemos por $T_N$ la restricción de $T$ a $N$. 
+>> 19. Es fácil verificar que $T_N$ es un operador compacto en el espacio de Hilbert $N$, vea el Ejercicio 7.24. 
+>> 20. Ahora supongamos que $T_N$ no es el operador cero en $N$. Por el Teorema 7.32, $T_N$ debe tener un valor propio no nulo, digamos $\lambda$, con un autovector no nulo correspondiente $\vec{e} \in N$, así que por definición, $T_N \vec{e} = \lambda \vec{e}$. 
+>> 21. Sin embargo, esto implica que $\lambda$ es un valor propio no nulo de $T$, por lo que debe pertenecer al subespacio generado por los autovectores correspondientes a $\lambda$.
+>> 22. Pero este subespacio está en $M$, por lo que $\vec{e} \in M$ lo que contradice que $\vec{e} \in N = M^{\perp}$ (ya que $\vec{e} \notin M$). 
+>> 23. Así que $T_N$ debe ser el operador cero. En otras palabras, $T v = T_N v = 0$ para todo $v \in M$, lo que hemos afirmado antes, y por lo tanto completa la prueba de que $M = \text{Im}T$.
+>> 24. Finalmente, para cualquier $x \in \mathcal{H}$ tenemos que $(I - P)x \in \mathcal{M}^\perp$ por lo que $(x, e_n) = (Px + (I - P)x, e_n) = (Px, e_n),$ para todo $n$ (ya que $e_n \in \mathcal{M}$), 
+>> 25. y por lo tanto $Tx = T(Px + (I - P)x) = TPx = \sum_{n=1}^{J} \lambda_n (Px, e_n)e_n = \sum_{n=1}^{J} \lambda_n (x, e_n)e_n,$ según el cálculo anterior.
 
 >[!Remark]-
 >La representación $(7.10)$ del operador autoadjunto $T$ es una versión de dimensión infinita del conocido resultado en álgebra lineal de dimensión finita que un matriz autoadjunta puede ser diagonalizada eligiendo una base consistente de vectores propios de la matriz.
