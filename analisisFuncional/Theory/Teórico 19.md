@@ -47,17 +47,18 @@ dateCreated: 2024-11-10,19:55
 >$$S_\lambda p + \text{Ker}(T - \lambda I). \quad \text{(7.7)}$$
 >>[!Proof]-
 >>1. Como $p \in \text{Im}(T - \lambda I)$, existe una solución $x_0$ de (7.5). 
->>2. Sea $P$ la proyección ortogonal de $H$ sobre $\text{Ker}(T - \lambda I)^\perp$, y sea $u_0 = Px_0$
->>3. Entonces $x_0 - u_0 = (I-P)x_{0}\in \text{Ker}(T - \lambda I)$, y por lo tanto $$(T - \lambda I)u_0 = (T - \lambda I)x_0 = p$$
->>4. Por lo tanto, $u_0$ también es una solución de (7.5), y cualquier vector de la forma $u_0 + z$, con $z \in \text{Ker}(T - \lambda I)$, es una solución de (7.5).
->>5. Por otro lado, si $x$ es una solución de (7.5), entonces $(T - \lambda I)(u_0 - x) = p - p = 0$, por lo que $u_0 - x \in \text{Ker}(T - \lambda I)$, y por lo tanto $x = u_0 + z$, con $z \in \text{Ker}(T - \lambda I)$. 
->>6. Así que el conjunto de soluciones de (7.5) tiene la forma (7.7).
->>7. A continuación, se puede mostrar (ver el Ejercicio 7.23) que $u_0 \in \text{Ker}(T - \lambda I)$ está determinado de manera única por $p$, por lo que podemos definir una función $S_\lambda : \text{Im}(T - \lambda I) \to \text{Ker}(T - \lambda I)^\perp$ mediante $S_\lambda(p) = u_0$, para $p \in \text{Im}(T - \lambda I)$. 
->>8. Usando unicidad, se puede mostrar que la función $S_\lambda$ es lineal (ver el Ejercicio 7.23).
->>9. Finalmente, supongamos que $S_\lambda$ no es acotada. Entonces existe una secuencia de vectores unitarios $\{p_n\}$, tal que $\|S_\lambda p_n\| \neq 0$ para todo $n \in \mathbb{N}$, y que $\lim_{n \to \infty} \|S_\lambda p_n\| = \infty$. 
->>10. Al poner $w_n = \|S_\lambda p_n\|^{-1} S_\lambda p_n$, vemos que $w_n \in \text{Ker}(T - \lambda I)^\perp$, $\|w_n\| = 1$ y que
+>>2. Sea $P$ la proyección ortogonal de $H$ sobre $\ker(T - \lambda I)^\perp$, y sea $u_p = Px_0$
+>>3. Entonces $I-P$ proyeccion sobre $\ker(T-\lambda I)^{\perp\perp}=\ker(T-\lambda I)$ luego $x_0 - u_p = (I-P)x_{0}\in \text{Ker}(T - \lambda I)$, y por lo tanto $$(T - \lambda I)u_p = (T - \lambda I)x_0 = p$$
+>>4. Por lo tanto, $u_p\in \ker(T-\lambda I)^{\perp}$ y es solucion de (7.5)
+>>5. Supongamos hubiera otra $v\in \ker(T-\lambda I)^{\perp}$ entonces $(T - \lambda I)(u_p - v) = p - p = 0$, por lo que $u_p - x \in \text{Ker}(T - \lambda I)$
+>>6. Pero obviamente $u_{p}-v\in \ker(T-\lambda I)^{\perp}$ entonces $u_{p}-v=0$. 
+>>7. Por lo tanto la solucion en $\ker(T-\lambda I)^{\perp}$ es unica y entonces podemos definir $S_{\lambda}p=u_{p}$ 
+>>8. Veamos linealidad $(T-\lambda I)(\alpha S_{\lambda}p)=\alpha (T-\lambda I)u_{p}=\alpha p$ pero entonces $\alpha S_{\lambda}p$ es solucion para la ecuacion para el punto $\alpha p$ por unicidad tiene que ser igual a la solucion generica $S_{\lambda}\alpha p$.
+>>9. Analogamente vemos la suma.
+>>10. Finalmente, supongamos que $S_\lambda$ no es acotada. Entonces existe una secuencia de vectores unitarios $\{p_n\}$, tal que $\|S_\lambda p_n\| \neq 0$ para todo $n \in \mathbb{N}$, y que $\lim_{n \to \infty} \|S_\lambda p_n\| = \infty$. 
+>>11. Al poner $w_n = \|S_\lambda p_n\|^{-1} S_\lambda p_n$, vemos que $w_n \in \text{Ker}(T - \lambda I)^\perp$, $\|w_n\| = 1$ y que
 >>$$(T - \lambda I)w_n = \|S_\lambda p_n\|^{-1} (T - \lambda I) S_\lambda p_n \to 0 \quad \text{a medida que} \quad n \to \infty.$$
->>11. Ahora, exactamente como en el segundo párrafo de la prueba del [[Teórico 18#^3b2c2f]], podemos mostrar que estas propiedades conducen a una contradicción, lo que prueba el resultado.
+>>12. Ahora, exactamente como en el segundo párrafo de la prueba del [[Teórico 18#^3b2c2f]], podemos mostrar que estas propiedades conducen a una contradicción, lo que prueba el resultado.
 
 >[!Remark]-
 >El Teorema 7.29 establece que la solución $S_\lambda p$ satisface $\|S_\lambda p\| \leq C\|p\|$, para alguna constante $C > 0$. Sin embargo, tal desigualdad no puede sostenerse para todas las soluciones $x$ de (7.5) que tienen la forma $x = S_\lambda p + z$, con $z \in \text{Ker}(T - \lambda I)$ teniendo arbitrariamente grandes $\|z\|$.
