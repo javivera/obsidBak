@@ -1,7 +1,7 @@
 ---
 dateCreated: 2024-10-19,11:18
 ---
->[!Proposition]
+>[!Proposition] Inversa de adjunta
 > Sea $\mathcal{H}$ Hilbert $T\in B(H)$ inversible entonces $T^{*}$ inversible y $(T^{*})^{-1}=(T^{-1})^{*}$
 >>[!Proof]-
 >>1. Tomamos adjunta en $TT^{-1}=T^{-1}T=Id$
@@ -26,7 +26,7 @@ dateCreated: 2024-10-19,11:18
 
 ^81235c
 
->[!Lemma] Propiedades operador normal
+>[!Lemma] Propiedades operador normal MEMO
 >$T\in B(\mathcal{H})$ normal $\alpha >0$ entonces
 >- (a) $\lVert Tx \rVert=\lVert T^{*}x \rVert\quad\forall x\in \mathcal{H}$ 
 >- (b) $\lVert Tx \rVert\geq\alpha \lVert x \rVert\quad\forall x\in \mathcal{H}$ entonces $\ker T^{*}=\{ 0 \}$ 
@@ -39,7 +39,7 @@ dateCreated: 2024-10-19,11:18
 
 ^6cb446
 
->[!Corollary] Desigualdad implica inversible con operadores normales
+>[!Corollary] Desigualdad implica inversible con operadores normales MEMO
 >$T\in B(\mathcal{H})$ es normal entonces $T$ inversible $\iff \exists \alpha >0$ tal que $\lVert Tx \rVert\geq\alpha \lVert x \rVert\quad\forall x\in \mathcal{H}$
 >>[!Proof]-
 >>$(\Leftarrow)$ [[#^6cb446]] implica $\ker T^{*}=\{ 0 \}$ luego por [[Teórico 14#^5be0d2]]
@@ -59,7 +59,7 @@ dateCreated: 2024-10-19,11:18
 
 ^94253a
 
->[!Lemma] Las autoadjuntas forman Banach real
+>[!Lemma] Las autoadjuntas forman Banach real MEMO
 >$\mathcal{H}$ Hilbert $S=\{ T\in B(\mathcal{H}):T\text{ autoadjunta} \}$ entonces 
 >- (a) $\alpha ,\beta\in \mathbb{R}$ y $T_{1},T_{2}\in S$ entonces $\alpha T_{1}+\beta T_{2}\in S$. 
 >- (b) $S$ cerrado en $B(\mathcal{H})$
@@ -136,7 +136,7 @@ dateCreated: 2024-10-19,11:18
 
 ^317da9
 
->[!Lemma] ver bien
+>[!Lemma] ver bien MEMO
 >$\mathcal{H}$ Hilbert y $\mathcal{U}=\{ U\in B(\mathcal{H}):U\text{ unitaria} \}$
 >- (a) $U\in \mathcal{U}$ entonces $U^{*}\in \mathcal{U}$ y $\lVert U \rVert=\lVert U^{*} \rVert=1$
 >- (b) $U_{1},U_{2}\in \mathcal{U}$ entonces $U_{1}U_{2},U^{-1}\in \mathcal{U}$
@@ -185,7 +185,7 @@ dateCreated: 2024-10-19,11:18
 
 ^bdf665
 
->[!Theorem] Espectro es compacto y sus elementos menores (modulo) que norma del operador 
+>[!Theorem] Espectro es compacto y sus elementos menores (modulo) que norma del operador MEMO
 >$\mathcal{H}$ Hilbert y $T\in B(\mathcal{H})$
 >- (a) $\lvert \lambda \rvert > \lVert T \rVert$ entonces $\lambda\not\in \sigma(T)$
 >- (b) $\sigma(T)$ es cerrado osea $\sigma(T)$ compacto (en $\mathbb{C}$  cerrado y acotado es compacto) 
@@ -286,7 +286,7 @@ dateCreated: 2024-10-19,11:18
 
 ^e62686
 
->[!Theorem]
+>[!Theorem] MEMO Solo (c) 
 >Sean $\mathcal{H}$ Hilbert $S\in B(\mathcal{H})$ audoadjunto entonces
 >- (a) $V(S)\subseteq \mathbb{R}$
 >- (b) $\sigma(S)\subseteq \mathbb{R}$

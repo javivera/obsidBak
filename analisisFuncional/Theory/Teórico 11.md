@@ -29,7 +29,7 @@ dateCreated: 2024-10-02,22:03
 
 ^5cf5d9
 
->[!Proposition] $\ell^{\infty}$ no es separable
+>[!Proposition] $\ell^{\infty}$ no es separable MEMO
 >$\ell^{\infty}$ no es separable
 >>[!Proof]-
 >>1. Sea $N\subseteq \mathbb{R}$ $$x^{N}_{n}=\begin{cases}1 & \text{si }x\in N \\0 & \text{cc}\end{cases}$$
@@ -40,19 +40,19 @@ dateCreated: 2024-10-02,22:03
 
 ^18df41
 
->[!Remark] $X$ separable no implica $X'$ separable
+>[!Remark] $X$ separable no implica $X'$ separable MEMO
 >1. $(\ell^{1})'$ no es separable por que vimos que si $p \in [1,\infty),q \in (1,\infty]$ hay un isomorfismo de $\ell^{q}$ en $(\ell^{p})'$ con $\frac{1}{p}+\frac{1}{q}$ [[Teórico 8#^bd2cdc]] entonces si $(\ell^{1})'$ fuese separable entonces $\ell^{\infty}$ seria separable  
 >2. Entonces $\ell^{1}$ separable pero $(\ell^{1})'$ no es separable
 
 ^67afdd
 
->[!Remark] No hay isomorfismos entre $\ell_{1}$ y $(\ell^{\infty})'$   
->1. $(\ell^{\infty})'$ no es separable por que si lo fuera $\ell^{\infty}$ seria separable por [[#^5cf5d9]]
+>[!Remark] No hay isomorfismos entre $\ell_{1}$ y $(\ell^{\infty})'$ MEMO
+>1. $(\ell^{\infty})'$ no es separable por que si lo fuera $\ell^{\infty}$ seria separable por [[Teórico 11#^5cf5d9]]
 >2. Por lo tanto no puede haber isomorfismo entre $\ell^{1}$ y $(\ell^{\infty})'$ pues $\ell^{1}$ es separable y $(\ell^{\infty})'$ no es separable. [[Teórico 6#^2cb23e]]
 
 ^9e9e53
 
->[!Theorem] Hahn-Banach sobre $\mathbb{R}$
+>[!Theorem] Hahn-Banach sobre $\mathbb{R}$ MEMO
 >$X$ espacio vectorial $p : X\rightarrow \mathbb{R}$ [[Teórico 10#^dafca5]]. 
 >Supongamos $\exists W\subseteq X$ subespacio y $f_{W}:W\rightarrow\mathbb{R}$ lineal tal que $f_{W}(w)\leq p(w)\quad\forall w\in W$ 
 >Entonces $\exists f_{X}:X\rightarrow\mathbb{R}$ extension de $f_{W}$ tal que $f_{X}(x)\leq p(x)\quad\forall x\in X$
@@ -65,18 +65,20 @@ dateCreated: 2024-10-02,22:03
 >>2. Definimos un orden $f<g \iff D_{f}\subseteq D_{g}$ y $f=g$ en $D_{f}$. Es facil ver que es orden parcial
 >>3. Sea $\tilde{E} \subseteq E$ con $\tilde{E}$ totalmente ordenado, osea una cadena de $E$. Entonces $\forall f,g\in \tilde{E}$ sucede que $g$ es extension de $f$ y $D_{f}\subseteq D_{g}$ o viceversa)
 >>4. Sea $Z_{\tilde{E}}=\bigcup_{f\in \tilde{E}}D_{f}$. Es directo ver que $Z_{\tilde{E}}$ es subespacio. 
->>	5. Sea $x,y\in Z_{\tilde{E}}$ y $\alpha ,\beta\in \mathbb{R}$ entonces $x\in D_{f}$ e $y\in D_{g}$
->>	6. Por ser $\tilde{E}$ totalmente ordenado (o cadena) sin perdida de generalidades $f\leq g$ por lo tanto $D_{f}\subseteq D_{g}$ entonces $x,y\in D_{g}$ como $D_{g}$ subespacio $\alpha x+\beta y\in D_{g}$ 
->>7. Definimos $f_{\tilde{E}}:Z_{\tilde{E}}\rightarrow\mathbb{R}$ de la siguiente manera. 
->>	8. Dado $z\in Z_{\tilde{E}}$ sabemos $\exists \delta \in \tilde{E}$ tal que $z\in D_{\delta}$ entonces $f_{\tilde{E}}(z)=\delta(z)$ 
->>	9. La definicion es buena ya que si $z\in D_{\mu}$ como $\tilde{E}$ es orden total $D_{\mu}\subseteq D_{\delta}$ entonces $\delta(x)=\mu(x)\quad\forall x\in D_{\mu}$ o viceversa $D_{\delta }\subseteq D_{\mu}$ y $\delta(x)=\mu(x)\quad\forall x\in D_{\delta }$ 
->>	10. Por lo tanto en ambos casos $\delta(z)=\mu(z)$ asi que da igual tomar cualquiera de las dos para definirla 
->>11. Veamos $f_{\tilde{E}}$ es lineal  
->>	12. Sean $x,y\in Z_{\tilde{E}}$ y $\alpha ,\beta\in \mathbb{F}$ por 4. $\alpha x+\beta y\in Z_{\tilde{E}}$ entonces $\exists \delta\in \tilde{E}$ tal que $f_{\tilde{E}}(\alpha x+\beta y)=\delta (\alpha x+\beta y)$ 
->>	13. Como $\delta$ es lineal $f_{\tilde{E}}(\alpha x+\beta y)=\alpha \delta (x)+\beta\delta (y)=\alpha f_{\tilde{E}}(x)+\beta f_{\tilde{E}}(y)$ (Esto ultimo por la buena definicion) 
->>14. Mas aun $f_{\tilde{E}}\in E$ (Osea cumple las hipotesis) y ademas $f\leq f_{\tilde{E}}\quad\forall f\in \tilde{E}$ en el sentido de la relacion de orden. Entonces $f_{\tilde{E}}$ es cota superior de $\tilde{E}$ 
->>15. Luego por *Lema de Zorn* $E$ tiene un elemento maximal $f_{max}$ 
->>16. Suponemos $D_{f_{max}}\neq X$. Por [[Teórico 10#^3226b6]] sucede que $f_{max}$ tiene una extension que esta claramente en $E$ (osea cumple las hipotesis) contradiciendo que $f_{max}$ fuera maximal.
+>>	- $Z_{\tilde{E}}$ es subespacio 
+>>		1. Sea $x,y\in Z_{\tilde{E}}$ y $\alpha ,\beta\in \mathbb{R}$ entonces $x\in D_{f}$ e $y\in D_{g}$
+>>		2. Por ser $\tilde{E}$ totalmente ordenado (o cadena) sin perdida de generalidades $f\leq g$ por lo tanto $D_{f}\subseteq D_{g}$ entonces $x,y\in D_{g}$ como $D_{g}$ subespacio $\alpha x+\beta y\in D_{g}$ 
+>>		3. Entonces $\alpha x+\beta y\in Z_{\tilde{E}}$ 
+>>4. Definimos $f_{\tilde{E}}:Z_{\tilde{E}}\rightarrow\mathbb{R}$ de la siguiente manera. Dado $z\in Z_{\tilde{E}}$ sabemos $\exists \delta \in \tilde{E}$ tal que $z\in D_{\delta}$ entonces $f_{\tilde{E}}(z)=\delta(z)$ 
+>>	- Buena definicion
+>>		1. La definicion es buena ya que si $z\in D_{\mu}$ como $\tilde{E}$ es orden total $D_{\mu}\subseteq D_{\delta}$ entonces $\delta(x)=\mu(x)\quad\forall x\in D_{\mu}$ o viceversa $D_{\delta }\subseteq D_{\mu}$ y $\delta(x)=\mu(x)\quad\forall x\in D_{\delta }$ 
+>>		2. Por lo tanto en ambos casos $\delta(z)=\mu(z)$ asi que da igual tomar cualquiera de las dos para definirla 
+>>	- Veamos $f_{\tilde{E}}$ es lineal  
+>>		1. Sean $x,y\in Z_{\tilde{E}}$ y $\alpha ,\beta\in \mathbb{F}$ por 4. $\alpha x+\beta y\in Z_{\tilde{E}}$ entonces $\exists \delta\in \tilde{E}$ tal que $f_{\tilde{E}}(\alpha x+\beta y)=\delta (\alpha x+\beta y)$ 
+>>		2. Como $\delta$ es lineal $f_{\tilde{E}}(\alpha x+\beta y)=\alpha \delta (x)+\beta\delta (y)=\alpha f_{\tilde{E}}(x)+\beta f_{\tilde{E}}(y)$ (Esto ultimo por la buena definicion) 
+>>3. Entonces concluimos $f_{\tilde{E}}\in E$ (Osea cumple las hipotesis) y ademas $f\leq f_{\tilde{E}}\quad\forall f\in \tilde{E}$ en el sentido de la relacion de orden. Entonces $f_{\tilde{E}}$ es cota superior de $\tilde{E}$ 
+>>4. Luego por *Lema de Zorn* $E$ tiene un elemento maximal $f_{max}$ 
+>>5. Suponemos $D_{f_{max}}\neq X$. Por [[Teórico 10#^3226b6]] sucede que $f_{max}$ tiene una extension que esta claramente en $E$ (osea cumple las hipotesis) contradiciendo que $f_{max}$ fuera maximal.
 
 ^3c7ea3
 

@@ -12,7 +12,7 @@ $$\sigma_p(S) = \{\lambda : \lambda \text{ es un autovalor de } S\}, \quad \rho(
 >[!Remark]
 >Comenzamos nuestra discusión de $\sigma(T)$ tratando el punto $\lambda = 0$.
 
->[!Theorem] Operadores Compactos - $0$ esta en el espectro siempre
+>[!Theorem] Operadores Compactos - $0$ esta en el espectro siempre MEMO
 >Si $\mathcal{H}$ es de dimensión infinita, entonces $0 \in \sigma(T)$. Si $\mathcal{H}$ es separable, entonces ocurre que $0 \in \sigma_p(T)$ o $0 \in \sigma(T) \setminus \sigma_p(T)$. Si $\mathcal{H}$ no es separable, entonces $0 \in \sigma_p(T)$.
 >>[!Proof]-
 >>1. Si tuviéramos que $0 \not\in \sigma(T)$ entonces $T$ sería invertible. Sin embargo, dado que $\mathcal{H}$ es de dimensión infinita, esto contradice el [[Teórico 17#^201bb6]], por lo que debemos tener $0 \in \sigma(T)$.
@@ -36,18 +36,18 @@ $$\sigma_p(S) = \{\lambda : \lambda \text{ es un autovalor de } S\}, \quad \rho(
 ^063913
 
 >[!Theorem]
->Si $\lambda \neq 0$ entonces $\text{Ker}(T - \lambda I)$ tiene dimensión finita.
+>$T$ compacto. Si $\lambda \neq 0$ entonces $\text{Ker}(T - \lambda I)$ tiene dimensión finita.
 >>[!Proof]-
 >>1. Supongamos que $M = \text{Ker}(T - \lambda I)$ es infinito-dimensional. 
 >>2. Dado que el núcleo de un operador acotado es cerrado [[Teórico 5#^e19482]] entonces el espacio $M$ es Hilbert (infinito-dimensional)
 >>3. Luego existe una sucesión ortonormal $\{e_n\}$ en $M$ por [[Teórico 3#^252a33]] 
->>4. Como $e_n \in \text{Ker}(T - \lambda I)$ tenemos $T e_n = \lambda e_n$ para cada $n \in \mathbb{N}$, y dado que $\lambda \neq 0$, la sucesión $\{\lambda e_n\}$ no puede tener una subsecuencia convergente, ya que $\{e_n\}$ es ortonormal (ver Ejercicio 7.4). 
+>>4. Como $e_n \in \text{Ker}(T - \lambda I)$ tenemos $T e_n = \lambda e_n$ para cada $n \in \mathbb{N}$, y dado que $\lambda \neq 0$, la sucesión $\{\lambda e_n\}$ no puede tener una subsecuencia convergente, ya que $\{e_n\}$ es ortonormal entonces $$\lVert e_{m}-e_{n} \rVert ^{2}=(e_{m}-e_{n},e_{m}-e_{n})=\lVert e_{m} \rVert ^{2}+\lVert e_{n} \rVert ^{2} =2$$
 >>5. Esto contradice la compacidad de $T$, lo que prueba el teorema.
 
 ^014228
 
->[!Theorem]
->Si $\lambda \neq 0$ entonces $\text{Im}(T - \lambda I)$ es cerrado.
+>[!Theorem] MEMO
+>$T$ compacto. Si $\lambda \neq 0$ entonces $\text{Im}(T - \lambda I)$ es cerrado.
 >>[!Proof]-
 >>1. Sea $\{y_n\}$ una sucesión en $\text{Im}(T - \lambda I)$, con $\lim_{n \to \infty} y_n = y$. 
 >>2. Entonces para cada $n$ tenemos $y_n = (T - \lambda I) x_n$, para algún $x_n$, y dado que $\text{Ker}(T - \lambda I)$ es cerrado, $x_n$ tiene una descomposición ortogonal de la forma $x_n = u_n + v_n$, con $u_n \in \text{Ker}(T - \lambda I)$ y $v_n \in \text{Ker}(T - \lambda I)^\perp$. 
@@ -75,7 +75,7 @@ $$\sigma_p(S) = \{\lambda : \lambda \text{ es un autovalor de } S\}, \quad \rho(
 >Si $\lambda \neq 0$ entonces
 >$$\text{Im}(T - \lambda I) = \text{Ker}(T^* - \overline{\lambda}  I)^\perp, \quad \text{Im}(T^* - \overline{\lambda}  I) = \text{Ker}(T - \lambda I)^\perp.$$
 >>[!Proof]-
->>14. $Im(T-\lambda I)=\overline{Im(T-\lambda I)}=Im(T-\lambda I)^{\perp\perp}=ker(T^{*}-\lambda I)^{\perp}$ Y el otro igual permutando $T$ por $T^{*}$ 
+>>14. $Im(T-\lambda I)=\overline{Im(T-\lambda I)}=Im(T-\lambda I)^{\perp\perp}=ker(T^{*}-\overline{\lambda} I)^{\perp}$ Y el otro igual permutando $T$ por $T^{*}$ 
 
 ^937fe3
 
@@ -84,7 +84,7 @@ $$\sigma_p(S) = \{\lambda : \lambda \text{ es un autovalor de } S\}, \quad \rho(
 
 ^5b16e9
 
->[!Theorem]
+>[!Theorem] MEMO
 >Para cualquier real $t > 0$, el conjunto de todos los autovalores distintos de $T$ con $|\lambda| \geq t$ es finito.
 >>[!Proof]-
 >>1. Supongamos en cambio que para algún $t_0 > 0$ existe una sucesión de autovalores distintos $\{\lambda_n\}$ con $|\lambda_n| \geq t_0$ para todo $n$, y sea $\{e_n\}$ una sucesión de autovectores unitarios correspondientes. 
@@ -104,7 +104,7 @@ $$\sigma_p(S) = \{\lambda : \lambda \text{ es un autovalor de } S\}, \quad \rho(
 
 ^301f9e
 
->[!Corollary]
+>[!Corollary] MEMO
 >El conjunto $\sigma_p(T)$ es a lo sumo numerablemente infinito. Si $\{\lambda_n\}$ es cualquier sucesión de autovalores distintos de $T$ entonces $\lim_{n \to \infty} \lambda_n = 0$.
 >>[!Proof]-
 >>1. Escribimos $$\sigma_{p}(T)=\bigcup_{r\in \mathbb{N} }\left\{  \lambda\in \sigma_{p}(T):\lvert \lambda \rvert\geq \frac{1}{r}  \right\}$$ que es union numerable de conjuntos finitos por [[Teórico 18#^301f9e]]
@@ -114,7 +114,7 @@ $$\sigma_p(S) = \{\lambda : \lambda \text{ es un autovalor de } S\}, \quad \rho(
 
  
 >[!Remark]
->Notamos que es posible para un operador compacto $T$ en un espacio de dimensión infinita no tener autovalores en absoluto, ver el Ejercicio 7.17. En ese caso, por el [[Teórico 18#^5d2cfe]] y el Teorema 7.25 más abajo, $\sigma(T) = \{0\}$.
+>Notamos que es posible para un operador compacto $T$ en un espacio de dimensión infinita no tener autovalores en absoluto, ver el Ejercicio 7.17. En ese caso, por el [[Teórico 18#^5d2cfe]] y el [[Teórico 18#^3f6266]] podemos concluir más abajo, $\sigma(T) = \{0\}$.
 
 >[!Remark]
 >Ahora vamos a mostrar que para cualquier operador compacto $T$, todos los puntos no nulos de $\sigma(T)$ deben ser autovalores. Dado que $T^*$ también es compacto, se sigue de esto y del Lema 6.37 que si $\lambda \neq 0$ es un autovalor de $T$, entonces $\bar{\lambda}$ es un autovalor de $T^*$. También demostraremos que estos autovalores tienen igual multiplicidad finita. Estos resultados son estándar en el caso finito-dimensional. Los demostraremos en el caso infinito-dimensional en dos pasos:
@@ -138,7 +138,7 @@ $$\sigma_p(S) = \{\lambda : \lambda \text{ es un autovalor de } S\}, \quad \rho(
 >[!Remark] Notacion
 >Denotamos $n(A)$ a $\dim(\ker(A))$  
 
->[!Lemma]
+>[!Lemma] MEMO
 >Si $T\in K(\mathcal{H})$ tiene rango finito y $\lambda \neq 0$, entonces, o bien: (a) $\lambda \in \rho(T)$ y $\bar{\lambda} \in \rho(T^*)$; o (b) $\lambda \in \sigma_p(T)$ y $\bar{\lambda} \in \sigma_p(T^*)$. Además, $n(T - \lambda I) = n(T^* - \lambda I) < \infty$.
 >>[!Proof]-
 >>1. Sea $M = \text{Im} T$ y $N = \text{Ker} T^* = M^\perp$ (por la misma propiedad de siempre). 
@@ -177,7 +177,7 @@ $$\sigma_p(S) = \{\lambda : \lambda \text{ es un autovalor de } S\}, \quad \rho(
 
 ^19d507
 
->[!Theorem]
+>[!Theorem] MEMO
 >Si $T$ es compacto y $\lambda \neq 0$, entonces, o bien: (a) $\lambda \in \rho(T)$ y $\bar{\lambda} \in \rho(T^*)$; o (b) $\lambda \in \sigma_p(T)$ y $\bar{\lambda} \in \sigma_p(T^*)$. Además, $n(T - \lambda I) = n(T^* - \lambda I) < \infty$.
 >>[!Proof]-
 >>1. Primero reducimos el problema al caso de un operador de rango finito. 

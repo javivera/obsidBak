@@ -2,15 +2,15 @@
 dateCreated: 2024-11-10,19:55
 ---
 
->[!Remark]
+>[!Remark] MEMO
 >Ahora consideramos las siguientes ecuaciones ($T$ compacto)  :
->$$(T - \lambda I) x = 0, \quad (T^* - \lambda I) y = 0, \quad \text{(7.1)}$$
->$$(T - \lambda I) x = p, \quad (T^* - \lambda I) y = q \quad \text{(7.2)}$$
+>$$(T - \lambda I) x = 0, \quad (T^* - \overline{\lambda}  I) y = 0, \quad \text{(7.1)}$$
+>$$(T - \lambda I) x = p, \quad (T^* - \overline{\lambda}  I) y = q \quad \text{(7.2)}$$
 >Las ecuaciones de la forma (7.1), con lados derechos nulos, se llaman homogéneas, mientras que las ecuaciones de la forma (7.2), con lados derechos no nulos, se llaman inhomogéneas. Los resultados del [[Teórico 18#^3f6266]] (junto con el [[Teórico 18#^eeeb64]]) pueden ser reformulados en términos de la solvencia de estas ecuaciones.
 
->[!Theorem] Alternativa de Fredholm
+>[!Theorem] Alternativa de Fredholm MEMO
 >Si $\lambda \neq 0$ entonces uno u otro de los siguientes casos se cumple:
->- (a) Cada una de las ecuaciones homogéneas (H) tiene solo la solución $x = 0, y = 0$, respectivamente, en este caso las correspondientes ecuaciones inhomogéneas (7.2) tienen soluciones únicas $x, y$ para cualquier $p, q \in H$.
+>- (a) Cada una de las ecuaciones homogéneas (H) tiene solo la solución $x = 0, y = 0$, respectivamente, en este caso las correspondientes ecuaciones inhomogéneas (NH) tienen soluciones únicas $x, y$ para cualquier $p, q \in H$.
 >- (b) Existe un número finito $m_\lambda > 0$ tal que cada una de las ecuaciones homogéneas (7.1) tiene exactamente $m_\lambda$ soluciones linealmente independientes, digamos $x_n, y_n$, para $n = 1, \dots, m_\lambda$, respectivamente, mientras que las correspondientes ecuaciones inhomogéneas (7.2) tienen soluciones si y solo si $p, q \in H$ satisfacen las condiciones
 >$$(p, y_n) = 0, \quad (q, x_n) = 0, \quad n = 1, \dots, m_\lambda. \quad \text{(7.3)}$$
 >>[!Proof]-
@@ -44,7 +44,8 @@ dateCreated: 2024-11-10,19:55
 ^92f1c2
 
 >[!Remark]
->En esencia, el [[Teórico 19#^92f1c2]] establece que "la unicidad de las soluciones de la ecuación (NH) implica la existencia de soluciones". Este es un resultado extremadamente útil. En muchas aplicaciones es relativamente fácil probar la unicidad de las soluciones de una ecuación dada. Si la ecuación tiene la forma (NH) y sabemos que el operador $T$ es compacto, entonces podemos deducir inmediatamente la existencia de una solución.
+>En esencia, el [[Teórico 19#^92f1c2]] establece que "la unicidad de las soluciones de la ecuación (H) implica la existencia de soluciones en la (NH) ". 
+>Este es un resultado extremadamente útil. En muchas aplicaciones es relativamente fácil probar la unicidad de las soluciones de una ecuación dada. Si la ecuación tiene la forma (NH) y sabemos que el operador $T$ es compacto, entonces podemos deducir inmediatamente la existencia de una solución.
 
 >[!Theorem]
 >Supongamos que $\lambda \neq 0$ es un autovalor de $T$. Si $p \in \text{Im}(T - \lambda I)$ (es decir, si $p$ satisface (7.3)), entonces la ecuación (NH) tiene una solución única $S_\lambda(p) \in \text{Ker}(T - \lambda I)^\perp$. La función $S_\lambda : \text{Im}(T - \lambda I) \to \text{Ker}(T - \lambda I)^\perp$ es lineal y acotada, y el conjunto de soluciones de (NH) tiene la forma
@@ -65,7 +66,7 @@ dateCreated: 2024-11-10,19:55
 >>12. Ahora, exactamente como en el segundo párrafo de la prueba del [[Teórico 18#^3b2c2f]], podemos mostrar que estas propiedades conducen a una contradicción, lo que prueba el resultado.
 >>13. Y obviamente sea $x\in \ker(T-\lambda I)$ entonces $(T-\lambda I)(S_{\lambda}p+x)=(T-\lambda I)u_{p}=p$ osea es solucion   
 
->[!Remark]-
+>[!Remark]
 >El Teorema 7.29 establece que la solución $S_\lambda p$ satisface $\|S_\lambda p\| \leq C\|p\|$, para alguna constante $C > 0$. Sin embargo, tal desigualdad no puede sostenerse para todas las soluciones $x$ de (7.5) que tienen la forma $x = S_\lambda p + z$, con $z \in \text{Ker}(T - \lambda I)$ teniendo arbitrariamente grandes $\|z\|$.
 
 ## Operadores Compactos Autoadjuntos
@@ -95,14 +96,14 @@ dateCreated: 2024-11-10,19:55
 ^17c4c5
 
 >[!Theorem]
->Si $\lambda \neq 0$ entonces uno de los números $\|T\|$, $-\|T\|$ es un valor propio de $T$.
+>Alguno de los números $\|T\|$, $-\|T\|$ es un valor propio de $T$.
 >>[!Proof]-
->>1. Si $T$ es el operador cero el resultado es trivial, por lo que podemos suponer que $T$ es no nulo. 
+>>1. Si $T$ es el operador cero el resultado es trivial, por lo que podemos suponer que $T$ es no nulo entonces $\lVert T \rVert\neq 0$ 
 >>2. Por [[Teórico 15#^d51465]] (d), al menos uno de $\|T\|$ o $-\|T\|$ está en $\sigma(T)$, luego por [[Teórico 18#^eeeb64]] este punto debe pertenecer a $\sigma_p(T)$.
 
 ^5db8fc
 
->[!Theorem]
+>[!Theorem] MEMO
 >El conjunto de los valores propios no nulos de $T$ no está vacío y es finito o consiste en una secuencia que tiende a cero. Cada valor propio no nulo es real y tiene multiplicidad finita. Los autovectores correspondientes a diferentes valores propios son ortogonales.
 >>[!Proof]-
 >>1. [[Teórico 18#^64b388]] nos dice que disntitos tienden a $0$ o es finito
@@ -119,7 +120,7 @@ dateCreated: 2024-11-10,19:55
 
 ^840d86
 
->[!Theorem]
+>[!Theorem] MEMO
 >El número de valores propios no nulos de $T$ (repetidos según multiplicidad) es igual a $r(T)$. El conjunto de autovectores $\{e_n\}_{n=1}^{r(T)}$ construido arriba (osea de autovalor no nulo) es una base ortonormal para $\overline{ImT}$ y el operador $T$ tiene la representación
 >$$ T x = \sum_{n=1}^{r(T)} \lambda_n (x, e_n) e_n, \quad \text{donde} \quad \{\lambda_n\}_{n=1}^{r(T)} \text{ es el conjunto de valores propios no nulos de } T. \tag{7.10} $$
 >>[!Proof]-
@@ -128,7 +129,7 @@ dateCreated: 2024-11-10,19:55
 >>3. Devuelta por BON, para cualquier $u \in M$ tenemos que $u = \sum_{n=1}^{J} \alpha_n e_n$, donde $\alpha_n = (u, e_n)\quad n = 1, \dots, J$. Así, si $J = \infty$, tenemos
 >>$$ u = \lim_{k \to \infty} \sum_{n=1}^k \alpha_n \lambda_n^{-1} T e_n = \lim_{k \to \infty} T \left( \sum_{n=1}^k \alpha_n \lambda_n^{-1} e_n \right) \in \overline{ImT} ,$$mostrando que $M \subset \overline{ImT}$; 
 >>4. Un argumento similar se aplica cuando $J$ es finito (sin los límites). 
->>5. Ahora mostraremos que $M^{\perp} \subset \ker T$, esto nos diria $M\supset \ker (T)^{\perp}=\overline{ImT}$ (ultima igualdad vista en [[Teórico 19#^840d86]]) por lo tanto $\ker (T)^{\perp}=\overline{ImT}$ lo que implicaria que $M= \overline{ImT}$ que es lo que queriamos probar 
+>>5. Ahora mostraremos que $M^{\perp} \subset \ker T$, esto nos diria $M\supset \ker (T)^{\perp}=\overline{ImT}$ (ultima igualdad vista en [[Teórico 19#^17c4c5]]) por lo tanto $\ker (T)^{\perp}=\overline{ImT}$ lo que implicaria que $M= \overline{ImT}$ que es lo que queriamos probar 
 >>6. Si $J = \infty$ y $u \in M$, tenemos
 >>$$ T u = T \left( \lim_{k \to \infty} \sum_{n=1}^k (u,e_{n}) e_n \right) = \lim_{k \to \infty} \sum_{n=1}^k \lambda_n (u,e_{n}) e_n \in M$$
 >> y de nuevo, un cálculo similar se aplica (sin los límites) si $J < \infty$. 
@@ -138,8 +139,8 @@ dateCreated: 2024-11-10,19:55
 >> 10. Ahora supongamos que $T_N$ no es el operador cero en $N$. Por [[Teórico 19#^5db8fc]], $T_N$ debe tener un valor propio no nulo, digamos $\lambda$, con un autovector no nulo correspondiente $\tilde{e} \in N$, así que por definición, $T_N \tilde{e} = \lambda \tilde{e}$. 
 >> 11. Sin embargo, esto implica que $\lambda$ es un valor propio no nulo de $T$, por lo que $\lambda=\lambda_{n}$ para algun $n<r(T)$
 >> 12. Ademas $\tilde{e}$ debe pertenecer al subespacio de autovectores correspondientes a $\lambda_{n}$ que esta metido en $M$ por definicion que es absurdo por que $\tilde{e}\in M^{\perp}$  
->> 13. Así que $T_N$ debe ser el operador cero. En otras palabras, $T v = T_N v = 0$ para todo $v \in N$, lo que hemos afirmado antes, y por lo tanto completa la prueba de que $M = \text{Im}T$.
->> 14. Finalmente, para cualquier $x \in \mathcal{H}$ tenemos que $(I - P)x \in M^\perp$ entonces $T((I-P)x)=0$ por 13. Ademas $((I-P)x,e_{n})=0$ por lo tanto $(Px,e_{n})=(x,e_{n})$  
+>> 13. Así que $T_N$ debe ser el operador cero. En otras palabras, $T v = T_N v = 0$ para todo $v \in N$, lo que hemos afirmado antes, y por lo tanto completa la prueba de que $M = \overline{ImT}$.
+>> 14. Finalmente, para cualquier $x \in \mathcal{H}$ tenemos que $(I - P)x \in M^\perp=\ker T$ entonces $T((I-P)x)=0$ por 13. Ademas $((I-P)x,e_{n})=0$ por lo tanto $(Px,e_{n})=(x,e_{n})$  
 >> 15. Por lo tanto $$Tx = T(Px + (I - P)x) =T(Px)=\sum^{J}_{n=1}\lambda_{n}(Px,e_{n})e_{n} = \sum_{n=1}^{J} \lambda_n (x, e_n)e_n$$ según el cálculo anterior.
 
 ^e7a5da

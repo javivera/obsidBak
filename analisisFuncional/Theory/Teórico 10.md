@@ -74,15 +74,16 @@
 >Supongo $f_{W,\mathbb{R}}:W_{\mathbb{R}}\rightarrow\mathbb{R}$ definida en [[Teórico 10#^5efc35]] tiene una extension $f_{X,\mathbb{R}} : X_{\mathbb{R}}\rightarrow \mathbb{R}$ tal que $$\lvert f_{X,\mathbb{R}}(x) \rvert \leq p(x)\quad\forall x\in X_{\mathbb{R}}$$ 
 >Entonces $f_{W}$ tiene una extension $f_{X}:X\rightarrow\mathbb{C}$ tal que $$\lvert f_{X}(x) \rvert \leq p(x)\quad\forall x\in X$$
 >>[!Proof]-
->>1. Podemos escribir $f_{W}=f_{W,\mathbb{R}}-if_{W,\mathbb{R}}$
->>2. Como $f_{W,\mathbb{R}}$ es extensible (por hipotesis) tenemos $f_{X}=f_{X,\mathbb{R}}-if_{X,\mathbb{R}}$ extension de $f_{W}$
+>>- Extension
+>>	1. Podemos escribir $f_{W}=f_{W,\mathbb{R}}-if_{W,\mathbb{R}}$
+>>	2. Como $f_{W,\mathbb{R}}$ es extensible (por hipotesis) tenemos $f_{X}=f_{X,\mathbb{R}}-if_{X,\mathbb{R}}$ extension de $f_{W}$
 >>- (Desigualdad)
 >>	1. $x\in X$ con $f_{X}(x)\neq 0$ y $\alpha \in \mathbb{C}$ con $\lvert \alpha  \rvert=1$ tal que $\lvert f_{X}(x) \rvert=\alpha f_{X}(x)=f_{X}(\alpha x)\in \mathbb{R}$
 >>	2. $\lvert f_{X}(x) \rvert= f_{X}(\alpha x)=f_{X,\mathbb{R}}(\alpha x)\leq p(\alpha x)=\lvert \alpha  \rvert p(x)=p(x)$ 
 
 ^b346de
 
->[!Theorem] Hahn-Banach General
+>[!Theorem] Hahn-Banach General MEMO
 >Sea $X$ espacio vectorial $p : X\rightarrow \mathbb{R}$ [[Teórico 9#^c27268]] $W\subseteq X$ subespacio y $f_{W}:W\rightarrow\mathbb{F}$ funcional lineal tal que $\lvert f_{W}(w) \rvert\leq p(w)\quad\forall w\in W$ entonces 
 >$$\exists \ f_{X} :X\rightarrow \mathbb{F}\quad\text{ extension de } f_{W}$$ tal que $$\lvert f_{X}(x) \rvert \leq p(x)\quad\forall x\in X$$
 >>[!Proof]-
@@ -101,7 +102,7 @@
 ^055669
 ## Hahan Banach en normado
 
->[!Lemma] Extensiones en general
+>[!Lemma] Extensiones en general MEMO
 >$X$ un $\mathbb{R}$ espacio vectorial $W\subseteq X$, $p:X\rightarrow\mathbb{R}$ sublineal y $f_{W}:W\rightarrow\mathbb{R}$ lineal tal que $$\lvert f_{W}(x) \rvert\leq p(x)\quad\forall w\in W$$
 >Sean $z_{1}\not\in W$ con $W_{1}=Sp\{ z_{1} \}\oplus W=\{ \alpha z_{1}+W : \alpha\in \mathbb{F},w\in W \}$. Entonces $$\exists \delta_{1}\in \mathbb{R}\quad\text{y}\quad f_{W_{1}} : W_{1}\rightarrow \mathbb{R}$$
 >Tal que $$f_{W_{1}}(\alpha z_{1}+w)=\alpha\delta_{1}+f_{W}(w)\leq p(\alpha z_{1}+w)\quad \forall \alpha\in \mathbb{R}\quad\forall w\in W\quad (a)$$
@@ -120,7 +121,7 @@
 
 ^3226b6
 
->[!Theorem] Hahn Banach en normado
+>[!Theorem] Hahn Banach en normado MEMO
 >$X$ normado $W\subseteq X$ subespacio entonces $\forall f_{W}\in W'\quad\exists f_{X}\in X'$ extension de $f_{W}$ tal que $\lVert f_{W} \rVert=\lVert f_{X} \rVert$
 >>[!Proof]-
 >> 1. Definimos $p(x)=\lVert f_{W} \rVert\lVert x \rVert$ es [[Teórico 9#^c27268]] en $X$. Trivial (Notar que esta bien definida para $x\in X$ )
@@ -129,30 +130,31 @@
 >> 4. Entonces valen las hipotesis de [[Teórico 10#^065972]] por lo tanto $\exists f_{X}$ extension de $f_{W}$ tal que $\lvert f_{X}(x) \rvert\leq p(x)\quad\forall x\in X$
 >> 5. Usando supremo de ambos lados $\lVert f_{X} \rVert\leq \lVert f_{W} \rVert$
 >> 6. Ademas $\lVert f_{W} \rVert=\sup \{ \lVert f_{W}(w)\rVert:w\in W,\lVert w\rVert=1 \rVert \}\leq \{\lVert f_{X}(x)\rVert:x\in X,\lVert x \rVert=1\} =\lVert f_{X}\rVert$
+
 ^8c080d
 
->[!Theorem] existe $f$ que separa
+>[!Theorem] existe $f$ que separa MEMO
 >$X$ normado $W\subseteq X$ subespacio. Supongamos $\exists x\in X$ tal que $\delta =\inf \{ \lVert x+w \rVert:w\in W \}>0$ entonces $$\exists f\in X' \quad\text{ tal que } \quad\lVert f \rVert=1\quad f(x)=\delta \quad f|_{W}\equiv 0$$
 >>[!Proof]-
->>7. Notar que pedimos $\delta >0$ si no $W$ seria denso en $X$ (o seria $X$ directamente) entonces si tenemos un funcional tal que $f|_{W}\equiv 0$ por continuidad y densidad $f\equiv 0$ entonces $\lVert f \rVert\neq 1$ 
->>8. Sea $Y=Sp\{ x \}\bigoplus W$ definimos $f_{Y}:Y\rightarrow \mathbb{F}$ dada por $$f_{Y}(\alpha x+w)=\alpha \delta\quad\alpha \in \mathbb{F} ,w\in W$$ 
->>9. Si $\alpha =0$ entonces tenemos $f_{Y}(w)=0\quad\forall w\in W$  
->>10. Luego si $\alpha \neq0$ $$\lvert f_{Y}(\alpha x +w) \rvert=\lvert \alpha  \rvert\delta \leq \lvert \alpha  \rvert\lVert x+\alpha^{-1}w \rVert=\lVert \alpha x+w \rVert$$ (Notar que $\alpha^{-1}w \in W$ entonces la desigualdad vale por ser $\delta$ un infimo)
->>11. $\lVert f_{Y} \rVert=\sup \{ \lvert f_{Y}(y) \rvert :y\in Y,\lVert y \rVert=1\}=\sup \{ \lvert  f_{Y}(\alpha x+w)\rvert: \alpha x+w\in Y,\lVert \alpha x+w \rVert=1 \}$
->>12. Entonces usando 4. $\lVert f_{Y} \rVert\leq 1$
->>13. La otra desigualdad $\epsilon>0$ como $\delta$ es infimo $\exists \tilde{w}_{\epsilon}$ tal que $\delta\leq \lVert x+\tilde{w}_{\epsilon} \rVert\leq (1+\epsilon)\delta$
->>14. Sea $w=\tilde{\alpha} \tilde{w}_{\epsilon}$ con $\tilde{\alpha } \neq 0$
->>15. $$ \frac{\lvert f_{Y}(\tilde{\alpha } x+w) \rvert }{\lVert \tilde{\alpha } x+w \rVert }= \frac{\lvert \tilde{\alpha }  \rvert \delta}{\lvert \tilde{\alpha }  \rvert \lVert x+\tilde{\alpha } ^{-1} w \rVert }= \frac{\delta}{\lVert x+\tilde{\alpha } ^{-1} w \rVert }= \frac{\delta}{\lVert x+\tilde{w}_{\epsilon} \rVert } \geq \frac{1}{1+\epsilon}$$
->>16. Entonces $$\left\lvert  \frac{f_{Y}(\tilde{\alpha } x+w)}{\lVert \tilde{\alpha } x+w \rVert }  \right\rvert\geq \frac{1}{1+\epsilon}\quad\forall \epsilon\geq 0 \quad \text{ Entonces}\quad \left\lvert  \frac{f_{Y}(\tilde{\alpha } x+w)}{\lVert \tilde{\alpha } x+w \rVert }  \right\rvert\geq 1 \quad$$
->>17. Pero entonces $1\leq \left\lvert  f_{Y}\left( \frac{\tilde{\alpha } x+w}{\lVert \tilde{\alpha } x+w \rVert}\right) \right\rvert\in \{  \lvert f_{Y} (x)\rvert:\lVert x \rVert=1\}$ . 
->>18. Por lo tanto $$\lVert f_{Y} \rVert = \sup \{ |f_{Y}(x)|:\lVert x \rVert=1 \}\geq1$$
->>19. Mostrando que $\lVert f_{Y} \rVert=1$ 
->>20. Por [[#^8c080d]] extiendo $f_{Y}$ a $f:X\rightarrow \mathbb{F}$ con $\lVert f \rVert=\lVert f_{Y} \rVert=1$ 
->>21. Y es claro que si $w \in W$ entonces $f(w)=f_{Y}(0.x +w)=0.\delta=0$ y entonces $f(x)=f_{Y}(1.x+0)=1.\delta=\delta$
+>>1. Notar que pedimos $\delta >0$ para algun $x$ si no $W$ seria denso en $X$ (o seria $X$ directamente) entonces si tenemos un funcional tal que $f|_{W}\equiv 0$ por continuidad y densidad $f\equiv 0$ entonces $\lVert f \rVert\neq 1$ 
+>>2. Sea $Y=Sp\{ x \}\bigoplus W$ definimos $f_{Y}:Y\rightarrow \mathbb{F}$ dada por $$f_{Y}(\alpha x+w)=\alpha \delta\quad\alpha \in \mathbb{F} ,w\in W$$ 
+>>3. Si $\alpha =0$ entonces tenemos $f_{Y}(w)=0\quad\forall w\in W$  
+>>4. Luego si $\alpha \neq0$ $$\lvert f_{Y}(\alpha x +w) \rvert=\lvert \alpha  \rvert\delta \leq \lvert \alpha  \rvert\lVert x+\alpha^{-1}w \rVert=\lVert \alpha x+w \rVert$$ (Notar que $\alpha^{-1}w \in W$ entonces la desigualdad vale por ser $\delta$ un infimo)
+>>5. $\lVert f_{Y} \rVert=\sup \{ \lvert f_{Y}(y) \rvert :y\in Y,\lVert y \rVert=1\}=\sup \{ \lvert  f_{Y}(\alpha x+w)\rvert: \alpha x+w\in Y,\lVert \alpha x+w \rVert=1 \}$
+>>6. Entonces usando 4. $\lVert f_{Y} \rVert\leq 1$
+>>7. La otra desigualdad $\epsilon>0$ como $\delta$ es infimo $\exists \tilde{w}_{\epsilon}$ tal que $\delta\leq \lVert x+\tilde{w}_{\epsilon} \rVert\leq (1+\epsilon)\delta$
+>>8. Sea $w=\tilde{\alpha} \tilde{w}_{\epsilon}$ con $\tilde{\alpha } \neq 0$
+>>9. $$ \frac{\lvert f_{Y}(\tilde{\alpha } x+w) \rvert }{\lVert \tilde{\alpha } x+w \rVert }= \frac{\lvert \tilde{\alpha }  \rvert \delta}{\lvert \tilde{\alpha }  \rvert \lVert x+\tilde{\alpha } ^{-1} w \rVert }= \frac{\delta}{\lVert x+\tilde{\alpha } ^{-1} w \rVert }= \frac{\delta}{\lVert x+\tilde{w}_{\epsilon} \rVert } \geq \frac{1}{1+\epsilon}$$
+>>10. Entonces $$\left\lvert  \frac{f_{Y}(\tilde{\alpha } x+w)}{\lVert \tilde{\alpha } x+w \rVert }  \right\rvert\geq \frac{1}{1+\epsilon}\quad\forall \epsilon\geq 0 \quad \text{ Entonces}\quad \left\lvert  \frac{f_{Y}(\tilde{\alpha } x+w)}{\lVert \tilde{\alpha } x+w \rVert }  \right\rvert\geq 1 \quad$$
+>>11. Pero entonces $1\leq \left\lvert  f_{Y}\left( \frac{\tilde{\alpha } x+w}{\lVert \tilde{\alpha } x+w \rVert}\right) \right\rvert\in \{  \lvert f_{Y} (x)\rvert:\lVert x \rVert=1\}$ . 
+>>12. Por lo tanto $$\lVert f_{Y} \rVert = \sup \{ |f_{Y}(x)|:\lVert x \rVert=1 \}\geq1$$
+>>13. Mostrando que $\lVert f_{Y} \rVert=1$ 
+>>14. Por [[#^8c080d]] extiendo $f_{Y}$ a $f:X\rightarrow \mathbb{F}$ con $\lVert f \rVert=\lVert f_{Y} \rVert=1$ 
+>>15. Y es claro que si $w \in W$ entonces $f(w)=f_{Y}(0.x +w)=0.\delta=0$ y entonces $f(x)=f_{Y}(1.x+0)=1.\delta=\delta$
 
 ^3a0090
 
->[!Corollary] Propiedades usando $f$ que separa 
+>[!Corollary] Propiedades usando $f$ que separa
 >Sea $X\neq \{ 0 \}$ normado, $x\in X$ fijo $x\neq 0$ entonces 
 >- (a)  $\exists f\in X'$ tal que $\lVert f \rVert =1 \quad f(x)=\lVert x \rVert$
 >- (b) $\lVert x \rVert=\sup \{ \lvert f(x) \rvert : f\in X',\lVert f \rVert=1\} =\sup A$
@@ -167,7 +169,7 @@
 >>	2. $\lvert f(x) \rvert\leq \lVert f \rVert\lVert x \rVert$ (Vale siempre truco de $\frac{x}{\lVert x \rVert}$) entonces $\sup \{\lvert f(x) \rvert:\lVert f \rVert=1\}\leq \lVert x \rVert$ 
 >>- (c) 
 >>	1. Sea $y\neq0$ y $W=Sp\{ y \}$ supongamos $x\not\in W$
->>	2. Luego usamos [[#^3a0090]] notando $\delta >0$ (de la demo) por que $W$ es cerrado y $x\not\in W$. Con esto ya tenemos la $f$ que necesitamos
+>>	2. Luego usamos [[Teórico 10#^3a0090]] notando $\delta >0$ (de la demo) por que $W$ es cerrado y $x\not\in W$. Con esto ya tenemos la $f$ que necesitamos
 >>	3. Si no $x\in W$ es trivial. Porque $y=\alpha x$ con $\alpha \neq0,1$  entonces casi cualquier funcional sirve porque $f(x)\neq \alpha f(x) = f(\alpha x)=f(y)$
 >>	4. Si $y=0$ permuto los roles de $x$ e $y$ 
 

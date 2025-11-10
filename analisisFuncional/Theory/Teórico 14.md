@@ -1,7 +1,7 @@
 ---
 dateCreated: 2024-10-11,20:30
 ---
->[!Proposition] Metrica de la convergencia debil-$*$
+>[!Proposition] Metrica de la convergencia debil-$*$ MEMO
 >Supongo $X$ es Banach separable $\{s_{k}\}_{k\in \mathbb{N} }\subseteq X$ denso numerable. $s_{k}\neq 0\quad \forall k\in \mathbb{N}$. Sea $d_{W}:X'\times X'\longrightarrow \mathbb{R}$ dada por $$d_{W}(f,g)=\sum_{k=1}^{\infty} \frac{1}{2^k}\frac{f(s_{k})-g(s_{k})}{\lVert s_{k} \rVert }$$ entonces $d_{W}$ es metrica en $X'$ y si $\{f_{n}\}_{n\in \mathbb{N} }\subseteq X'$  y $f\in X'$ entonces son equivalentes:
 >- (a) $\exists c>0$ tal que $\lVert f_{n}\rVert \leq c \quad \forall n\in \mathbb{N}$     y    $d_{W}(f,f_{n})\xrightarrow{n\rightarrow \infty } 0$  
 >- (b) $f_{n}(x)\xrightarrow{n\rightarrow \infty }f(x)\quad \forall x\in X$ (Osea $f_{n}$ converge debilmente-$*$ a $f$) 
@@ -34,7 +34,7 @@ dateCreated: 2024-10-11,20:30
 >[!Remark]
 >[[Teórico 14#^0bed9e]] nos dice que si $X$ separable, para $\{ f_{n} \}$ acotada la convergencia respecto $d_{W}$ equivale a convergencia débil
 
->[!Proposition] Equivalencia convergencia debil
+>[!Proposition] Equivalencia convergencia debil MEMO
 >Sea $H$ Hilbert. Entonces
 >- (a) $x_{n}\rightharpoonup x \iff (x_{n},y)\longrightarrow (x,y)\quad \forall y\in H$
 >- (b) Si ${} dim(\mathcal{H}) {}$ infinita y ${} \{e_{n}\}\subseteq \mathcal{H} {}$ sucesion ortonormal entonces $e_{n}\rightharpoonup 0$ 
@@ -86,7 +86,7 @@ dateCreated: 2024-10-11,20:30
 
 ^195d3b
 
->[!Theorem] Banach-Alaogtu
+>[!Theorem] Banach-Alaogtu MEMO
 >Si $X$ es Banach separable y $\{ f_{n} \}\subseteq X'$ es acotada, entonces $\{ f_{n} \}$ tiene una subsucesion que converge debil-* a algun $f\in X'$
 >>[!Proof]-
 >>1. Sea $\{ s_{k} \}\subseteq X$ denso 
@@ -98,7 +98,7 @@ dateCreated: 2024-10-11,20:30
 
 ^105785
 
->[!Corollary] Compacidad debil-* de la bola cerrada
+>[!Corollary] Compacidad debil-* de la bola cerrada MEMO
 >Sea $X$ Banach separable entonces toda sucesion en $B=\{ f\in X':\lVert f \rVert\leq 1 \}$ tiene subsucesion que converge debil-* a algun elemento de $B$. Es decir $B$ es compacta respecto a la topologia inducida por $d_{W}$ (existe, pues $X$ es separable)
 >>[!Proof]-
 >>1. Sea $\{ f_{n} \}\subseteq B$ entonces por [[Teórico 14#^105785]] existe $\{ f_{n_{k}} \}$ sub sucesion con $f_{n_{k}}\rightharpoonup^{*}f$ para algun $f\in X'$
@@ -186,7 +186,7 @@ dateCreated: 2024-10-11,20:30
 
 ^0589c9
 
->[!Proposition]
+>[!Proposition] MEMO
 >Sean $\mathcal{H},K$ Hilbert, $T\in B(\mathcal{H},K)$ y $T^{*}\in B(K,\mathcal{H})$ entonces 
 >- (a) $\ker(T)=Im(T^{*})^{\perp}$
 >- (b) $\ker(T^{*})=(Im(T))^{\perp}$
@@ -206,7 +206,7 @@ dateCreated: 2024-10-11,20:30
 
 ^592165
 
->[!Corollary] DUDA
+>[!Corollary] MEMO
 >$\mathcal{H}$ Hilbert y $T\in B(\mathcal{H})$ entonces $T$ invertible $\iff\ker (T^{*})=0$ y $\exists \alpha >0$ con $\lVert T(x) \rVert\geq \alpha \lVert x \rVert\quad\forall x\in \mathcal{H}$
 >>[!Proof]-
 >>- $(\Leftarrow)$  

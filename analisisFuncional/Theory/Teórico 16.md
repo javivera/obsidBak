@@ -114,7 +114,7 @@ dateCreated: 2024-10-27,13:06
 
 ^21a7c0
 
->[!Lemma]
+>[!Lemma] MEMO
 >Si $\mathcal{H}$ es un espacio de Hilbert complejo, $\mathcal{M}$ es un subespacio lineal cerrado de $\mathcal{H}$ y $P$ es la proyección ortogonal de $\mathcal{H}$ sobre $\mathcal{M}$, entonces $I - P$ es la proyección ortogonal de $\mathcal{H}$ sobre $\mathcal{M}^\perp$.
 >>[!Proof]-
 >>1. Como $I$ y $P$ son autoadjuntos, también lo es $I - P$. [[Teórico 15#^2e9773]] 
@@ -128,7 +128,7 @@ dateCreated: 2024-10-27,13:06
 >[!Remark]
 >Si el subespacio lineal cerrado $\mathcal{M}$ tiene una base ortonormal, entonces es posible dar una fórmula para la proyección ortogonal sobre $\mathcal{M}$ en términos de esta base ortonormal. Esta fórmula está dada en [[#^f02ad5]] cuya prueba queda como ejercicio.
 
->[!Corollary]
+>[!Corollary] MEMO
 >Si $\mathcal{H}$ es un espacio de Hilbert complejo, $\mathcal{M}$ es un subespacio lineal cerrado de $\mathcal{H}$, $\{e_n\}_{n=1}^J$ es una base ortonormal para $\mathcal{M}$, donde $J$ es un número entero positivo o $\infty$, y $P$ es la proyección ortogonal de $H$ sobre $\mathcal{M}$, entonces 
 >$$P_{\mathcal{M}}x = \sum_{n=1}^J (x, e_n) e_n$$
 >>[!Proof]-
@@ -146,7 +146,7 @@ dateCreated: 2024-10-27,13:06
 >[!Remark]
 >Aunque todos los números reales positivos tienen raíces cuadradas positivas, es quizás sorprendente que todos los operadores positivos tengan raíces cuadradas positivas. El siguiente lema será el paso clave para demostrar que los operadores positivos tienen raíces cuadradas.
 
->[!Lemma]
+>[!Lemma] MEMO
 >Sea $H$ un espacio de Hilbert complejo, y sea $\mathcal{S}$ el espacio de Banach real de todos los operadores autoadjuntos en $B(H)$. Si $S \in \mathcal{S}$, entonces existe un $\Phi \in B(\mathcal{C}_{\mathbb{R}}(\sigma(S)), \mathcal{S})$ tal que:
 >- (a) $\Phi(p) = p(S)$ siempre que $p$ sea un polinomio en $\mathcal{C}_\mathbb{R}(\sigma(S))$;  
 >- (b) $\Phi(fg) = \Phi(f)\Phi(g)$ para todo $f, g \in \mathcal{C}_\mathbb{R}(\sigma(S))$
@@ -167,7 +167,7 @@ dateCreated: 2024-10-27,13:06
 > Sea $\mathcal{H}$, $\mathcal{S}$  y $S$ como en el Lema de arriba. Para cualquier $f \in \mathbb{C}_R(\sigma(S))$ ahora denotamos $\Phi(f)$ por $f(S)$. En otras palabras, el [[#^e6333b]] nos permite construir "funciones" de un operador autoadjunto $S$. Anteriormente habíamos definido $p(S)$ cuando $p$ es un polinomio. 
 > El Lema [[#^e6333b]] extiende esto a $f(S)$ cuando $f \in \mathbb{C}_{\mathbb{R}}(\sigma(S))$. Supongamos ahora que $\sigma(S) \subset [0, \infty)$ y $g : \sigma(S) \to \mathbb{R}$ está definida por $g(x) = x^{1/2}$. Entonces $g \in \mathbb{C}_{\mathbb{R}}(\sigma(S))$ por lo que $g(S)$ tiene sentido. La notación está destinada a sugerir que $g(S)$ es una raíz cuadrada de $S$ y mostramos que esto es cierto en el siguiente teorema
 
->[!Theorem] DUDA
+>[!Theorem] MEMO
 > Sea $\mathcal{H}$ un espacio de Hilbert complejo, sea $\mathcal{S}$ el espacio de Banach de todos los operadores autoadjuntos en $B(\mathcal{H})$ y sea $S \in \mathcal{S}$ positivo.
 >- (a) Existe una raíz cuadrada positiva $R$ de $S$ que es el límite de una secuencia de polinomios evaluados en $S$
 >- (b) Si $Q$ es cualquier raíz cuadrada positiva de $S$, entonces $R = Q$

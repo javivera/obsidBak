@@ -21,11 +21,12 @@ dateCreated: 2024-11-10,18:54
 >>	2. Luego, dado que $\{x_{n(r)}\}$ es acotada y $T$ es compacto, existe una subsecuencia $\{x_{n(r(s))}\}$ de la sucesión $\{x_{n(r)}\}$ tal que $\{Tx_{n(r(s))}\}$ converge. 
 >>	3. Se deduce que la sucesión $\{\alpha Sx_{n(r(s))} + \beta Tx_{n(r(s))}\}$ converge. Así, $\alpha S + \beta T$ es compacto.
 >>- (b) 
->> 	1. Sea $\{x_n\}$ una sucesión acotada en $X$. Si $S$ es compacto entonces existe una subsecuencia $\{x_{n(r)}\}$ tal que $\{Sx_{n(r)}\}$ converge. 
->> 	2. Como $T$ es acotado (y, por lo tanto, continuo), la sucesión $\{TSx_{n(r)}\}$ converge. 
->> 	3. Así, $TS$ es compacto.
->> 	4. Si $T$ compacto y $S$ es acotado pero no compacto, entonces la sucesión $\{Sx_n\}$ es acotada. 
->> 	5. Luego, dado que $T$ debe ser compacto, existe una subsecuencia $\{Sx_{n(r)}\}$ tal que $\{TSx_{n(r)}\}$ converge, y nuevamente $TS$ es compacto.
+>> 	1. Sea $\{x_n\}$ una sucesión acotada en $X$. 
+>> 	2. Si $S$ es compacto entonces existe una subsecuencia $\{x_{n(r)}\}$ tal que $\{Sx_{n(r)}\}$ converge. 
+>> 	3. Como $T$ es acotado (y, por lo tanto, continuo), la sucesión $\{TSx_{n(r)}\}$ converge. 
+>> 	4. Así, $TS$ es compacto.
+>> 	5. Si $T$ compacto y $S$ es acotado pero no compacto, entonces la sucesión $\{Sx_n\}$ es acotada. 
+>> 	6. Luego, dado que $T$ debe ser compacto, existe una subsecuencia $\{Sx_{n(r)}\}$ tal que $\{TSx_{n(r)}\}$ converge, y nuevamente $TS$ es compacto.
 
 ^984cdb
 
@@ -46,7 +47,7 @@ dateCreated: 2024-11-10,18:54
 
 ^b2b728
 
->[!Theorem] Dim infinita opderador identidad no es compacto
+>[!Theorem] Dim infinita opderador identidad no es compacto MEMO
 >Si $X$ es un espacio normado de dimensión infinita, entonces el operador identidad $I$ en $X$ no es compacto.
 >>[!Proof]-
 >>1. Dado que $X$ es un espacio normado de dimensión infinita, la prueba del [[Teórico 1#^8db74f]] muestra que existe una sucesión de vectores unitarios $\{x_n\}$ en $X$ que no tiene ninguna subsecuencia convergente. 
@@ -55,7 +56,7 @@ dateCreated: 2024-11-10,18:54
 
 ^e35495
 
->[!Corollary] Dim infinta operador compacto no es invertible
+>[!Corollary] Dim infinta operador compacto no es invertible MEMO
 >Si $X$ es un espacio normado de dimensión infinita y $T \in K(X)$, entonces $T$ no es invertible.
 >>[!Proof]-
 >>1. Supongamos que $T$ es invertible. 
@@ -99,7 +100,7 @@ dateCreated: 2024-11-10,18:54
 >[!Remark]
 > Ahora consideramos cómo demostrar que un operador dado es compacto. El siguiente teorema, que muestra que el límite de una sucesión de operadores compactos en $B(X, Y)$ es compacto, nos proporcionará un método muy poderoso para hacerlo.
 
->[!Theorem]
+>[!Theorem] MEMO
 >Si $X$ es un espacio normado, $Y$ es un espacio de Banach y $\{T_k\}$ es una sucesión en $K(X, Y)$ que converge a un operador $T \in B(X, Y)$, entonces $T$ es compacto. Por lo tanto, $K(X, Y)$ es cerrado en $B(X, Y)$.
 >>[!Proof]-
 >>1. Sea $\{x_n\}$ una sucesión acotada en $X$. Por compacidad, existe una subsucesion de $\{x_n\}$, a la que etiquetaremos como $\{x_{n(1, r)}\} = \{x_{n(1, r)}\}_{r=1}^{\infty}$, tal que la sucesión $\{T_1 x_{n(1, r)}\}$ converge. 
@@ -137,12 +138,12 @@ n^{-1} a_n, & \text{si } n \leq k, \\
 >>3. Además, para cualquier $a \in \ell^2$ tenemos 
 >>$$\|(T_k - T)a\|^2 = \sum_{n=k+1}^{\infty} |a_n|^2/n^2 \leq (k + 1)^{-2} \sum_{n=k+1}^{\infty} |a_n|^2 \leq (k + 1)^{-2}\|a\|^2.$$
 >>4. Esto implica que $\|T_k - T\| \leq (k + 1)^{-1}$
->>5. Y por lo tanto $\|T_k - T\| \to 0$. Así, $T$ es compacto por [[#^c90dfa]]
+>>5. Y por lo tanto $\|T_k - T\| \to 0$. Así, $T$ es compacto por [[Teórico 17#^f21d4d]]
 
 >[!Remark]
 >El recíproco de [[Teórico 17#^f21d4d]] no es cierto, en general, cuando $Y$ es un espacio de Banach, pero sí es cierto cuando $Y$ es un espacio de Hilbert
 
->[!Theorem] Compactos tienen sucesion de rango finto que converge DUDA
+>[!Theorem] Compactos tienen sucesion de rango finto que converge MEMO
 >Si $X$ es un espacio normado, $\mathcal{H}$ es un espacio de Hilbert y $T \in K(X, \mathcal{H})$, entonces existe una sucesión de operadores de rango finito (y acotados)  $\{T_k\}$ que converge a $T$ en $B(X, \mathcal{H})$.
 >>[!Proof]-
 >>6. Si $T$ mismo tuviera rango finito, el resultado sería trivial, así que asumimos que no lo tiene. 
@@ -174,7 +175,7 @@ n^{-1} a_n, & \text{si } n \leq k, \\
 >[!Remark]
 >Usando estos resultados ahora podemos mostrar que el adjunto de un operador compacto es compacto. Primero tratamos con operadores de rango finito.
 
->[!Lemma]
+>[!Lemma] MEMO
 >Si $H$ es un espacio de Hilbert y $T \in B(H)$, entonces $r(T) = r(T^*)$ (ya sean números finitos o $\infty$). En particular $T$ tiene rango finito si y solo si $T^*$ tiene rango finito.
 >>[!Proof]-
 >>1. Supongamos primero que $r(T) < \infty$. 
@@ -188,7 +189,7 @@ n^{-1} a_n, & \text{si } n \leq k, \\
 
 ^56dbd3
 
->[!Theorem] DUDA
+>[!Theorem] MEMO
 >Si $H$ es un espacio de Hilbert y $T \in B(H)$, entonces $T$ es compacto si y solo si $T^*$ es compacto.
 >>[!Proof]-
 >>- $(\Rightarrow)$  

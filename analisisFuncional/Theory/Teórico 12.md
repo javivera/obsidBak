@@ -80,7 +80,7 @@ tags:
 
 ^1f2693
 
->[!Remark] $J_{X}$ no siempre es biyectiva 
+>[!Remark] $J_{X}$ no siempre es biyectiva
 >Si $X$ no es Banach entonces $J_{X}(X)$ no es Banach por que son isometricamente isomorfos por lo tanto  $J_{X}X\neq X''$. Pues $X''$ es Banach. Osea $J_{X}$ no siempre es sobreyectiva.. Inclusive si $X$ es Banach es posible que $J_{X}(X)\neq X''$. 
 
 ^247501
@@ -98,9 +98,9 @@ tags:
 
 ^97ebbd
 
->[!Theorem] $X$ dim finita y $\mathcal{H}$ Hilbert son reflexivos 
+>[!Theorem] $X$ dim finita y $\mathcal{H}$ Hilbert son reflexivos MEMO
 >- (a)  Si $X$ es normado con $\dim X=n<\infty$ entonces $X$ es reflexivo
->- (b)  Si $H$ es Hilbert entonces $H$ es reflexivo 
+>- (b)  Si $\mathcal{H}$ es Hilbert entonces $\mathcal{H}$ es reflexivo 
 >>[!Proof]-
 >>- (a)  
 >>	1. Como dimension de $X$ es finita sabemos que $\dim X=\dim X'=\dim X''$ (Por algebra 1 dada base finita de $X$ encontramos base finita de $X'$ y podemos reaplicar la misma idea para $X'$ y $X''$ ) 
@@ -114,7 +114,7 @@ tags:
 
 ^568cc1
 
->[!Theorem] $X$ reflexivo sii $X'$ reflexivo  
+>[!Theorem] $X$ reflexivo sii $X'$ reflexivo MEMO
 >$X$ Banach entonces $X$ reflexivo sii $X'$ reflexivo ($\iff J_{X'}:X'\rightarrow X'''$ es sobre)
 >>[!Proof]-
 >>- $(\Rightarrow)$ 

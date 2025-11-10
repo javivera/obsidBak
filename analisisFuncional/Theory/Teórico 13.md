@@ -1,7 +1,7 @@
 ---
 dateCreated: 2024-10-11,20:30
 ---
->[!Corollary] $c_{0}$ y $\ell^{\infty}$ no son reflexivos
+>[!Corollary] $c_{0}$ y $\ell^{\infty}$ no son reflexivos MEMO
 >Los espacios $c_{0}$ y $\ell^{\infty}$ no son reflexivos
 >>[!Proof]-
 >>1. Vimos en [[Teórico 12#^0a50d4]] que $( ^{\circ}Z ) ^{\circ} =c_{0}'\neq Z$ 
@@ -47,7 +47,7 @@ dateCreated: 2024-10-11,20:30
 
 ^7587c2
 
->[!Theorem] $T$ iso entonces $T'$ iso  
+>[!Theorem] $T$ iso entonces $T'$ iso MEMO
 >$X,Y$ normados $T\in B( X,Y )$ 
 >- (a) Si $T$ es isomorfismo entonces $T'$ es isomorfismo con $( T')^{-1} =( T^{-1} )'$.
 >(En particular si son isomorfos $X$ e $Y$ tambien lo son $X'$ e $Y'$) 
@@ -73,7 +73,7 @@ dateCreated: 2024-10-11,20:30
 Recordar que si $1\leq p<\infty, \ x\in \ell^p, \ a\in \ell^{q}$ con $\frac{1}{p}+\frac{1}{q}=1$. 
 Tomando $f_{a}(x)=\sum_{n=1}^{\infty} a_{n} x_{n}$ entonces $T_{p}:\ell^{q} \longrightarrow (\ell^{p} )'$ dada por $T_{p}(a)=f_{a}$  es isomorfismo isometrico       
 
->[!Corollary] Reflexividad de $\ell^{p}$ 
+>[!Corollary] Reflexividad de $\ell^{p}$ MEMO
 >$\ell^{p}$ con $\ 1<p<\infty$ es reflexivo 
 >>[!Proof]-
 >>1. Sean $x\in\ell^{p} \ \ y\in \ell^{q}$ con  $1<q< \infty$ y $\frac{1}{q}+\frac{1}{p}=1$ 
@@ -108,7 +108,7 @@ $$J_{Y}\circ T=T'' \circ J_{X}$$
 >$\ell^{1}$ no es reflexivo
 >>[!Proof]-
 >>1. Sabemos que $c_{0}$ no es reflexivo [[#^8dcf06]] entonces por [[Teórico 12#^ba33bb]] (considerando $c_{0}$ es Banach) $c_{0}'$  no es reflexivo
->>2. $\ell^{1}$ es isomorfo a $c_{0}'$ por [[Teórico 12#^0a50d4]] entonces por [[#^9a9641]] 
+>>2. $\ell^{1}$ es isomorfo a $c_{0}'$ por [[Teórico 12#^0a50d4]] entonces por [[Teórico 13#^9a9641]] 
 
 ^cee970
 
@@ -168,7 +168,7 @@ $$J_{Y}\circ T=T'' \circ J_{X}$$
 
 ^c34834
 
->[!Proposition] Propiedades de espacios complementarios y de proyecciones sobre espacios
+>[!Proposition] Propiedades de espacios complementarios y de proyecciones sobre espacios MEMO
 >$U,V\subseteq X$ son complementarios entonces:
 >- (a)  $U$ y $V$ complementarios topologicos sii $P_{U}$ y $P_{V}$ son continuas
 >- (b) Si $U,V$ son complementarios topologicos entonces $U,V$ son cerrados
@@ -196,7 +196,7 @@ $$J_{Y}\circ T=T'' \circ J_{X}$$
 >Si $\dim V<\infty$ es cierto (ej). 
 >En general esto no es cierto pero si vale en espacios de Hilbert (Lo vemos mas adelante)
 
->[!Lemma] Sucesion acotada de funciones tiene limite
+>[!Lemma] Sucesion acotada de funciones tiene limite MEMO
 >Sea $X$ Banach y sea $S= \{s_{\alpha }: \alpha \in A\}$  tal que $\overline{Sp}S=X$. Si $\{f_{n} \}$ es una sucesion acotada en $X'$ y $\{f_{n} (s_{\alpha })\}$ converge $\forall \alpha \in A$ entonces $\exists f\in X'$ tal que $f_{n} (x)\longrightarrow f(x)\quad \forall x\in X$  
 >>[!Proof]-
 >>1. Sea $x\in X$ como $\{f_{n} \}$ es acotada $\exists c>0$ tal que $\lVert f_{n}  \rVert \leq c \quad \forall n\in \mathbb{N}$.
