@@ -75,8 +75,8 @@
 >Entonces $f_{W}$ tiene una extension $f_{X}:X\rightarrow\mathbb{C}$ tal que $$\lvert f_{X}(x) \rvert \leq p(x)\quad\forall x\in X$$
 >>[!Proof]-
 >>- Extension
->>	1. Podemos escribir $f_{W}=f_{W,\mathbb{R}}-if_{W,\mathbb{R}}$
->>	2. Como $f_{W,\mathbb{R}}$ es extensible (por hipotesis) tenemos $f_{X}=f_{X,\mathbb{R}}-if_{X,\mathbb{R}}$ extension de $f_{W}$
+>>	1. Podemos escribir $f_{W}(x)=f_{W,\mathbb{R}}(x)-if_{W,\mathbb{R}}(ix)$
+>>	2. Como $f_{W,\mathbb{R}}$ es extensible (por hipotesis) tenemos $f_{X}(x)=f_{X,\mathbb{R}}(x)-if_{X,\mathbb{R}}(ix)$ extension de $f_{W}$
 >>- (Desigualdad)
 >>	1. $x\in X$ con $f_{X}(x)\neq 0$ y $\alpha \in \mathbb{C}$ con $\lvert \alpha  \rvert=1$ tal que $\lvert f_{X}(x) \rvert=\alpha f_{X}(x)=f_{X}(\alpha x)\in \mathbb{R}$
 >>	2. $\lvert f_{X}(x) \rvert= f_{X}(\alpha x)=f_{X,\mathbb{R}}(\alpha x)\leq p(\alpha x)=\lvert \alpha  \rvert p(x)=p(x)$ 

@@ -42,7 +42,7 @@ dateCreated: 2024-10-19,11:18
 >[!Corollary] Desigualdad implica inversible con operadores normales MEMO
 >$T\in B(\mathcal{H})$ es normal entonces $T$ inversible $\iff \exists \alpha >0$ tal que $\lVert Tx \rVert\geq\alpha \lVert x \rVert\quad\forall x\in \mathcal{H}$
 >>[!Proof]-
->>$(\Leftarrow)$ [[#^6cb446]] implica $\ker T^{*}=\{ 0 \}$ luego por [[Teórico 14#^5be0d2]]
+>>$(\Leftarrow)$ [[Teórico 15#^6cb446]] implica $\ker T^{*}=\{ 0 \}$ luego por [[Teórico 14#^5be0d2]]
 >>$(\Rightarrow)$  Sale directo de [[Teórico 14#^5be0d2]]
 
 ^acb07f
@@ -185,15 +185,15 @@ dateCreated: 2024-10-19,11:18
 
 ^bdf665
 
->[!Theorem] Espectro es compacto y sus elementos menores (modulo) que norma del operador MEMO
->$\mathcal{H}$ Hilbert y $T\in B(\mathcal{H})$
+>[!Theorem] Espectro es compacto y sus elementos menores (modulo) que norma del operador 
+>$\mathcal{H}$ Hilbert y $T\in B(\mathcal{H})$ (Creo aca se asume $\lambda\neq0$) 
 >- (a) $\lvert \lambda \rvert > \lVert T \rVert$ entonces $\lambda\not\in \sigma(T)$
 >- (b) $\sigma(T)$ es cerrado osea $\sigma(T)$ compacto (en $\mathbb{C}$  cerrado y acotado es compacto) 
 >>[!Proof]-
 >>- (a) 
 >>	1. Si $\lvert \lambda \rvert>\lVert T \rVert$ entonces $\lVert \lambda^{-1}T \rVert <1$ 
 >>	2. Luego $I-\lambda^{-1}T$ es inversible por [[Teórico 6#^aa4e9d]]
->>	3. Por lo tanto $\lambda I-T$ es inversible tambien (componiendo con $\lambda I$ que es inversible) , mostrando que $\lambda\not\in\sigma(T)$    
+>>	3. Por lo tanto $T - \lambda I$ es inversible tambien (componiendo con la funcion multiplicar por $-\lambda$ que es inversible) , mostrando que $\lambda\not\in\sigma(T)$    
 >>- (b)
 >>	1. Sea $F : \mathbb{C}\rightarrow B(H)$ dada por $F(\lambda)=\lambda I-T$ entonces $F$ es continua pues $$\lVert F(u)-F(\lambda) \rVert =\lVert uI-T-\lambda I+T \rVert=\lvert u-\lambda \rvert \lVert I \rVert =\lvert u-\lambda \rvert  $$
 >>	2. Luego como $G=\{ T\in B(\mathcal{H}): T\text{ no es inversible} \}$ es cerrado por que $G^{c}$ es abierto por [[Teórico 6#^efd74a]]
@@ -242,8 +242,8 @@ dateCreated: 2024-10-19,11:18
 >>	3. Ahora $$\begin{align}\lambda\not\in\sigma(p(T))&\iff\lambda I-p(T)\text{ inversible} \\ &\iff f(T)\text{ inversible} \\&\iff c\prod(T-u_{j}I)\text{ inversible}  \\(*)&\iff T-u_{j}I \text{ inversible}\quad\forall 1\leq j\leq n  \\ &\iff \text{ los ceros de }f\not\in\sigma(T)  \\ &\iff f(u)\neq 0\quad\forall u\in \sigma(T) \\ &\iff \lambda\neq p(u)\quad\forall u\in \sigma(T)\\ \end{align}$$(*) ($T_{1}T_{2}$ inversible $\iff T_{1}$ y $T_{2}$ son inversibles) $\iff T_{1},T_{2}$ conmutan y en este caso conmutan por lo cual vale el sii
 >>- (b)
 >>	1. $T^{-1}$ inversible entonces $0\not\in\sigma(T^{-1})$
->>	2. Entonces todo elemento de $\sigma(T^{-1})$ se puede escribir como $u^{-1}$ con $u\in \mathbb{C}$. Ademas $$u^{-1}I-T^{-1}=-T^{-1}u^{-1}(uI-T)\quad (-T^{-1}u^{-1} \text{ es invertible por que su inversa es obviamente }-uT)$$
->>	3. Entonces (del 3er al 4to sii devuelta usando que si conmutan entonces cada parte es inversible si la composicion lo es) $$\begin{align} u^{-1}\in \sigma(T^{-1})&\iff u^{-1}I-T^{-1} \text{ es no inversible}\\ &\iff -T^{-1}u^{-1}(uI-T) \text{ es no inversible} \\ &\iff uI-T \text{ es no inversible} \\ &\iff u\in \sigma(T)\\ \end{align}$$ 
+>>	2. Entonces todo elemento de $\sigma(T^{-1})$ se puede escribir como $u^{-1}$ con $u\in \mathbb{C}$. Ademas $$T^{-1}-u^{-1}I=-T^{-1}u^{-1}(T-uI)\quad (-T^{-1}u^{-1} \text{ es invertible por que su inversa es obviamente }-uT)$$
+>>	3. Entonces (del 3er al 4to sii devuelta usando que si conmutan entonces cada parte es inversible si la composicion lo es) $$\begin{align} u^{-1}\in \sigma(T^{-1})&\iff T^{-1}-u^{-1}I \text{ es no inversible}\\ &\iff -T^{-1}u^{-1}(T-uI) \text{ es no inversible} \\ &\iff T-uI \text{ es no inversible} \\ &\iff u\in \sigma(T)\\ \end{align}$$ 
 >>	4. Entonces $\sigma(T^{-1})=\{ u^{-1}:u\in \sigma(T) \}$  
 
 ^145b8c
@@ -307,7 +307,7 @@ dateCreated: 2024-10-19,11:18
 >>	5. Y como $S$ auto adjunta entonces $S^{2}$ auto adjunta entonces
 >>	6. Usando que $\lVert S(x_{n}) \rVert^{2}=(S(x_{n}),S(x_{n}))=(S^{2}(x_{n}),x_{n})$ por autoadjunta y por que $\lVert x_{n} \rVert=1$ y usando $\lVert S^{2}(x_{n}) \rVert\leq\lVert S \rVert\lVert S \rVert\lVert x_{n} \rVert=1$ vemos que $$\lVert x_{n} \rVert^{2}+\lVert S^{2}(x_{n}) \rVert^{2}-2(S^{2}(x_{n}),x_{n})\leq 2-2\lVert S(x_{n}) \rVert^{2}$$
 >>	7. Entonces $\lim_{ n \to \infty }\lVert (I-S^{2})(x_{n}) \rVert^{2}=0$     
->>	8. Como $S^{2}$ es normal (pues es autoadjunta) luego por [[#^acb07f]] $I-S^{2}$ es NO invertible
+>>	8. Como $S^{2}$ es normal (pues es autoadjunta) luego por [[Teórico 15#^acb07f]] $I-S^{2}$ es NO invertible entonces $S^{2}-I$ es no invertible 
 >>	9. Entonces $1\in \sigma(S^{2})=\{ \lambda^{2}:\lambda\in \sigma(S) \}$ (Ultima igualdad por [[#^145b8c]] (a)) 
 >>	10. Por lo tanto $\lVert S \rVert=1\in \sigma(S)$ o $-\lVert S \rVert=-1\in \sigma(S)$ 
 >>	11. Notar que si no tenia norma 1 entonces $T=\frac{S}{\lVert S \rVert}$ entonces $T$ es autoadjunta de norma 1 usando la misma demo $1= \lVert T \rVert\in \sigma(T)$ pero $\sigma(T)=\sigma\left( \frac{S}{\lVert S \rVert} \right)=\frac{1}{\lVert S \rVert}\sigma(S)$ por [[Teórico 15#^4a41e5]]

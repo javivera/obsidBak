@@ -10,7 +10,7 @@ dateCreated: 2024-10-02,22:03
 
 ^60205b
 
->[!Theorem] $X'$ separable implica $X$ separable  
+>[!Theorem] $X'$ separable implica $X$ separable MEMO  
 >$X'$ separable entonces $X$ separable
 >>[!Proof]-
 >> 1. Sea $B=\{ f\in X':\lVert f \rVert=1 \}\subseteq X'$ 
@@ -32,10 +32,10 @@ dateCreated: 2024-10-02,22:03
 >[!Proposition] $\ell^{\infty}$ no es separable MEMO
 >$\ell^{\infty}$ no es separable
 >>[!Proof]-
->>1. Sea $N\subseteq \mathbb{R}$ $$x^{N}_{n}=\begin{cases}1 & \text{si }x\in N \\0 & \text{cc}\end{cases}$$
->>2. Obviamente hay no numerables de estos por que $N\in \mathcal{P}(\mathbb{R})$ que es no numerable
+>>1. Sea $N\subseteq \mathbb{N}$ $$x^{N}_{n}=\begin{cases}1 & \text{si }n\in N \\0 & \text{cc}\end{cases}$$
+>>2. Obviamente $2^{\aleph}$ (no numerables) sucesiones distintas de $0$ y $1s$   
 >>3. Dado $N$ y $M$ distintos entonces $\exists n_{0}\in N\setminus M$ por lo tanto $\lVert x^{N}-x^{M} \rVert_{\infty}=1$    
->>4. Tomo bolas $B(\frac{1}{4},x^{N})$ y $B\left( \frac{1}{4},x^{M} \right)$  entonces si existiera un $y$ en la interseccion $$\lVert x^{N} -x^{M}\rVert\leq \lVert x^{N}-y \rVert+\lVert y-x^{M} \rVert\leq \frac{1}{4}+\frac{1}{4}=\frac{1}{2}$$ que es absurdo  
+>>4. Tomo bolas $B(\frac{1}{4},x^{N})$ y $B\left( \frac{1}{4},x^{M} \right)$ entonces si existiera un $y$ en la interseccion $$\lVert x^{N} -x^{M}\rVert\leq \lVert x^{N}-y \rVert+\lVert y-x^{M} \rVert\leq \frac{1}{4}+\frac{1}{4}=\frac{1}{2}$$ que es absurdo  
 >>5. Entonces tengo no numerables bolas disjuntas. No es separable
 
 ^18df41

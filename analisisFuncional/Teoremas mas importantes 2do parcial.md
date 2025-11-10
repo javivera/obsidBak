@@ -44,21 +44,38 @@
 >>15. Y es claro que si $w \in W$ entonces $f(w)=f_{Y}(0.x +w)=0.\delta=0$ y entonces $f(x)=f_{Y}(1.x+0)=1.\delta=\delta$
 
 # Teorico 11
+>[!Theorem] $X'$ separable implica $X$ separable  
+>$X'$ separable entonces $X$ separable
+>>[!Proof]-
+>> 1. Sea $B=\{ f\in X':\lVert f \rVert=1 \}\subseteq X'$ 
+>> 2. Como $X'$ es separable $\exists F=\{ f_{n} \}\subseteq B$ tal que $F$ es denso en $B$ ($B$ separable porque $X'$ separable)
+>> 3. Para $n\in \mathbb{N}$ sea $w_{n}$ con $\lVert w_{n} \rVert=1$ y $f_{n}(w_{n})\geq \frac{1}{2}$ (Existe por def de $\lVert f \rVert$ supremo)
+>> 4. Sea $W=\overline{Sp}\{ w_{j} \}$ si $W\subsetneq X$ usando [[Teórico 10#^3a0090]] tenemos $f\in B$ tal que $f(w)=0\quad\forall w\in W$ (Vale por que $x\not\in W$ nos asegura que $\inf\{ \lVert x-w \rVert:w\in W \}>0$  si no lo fuera tendriamos una sucesion de cosas en $W$ que converge a $x$ que es absurdo por que $W$ es cerrado)   
+>> 5. $\frac{1}{2}\leq \lvert f_{n}(w_{n}) \rvert=\lvert f_{n}(w_{n})-f(w_{n}) \rvert\leq \lVert f_{n}-f \rVert\lVert w_{n} \rVert=\lVert f_{n}-f \rVert\quad\forall n\in \mathbb{N}$ (Por que $f(w_{n})=0$)
+>> 6. Esto contradice la densidad de $F$ en $B$. Entonces $W=X$.
+>> 7. Veamos que $\overline{Sp}\{ w_{j} \}$ es separable. Proponemos $Sp\{ w_{j} \}$ como denso numerable. 
+>> 8. Sea un $x\in \overline{Sp}\{ w_{j} \}$ por def de span cerrado existe $x^{n}\in Sp\{ w_{j} \}$ tal que $x^{n}\rightarrow x$
+>> 9. Entonces $\exists n_{0}\in \mathbb{N}$ tal que $\lVert x^{n_{0}}-x \rVert<\frac{\epsilon}{2}$
+>> 10. Como $x^{n_{0}}\in Sp\{ w_{j} \}$ entonces $x^{n_{0}}=\sum^{N}_{n=1} c_{n}w_{n}$ y a esta si la podemos aproximar por con coeficientes racionales osea existe $\tilde{x}$ con coef racionales tal que $\lVert \tilde{x}-x^{n_{0}} \rVert\leq \frac{\epsilon}{2}$
+>> 11. Por ende $\lVert \tilde{x} -x\rVert\leq \lVert \tilde{x}-x^{n_{0}} \rVert+\lVert x^{n_{0}}-x \rVert\leq \epsilon$ 
+>> 12. Con lo cual aproxime $x$ con una suma finita de coeficientes racionales. Mostrando que la sumas finitas de coeficientes racionales son densas en $\overline{Sp}\{ w_{j} \}$ y como obviamente son numerables
+>> 13. Luego $X=\overline{Sp}\{ w_{j} \}$ es separable
+
 >[!Proposition] $\ell^{\infty}$ no es separable MEMO
 >$\ell^{\infty}$ no es separable
 >>[!Proof]-
->>1. Sea $N\subseteq \mathbb{R}$ $$x^{N}_{n}=\begin{cases}1 & \text{si }x\in N \\0 & \text{cc}\end{cases}$$
->>2. Obviamente hay no numerables de estos por que $N\in \mathcal{P}(\mathbb{R})$ que es no numerable
->>3. Dado $N$ y $M$ distintos entonces $\exists n_{0}\in N\setminus M$ por lo tanto $\lVert x^{N}-x^{M} \rVert_{\infty}=1$    
->>4. Tomo bolas $B(\frac{1}{4},x^{N})$ y $B\left( \frac{1}{4},x^{M} \right)$  entonces si existiera un $y$ en la interseccion $$\lVert x^{N} -x^{M}\rVert\leq \lVert x^{N}-y \rVert+\lVert y-x^{M} \rVert\leq \frac{1}{4}+\frac{1}{4}=\frac{1}{2}$$ que es absurdo  
->>5. Entonces tengo no numerables bolas disjuntas. No es separable
+>>14. Sea $N\subseteq \mathbb{N}$ $$x^{N}_{n}=\begin{cases}1 & \text{si }n\in N \\0 & \text{cc}\end{cases}$$
+>>15. Obviamente $2^{\aleph}$ (no numerables) sucesiones distintas de $0$ y $1s$   
+>>16. Dado $N$ y $M$ distintos entonces $\exists n_{0}\in N\setminus M$ por lo tanto $\lVert x^{N}-x^{M} \rVert_{\infty}=1$    
+>>17. Tomo bolas $B(\frac{1}{4},x^{N})$ y $B\left( \frac{1}{4},x^{M} \right)$ entonces si existiera un $y$ en la interseccion $$\lVert x^{N} -x^{M}\rVert\leq \lVert x^{N}-y \rVert+\lVert y-x^{M} \rVert\leq \frac{1}{4}+\frac{1}{4}=\frac{1}{2}$$ que es absurdo  
+>>18. Entonces tengo no numerables bolas disjuntas. No es separable
+
+>[!Remark] $X$ separable no implica $X'$ separable MEMO
+>1. $(\ell^{1})'$ no es separable por que vimos que si $p \in [1,\infty),q \in (1,\infty]$ hay un isomorfismo de $\ell^{q}$ en $(\ell^{p})'$ con $\frac{1}{p}+\frac{1}{q}$ [[Teórico 8#^bd2cdc]] entonces si $(\ell^{1})'$ fuese separable entonces $\ell^{\infty}$ seria separable  
+>2. Entonces $\ell^{1}$ separable pero $(\ell^{1})'$ no es separable
 
 >[!Remark] No hay isomorfismos entre $\ell_{1}$ y $(\ell^{\infty})'$ MEMO
 >1. $(\ell^{\infty})'$ no es separable por que si lo fuera $\ell^{\infty}$ seria separable por [[Teórico 11#^5cf5d9]]
->2. Por lo tanto no puede haber isomorfismo entre $\ell^{1}$ y $(\ell^{\infty})'$ pues $\ell^{1}$ es separable y $(\ell^{\infty})'$ no es separable. [[Teórico 6#^2cb23e]]
-
->[!Remark] No hay isomorfismos entre $\ell_{1}$ y $(\ell^{\infty})'$ MEMO
->1. $(\ell^{\infty})'$ no es separable por que si lo fuera $\ell^{\infty}$ seria separable por [[#^5cf5d9]]
 >2. Por lo tanto no puede haber isomorfismo entre $\ell^{1}$ y $(\ell^{\infty})'$ pues $\ell^{1}$ es separable y $(\ell^{\infty})'$ no es separable. [[Teórico 6#^2cb23e]]
 
 >[!Lemma] Extensiones en general
@@ -67,16 +84,16 @@
 >Tal que $$f_{W_{1}}(\alpha z_{1}+w)=\alpha\delta_{1}+f_{W}(w)\leq p(\alpha z_{1}+w)\quad \forall \alpha\in \mathbb{R}\quad\forall w\in W\quad (a)$$
 >En particular $f_{W_{1}}$ es lineal y extension de $f_{W}$
 >>[!Proof]-
->>1. $\forall u,v\in W$ es $f_{W}(u)+f_{W}(v)=f_{W}(u+v)\leq \lvert f_{W}(u+v) \rvert\leq p(u+v)\leq p(u-z_{1})+p(v+z_{1})$ (Por sublineal) 
->>2. entonces $f_{W}(u)-p(u-z_{1})\leq -f_{W}(v)+p(v+z_{1})$
->>3. Sea $\delta_{1}=\inf \{ -f_{W}(v)+p(v+z_{1}):v\in W \}>-\infty$ (2. Nos dice que esta acotado)
->>4. Entonces ahora definimos $f_{W_{1}}(\alpha z_{1}+w)=\alpha \delta_{1}+f_{W}(w)$
->>5. $-\delta_{1} +f_{W}(u)\leq p(u-z_{1})$ (Usando infimo en 2.)
->>6. $\delta_{1} +f_{W}(v)\leq p(v+z_{1})$ (Usando infimo en 2.)
->>7. Si $\alpha <0$ multiplicamos 5. por $-\alpha$ y escribiendo $w=-\alpha u$ obtenemos $(a)$
->>8. Si $\alpha >0$ multiplicamos 6. por $\alpha$ y escribiendo $w=\alpha v$ obtebemos $(a)$
->>9. Si $\alpha =0$ trivial
->>10. Entonces $f_{W_{1}}$ cumple la desigualdad 
+>>19. $\forall u,v\in W$ es $$f_{W}(u)+f_{W}(v)=f_{W}(u+v)\leq \lvert f_{W}(u+v) \rvert\leq p(u+v)\leq p(u-z_{1})+p(v+z_{1})$$ (Por sublineal) 
+>>20. entonces $f_{W}(u)-p(u-z_{1})\leq -f_{W}(v)+p(v+z_{1})$
+>>21. Sea $\delta_{1}=\inf \{ -f_{W}(v)+p(v+z_{1}):v\in W \}>-\infty$ (2. Nos dice que esta acotado)
+>>22. Entonces ahora definimos $f_{W_{1}}(\alpha z_{1}+w)=\alpha \delta_{1}+f_{W}(w)$
+>>23. $-\delta_{1} +f_{W}(u)\leq p(u-z_{1})$ (Usando infimo en 2.)
+>>24. $\delta_{1} +f_{W}(v)\leq p(v+z_{1})$ (Usando infimo en 2.)
+>>25. Si $\alpha <0$ multiplicamos 5. por $-\alpha$ y escribiendo $w=-\alpha u$ obtenemos $(a)$
+>>26. Si $\alpha >0$ multiplicamos 6. por $\alpha$ y escribiendo $w=\alpha v$ obtebemos $(a)$
+>>27. Si $\alpha =0$ trivial
+>>28. Entonces $f_{W_{1}}$ cumple la desigualdad 
 
 >[!Theorem] Hahn-Banach sobre $\mathbb{R}$ MEMO
 >$X$ espacio vectorial $p : X\rightarrow \mathbb{R}$ [[Teórico 10#^dafca5]]. 
@@ -93,7 +110,7 @@
 >>4. Sea $Z_{\tilde{E}}=\bigcup_{f\in \tilde{E}}D_{f}$. 
 >>	- Es directo ver que $Z_{\tilde{E}}$ es subespacio. 
 >>		1. Sea $x,y\in Z_{\tilde{E}}$ y $\alpha ,\beta\in \mathbb{R}$ entonces $x\in D_{f}$ e $y\in D_{g}$
->>		2. Por ser $\tilde{E}$ totalmente ordenado (o cadena) sin perdida de generalidades $f\leq g$ por lo tanto $D_{f}\subseteq D_{g}$ entonces $x,y\in D_{g}$ como $D_{g}$ subespacio $\alpha x+\beta y\in D_{g}$ 
+>>		2. Por ser $\tilde{E}$ totalmente ordenado (o cadena) sin perdida de generalidades $f\leq g$ por lo tanto $D_{f}\subseteq D_{g}$ entonces $x,y\in D_{g}$ como $D_{g}$ subespacio $\alpha x+\beta y\in D_{g}\subseteq Z_{\tilde{E}}$ 
 >>3. Definimos $f_{\tilde{E}}:Z_{\tilde{E}}\rightarrow\mathbb{R}$ de la siguiente manera. 
 >>	- Buena definicion
 >>		1. Dado $z\in Z_{\tilde{E}}$ sabemos $\exists \delta \in \tilde{E}$ tal que $z\in D_{\delta}$ entonces $f_{\tilde{E}}(z)=\delta(z)$ 
@@ -135,8 +152,24 @@
 >>	3. Por [[Teórico 10#^3a0090]] ($W=J_{X}(X)$ y tenemos $\tilde{x}\in X''\setminus J_{X}(X)$ y cumple $\delta >0$ por que $J_{X}(X)$ es cerrado) Existe $k\in X'''$ tal que $k(\tilde{x})=\delta\neq 0$ y $k(J_{X}(x))=k|_{J_{X}(X)}=0 \quad\forall x\in X$
 >>	4. Ademas como $X'$ es reflexivo $J_{X'}:X'\rightarrow X'''$ es sobre en particular $\exists g\in X'$ tal que $k=J_{X'}(g)$ osea $k(\psi)=(J_{X'}(g))(\psi)=\psi(g)\quad\forall \psi\in X''$ (Recordar $J_{X'}(f)$ es el funcional evaluar en $f$)
 >>	5. Luego $g(x)=(J_{X}(x))(g)=k(J_{X}(x))=0\quad\forall x\in X$. osea $g\equiv 0$. (La igualdad del medio es por la igualdad en 4.) 
->>	6. Pero como $\tilde{x}\in X''$ por $4.$ tenemos $\tilde{x}(g)=k(\tilde{x})\neq 0$ (esto ultimos por $3.$). Absurdo por que $g\equiv 0$ y $\tilde{x}$ es funcional lineal 
+>>	6. Pero como $\tilde{x}\in X''$ por $4.$ tenemos $\tilde{x}(g)=k(\tilde{x})=\delta \neq 0$. Absurdo por que $g\equiv 0$ y $\tilde{x}$ es funcional lineal 
 
+>[!Theorem] Anuladores y reflexividad
+>$X$ normado $W\subseteq X$ subespacio cerrado $Z\subseteq X'$ subespacio cerrado entonces
+>- (a)  $W=\ ^{\circ}(W^{\circ})$
+>- (b) Si $X$ reflexivo $Z=(^{\circ}Z)^{\circ}$
+>>[!Proof]-
+>>- (a)
+>>	1. Sabemos que $W\subseteq \ ^{\circ}(W^{\circ} )$ [[Teórico 12#^03be79]]
+>>	2. Supongamos $p \in \ ^{\circ}(W^{\circ})\setminus W$ . 
+>>	3. Como $W$ cerrado por [[Teórico 10#^3a0090]] existe $f\in X'$ tal que $f(p)\neq 0$ y $f\equiv 0$ en $W$ osea $f\in W^{\circ}$
+>>	4. Entonces $p \not\in \ ^{\circ}(W^{\circ})$. Absurdo
+>>- (b) 
+>>	1. Sabemos $Z\subseteq (^\circ Z)^{\circ}$. Supongamos que $\exists g\in (^{\circ}Z)^{\circ}\setminus Z$ ($g\in X'$) 
+>>	2. Como en parte $1.$ sabemos $\exists \psi \in X''$ tal que $(I) \ \psi(g)\neq 0$ y $\psi(f)=0\quad\forall f\in Z$
+>>	3. Como $X$ reflexivo $\exists q\in X$ tal que $\psi=J_{X}(q)$ osea $(II)\ \psi(f)=f(q)\quad\forall f\in X'$
+>>	4. Luego $f(q)=\psi(f)=0\quad\forall f\in Z$ osea que $q\in\ ^{\circ}Z$
+>>	5. Pero $g(q)=\psi(g)\neq 0$ por $(I),(II)$ entonces $g\not\in (^{\circ}Z)^{\circ}$. Absurdo
 # Teorico 13
 >[!Corollary] $c_{0}$ y $\ell^{\infty}$ no son reflexivos
 >Los espacios $c_{0}$ y $\ell^{\infty}$ no son reflexivos
@@ -155,13 +188,13 @@
 >>	1. Sea $S=T^{-1}$ entonces $S\in B( Y,X )$ y ademas esta bien definida $S'\in B( X',Y')$ por [[Teórico 13#^e98c72]]
 >>	2. Ahora $\forall x\in X ,f\in X'$ tenemos $$T'( S'(f))(x)=S'( f)( Tx)=f( S( Tx))=f( x)$$Osea $T'( S'( f))=f$ por lo tanto $T'\circ S'=Id_{X'}$  
 >>	3. Analogamente vemos $S'\circ T'=Id$
->>	4. Entonces $(T^{-1})'=S'=(T')^{-1}$ , como $T'$ tiene inversa , es isomorfismo  
+>>	4. Entonces $(T^{-1})'=S'=(T')^{-1}$ , como $T'$ tiene inversa continua , es isomorfismo  
 >>- (b) 
 >>	1. Por (a) basta ver que $T'$ es isometria. 
 >>	2. Por una parte $\lVert T'(f)(x) \rVert =\lVert f(Tx) \rVert \leq \lVert f \rVert \lVert T \rVert \lVert x \rVert$ (Con $\lVert T \rVert =1$ por ser isometria)
 >>	3. Entonces $\lVert T'(f) \rVert \leq \lVert f \rVert$ 
 >>	4. Por otro lado $\forall \epsilon>0\ \exists y\in Y$ con $\lVert y \rVert =1$ tal que $\lvert f(y) \rvert \geq \lVert f \rVert -\epsilon$ (Por def de supremo)
->>	5. Sea $x=T^{-1} y$ entonces $\lVert x \rVert =1$ (Pues $1= \lVert y \rVert =\lVert T(T^{-1} y) \rVert =\lVert T x \rVert =\lVert x \rVert$ ) 
+>>	5. Como $T$ isomorfismo existe $x\in X$ tal que $Tx=y$ como es isometria $1=\lVert y \rVert=\lVert Tx \rVert=\lVert x \rVert$  
 >>	6. Por lo tanto $\lVert T'(f) \rVert \geq \lvert T'(f)(x) \rvert =\lvert f(Tx) \rvert= \lvert f(y) \rvert \geq \lVert f \rVert -\epsilon$ (Por def de norma $\lVert T'(f) \rVert$ dado que $\lVert x \rVert=1$) 
 >>	7. Mostrando que $\lVert T'(f) \rVert =\lVert f \rVert$ 
 
@@ -310,7 +343,7 @@
 >$\mathcal{H}$ Hilbert y $T\in B(\mathcal{H})$ entonces $T$ invertible $\iff\ker (T^{*})=0$ y $\exists \alpha >0$ con $\lVert T(x) \rVert\geq \alpha \lVert x \rVert\quad\forall x\in \mathcal{H}$
 >>[!Proof]-
 >>- $(\Leftarrow)$  
->>	1. $K=0^{\perp}=\ker (T^{*})^{\perp}=(Im(T)^{\perp})^{\perp}=\overline{Im(T)}=Im(T)$ (Última igualdad por [[Teórico 7#^6e0039]]) 
+>>	1. $\mathcal{H}=0^{\perp}=\ker (T^{*})^{\perp}=(Im(T)^{\perp})^{\perp}=\overline{Im(T)}=Im(T)$ (Última igualdad por [[Teórico 7#^6e0039]]) 
 >>	2. Entonces $T$ es sobre.
 >>	3. Ademas si $Tx=0$ entonces $0=\lVert Tx \rVert\geq\alpha \lVert x \rVert$ por lo tanto $x=0$ entonces es inyectiva
 >>	4. Como $\mathcal{H}$ es Banach entonces por aplicacion abierta $T$ es invertible 
@@ -333,7 +366,7 @@
 >[!Corollary] Desigualdad implica inversible con operadores normales MEMO
 >$T\in B(\mathcal{H})$ es normal entonces $T$ inversible $\iff \exists \alpha >0$ tal que $\lVert Tx \rVert\geq\alpha \lVert x \rVert\quad\forall x\in \mathcal{H}$
 >>[!Proof]-
->>$(\Leftarrow)$ [[#^6cb446]] implica $\ker T^{*}=\{ 0 \}$ luego por [[Teórico 14#^5be0d2]]
+>>$(\Leftarrow)$ [[Teórico 15#^6cb446]] implica $\ker T^{*}=\{ 0 \}$ luego por [[Teórico 14#^5be0d2]]
 >>$(\Rightarrow)$  Sale directo de [[Teórico 14#^5be0d2]]
 
 >[!Lemma] Las autoadjuntas forman Banach real
@@ -369,14 +402,14 @@
 >>	3. Dando vuelta los factores llegamos a $U^{*}U=Id$. Mostrando que $U\in \mathcal{U}$  
 
 >[!Theorem] Espectro es compacto y sus elementos menores (modulo) que norma del operador 
->$\mathcal{H}$ Hilbert y $T\in B(\mathcal{H})$
+>$\mathcal{H}$ Hilbert y $T\in B(\mathcal{H})$ (Creo aca se asume $\lambda\neq0$) 
 >- (a) $\lvert \lambda \rvert > \lVert T \rVert$ entonces $\lambda\not\in \sigma(T)$
 >- (b) $\sigma(T)$ es cerrado osea $\sigma(T)$ compacto (en $\mathbb{C}$  cerrado y acotado es compacto) 
 >>[!Proof]-
 >>- (a) 
 >>	1. Si $\lvert \lambda \rvert>\lVert T \rVert$ entonces $\lVert \lambda^{-1}T \rVert <1$ 
 >>	2. Luego $I-\lambda^{-1}T$ es inversible por [[Teórico 6#^aa4e9d]]
->>	3. Por lo tanto $\lambda I-T$ es inversible tambien (componiendo con $\lambda I$ que es inversible) , mostrando que $\lambda\not\in\sigma(T)$    
+>>	3. Por lo tanto $T - \lambda I$ es inversible tambien (componiendo con la funcion multiplicar por $-\lambda$ que es inversible) , mostrando que $\lambda\not\in\sigma(T)$    
 >>- (b)
 >>	1. Sea $F : \mathbb{C}\rightarrow B(H)$ dada por $F(\lambda)=\lambda I-T$ entonces $F$ es continua pues $$\lVert F(u)-F(\lambda) \rVert =\lVert uI-T-\lambda I+T \rVert=\lvert u-\lambda \rvert \lVert I \rVert =\lvert u-\lambda \rvert  $$
 >>	2. Luego como $G=\{ T\in B(\mathcal{H}): T\text{ no es inversible} \}$ es cerrado por que $G^{c}$ es abierto por [[Teórico 6#^efd74a]]
@@ -401,11 +434,20 @@
 >>	3. Ahora $$\begin{align}\lambda\not\in\sigma(p(T))&\iff\lambda I-p(T)\text{ inversible} \\ &\iff f(T)\text{ inversible} \\&\iff c\prod(T-u_{j}I)\text{ inversible}  \\(*)&\iff T-u_{j}I \text{ inversible}\quad\forall 1\leq j\leq n  \\ &\iff \text{ los ceros de }f\not\in\sigma(T)  \\ &\iff f(u)\neq 0\quad\forall u\in \sigma(T) \\ &\iff \lambda\neq p(u)\quad\forall u\in \sigma(T)\\ \end{align}$$(*) ($T_{1}T_{2}$ inversible $\iff T_{1}$ y $T_{2}$ son inversibles) $\iff T_{1},T_{2}$ conmutan y en este caso conmutan por lo cual vale el sii
 >>- (b)
 >>	1. $T^{-1}$ inversible entonces $0\not\in\sigma(T^{-1})$
->>	2. Entonces todo elemento de $\sigma(T^{-1})$ se puede escribir como $u^{-1}$ con $u\in \mathbb{C}$. Ademas $$u^{-1}I-T^{-1}=-T^{-1}u^{-1}(uI-T)\quad (-T^{-1}u^{-1} \text{ es invertible por que su inversa es obviamente }-uT)$$
->>	3. Entonces (del 3er al 4to sii devuelta usando que si conmutan entonces cada parte es inversible si la composicion lo es) $$\begin{align} u^{-1}\in \sigma(T^{-1})&\iff u^{-1}I-T^{-1} \text{ es no inversible}\\ &\iff -T^{-1}u^{-1}(uI-T) \text{ es no inversible} \\ &\iff uI-T \text{ es no inversible} \\ &\iff u\in \sigma(T)\\ \end{align}$$ 
+>>	2. Entonces todo elemento de $\sigma(T^{-1})$ se puede escribir como $u^{-1}$ con $u\in \mathbb{C}$. Ademas $$T^{-1}-u^{-1}I=-T^{-1}u^{-1}(T-uI)\quad (-T^{-1}u^{-1} \text{ es invertible por que su inversa es obviamente }-uT)$$
+>>	3. Entonces (del 3er al 4to sii devuelta usando que si conmutan entonces cada parte es inversible si la composicion lo es) $$\begin{align} u^{-1}\in \sigma(T^{-1})&\iff T^{-1}-u^{-1}I \text{ es no inversible}\\ &\iff -T^{-1}u^{-1}(T-uI) \text{ es no inversible} \\ &\iff T-uI \text{ es no inversible} \\ &\iff u\in \sigma(T)\\ \end{align}$$ 
 >>	4. Entonces $\sigma(T^{-1})=\{ u^{-1}:u\in \sigma(T) \}$  
 
->[!Theorem] SOLO c
+>[!Corollary]
+>Si $U\in B(\mathcal{H})$ es unitario $$\sigma(U)\subseteq \{ \lambda\in \mathbb{C}:\lvert \lambda \rvert =1 \}$$
+>>[!Proof]-
+>>1. Si $U$ unitario y recordemos que los unitarios son isometrias [[Teórico 15#^317da9]]) entonces $\lVert U \rVert=1$ 
+>>2. Luego $\sigma(U)\subseteq \{ \lambda\in \mathbb{C}:\lvert \lambda \rvert\leq 1 \}$ por [[Teórico 15#^4949f7]]
+>>3. Tambien $\sigma(U^{*})\subseteq \{ \lambda\in \mathbb{C}:\lvert \lambda \rvert\leq 1 \}$ por que $U^{*}$ tambien es unitario
+>>4. Pero $U^{*}=U^{-1}$ (def unitario) entonces $$\sigma(U)=\sigma((U^{-1})^{-1})=\sigma((U^{*} )^{-1})=\{ \lambda^{-1}:\lambda\in \sigma(U^{*} ) \}\subseteq \{ \lambda\in \mathbb{C}:\lvert \lambda \rvert \geq1 \}$$
+>>Por [[Teórico 15#^145b8c]] (b) la ultima igualdad, la inclusión por 2.
+
+>[!Theorem] MEMO Solo (c) 
 >Sean $\mathcal{H}$ Hilbert $S\in B(\mathcal{H})$ audoadjunto entonces
 >- (a) $V(S)\subseteq \mathbb{R}$
 >- (b) $\sigma(S)\subseteq \mathbb{R}$
@@ -426,7 +468,7 @@
 >>	5. Y como $S$ auto adjunta entonces $S^{2}$ auto adjunta entonces
 >>	6. Usando que $\lVert S(x_{n}) \rVert^{2}=(S(x_{n}),S(x_{n}))=(S^{2}(x_{n}),x_{n})$ por autoadjunta y por que $\lVert x_{n} \rVert=1$ y usando $\lVert S^{2}(x_{n}) \rVert\leq\lVert S \rVert\lVert S \rVert\lVert x_{n} \rVert=1$ vemos que $$\lVert x_{n} \rVert^{2}+\lVert S^{2}(x_{n}) \rVert^{2}-2(S^{2}(x_{n}),x_{n})\leq 2-2\lVert S(x_{n}) \rVert^{2}$$
 >>	7. Entonces $\lim_{ n \to \infty }\lVert (I-S^{2})(x_{n}) \rVert^{2}=0$     
->>	8. Como $S^{2}$ es normal (pues es autoadjunta) luego por [[#^acb07f]] $I-S^{2}$ es NO invertible
+>>	8. Como $S^{2}$ es normal (pues es autoadjunta) luego por [[Teórico 15#^acb07f]] $I-S^{2}$ es NO invertible entonces $S^{2}-I$ es no invertible 
 >>	9. Entonces $1\in \sigma(S^{2})=\{ \lambda^{2}:\lambda\in \sigma(S) \}$ (Ultima igualdad por [[#^145b8c]] (a)) 
 >>	10. Por lo tanto $\lVert S \rVert=1\in \sigma(S)$ o $-\lVert S \rVert=-1\in \sigma(S)$ 
 >>	11. Notar que si no tenia norma 1 entonces $T=\frac{S}{\lVert S \rVert}$ entonces $T$ es autoadjunta de norma 1 usando la misma demo $1= \lVert T \rVert\in \sigma(T)$ pero $\sigma(T)=\sigma\left( \frac{S}{\lVert S \rVert} \right)=\frac{1}{\lVert S \rVert}\sigma(S)$ por [[Teórico 15#^4a41e5]]
@@ -452,30 +494,29 @@
 >>[!Proof]-
 >>1. Como $I$ y $P$ son autoadjuntos, también lo es $I - P$. [[Teórico 15#^2e9773]] 
 >>2. Además, como $P^2 = P$ $$(I - P)^2 = I - 2P + P^2 = I - 2P + P = I - P$$por lo tanto, $I - P$ es una proyección ortogonal. 
->>3. Ahora sea $z\in \mathcal{M}^{\perp}$ entonces $(I-P)z=z-P(z)=z$ por lo tanto $\mathcal{M} \subseteq Im(I-P)$ y la otra contencion es trivial entonces $\mathcal{M}^{\perp}=Im(I-P)$ 
->>4. Finalmente por [[Teórico 16#^21a7c0]] (b) $I-P=P_{Im(I-P)}=P_{\mathcal{M}^{\perp}}$   
+>>3. Sea $x\in \mathcal{H}$ entonces $x=x_{1}+x_{2}$ con $x_{1}\in \mathcal{M}$ $x_{2}\in \mathcal{M}^{\perp}$ entonces $$(I-P)x=x_{1}+x_{2}-Px_{1}-Px_{2}=x_{2}$$ mostrando que $I-P$ es proyectar sobre $\mathcal{M}$      
 
 >[!Corollary]
 >Si $\mathcal{H}$ es un espacio de Hilbert complejo, $\mathcal{M}$ es un subespacio lineal cerrado de $\mathcal{H}$, $\{e_n\}_{n=1}^J$ es una base ortonormal para $\mathcal{M}$, donde $J$ es un número entero positivo o $\infty$, y $P$ es la proyección ortogonal de $H$ sobre $\mathcal{M}$, entonces 
 >$$P_{\mathcal{M}}x = \sum_{n=1}^J (x, e_n) e_n$$
 >>[!Proof]-
->>1. Notar que $ImP_{\mathcal{M}}\subseteq \mathcal{M}$ (Por definicion sale como en paso 6. a 8. del [[Teórico 16#^21a7c0]] (b))
->>2. Por lo tanto dado $P_{\mathcal{M}}x\in \mathcal{M}$ $$P_{\mathcal{M}}x=\sum^{J}_{n=1}(P_{\mathcal{M}}x,e_{n})e_{n}=\sum^{J}_{n=1}(x,P_{\mathcal{M}}e_{n})e_{n}=\sum^{J}_{n=1}(x,e_{n})e_{n}$$ Usamos $P_{\mathcal{M}}$ es autoadjunta y que $e_{n}\in \mathcal{M}$ 
+>>4. Notar que $ImP_{\mathcal{M}}\subseteq \mathcal{M}$ (Por definicion sale como en paso 6. a 8. del [[Teórico 16#^21a7c0]] (b))
+>>5. Por lo tanto dado $P_{\mathcal{M}}x\in \mathcal{M}$ $$P_{\mathcal{M}}x=\sum^{J}_{n=1}(P_{\mathcal{M}}x,e_{n})e_{n}=\sum^{J}_{n=1}(x,P_{\mathcal{M}}e_{n})e_{n}=\sum^{J}_{n=1}(x,e_{n})e_{n}$$ Usamos $P_{\mathcal{M}}$ es autoadjunta y que $e_{n}\in \mathcal{M}$ 
 
 >[!Lemma]
 >Sea $H$ un espacio de Hilbert complejo, y sea $\mathcal{S}$ el espacio de Banach real de todos los operadores autoadjuntos en $B(H)$. Si $S \in \mathcal{S}$, entonces existe un $\Phi \in B(\mathcal{C}_{\mathbb{R}}(\sigma(S)), \mathcal{S})$ tal que:
 >- (a) $\Phi(p) = p(S)$ siempre que $p$ sea un polinomio en $\mathcal{C}_\mathbb{R}(\sigma(S))$;  
 >- (b) $\Phi(fg) = \Phi(f)\Phi(g)$ para todo $f, g \in \mathcal{C}_\mathbb{R}(\sigma(S))$
 >>[!Proof]-
->> 1. Sea $\mathcal{P}$ el subespacio lineal de $\mathcal{C}_\mathbb{R}(\sigma(S))$ compuesto por todos los polinomios. 
->> 2. Definimos $\varphi : \mathcal{P} \to \mathcal{S}$ por $\varphi(p) = p(S)$. 
->> 3. Entonces, $\varphi$ es una transformación lineal tal que $\varphi(pq) = \varphi(p)\varphi(q)$ para todo $p \in \mathcal{P}$ por [[Teórico 6#^c381db]] 
->> 4. Además como $p(S)$ es autoadjunta ([[Teórico 15#^2e9773]] y $A^{n}$ autoadjunta si $A$ autoadjujta ) 
->> 5. usando [[Teórico 15#^d51465]] (e) y [[Teórico 15#^145b8c]] (a) 
+>> 6. Sea $\mathcal{P}$ el subespacio lineal de $\mathcal{C}_\mathbb{R}(\sigma(S))$ compuesto por todos los polinomios. 
+>> 7. Definimos $\varphi : \mathcal{P} \to \mathcal{S}$ por $\varphi(p) = p(S)$. 
+>> 8. Entonces, $\varphi$ es una transformación lineal tal que $\varphi(pq) = \varphi(p)\varphi(q)$ para todo $p \in \mathcal{P}$ por [[Teórico 6#^c381db]] 
+>> 9. Además como $p(S)$ es autoadjunta ([[Teórico 15#^2e9773]] y $A^{n}$ autoadjunta si $A$ autoadjujta ) 
+>> 10. usando [[Teórico 15#^d51465]] (e) y [[Teórico 15#^145b8c]] (a) 
 >> $$\begin{align} \|\varphi(p)\| = \|p(S)\| = r_\sigma(p(S)) & = \sup\{|\mu| : \mu \in \sigma(p(S))\}\\& = \sup\{|p(\lambda)| : \lambda \in \sigma(S)\} \\&= \|p\|_{\infty}\end{align}$$ (notar $p \in \mathcal{C}_{\mathbb{R}}(\sigma(S))$ y como $\sigma(S)$ es compacto. Dicha norma existe y es finita) 
->> 6. Así, $\varphi$ es una isometría. (Ergo es continua) 
->> 7. Como $S$ es un espacio de Banach real y $\mathcal{P}$ es denso en $\mathcal{C}_{\mathbb{R}}(\sigma(S))$ (además usando que el espectro es compacto para usar [[Teórico 4#^f39524]] ) existe $\Phi \in B(\mathcal{C}_\mathbb{R}(\sigma(S)), S)$ tal que $\Phi(p) = \varphi(p)\quad\forall p\in \mathcal{P}$ por [[Teórico 5#^33d528]] (b) 
->> 8. Además, como $\varphi(pq) = \varphi(p)\varphi(q)$ para todo $p \in \mathcal{P}$ se sigue que $\Phi(fg) = \Phi(f)\Phi(g)$ para todo $f, g \in \mathbb{C}_{\mathbb{R}}(\sigma(S))$ por la densidad de $\mathcal{P}$ en $\mathbb{C}_{\mathbb{R}}(\sigma(S))$ y la continuidad de $\Phi$.
+>> 11. Así, $\varphi$ es continua osea $\varphi \in  B(\mathcal{P},\mathcal{S})$ (Ademas una isometria) 
+>> 12. Como $\mathcal{S}$ es un espacio de Banach real y $\mathcal{P}$ es denso en $\mathcal{C}_{\mathbb{R}}(\sigma(S))$ (además usando que el espectro es compacto para usar [[Teórico 4#^f39524]] ) existe $\Phi \in B(\mathcal{C}_\mathbb{R}(\sigma(S)), \mathcal{S})$ tal que $\Phi(p) = \varphi(p)\quad\forall p\in \mathcal{P}$ por [[Teórico 5#^33d528]] (b) 
+>> 13. Además, como $\varphi(pq) = \varphi(p)\varphi(q)$ para todo $p \in \mathcal{P}$ se sigue que $\Phi(fg) = \Phi(f)\Phi(g)$ para todo $f, g \in \mathbb{C}_{\mathbb{R}}(\sigma(S))$ por la densidad de $\mathcal{P}$ en $\mathbb{C}_{\mathbb{R}}(\sigma(S))$ y la continuidad de $\Phi$.
 
 >[!Theorem] DUDA
 > Sea $\mathcal{H}$ un espacio de Hilbert complejo, sea $\mathcal{S}$ el espacio de Banach de todos los operadores autoadjuntos en $B(\mathcal{H})$ y sea $S \in \mathcal{S}$ positivo.

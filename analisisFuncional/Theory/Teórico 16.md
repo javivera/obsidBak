@@ -114,13 +114,12 @@ dateCreated: 2024-10-27,13:06
 
 ^21a7c0
 
->[!Lemma] MEMO
+>[!Lemma] $I-P$ es proyeccion ortogonal sobre el ortogonal MEMO
 >Si $\mathcal{H}$ es un espacio de Hilbert complejo, $\mathcal{M}$ es un subespacio lineal cerrado de $\mathcal{H}$ y $P$ es la proyección ortogonal de $\mathcal{H}$ sobre $\mathcal{M}$, entonces $I - P$ es la proyección ortogonal de $\mathcal{H}$ sobre $\mathcal{M}^\perp$.
 >>[!Proof]-
 >>1. Como $I$ y $P$ son autoadjuntos, también lo es $I - P$. [[Teórico 15#^2e9773]] 
 >>2. Además, como $P^2 = P$ $$(I - P)^2 = I - 2P + P^2 = I - 2P + P = I - P$$por lo tanto, $I - P$ es una proyección ortogonal. 
->>3. Ahora sea $z\in \mathcal{M}^{\perp}$ entonces $(I-P)z=z-P(z)=z$ por lo tanto $\mathcal{M} \subseteq Im(I-P)$ y la otra contencion es trivial entonces $\mathcal{M}^{\perp}=Im(I-P)$ 
->>4. Finalmente por [[Teórico 16#^21a7c0]] (b) $I-P=P_{Im(I-P)}=P_{\mathcal{M}^{\perp}}$   
+>>3. Sea $x\in \mathcal{H}$ entonces $x=x_{1}+x_{2}$ con $x_{1}\in \mathcal{M}$ $x_{2}\in \mathcal{M}^{\perp}$ entonces $$(I-P)x=x_{1}+x_{2}-Px_{1}-Px_{2}=x_{2}$$ mostrando que $I-P$ es proyectar sobre $\mathcal{M}$      
 
 >[!Remark]
 >Para la proyección ortogonal $P$ considerada en [[#^9a80dc]] el operador $I - P$ está dado por $(I - P)(x, y, z) = (0, 0, z)$ y es la proyección ortogonal sobre el subespacio $\{(0, 0, z) : z \in \mathbb{C}\}$
@@ -132,8 +131,8 @@ dateCreated: 2024-10-27,13:06
 >Si $\mathcal{H}$ es un espacio de Hilbert complejo, $\mathcal{M}$ es un subespacio lineal cerrado de $\mathcal{H}$, $\{e_n\}_{n=1}^J$ es una base ortonormal para $\mathcal{M}$, donde $J$ es un número entero positivo o $\infty$, y $P$ es la proyección ortogonal de $H$ sobre $\mathcal{M}$, entonces 
 >$$P_{\mathcal{M}}x = \sum_{n=1}^J (x, e_n) e_n$$
 >>[!Proof]-
->>1. Notar que $ImP_{\mathcal{M}}\subseteq \mathcal{M}$ (Por definicion sale como en paso 6. a 8. del [[Teórico 16#^21a7c0]] (b))
->>2. Por lo tanto dado $P_{\mathcal{M}}x\in \mathcal{M}$ $$P_{\mathcal{M}}x=\sum^{J}_{n=1}(P_{\mathcal{M}}x,e_{n})e_{n}=\sum^{J}_{n=1}(x,P_{\mathcal{M}}e_{n})e_{n}=\sum^{J}_{n=1}(x,e_{n})e_{n}$$ Usamos $P_{\mathcal{M}}$ es autoadjunta y que $e_{n}\in \mathcal{M}$ 
+>>4. Notar que $ImP_{\mathcal{M}}\subseteq \mathcal{M}$ (Por definicion sale como en paso 6. a 8. del [[Teórico 16#^21a7c0]] (b))
+>>5. Por lo tanto dado $P_{\mathcal{M}}x\in \mathcal{M}$ $$P_{\mathcal{M}}x=\sum^{J}_{n=1}(P_{\mathcal{M}}x,e_{n})e_{n}=\sum^{J}_{n=1}(x,P_{\mathcal{M}}e_{n})e_{n}=\sum^{J}_{n=1}(x,e_{n})e_{n}$$ Usamos $P_{\mathcal{M}}$ es autoadjunta y que $e_{n}\in \mathcal{M}$ 
 
 ^f02ad5
 
@@ -151,15 +150,15 @@ dateCreated: 2024-10-27,13:06
 >- (a) $\Phi(p) = p(S)$ siempre que $p$ sea un polinomio en $\mathcal{C}_\mathbb{R}(\sigma(S))$;  
 >- (b) $\Phi(fg) = \Phi(f)\Phi(g)$ para todo $f, g \in \mathcal{C}_\mathbb{R}(\sigma(S))$
 >>[!Proof]-
->> 1. Sea $\mathcal{P}$ el subespacio lineal de $\mathcal{C}_\mathbb{R}(\sigma(S))$ compuesto por todos los polinomios. 
->> 2. Definimos $\varphi : \mathcal{P} \to \mathcal{S}$ por $\varphi(p) = p(S)$. 
->> 3. Entonces, $\varphi$ es una transformación lineal tal que $\varphi(pq) = \varphi(p)\varphi(q)$ para todo $p \in \mathcal{P}$ por [[Teórico 6#^c381db]] 
->> 4. Además como $p(S)$ es autoadjunta ([[Teórico 15#^2e9773]] y $A^{n}$ autoadjunta si $A$ autoadjujta ) 
->> 5. usando [[Teórico 15#^d51465]] (e) y [[Teórico 15#^145b8c]] (a) 
+>> 6. Sea $\mathcal{P}$ el subespacio lineal de $\mathcal{C}_\mathbb{R}(\sigma(S))$ compuesto por todos los polinomios. 
+>> 7. Definimos $\varphi : \mathcal{P} \to \mathcal{S}$ por $\varphi(p) = p(S)$. 
+>> 8. Entonces, $\varphi$ es una transformación lineal tal que $\varphi(pq) = \varphi(p)\varphi(q)$ para todo $p \in \mathcal{P}$ por [[Teórico 6#^c381db]] 
+>> 9. Además como $p(S)$ es autoadjunta ([[Teórico 15#^2e9773]] y $A^{n}$ autoadjunta si $A$ autoadjujta ) 
+>> 10. usando [[Teórico 15#^d51465]] (e) y [[Teórico 15#^145b8c]] (a) 
 >> $$\begin{align} \|\varphi(p)\| = \|p(S)\| = r_\sigma(p(S)) & = \sup\{|\mu| : \mu \in \sigma(p(S))\}\\& = \sup\{|p(\lambda)| : \lambda \in \sigma(S)\} \\&= \|p\|_{\infty}\end{align}$$ (notar $p \in \mathcal{C}_{\mathbb{R}}(\sigma(S))$ y como $\sigma(S)$ es compacto. Dicha norma existe y es finita) 
->> 6. Así, $\varphi$ es una isometría. (Ergo es continua) 
->> 7. Como $S$ es un espacio de Banach real y $\mathcal{P}$ es denso en $\mathcal{C}_{\mathbb{R}}(\sigma(S))$ (además usando que el espectro es compacto para usar [[Teórico 4#^f39524]] ) existe $\Phi \in B(\mathcal{C}_\mathbb{R}(\sigma(S)), S)$ tal que $\Phi(p) = \varphi(p)\quad\forall p\in \mathcal{P}$ por [[Teórico 5#^33d528]] (b) 
->> 8. Además, como $\varphi(pq) = \varphi(p)\varphi(q)$ para todo $p \in \mathcal{P}$ se sigue que $\Phi(fg) = \Phi(f)\Phi(g)$ para todo $f, g \in \mathbb{C}_{\mathbb{R}}(\sigma(S))$ por la densidad de $\mathcal{P}$ en $\mathbb{C}_{\mathbb{R}}(\sigma(S))$ y la continuidad de $\Phi$.
+>> 11. Así, $\varphi$ es continua osea $\varphi \in  B(\mathcal{P},\mathcal{S})$ (Ademas una isometria) 
+>> 12. Como $\mathcal{S}$ es un espacio de Banach real y $\mathcal{P}$ es denso en $\mathcal{C}_{\mathbb{R}}(\sigma(S))$ (además usando que el espectro es compacto para usar [[Teórico 4#^f39524]] ) existe $\Phi \in B(\mathcal{C}_\mathbb{R}(\sigma(S)), \mathcal{S})$ tal que $\Phi(p) = \varphi(p)\quad\forall p\in \mathcal{P}$ por [[Teórico 5#^33d528]] (b) 
+>> 13. Además, como $\varphi(pq) = \varphi(p)\varphi(q)$ para todo $p \in \mathcal{P}$ se sigue que $\Phi(fg) = \Phi(f)\Phi(g)$ para todo $f, g \in \mathbb{C}_{\mathbb{R}}(\sigma(S))$ por la densidad de $\mathcal{P}$ en $\mathbb{C}_{\mathbb{R}}(\sigma(S))$ y la continuidad de $\Phi$.
 
 ^e6333b
 

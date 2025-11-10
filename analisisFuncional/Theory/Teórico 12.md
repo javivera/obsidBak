@@ -66,7 +66,7 @@ tags:
 
 ^30c58d
 
->[!Corollary] $J_{X}$ es isometria
+>[!Corollary] $J_{X}$ es isometria isomorfa
 >$J_{X}:X\rightarrow X''$ es una isometria. En particular:
 >- (a) $X$ es isometricamente isomorfo a un subconjunto de $X''$ (de hecho a $J_{X}(X)$)
 >- (b) $X$ es isometricamente isomorfo a un suconjunto denso de un Banach
