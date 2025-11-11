@@ -172,16 +172,16 @@ dateCreated: 2024-10-27,13:06
 >- (b) Si $Q$ es cualquier raíz cuadrada positiva de $S$, entonces $R = Q$
 >>[!Proof]-
 >>- (a) 
->>	1. Como $S$ es positivo es autoadjunto entonces $\sigma(S) \subseteq [0, \infty)$ por [[#^ea1bda]]
+>>	1. Como $S$ es positivo es autoadjunto entonces $\sigma(S) \subseteq [0, \infty)$ por [[Teórico 16#^ea1bda]]
 >>	2. Entonces $f : \sigma(S) \to \mathbb{R}$ y $g : \sigma(S) \to \mathbb{R}$ definidos por $$f(x) = x^{1/4}, \quad g(x) = x^{1/2} \quad \text{y} \quad j(x) = x$$están en $\mathbb{C}_\mathbb{R}(\sigma(S))$. 
->>	3. Sea $R=g(S)$ y $T=f(S)$ que son autoadjuntas (recordar [[#^e6333b]] $\Phi:\mathcal{C}_{\mathbb{R}}(\sigma(S))\to\mathcal{S}$ entonces $T=f(S)=\Phi(f)\in \mathcal{S}$)  
+>>	3. Sea $R=g(S)$ y $T=f(S)$ que son autoadjuntas (recordar [[Teórico 16#^e6333b]] $\Phi:\mathcal{C}_{\mathbb{R}}(\sigma(S))\to\mathcal{S}$ entonces $T=f(S)=\Phi(f)\in \mathcal{S}$)  
 >>	4. El conjunto $\mathcal{P}$ es denso en $\mathbb{C}_R(\sigma(S))$ entonces existen polinomios $g_{n}$ que convergen a $g$.
 >>	5. Luego $R=g(S)=\lim_{ n \to \infty }g_{n}(S)$ que son una secuencia de polinomios evaluados en $S$  
->>	6. Además, por el [[#^e6333b]] (b) $$R^2 = (g(S))^2 = g^2(S) = j(S) = S$$ por lo que $R$ es una raíz cuadrada de $S$ y $$T^2 = (f(S))^2 = f^2(S) = g(S) = R$$
+>>	6. Además, por el [[Teórico 16#^e6333b]] (b) $$R^2 = (g(S))^2 = g^2(S) = j(S) = S$$ por lo que $R$ es una raíz cuadrada de $S$ y $$T^2 = (f(S))^2 = f^2(S) = g(S) = R$$
 >>	7. Entonces $R$ es positivo porque $$(Rx,x)=(T^{2}x,x)=(Tx,T^{*}x)=(Tx,Tx)=\lVert Tx \rVert^{2}\geq0\quad\forall x\in \mathcal{H}$$
 >>- (b) 
 >>	1. Como $$QS = QQ^2 = Q^2Q = SQ$$
->>	2. Si $p$ es cualquier polinomio, entonces $Qp(S) = p(S)Q$ (Usando que comutan por el 1.) 
+>>	2. Entonces $p$ es cualquier polinomio, entonces $Qp(S) = p(S)Q$ (Usando que comutan por el 1.) 
 >>	3. Entonces, como $R$ es el límite de una secuencia de polinomios en $S$ $$QR = RQ$$
 >>	4. Como $Q$ es positivo, $Q$ tiene una raíz cuadrada positiva $P$ por la parte (a). Ergo $P^{2}=Q$ 
 >>	5. Sea $x \in \mathcal{H}$ e $y=(R-Q)x$. Entonces como $R^2 = Q^2 = S$ y $T,P$ auto adjuntas $T$ defimida en el (a) cumple $T^{2}=R$  $$\begin{align}\|T y\|^2 + \|P y\|^2 & = (T^2 y, y) + (P^2 y, y)\\& = ((R + Q)y, y)\\& = ((R + Q)(R - Q)x, y)&& (y=(R-Q)x)\\& =((R^{2}-Q^{2})x,y)&&(QR=RQ)\\&= 0\end{align}$$

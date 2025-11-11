@@ -185,7 +185,7 @@ dateCreated: 2024-10-19,11:18
 
 ^bdf665
 
->[!Theorem] Espectro es compacto y sus elementos menores (modulo) que norma del operador 
+>[!Theorem] Espectro es compacto y sus elementos menores (modulo) que norma del operador MEMO
 >$\mathcal{H}$ Hilbert y $T\in B(\mathcal{H})$ (Creo aca se asume $\lambda\neq0$) 
 >- (a) $\lvert \lambda \rvert > \lVert T \rVert$ entonces $\lambda\not\in \sigma(T)$
 >- (b) $\sigma(T)$ es cerrado osea $\sigma(T)$ compacto (en $\mathbb{C}$  cerrado y acotado es compacto) 
@@ -195,7 +195,7 @@ dateCreated: 2024-10-19,11:18
 >>	2. Luego $I-\lambda^{-1}T$ es inversible por [[Teórico 6#^aa4e9d]]
 >>	3. Por lo tanto $T - \lambda I$ es inversible tambien (componiendo con la funcion multiplicar por $-\lambda$ que es inversible) , mostrando que $\lambda\not\in\sigma(T)$    
 >>- (b)
->>	1. Sea $F : \mathbb{C}\rightarrow B(H)$ dada por $F(\lambda)=\lambda I-T$ entonces $F$ es continua pues $$\lVert F(u)-F(\lambda) \rVert =\lVert uI-T-\lambda I+T \rVert=\lvert u-\lambda \rvert \lVert I \rVert =\lvert u-\lambda \rvert  $$
+>>	1. Sea $F : \mathbb{C}\rightarrow B(H)$ dada por $F(\lambda)=T - \lambda I$ entonces $F$ es continua pues $$\lVert F(u)-F(\lambda) \rVert =\lVert T- uI -T + \lambda I \rVert=\lvert \lambda-u \rvert \lVert I \rVert =\lvert \lambda - u \rvert  $$
 >>	2. Luego como $G=\{ T\in B(\mathcal{H}): T\text{ no es inversible} \}$ es cerrado por que $G^{c}$ es abierto por [[Teórico 6#^efd74a]]
 >>	3. Y como $\sigma(T)=F^{-1}(G)$ entonces $\sigma(T)$ es cerrado 
 

@@ -411,7 +411,7 @@
 >>	2. Luego $I-\lambda^{-1}T$ es inversible por [[Teórico 6#^aa4e9d]]
 >>	3. Por lo tanto $T - \lambda I$ es inversible tambien (componiendo con la funcion multiplicar por $-\lambda$ que es inversible) , mostrando que $\lambda\not\in\sigma(T)$    
 >>- (b)
->>	1. Sea $F : \mathbb{C}\rightarrow B(H)$ dada por $F(\lambda)=\lambda I-T$ entonces $F$ es continua pues $$\lVert F(u)-F(\lambda) \rVert =\lVert uI-T-\lambda I+T \rVert=\lvert u-\lambda \rvert \lVert I \rVert =\lvert u-\lambda \rvert  $$
+>>	1. Sea $F : \mathbb{C}\rightarrow B(H)$ dada por $F(\lambda)=T - \lambda I$ entonces $F$ es continua pues $$\lVert F(u)-F(\lambda) \rVert =\lVert T- uI -T + \lambda I \rVert=\lvert \lambda-u \rvert \lVert I \rVert =\lvert \lambda - u \rvert  $$
 >>	2. Luego como $G=\{ T\in B(\mathcal{H}): T\text{ no es inversible} \}$ es cerrado por que $G^{c}$ es abierto por [[Teórico 6#^efd74a]]
 >>	3. Y como $\sigma(T)=F^{-1}(G)$ entonces $\sigma(T)$ es cerrado 
 
@@ -419,9 +419,9 @@
 >$\mathcal{H}$ Hilbert, $T\in B(H)$ entonces 
 >$$\sigma(T^{*} )=\{ \overline{\lambda}:\lambda\in \sigma(T)  \}$$
 >>[!Proof]-
->>1. Si $\lambda\not\in\sigma(T)$ entonces $T-\lambda I$ es inversible  
->>2. Luego $(T-\lambda I)^{*}=T^{*}-\overline{\lambda} I$ es inversible Por [[Teórico 15#^b9f186]] entonces $\overline{\lambda}\not\in\sigma(T^{*})$  
->>3. Permutando los roles de $T$ y $T^{*}$ deducimos que $\overline{\lambda}\not\in\sigma(T^{*})$ entonces $\lambda \not\in\sigma(T)$ 
+>>4. Si $\lambda\not\in\sigma(T)$ entonces $T-\lambda I$ es inversible  
+>>5. Luego $(T-\lambda I)^{*}=T^{*}-\overline{\lambda} I$ es inversible Por [[Teórico 15#^b9f186]] entonces $\overline{\lambda}\not\in\sigma(T^{*})$  
+>>6. Permutando los roles de $T$ y $T^{*}$ deducimos que $\overline{\lambda}\not\in\sigma(T^{*})$ entonces $\lambda \not\in\sigma(T)$ 
 
 >[!Theorem]
 >$\mathcal{H}$ Hilbert $T\in B(\mathcal{H})$
@@ -518,22 +518,22 @@
 >> 12. Como $\mathcal{S}$ es un espacio de Banach real y $\mathcal{P}$ es denso en $\mathcal{C}_{\mathbb{R}}(\sigma(S))$ (además usando que el espectro es compacto para usar [[Teórico 4#^f39524]] ) existe $\Phi \in B(\mathcal{C}_\mathbb{R}(\sigma(S)), \mathcal{S})$ tal que $\Phi(p) = \varphi(p)\quad\forall p\in \mathcal{P}$ por [[Teórico 5#^33d528]] (b) 
 >> 13. Además, como $\varphi(pq) = \varphi(p)\varphi(q)$ para todo $p \in \mathcal{P}$ se sigue que $\Phi(fg) = \Phi(f)\Phi(g)$ para todo $f, g \in \mathbb{C}_{\mathbb{R}}(\sigma(S))$ por la densidad de $\mathcal{P}$ en $\mathbb{C}_{\mathbb{R}}(\sigma(S))$ y la continuidad de $\Phi$.
 
->[!Theorem] DUDA
+>[!Theorem] MEMO
 > Sea $\mathcal{H}$ un espacio de Hilbert complejo, sea $\mathcal{S}$ el espacio de Banach de todos los operadores autoadjuntos en $B(\mathcal{H})$ y sea $S \in \mathcal{S}$ positivo.
 >- (a) Existe una raíz cuadrada positiva $R$ de $S$ que es el límite de una secuencia de polinomios evaluados en $S$
 >- (b) Si $Q$ es cualquier raíz cuadrada positiva de $S$, entonces $R = Q$
 >>[!Proof]-
 >>- (a) 
->>	1. Como $S$ es positivo es autoadjunto entonces $\sigma(S) \subseteq [0, \infty)$ por [[#^ea1bda]]
+>>	1. Como $S$ es positivo es autoadjunto entonces $\sigma(S) \subseteq [0, \infty)$ por [[Teórico 16#^ea1bda]]
 >>	2. Entonces $f : \sigma(S) \to \mathbb{R}$ y $g : \sigma(S) \to \mathbb{R}$ definidos por $$f(x) = x^{1/4}, \quad g(x) = x^{1/2} \quad \text{y} \quad j(x) = x$$están en $\mathbb{C}_\mathbb{R}(\sigma(S))$. 
->>	3. Sea $R=g(S)$ y $T=f(S)$ que son autoadjuntas (recordar [[#^e6333b]] $\Phi:\mathcal{C}_{\mathbb{R}}(\sigma(S))\to\mathcal{S}$ entonces $T=f(S)=\Phi(f)\in \mathcal{S}$)  
+>>	3. Sea $R=g(S)$ y $T=f(S)$ que son autoadjuntas (recordar [[Teórico 16#^e6333b]] $\Phi:\mathcal{C}_{\mathbb{R}}(\sigma(S))\to\mathcal{S}$ entonces $T=f(S)=\Phi(f)\in \mathcal{S}$)  
 >>	4. El conjunto $\mathcal{P}$ es denso en $\mathbb{C}_R(\sigma(S))$ entonces existen polinomios $g_{n}$ que convergen a $g$.
 >>	5. Luego $R=g(S)=\lim_{ n \to \infty }g_{n}(S)$ que son una secuencia de polinomios evaluados en $S$  
->>	6. Además, por el [[#^e6333b]] (b) $$R^2 = (g(S))^2 = g^2(S) = j(S) = S$$ por lo que $R$ es una raíz cuadrada de $S$ y $$T^2 = (f(S))^2 = f^2(S) = g(S) = R$$
+>>	6. Además, por el [[Teórico 16#^e6333b]] (b) $$R^2 = (g(S))^2 = g^2(S) = j(S) = S$$ por lo que $R$ es una raíz cuadrada de $S$ y $$T^2 = (f(S))^2 = f^2(S) = g(S) = R$$
 >>	7. Entonces $R$ es positivo porque $$(Rx,x)=(T^{2}x,x)=(Tx,T^{*}x)=(Tx,Tx)=\lVert Tx \rVert^{2}\geq0\quad\forall x\in \mathcal{H}$$
 >>- (b) 
 >>	1. Como $$QS = QQ^2 = Q^2Q = SQ$$
->>	2. Si $p$ es cualquier polinomio, entonces $Qp(S) = p(S)Q$ (Usando que comutan por el 1.) 
+>>	2. Entonces $p$ es cualquier polinomio, entonces $Qp(S) = p(S)Q$ (Usando que comutan por el 1.) 
 >>	3. Entonces, como $R$ es el límite de una secuencia de polinomios en $S$ $$QR = RQ$$
 >>	4. Como $Q$ es positivo, $Q$ tiene una raíz cuadrada positiva $P$ por la parte (a). Ergo $P^{2}=Q$ 
 >>	5. Sea $x \in \mathcal{H}$ e $y=(R-Q)x$. Entonces como $R^2 = Q^2 = S$ y $T,P$ auto adjuntas $T$ defimida en el (a) cumple $T^{2}=R$  $$\begin{align}\|T y\|^2 + \|P y\|^2 & = (T^2 y, y) + (P^2 y, y)\\& = ((R + Q)y, y)\\& = ((R + Q)(R - Q)x, y)&& (y=(R-Q)x)\\& =((R^{2}-Q^{2})x,y)&&(QR=RQ)\\&= 0\end{align}$$
@@ -541,33 +541,65 @@
 >>	7. Luego usando 10. $$\begin{align}0=((R^{2}-Q^{2})x,y)& = ((R+Q)(R - Q)x, y)\\& = ((R + Q)y, y) \\&= (Ry,y)+(Qy,y)\end{align}$$
 >>	8. Finalmente $R = Q$.
 # Teorico 17
+>[!Theorem] $K(X,Y)$ es subespacio lineal y producto de compacto con otro
+>Sean $X$, $Y$, $Z$ espacios normados.
+>- (a) Si $S, T \in K(X, Y)$ y $\alpha, \beta \in \mathbb{C}$ entonces $\alpha S + \beta T$ es compacto. Así, $K(X, Y)$ es un subespacio lineal de $B(X, Y)$.
+>- (b) Si $S \in B(X, Y)$, $T \in B(Y, Z)$ y al menos uno de los operadores $S, T$ es compacto, entonces $TS \in B(X, Z)$ es compacto.
+>>[!Proof]-
+>>- (a) 
+>>	1. Sea $\{x_n\}$ una sucesión acotada en $X$. Dado que $S$ es compacto, existe una subsecuencia $\{x_{n(r)}\}$ tal que $\{Sx_{n(r)}\}$ converge. 
+>>	2. Luego, dado que $\{x_{n(r)}\}$ es acotada y $T$ es compacto, existe una subsecuencia $\{x_{n(r(s))}\}$ de la sucesión $\{x_{n(r)}\}$ tal que $\{Tx_{n(r(s))}\}$ converge. 
+>>	3. Se deduce que la sucesión $\{\alpha Sx_{n(r(s))} + \beta Tx_{n(r(s))}\}$ converge. Así, $\alpha S + \beta T$ es compacto.
+>>- (b) 
+>> 	1. Sea $\{x_n\}$ una sucesión acotada en $X$. 
+>> 	2. Si $S$ es compacto entonces existe una subsecuencia $\{x_{n(r)}\}$ tal que $\{Sx_{n(r)}\}$ converge. 
+>> 	3. Como $T$ es acotado (y, por lo tanto, continuo), la sucesión $\{TSx_{n(r)}\}$ converge. 
+>> 	4. Así, $TS$ es compacto.
+>> 	5. Si $T$ compacto y $S$ es acotado pero no compacto, entonces la sucesión $\{Sx_n\}$ es acotada. 
+>> 	6. Luego, dado que $T$ debe ser compacto, existe una subsecuencia $\{Sx_{n(r)}\}$ tal que $\{TSx_{n(r)}\}$ converge, y nuevamente $TS$ es compacto.
+
+>[!Theorem] Rango finito y acotada entonces compacto
+>Sean $X$, $Y$ espacios normados y $T \in B(X, Y)$.
+>- (a) Si $T$ tiene rango finito, entonces $T$ es compacto.
+>- (b) Si $\dim X$ o $\dim Y$ es finito, entonces $T$ es compacto.
+>>[!Proof]-
+>>- (a) 
+>>	1. Para cualquier sucesión acotada $\{x_n\}$ en $X$, la sucesión $\{Tx_n\}$ está acotada en $Z=ImT$ (como $T\in B(X,Y)$ tenemos $\lVert Tx_{n} \rVert\leq  \tilde{k}\lVert x_{n} \rVert\leq \tilde{k}k$)  
+>>	2. Dado que $T$ tiene rango finito, el espacio $Z = \text{Im } T$ es un espacio normado de dimensión finita. 
+>>	3. Luego por el teorema de Bolzano–Weierstrass (vale en dim finita), esta sucesión debe contener una subsucesion convergente. 
+>>	4. Por lo tanto, $T$ es compacto.
+>>- (b) 
+>>	1. Si $\dim X$ es finito, entonces $rg(T) \leq \dim X$ entonces $rg(T)$ (rango de $T$) tiene dim finita
+>>	2. mientras que si $\dim Y$ es finito, entonces claramente la dimensión de $\text{Im } T \subset Y$ debe ser finita (osea el rango de $T$ debe ser finito).
+>>	3. Así, en cualquiera de los casos, el resultado se deduce de la parte (a)
+
 >[!Theorem] Dim infinita opderador identidad no es compacto
 >Si $X$ es un espacio normado de dimensión infinita, entonces el operador identidad $I$ en $X$ no es compacto.
 >>[!Proof]-
->>1. Dado que $X$ es un espacio normado de dimensión infinita, la prueba del [[Teórico 1#^8db74f]] muestra que existe una sucesión de vectores unitarios $\{x_n\}$ en $X$ que no tiene ninguna subsecuencia convergente. 
->>2. Así, la sucesión $\{Ix_n\} = \{x_n\}$ no puede tener una subsecuencia convergente a pesar de ser $\{ x_{n} \}$ acotada
->>3. Por lo tanto el operador $I$ no es compacto.
+>>4. Dado que $X$ es un espacio normado de dimensión infinita, la prueba del [[Teórico 1#^8db74f]] muestra que existe una sucesión de vectores unitarios $\{x_n\}$ en $X$ que no tiene ninguna subsecuencia convergente. 
+>>5. Así, la sucesión $\{Ix_n\} = \{x_n\}$ no puede tener una subsecuencia convergente a pesar de ser $\{ x_{n} \}$ acotada
+>>6. Por lo tanto el operador $I$ no es compacto.
 
 >[!Corollary] Dim infinta operador compacto no es invertible
 >Si $X$ es un espacio normado de dimensión infinita y $T \in K(X)$, entonces $T$ no es invertible.
 >>[!Proof]-
->>4. Supongamos que $T$ es invertible. 
->>5. Entonces como $T$ compacto, por [[#^984cdb]] (b) el operador identidad $I = T^{-1}T$ debe ser compacto. 
->>6. Pero como $X$ es de dimensión infinita, esto contradice el [[#^e35495]]
+>>7. Supongamos que $T$ es invertible. 
+>>8. Entonces como $T$ compacto, por [[#^984cdb]] (b) el operador identidad $I = T^{-1}T$ debe ser compacto. 
+>>9. Pero como $X$ es de dimensión infinita, esto contradice el [[#^e35495]]
 
 >[!Theorem]
 >Si $X$ es un espacio normado, $Y$ es un espacio de Banach y $\{T_k\}$ es una sucesión en $K(X, Y)$ que converge a un operador $T \in B(X, Y)$, entonces $T$ es compacto. Por lo tanto, $K(X, Y)$ es cerrado en $B(X, Y)$.
 >>[!Proof]-
->>1. Sea $\{x_n\}$ una sucesión acotada en $X$. Por compacidad, existe una subsucesion de $\{x_n\}$, a la que etiquetaremos como $\{x_{n(1, r)}\} = \{x_{n(1, r)}\}_{r=1}^{\infty}$, tal que la sucesión $\{T_1 x_{n(1, r)}\}$ converge. 
->>2. De manera similar, existe una subsucesion $\{x_{n(2, r)}\}$ de $\{x_{n(1, r)}\}$ tal que $\{T_2 x_{n(2, r)}\}$ converge. Además, $\{T_1 x_{n(2, r)}\}$ converge ya que es una subsucesion de $\{T_1 x_{n(1, r)}\}$. 
->>3. Repitiendo este proceso inductivamente, vemos que para cada $j \in \mathbb{N}$ hay una subsecuencia $\{x_{n(j, r)}\}$ con la propiedad de que: para cualquier $k \leq j$, la sucesión $\{T_k x_{n(j, r)}\}$ converge. 
->>4. Sea $n(r) = n(r, r)$, para $r \in \mathbb{N}$, obtenemos una única subsecuencia $\{x_{n(r)}\}$ con la propiedad de que, para cada $k$ fijo de $\mathbb{N}$, la sucesión $\{T_k x_{n(r)}\}$ converge a medida que $r \to \infty$ (este tipo de argumento de "diagonalización de Cantor" es necesario para obtener una única sucesión que converge simultáneamente para todos los operadores $T_k$, $k \in \mathbb{N}$). 
->>5. Veremos ahora que la sucesión $\{T x_{n(r)}\}$ converge. Lo hacemos mostrando que $\{T x_{n(r)}\}$ es una sucesión de Cauchy y, por lo tanto, converge ya que $Y$ es un espacio de Banach.
->>6. Sea $\epsilon > 0$ dado. Dado que la subsecuencia $\{x_{n(r)}\}$ está acotada, existe $M > 0$ tal que $\|x_{n(r)}\| \leq M$, para todo $r \in \mathbb{N}$. 
->>7. Además como $\|T_k - T\| \to 0$ cuando $k \to \infty$, existe un entero $k \geq 1$ tal que $\|T_k - T\| < \epsilon / 3M$.
->>8. A continuación, dado que $\{T_k x_{n(r)}\}$ (para cualquier $k$ fijo) converge (es de Cauchy) existe un entero $R \geq 1$ tal que si $r, s \geq R$ entonces $\|T_k x_{n_{(r)}} - T_k x_{n_{(s)}}\| < \epsilon / 3$
->>9. Entonces tomando un $T_{k}$ adecuado tenemos  $$\|T x_{n(r)} - T x_{n(s)}\| < \|T x_{n(r)} - T_k x_{n(r)}\| + \|T_k x_{n(r)} - T_k x_{n(s)}\| + \|T_k x_{n(s)} - T x_{n(s)}\| < \epsilon\quad\forall r,x\geq R$$ (Notar que $\lVert Tx_{n(r)}-T_{k}x_{n(r)} \rVert\leq \lVert T-T_{k} \rVert\lVert x_{n(r)} \rVert=\frac{\epsilon}{3M}M=\frac{\epsilon}{3}$) 
->>10. Lo que demuestra que $\{T x_n(r)\}$ es una sucesión de Cauchy.
+>>10. Sea $\{x_n\}$ una sucesión acotada en $X$. Por compacidad, existe una subsucesion de $\{x_n\}$, a la que etiquetaremos como $\{x_{n(1, r)}\} = \{x_{n(1, r)}\}_{r=1}^{\infty}$, tal que la sucesión $\{T_1 x_{n(1, r)}\}$ converge. 
+>>11. De manera similar, existe una subsucesion $\{x_{n(2, r)}\}$ de $\{x_{n(1, r)}\}$ tal que $\{T_2 x_{n(2, r)}\}$ converge. Además, $\{T_1 x_{n(2, r)}\}$ converge ya que es una subsucesion de $\{T_1 x_{n(1, r)}\}$. 
+>>12. Repitiendo este proceso inductivamente, vemos que para cada $j \in \mathbb{N}$ hay una subsecuencia $\{x_{n(j, r)}\}$ con la propiedad de que: para cualquier $k \leq j$, la sucesión $\{T_k x_{n(j, r)}\}$ converge. 
+>>13. Sea $n(r) = n(r, r)$, para $r \in \mathbb{N}$, obtenemos una única subsecuencia $\{x_{n(r)}\}$ con la propiedad de que, para cada $k$ fijo de $\mathbb{N}$, la sucesión $\{T_k x_{n(r)}\}$ converge a medida que $r \to \infty$ (este tipo de argumento de "diagonalización de Cantor" es necesario para obtener una única sucesión que converge simultáneamente para todos los operadores $T_k$, $k \in \mathbb{N}$). 
+>>14. Veremos ahora que la sucesión $\{T x_{n(r)}\}$ converge. Lo hacemos mostrando que $\{T x_{n(r)}\}$ es una sucesión de Cauchy y, por lo tanto, converge ya que $Y$ es un espacio de Banach.
+>>15. Sea $\epsilon > 0$ dado. Dado que la subsecuencia $\{x_{n(r)}\}$ está acotada, existe $M > 0$ tal que $\|x_{n(r)}\| \leq M$, para todo $r \in \mathbb{N}$. 
+>>16. Además como $\|T_k - T\| \to 0$ cuando $k \to \infty$, existe un entero $k \geq 1$ tal que $\|T_k - T\| < \epsilon / 3M$.
+>>17. A continuación, dado que $\{T_k x_{n(r)}\}$ (para cualquier $k$ fijo) converge (es de Cauchy) existe un entero $R \geq 1$ tal que si $r, s \geq R$ entonces $\|T_k x_{n_{(r)}} - T_k x_{n_{(s)}}\| < \epsilon / 3$
+>>18. Entonces tomando un $T_{k}$ adecuado tenemos  $$\|T x_{n(r)} - T x_{n(s)}\| < \|T x_{n(r)} - T_k x_{n(r)}\| + \|T_k x_{n(r)} - T_k x_{n(s)}\| + \|T_k x_{n(s)} - T x_{n(s)}\| < \epsilon\quad\forall r,x\geq R$$ (Notar que $\lVert Tx_{n(r)}-T_{k}x_{n(r)} \rVert\leq \lVert T-T_{k} \rVert\lVert x_{n(r)} \rVert=\frac{\epsilon}{3M}M=\frac{\epsilon}{3}$) 
+>>19. Lo que demuestra que $\{T x_n(r)\}$ es una sucesión de Cauchy.
 
 >[!Corollary]
 >Si $X$ es un espacio normado, $Y$ es un espacio de Banach y $\{T_k\}$ es una sucesión de operadores acotados de rango finito que converge a $T \in B(X, Y)$, entonces $T$ es compacto.
@@ -575,7 +607,7 @@
 >[!Example]
 >El operador $T \in B(\ell^2)$ definido por $T\{a_n\} = \{n^{-1}a_n\}$ es compacto (Ejemplo 4.5 muestra que $T \in B(\ell^2)$).
 >>[!Proof]-
->>1. Para cada $k \in \mathbb{N}$ definimos el operador $T_k \in B(\ell^2)$ por 
+>>20. Para cada $k \in \mathbb{N}$ definimos el operador $T_k \in B(\ell^2)$ por 
 >>$$
 T_k\{a_n\} = \{b_n^k\}, \quad \text{donde} \quad 
 b_n^k = 
@@ -592,16 +624,16 @@ n^{-1} a_n, & \text{si } n \leq k, \\
 >[!Theorem] Compactos tienen sucesion de rango finto que converge DUDA
 >Si $X$ es un espacio normado, $\mathcal{H}$ es un espacio de Hilbert y $T \in K(X, \mathcal{H})$, entonces existe una sucesión de operadores de rango finito (y acotados)  $\{T_k\}$ que converge a $T$ en $B(X, \mathcal{H})$.
 >>[!Proof]-
->>6. Si $T$ mismo tuviera rango finito, el resultado sería trivial, así que asumimos que no lo tiene. 
->>7. Entonces $Im(T)$ tiene dimension infinita por lo tanto $\overline{ImT}$ tambien
->>8. Por [[Teórico 2#^5c7207]] el conjunto $\overline{ImT}$ es un espacio de Hilbert por [[#^dec284]] es separable, por el [[Teórico 3#^a44e0c]] tiene una base ortonormal $\{e_n\}$
->>9. Para cada entero $k \geq 1$, sea $P_k$ la proyección ortogonal de $\overline{ImT}$ sobre el subespacio lineal $M_k = \text{Sp}\{e_1, \dots, e_k\}$ (que es cerrado por dim finita) y sea $T_k = P_k T$. 
->>10. Por definicion $ImT_{k} \subset M_k$ luego $T_k$ tiene rango finito. Y por definicion es acotado, dado que tanto $P_{k}$ como $T_{k}$ son acotados enotnces $$\lVert T_{k} \rVert=\lVert P_{k}T \rVert\leq \lVert P_{k} \rVert\lVert T \rVert\leq \lVert T \rVert$$ 
->>11. Mostraremos que $\|T_k - T\| \to 0$ a medida que $k \to \infty$.
->>12. Supongamos que esto no es cierto. Entonces, después de tomar una subsecuencia de la sucesión $\{T_k\}$ si es necesario, existe un $\epsilon > 0$ tal que $\|T_k - T\| \geq \epsilon$ para todo $k$. 
->>13. Así, existe una sucesión de vectores unitarios $x_k \in X$ tal que $\|(T_k - T) x_k\| \geq \epsilon/2$ para todo $k$. 
->>14. Como $T$ es compacto, podemos suponer que $T x_k \to y$, para algún $y \in \overline{Im(T)}$ (después de tomar nuevamente una subsecuencia si es necesario). 
->>15. Usando la representación de $P_{M_{k}}$ en [[Teórico 16#^f02ad5]] y restandole a $Iy=y=\sum^{\infty}_{n=1}(y,e_{n})e_{n}$
+>>1. Si $T$ mismo tuviera rango finito, el resultado sería trivial, así que asumimos que no lo tiene. 
+>>2. Entonces $Im(T)$ tiene dimension infinita por lo tanto $\overline{ImT}$ tambien
+>>3. Por [[Teórico 2#^5c7207]] el conjunto $\overline{ImT}$ es un espacio de Hilbert por [[Teórico 17#^dec284]] es separable, por el [[Teórico 3#^a44e0c]] tiene una base ortonormal $\{e_n\}$
+>>4. Para cada entero $k \geq 1$, sea $P_k$ la proyección ortogonal de $\overline{ImT}$ sobre el subespacio lineal $M_k = \text{Sp}\{e_1, \dots, e_k\}$ (que es cerrado por dim finita) y sea $T_k = P_k T$. 
+>>5. Por definicion $ImT_{k} \subset M_k$ luego $T_k$ tiene rango finito. Y por definicion es acotado, dado que tanto $P_{k}$ como $T_{k}$ son acotados enotnces $$\lVert T_{k} \rVert=\lVert P_{k}T \rVert\leq \lVert P_{k} \rVert\lVert T \rVert\leq \lVert T \rVert$$ 
+>>6. Mostraremos que $\|T_k - T\| \to 0$ a medida que $k \to \infty$.
+>>7. Supongamos que esto no es cierto. Entonces, después de tomar una subsecuencia de la sucesión $\{T_k\}$ si es necesario, existe un $\epsilon > 0$ tal que $\|T_k - T\| \geq \epsilon$ para todo $k$. 
+>>8. Así, existe una sucesión de vectores unitarios $x_k \in X$ tal que $\|(T_k - T) x_k\| \geq \epsilon/2$ para todo $k$. 
+>>9. Como $T$ es compacto, podemos suponer que $T x_k \to y$, para algún $y \in \overline{Im(T)}$ (después de tomar nuevamente una subsecuencia si es necesario). 
+>>10. Usando la representación de $P_{M_{k}}$ en [[Teórico 16#^f02ad5]] y restandole a $Iy=y=\sum^{\infty}_{n=1}(y,e_{n})e_{n}$
 >>$$\begin{align} 
 (T_k - T) x_k = (P_k - I) T x_k = & (P_k - I)y + (P_k - I) T x_k - (P_{k}-I)y   \\
  \\
@@ -614,19 +646,19 @@ n^{-1} a_n, & \text{si } n \leq k, \\
 =& \| \sum_{n=k+1}^{\infty} (y, e_n)e_{n}\| + 2\|T x_k - y\| 
 \end{align}$$
 >>(Siendo $\|P_k\| \leq 1$, por el [[Teórico 16#^21a7c0]]). 
->>16. Absurdo por que el lado derecho de esta desigualdad tiende a cero a medida que $k \to \infty$ (la suma tiende a 0 por que como serie converge a y la cola es tan pequena como uno quiera) 
+>>11. Absurdo por que el lado derecho de esta desigualdad tiende a cero a medida que $k \to \infty$ (la suma tiende a 0 por que como serie converge a y la cola es tan pequena como uno quiera) 
 
 >[!Lemma]
 >Si $H$ es un espacio de Hilbert y $T \in B(H)$, entonces $r(T) = r(T^*)$ (ya sean números finitos o $\infty$). En particular $T$ tiene rango finito si y solo si $T^*$ tiene rango finito.
 >>[!Proof]-
->>1. Supongamos primero que $r(T) < \infty$. 
->>2. Para cualquier $x \in H$, escribimos la descomposición ortogonal de $x$ con respecto a $\text{Ker } T^*$ como $x = u + v$, con $u \in \text{Ker } T^*=(ImT)^{\perp}$ y $v \in \text{Im } T$ (ya que $r(T) < \infty$ entonces $ImT$  es cerrado ergo existe única descomposición).
->>3. Así, $T^* x = T^*(u + v) = T^* v$, y por lo tanto $\text{Im } T^* = T^*(\text{Im } T)$, lo que implica que $r(T^*) \leq r(T)$. 
->>4. Por lo tanto, $r(T^*) \leq r(T) < \infty$.
->>5. Aplicando este resultado a $T^*$, y usando que $(T^*)^* = T$, también obtenemos que $r(T) \leq r(T^*)$ cuando $r(T^*) < \infty$. 
->>6. Pero luego si $r(T)$ finito entonces $r(T^{*})\leq r(T)$ y $r(T^{*})$ es finito.
->>7. Como $r(T^{*})$ finito entonces $r(T)\leq r(T^{*})$ entonces $r(T)=r(T^{*})$      
->>8. Esto prueba el lema cuando ambos rangos son finitos, y también demuestra que es imposible que uno de los rangos sea finito y el otro infinito, lo que también prueba el caso de rango infinito.
+>>12. Supongamos primero que $r(T) < \infty$. 
+>>13. Para cualquier $x \in H$, escribimos la descomposición ortogonal de $x$ con respecto a $\text{Ker } T^*$ como $x = u + v$, con $u \in \text{Ker } T^*=(ImT)^{\perp}$ y $v \in \text{Im } T$ (ya que $r(T) < \infty$ entonces $ImT$  es cerrado ergo existe única descomposición).
+>>14. Así, $T^* x = T^*(u + v) = T^* v$, y por lo tanto $\text{Im } T^* = T^*(\text{Im } T)$, lo que implica que $r(T^*) \leq r(T)$. 
+>>15. Por lo tanto, $r(T^*) \leq r(T) < \infty$.
+>>16. Aplicando este resultado a $T^*$, y usando que $(T^*)^* = T$, también obtenemos que $r(T) \leq r(T^*)$ cuando $r(T^*) < \infty$. 
+>>17. Pero luego como supusimos $r(T)$ finito entonces $r(T^{*})\leq r(T)$ lo quen nos dice que $r(T^{*})$ es finito.
+>>18. Como $r(T^{*})$ finito entonces por 16. $r(T)\leq r(T^{*})$ entonces $r(T)=r(T^{*})$      
+>>19. Esto prueba el lema cuando ambos rangos son finitos, y también demuestra que es imposible que uno de los rangos sea finito y el otro infinito, lo que también prueba el caso de rango infinito.
 
 >[!Theorem] DUDA
 >Si $H$ es un espacio de Hilbert y $T \in B(H)$, entonces $T$ es compacto si y solo si $T^*$ es compacto.
@@ -643,32 +675,21 @@ n^{-1} a_n, & \text{si } n \leq k, \\
 
 # Teorico 18
 >[!Theorem] Operadores Compactos - $0$ esta en el espectro siempre
->Si $\mathcal{H}$ es de dimensión infinita, entonces $0 \in \sigma(T)$. Si $\mathcal{H}$ es separable, entonces ocurre que $0 \in \sigma_p(T)$ o $0 \in \sigma(T) \setminus \sigma_p(T)$. Si $\mathcal{H}$ no es separable, entonces $0 \in \sigma_p(T)$.
+>Si $\mathcal{H}$ es de dimensión infinita, $T$ compacto, entonces $0 \in \sigma(T)$. Si $\mathcal{H}$ es separable, entonces ocurre que $0 \in \sigma_p(T)$ o $0 \in \sigma(T) \setminus \sigma_p(T)$. Si $\mathcal{H}$ no es separable, entonces $0 \in \sigma_p(T)$.
 >>[!Proof]-
 >>1. Si tuviéramos que $0 \not\in \sigma(T)$ entonces $T$ sería invertible. Sin embargo, dado que $\mathcal{H}$ es de dimensión infinita, esto contradice el [[Teórico 17#^201bb6]], por lo que debemos tener $0 \in \sigma(T)$.
->>2. Si $\mathcal{H}$ no es separable entonces $\overline{ImT^{*}}\neq\mathcal{H}$ por que $T^{*}$ es compacto entonces $\overline{Im(T^{*})}$ compacto [[Teórico 17#^dec284]]
+>>2. Si $\mathcal{H}$ no es separable entonces $\overline{ImT^{*}}\neq\mathcal{H}$ por que $T^{*}$ es compacto entonces $\overline{Im(T^{*})}$ separable [[Teórico 17#^dec284]]
 >>3. Ademas sabemos $$ker(T)=\{ 0 \}\iff Im(T^{*})^{\perp}=\{ 0 \} \iff \overline{Im(T^{*})}=\mathcal{H}$$ entonces $ker (T)\neq\{ 0 \}$ ósea existe $c\in \mathcal{H}$ com $c\neq 0$ tal que $Tc=0$ osea $c$ autovecotor de aval $0$ mostrando que $0\in \sigma_{p}(T)$ 
->>4. Si $\mathcal{H}$ separable, abajo mostramos un ejemplo donde $0\in \sigma(T)\setminus \sigma_{p}(T)$ 
+>>4. Si $\mathcal{H}$ separable, mas adelante mostramos un ejemplo donde $0\in \sigma(T)\setminus \sigma_{p}(T)$ 
 
 >[!Theorem]
->Si $\lambda \neq 0$ entonces $\text{Im}(T - \lambda I)$ es cerrado.
+>$T$ compacto. Si $\lambda \neq 0$ entonces $\text{Ker}(T - \lambda I)$ tiene dimensión finita.
 >>[!Proof]-
->>1. Sea $\{y_n\}$ una sucesión en $\text{Im}(T - \lambda I)$, con $\lim_{n \to \infty} y_n = y$. 
->>2. Entonces para cada $n$ tenemos $y_n = (T - \lambda I) x_n$, para algún $x_n$, y dado que $\text{Ker}(T - \lambda I)$ es cerrado, $x_n$ tiene una descomposición ortogonal de la forma $x_n = u_n + v_n$, con $u_n \in \text{Ker}(T - \lambda I)$ y $v_n \in \text{Ker}(T - \lambda I)^\perp$. 
->>3. Supongamos que $\{ v_{n} \}$ no es acotado. Luego, después de tomar una subsecuencia si es necesario, podemos suponer que $\|v_n\| \neq 0$, para todo $n$, y $\lim_{n \to \infty} \|v_n\| = \infty$. 
->>4. Colocando $w_n = v_n / \|v_n\|$, tenemos que $w_n \in \text{Ker}(T - \lambda I)^\perp$, $\|w_n\| = 1$ (así que la sucesión $\{w_n\}$ está acotada) y 
->>$$(T - \lambda I) w_n =\frac{1}{\lVert v_{n} \rVert }(T-\lambda I)(x_{n}-u_{n})= \frac{y_n}{\|v_n\|}\rightarrow 0$$ esto es por que $y_{n}$ converge pero $\lVert v_{n} \rVert$ tiende a infinito  
->>5. Por la compacidad de $T$, podemos suponer que $\{T w_n\}$ converge (después de tomar una subsecuencia si es necesario). 
->>6. Al combinar estos resultados, se deduce que la sucesión $\{w_n\}$ converge (ya que $\lambda \neq 0$). 
->>7. Sea $w = \lim_{n \to \infty} w_n$ entonces $\|w\| = 1$ y
->>$$(T - \lambda I) w = \lim_{n \to \infty} (T - \lambda I) w_n = 0$$
->>por lo que $w \in \text{Ker}(T - \lambda I)$. 
->>8. Sin embargo, $w_n \in \text{Ker}(T - \lambda I)^{\perp}$, por lo tanto $\|w - w_n\|^2 = \|w \|^2 + \| w_n\|^2 = 1 + 1 = 2$. Lo que contradice que $w_n \to w$. (O mas facil por que $Ker(T-\lambda I)^{\perp}$ es cerrado)  
->>9. Por lo tanto, la sucesión $\{v_n\}$ está acotada. 
->>10. Ahora, por la compacidad de $T$, podemos suponer que $\{Tv_n\}$ converge. 
->>11. Luego, $$v_n = \lambda^{-1}(T v_n - (T - \lambda I) v_n) =\lambda^{-1}\big(T v_n - (T - \lambda I) (x_n-u_{n})\big)= \lambda^{-1}(T v_n - y_n)$$para $n \in \mathbb{N}$, por lo que la sucesión $\{v_n\}$ converge (por que $y_{n}$ y $Tv_{n}$ convergen). Sea su límite $v$. 
->>12. Luego $y = \lim_{n \to \infty} y_n = \lim_{n \to \infty} (T - \lambda I) v_n = (T - \lambda I) v$
->>13. entonces $y \in \text{Im}(T - \lambda I)$. Esto prueba que $\text{Im}(T - \lambda I)$ es cerrado
+>>1. Supongamos que $M = \text{Ker}(T - \lambda I)$ es infinito-dimensional. 
+>>2. Dado que el núcleo de un operador acotado es cerrado [[Teórico 5#^e19482]] entonces el espacio $M$ es Hilbert (infinito-dimensional)
+>>3. Luego existe una sucesión ortonormal $\{e_n\}$ en $M$ por [[Teórico 3#^252a33]] 
+>>4. Como $e_n \in \text{Ker}(T - \lambda I)$ tenemos $T e_n = \lambda e_n$ para cada $n \in \mathbb{N}$, y dado que $\lambda \neq 0$, la sucesión $\{\lambda e_n\}$ no puede tener una subsecuencia convergente, ya que $\{e_n\}$ es ortonormal entonces $$\lVert e_{m}-e_{n} \rVert ^{2}=(e_{m}-e_{n},e_{m}-e_{n})=\lVert e_{m} \rVert ^{2}+\lVert e_{n} \rVert ^{2} =2$$
+>>5. Esto contradice la compacidad de $T$, lo que prueba el teorema.
 
 >[!Theorem]
 >Para cualquier real $t > 0$, el conjunto de todos los autovalores distintos de $T$ con $|\lambda| \geq t$ es finito.
@@ -676,15 +697,15 @@ n^{-1} a_n, & \text{si } n \leq k, \\
 >>1. Supongamos en cambio que para algún $t_0 > 0$ existe una sucesión de autovalores distintos $\{\lambda_n\}$ con $|\lambda_n| \geq t_0$ para todo $n$, y sea $\{e_n\}$ una sucesión de autovectores unitarios correspondientes. 
 >>2. Ahora vamos a construir, inductivamente, una sucesión particular de vectores unitarios (ósea va a ser acotada)  $\{y_n\}$. Sea $y_1 = e_1$.
 >>3. Ahora consideremos cualquier entero $k \geq 1$. Por el Lema 1.14, el conjunto $\{e_1, \dots, e_k\}$ es linealmente independiente, por lo que el conjunto $M_k = \text{Sp}\{e_1, \dots, e_k\}$ es de dimensión $k$ y es cerrado por dim finita. 
->>4. Cualquier $e \in M_k$ puede escribirse como $e = \alpha_1 e_1 + \dots + \alpha_k e_k$, y tenemos
+>>4. Luego como $M_k$ es un subespacio cerrado de $M_{k+1}$ y no igual a $M_{k+1}$, por lo que el complemento ortogonal de $M_k$ en $M_{k+1}$ es un subespacio lineal no trivial de $M_{k+1}$. 
+>>5. Por lo tanto, existe un vector unitario $y_{k+1} \in M_{k+1}$ tal que $(y_{k+1}, e) = 0$ para todo $e \in M_k$ y $\|y_{k+1} - e\|= \lVert y_{k+1} \rVert+\lVert e \rVert\geq 1$ (esto último por que son ortogonales y unitarios ambos) 
+>>6. Repitiendo este proceso inductivamente, construimos una sucesión $\{y_n\}$.
+>>7. Por otro lado notemos $e \in M_k$ puede escribirse como $e = \alpha_1 e_1 + \dots + \alpha_k e_k$, y tenemos
 >>$$(T - \lambda_k I) e = \alpha_1 (\lambda_1 - \lambda_k) e_1 + \dots + \alpha_k (\lambda_{k-1} - \lambda_k) e_{k-1}$$Mostrando que si $e \in M_k$, entonces $(T - \lambda_k I) e \in M_{k-1}$
->>5. De forma similar, si $e \in M_k$, entonces $T e \in M_k$.
->>6. A continuación, $M_k$ es un subespacio cerrado de $M_{k+1}$ y no igual a $M_{k+1}$, por lo que el complemento ortogonal de $M_k$ en $M_{k+1}$ es un subespacio lineal no trivial de $M_{k+1}$. 
->>7. Por lo tanto, existe un vector unitario $y_{k+1} \in M_{k+1}$ tal que $(y_{k+1}, e) = 0$ para todo $e \in M_k$ y $\|y_{k+1} - e\|= \lVert y_{k+1} \rVert+\lVert e \rVert\geq 1$ (esto último por que son ortogonales y unitarios ambos) 
->>8. Repitiendo este proceso inductivamente, construimos una sucesión $\{y_n\}$.
->>9. Ahora, por la construcción de la sucesión $\{y_n\}$, para cualquier $m, n$ con $n > m$, tenemos
+>>8. De forma similar, si $e \in M_k$, entonces $T e \in M_k$.
+>>9. Ahora, por la construcción de la sucesión $\{y_n\}$, para cualquier $m, n$ con $n > m$, tenemos (suamndo y restando $\lambda_{n}y_{n}$)  
 >>$$\|T y_n - T y_m\| = |\lambda_n| \|y_n - \lambda_n^{-1} [(T - \lambda_n I) y_n + T y_m]\| \geq |\lambda_n| \geq t_0$$ 
->>Dado que por 4. $-(T - \lambda_n I) y_n \in M_{n-1}$. Y por 5. $Ty_{m}\in M_{m}\subseteq M_{n-1}$ por qué $n-1\geq m$ entonces por 7. la norma es mayor que $1 .|\lambda_{n}|$   
+>>Dado que por 4. $-(T - \lambda_n I) y_n \in M_{n-1}$. Y por 5. $Ty_{m}\in M_{m}\subseteq M_{n-1}$ por qué $n-1\geq m$ entonces por 5. la norma de las resta es mayor que $1$ 
 >>10. Esto muestra que la sucesión $\{T y_n\}$ no puede tener una subsecuencia convergente. 
 >>11. Esto contradice la compacidad de $T$ (notar que $\{ y_{n} \}$ es unitaria ósea acotada) lo que prueba el teorema. 
 
@@ -702,7 +723,7 @@ n^{-1} a_n, & \text{si } n \leq k, \\
 >ver el Ejercicio 7.18. Este operador puede escribirse en forma de "matriz" como
 >$$M \left[ \begin{array}{c} x \\ y \end{array} \right] = \left[ \begin{array}{cc} A & B \\ C & D \end{array} \right] \left[ \begin{array}{c} x \\ y \end{array} \right]$$
 >donde, formalmente, usamos las reglas estándar de multiplicación de matrices para evaluar el producto de matrices, aunque los elementos en las matrices son operadores o vectores – esto es válido siempre que mantengamos el orden correcto de los operadores y vectores.
->Además si $$M_{1}=\left[\begin{array}{cc} A & B \\ 0 & I_{\gamma} \end{array}\right]\quad M_{1}=\left[\begin{array}{cc} A & 0 \\ C & I_{\gamma} \end{array}\right]$$ entonces $A$ invertible implica $M_{1}$ y $M_{2}$ son inversible. De hecho $$M_{1}^{-1}=\left[\begin{array}{cc} A^{-1} & A^{-1}B \\ 0 & I_{\gamma} \end{array}\right]\quad M_{2}^{-1}=\left[\begin{array}{cc} A^{-1} & 0 \\ -CA^{-1} & I_{\gamma} \end{array}\right]$$ (Notar que entonces si $M_{1}$ o $M_{2}$ no son invertibles enonces $A$ no lo es)   
+>Además si $$M_{1}=\left[\begin{array}{cc} A & B \\ 0 & I_{\gamma} \end{array}\right]\quad M_{2}=\left[\begin{array}{cc} A & 0 \\ C & I_{\gamma} \end{array}\right]$$ entonces $A$ invertible implica $M_{1}$ y $M_{2}$ son inversible. De hecho $$M_{1}^{-1}=\left[\begin{array}{cc} A^{-1} & A^{-1}B \\ 0 & I_{\gamma} \end{array}\right]\quad M_{2}^{-1}=\left[\begin{array}{cc} A^{-1} & 0 \\ -CA^{-1} & I_{\gamma} \end{array}\right]$$ (Notar que entonces si $M_{1}$ o $M_{2}$ no son invertibles enonces $A$ no lo es)   
 >Y Si $A$ no inversible entonces $$\ker M_{1}=ker A\times \{ 0 \}\quad \land \quad\ker M_{2}=\{ (x,y)\in X\times Y:x\in ker A,y=-Cx\}$$
 >Y de aca podemos concluir (lo usamos despues) $$\dim(\ker(M_{1}))=\dim(\ker(A))\quad\land \quad\dim\ker(M_{2})=\dim\ker(A)$$   
 
@@ -716,7 +737,7 @@ n^{-1} a_n, & \text{si } n \leq k, \\
 >>5. Se sigue de esto que podemos expresar la acción del operador $(T - \lambda I)$ en forma de matriz como
 >>$$(T - \lambda I) \begin{bmatrix} u \\ v \end{bmatrix} = \begin{bmatrix} (T - \lambda I)|_M & T|_N \\ 0 & -\lambda I|_N \end{bmatrix} \begin{bmatrix} u \\ v \end{bmatrix}$$con $(T - \lambda I)|_M \in B(M)$, $T|_N \in B(N, M)$ y $I|_N \in B(N)$. 
 >>6. Definimos $A = (T - \lambda I)|_M$. Entonces o $A$ es invertible o $n(A)>0$. Si $A$ no es invertible entonces no es inyectiva (ni sobre por que $A:M\rightarrow M$ osea es un operador finito por que $T$ es rango finito) mostrando $n(A) > 0$ y si $n(A)=0$ entonces $A$ invertible (devuelta por ser operador finito)  
->>7. Entonces [[Teórico 18#^4bf96d]] o bien $T - \lambda I$ es invertible o (no lo es entonces tampoco lo es $A$) $n(T - \lambda I) = n(A) > 0$, es decir, $\lambda \in \sigma_p(T)$.
+>>7. Entonces por [[Teórico 18#^4bf96d]] o bien $A$ es inversible entonces $T - \lambda I$ es invertible ($\lambda\in \rho(T)$) o no lo es por lo tanto $n(T - \lambda I) = n(A) > 0$, es decir, $\lambda \in \sigma_p(T)$.
 >>8. Ahora sea $P_M$, $P_N$ los proyectores ortogonales de $\mathcal{H}$ sobre $M, N$. 
 >>9. Usando $I = P_M + P_N$ y recordamos $N = \text{Ker } T^*$, tenemos que
 >>$$(T^* - \overline{\lambda}  I)(u + v) = (T^* - \overline{\lambda}  I) u -\overline{\lambda}  v= I(T^{*} -\overline{\lambda} I)u-\overline{\lambda} v=P_M(T^* - \overline{\lambda}  I) u + P_N T^* u - \overline{\lambda}  v$$
@@ -724,21 +745,21 @@ n^{-1} a_n, & \text{si } n \leq k, \\
 >>$$(T^* - \overline{\lambda}  I) \begin{bmatrix} u \\ v \end{bmatrix} = \begin{bmatrix} P_M(T^* - \overline{\lambda}  I)|_M & 0 \\ P_M(T^*)|_M & -\overline{\lambda} I|_{N} \end{bmatrix} \begin{bmatrix} u \\ v \end{bmatrix}$$
 >>11. Se puede probar que $A^{*}=P_{M}(T^{*}-\overline{\lambda}I|_{M})$, y aca vale lo mismo o $A^{*}$ es invertible o $n(A^{*})>0$ devuelta por dimension finita y usando el teorema de antes de nuevo llegamos a que o bien $T^{*}-\overline{\lambda} I$ es inversible o bien $n(T^{*}-\overline{\lambda}I)=n(A^{*})>0$
 >>12. De nuevo por álgebra lineal finita, $n(A^*) = n(A)$ (osea en dimension finita $n(T)=n(T^{*})$) 
->>13. Se sigue de esto que si $n(A) = 0$, entonces $T - \lambda I$ invertible y ademas $n(A^{*})=0$ entonces $T^* - \overline{\lambda} I$ son invertibles, mientras que si $n(A) > 0$ entonces $n(T^* - \overline{\lambda} I)=n(T - \lambda I)  = n(A) > 0$
->>14. Entonces $\lambda \in \sigma_p(T)$ y $\bar{\lambda} \in \sigma_p(T^*)$.
+>>13. Se sigue de esto que si $n(A) = 0$, entonces $T - \lambda I$ invertible y ademas $n(A^{*})=0$ entonces $T^* - \overline{\lambda} I$ tambien es invertible entonces $\lambda\in \rho(T)$ y $\overline{\lambda}\in \rho(T^{*})$
+>>14. Mientras que si $n(A) > 0$ entonces $n(T^* - \overline{\lambda} I)=n(T - \lambda I)  = n(A) > 0$
+>>15. Entonces $\lambda \in \sigma_p(T)$ y $\bar{\lambda} \in \sigma_p(T^*)$.
 
 >[!Theorem]
 >Si $T$ es compacto y $\lambda \neq 0$, entonces, o bien: (a) $\lambda \in \rho(T)$ y $\bar{\lambda} \in \rho(T^*)$; o (b) $\lambda \in \sigma_p(T)$ y $\bar{\lambda} \in \sigma_p(T^*)$. Además, $n(T - \lambda I) = n(T^* - \lambda I) < \infty$.
 >>[!Proof]-
->>1. Primero reducimos el problema al caso de un operador de rango finito. 
->>2. Por [[Teórico 17#^b132a8]], hay un operador de rango finito $T_F$ en $H$ con $\| \lambda^{-1}(T - T_F) \| < \frac{1}{2}$ entonces por [[Teórico 6#^aa4e9d]]  $S = I - \lambda^{-1} (T - T_F)$ es inversible
->>3. Ademas por [[Teórico 15#^b9f186]] $S^*$ es invertibles. 
->>4. Ahora, denotemos $G = T_F S^{-1}$, vemos que
+>>16. Primero reducimos el problema al caso de un operador de rango finito. 
+>>17. Por [[Teórico 17#^b132a8]], hay un operador de rango finito $T_F$ en $H$ con $\| \lambda^{-1}(T - T_F) \| < \frac{1}{2}$ entonces por [[Teórico 6#^aa4e9d]]  $S = I - \lambda^{-1} (T - T_F)$ es inversible
+>>18. Ademas por [[Teórico 15#^b9f186]] $S^*$ es invertibles. 
+>>19. Ahora, denotemos $G = T_F S^{-1}$, vemos que
 >>$$T - \lambda I = (G - \lambda I) S, \quad \text{y por lo tanto} \quad T^* - \overline{\lambda}  I = S^* (G^* - \overline{\lambda}  I)$$
->>5. Dado que $S$ y $S^*$ son invertibles, se sigue que $$T - \lambda I \quad\land\quad T^* - \lambda I \quad\text{son invertibles} \iff  G - \lambda I \quad \land\quad G^* - \lambda I \quad \text{son invertibles}$$y que $n(T - \lambda I) = n(G - \lambda I)$ y $n(T^{*}-\overline{\lambda}I)=n(G^{*}-\overline{\lambda}I)$ por [[Teórico 18#^19d507]]
->>6. Ahora, como $\text{Im} G \subset \text{Im} T_F$ el operador $G$ tiene rango finito, los primeros resultados del teorema siguen de [[Teórico 18#^eeeb64]]
->>7. Ósea o $G$ cumple $\lambda\in \sigma_{p}(G)$ (ósea $G-\lambda I$ es no inversible $\iff$  $T-\lambda I$ no es invertible $\iff$ $\lambda\in \sigma_{p}(T)$  ) o $G$ cumple que $\lambda\in \rho(G)$ ósea ($G-\lambda I$ es inversible $\iff$  $T-\lambda I$ es invertible $\iff$ $\lambda\in \rho(T)$  ) análogo $T^{*}$ 
-
+>>20. Dado que $S$ y $S^*$ son invertibles, se sigue que $$T - \lambda I \quad\land\quad T^* - \lambda I \quad\text{son invertibles} \iff  G - \lambda I \quad \land\quad G^* - \lambda I \quad \text{son invertibles}$$y que $n(T - \lambda I) = n(G - \lambda I)$ y $n(T^{*}-\overline{\lambda}I)=n(G^{*}-\overline{\lambda}I)$ por [[Teórico 18#^19d507]]
+>>21. Ahora, como $\text{Im} G \subset \text{Im} T_F$ el operador $G$ tiene rango finito, los primeros resultados del teorema siguen de [[Teórico 18#^eeeb64]]
+>>22. Ósea o $G$ cumple $\lambda\in \sigma_{p}(G)$ (ósea $G-\lambda I$ es no inversible $\iff$  $T-\lambda I$ no es invertible $\iff$ $\lambda\in \sigma_{p}(T)$  ) o $G$ cumple que $\lambda\in \rho(G)$ ósea ($G-\lambda I$ es inversible $\iff$  $T-\lambda I$ es invertible $\iff$ $\lambda\in \rho(T)$  ) análogo $T^{*}$ 
 # Teorico 19
 >[!Remark] MEMO
 >Ahora consideramos las siguientes ecuaciones ($T$ compacto)  :

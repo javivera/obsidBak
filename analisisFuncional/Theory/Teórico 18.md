@@ -16,19 +16,21 @@ $$\sigma_p(S) = \{\lambda : \lambda \text{ es un autovalor de } S\}, \quad \rho(
 >Si $\mathcal{H}$ es de dimensión infinita, entonces $0 \in \sigma(T)$. Si $\mathcal{H}$ es separable, entonces ocurre que $0 \in \sigma_p(T)$ o $0 \in \sigma(T) \setminus \sigma_p(T)$. Si $\mathcal{H}$ no es separable, entonces $0 \in \sigma_p(T)$.
 >>[!Proof]-
 >>1. Si tuviéramos que $0 \not\in \sigma(T)$ entonces $T$ sería invertible. Sin embargo, dado que $\mathcal{H}$ es de dimensión infinita, esto contradice el [[Teórico 17#^201bb6]], por lo que debemos tener $0 \in \sigma(T)$.
->>2. Si $\mathcal{H}$ no es separable entonces $\overline{ImT^{*}}\neq\mathcal{H}$ por que $T^{*}$ es compacto entonces $\overline{Im(T^{*})}$ compacto [[Teórico 17#^dec284]]
+>>2. Si $\mathcal{H}$ no es separable entonces $\overline{ImT^{*}}\neq\mathcal{H}$ por que $T^{*}$ es compacto entonces $\overline{Im(T^{*})}$ separable por [[Teórico 17#^dec284]]
 >>3. Ademas sabemos $$ker(T)=\{ 0 \}\iff Im(T^{*})^{\perp}=\{ 0 \} \iff \overline{Im(T^{*})}=\mathcal{H}$$ entonces $ker (T)\neq\{ 0 \}$ ósea existe $c\in \mathcal{H}$ com $c\neq 0$ tal que $Tc=0$ osea $c$ autovecotor de aval $0$ mostrando que $0\in \sigma_{p}(T)$ 
 >>4. Si $\mathcal{H}$ separable, abajo mostramos un ejemplo donde $0\in \sigma(T)\setminus \sigma_{p}(T)$ 
 
 ^5d2cfe
 
 >[!Remark]
->Puede suceder que $S$ compscto y $\sigma_{p}(S)\neq\emptyset$ por ejemplo $S\in B(\ell^{2})$ dado por $$S(x_{1},x_{2},\ldots)=\left( 0,x_{1}, \frac{x_{2}}{2} ,\ldots\right)$$ Además $\sigma(S)=\{ 0 \}$
+>Puede suceder que $S$ compacto y $\sigma_{p}(S)=\emptyset$ por ejemplo $S\in B(\ell^{2})$ dado por $$S(x_{1},x_{2},\ldots)=\left( 0,x_{1}, \frac{x_{2}}{2} ,\ldots\right)$$ Además $\sigma(S)=\{ 0 \}$
 >>[!Proof]
->>1. Sea $\lambda \in \sigma_{p}(S)$ de autovector $x\neq 0$ entonces $$\left( 0,x_{1}, \frac{x_{2}}{2},\ldots \right)=S(x_{1},\ldots)=\lambda (x_{1},\ldots)=\left(\lambda x_{1}, \lambda x_{2},\ldots \right)$$  
->>2. Entonces tenemos que $\lambda =0$ entonces $0\in \sigma_{p}(S)$ o $\lambda\neq 0$ entonces $x_{1}=0$ entonces $x_{2}=0$ etc que es absurdo
->>3. Sea $(S-\lambda I)x=y$ entonces $-\lambda x_{1}=y_{1}$ entonces $x_{1}= -\frac{y_{1}}{\lambda}$ despues $x_{1}-\lambda x_{2}=y_{2}$ entonces $x_{2} = -\frac{y_{2}}{\lambda}- \frac{y_{1}}{\lambda^{2}}$ etc , asi definimos la inversa, resta ver que es continua
->>4. Osae $(S-\lambda I)^{-1}y=\left( -\frac{y_{1}}{\lambda} ,-\frac{y_{2}}{\lambda}- \frac{y_{1}}{\lambda^{2}} ,\ldots \right)$ 
+>>1. Es trivial ver que es compacto dado que si $\{ x_{n} \}$ esta acotado entonces $\sum^{\infty}_{n=1}|x_{n}|^{2}\leq M$ por lo tanto $|x_{n}|\leq M\quad\forall n\in \mathbb{N}$ por lo tanto $|S(x_{n})|\leq \frac{M}{n-1}$ para cada $n\in \mathbb{N}$ que tiende a $0$  
+>>2. Sea $\lambda \in \sigma_{p}(S)$ de autovector $x\neq 0$ entonces $$\left( 0,x_{1}, \frac{x_{2}}{2},\ldots \right)=S(x_{1},\ldots)=\lambda (x_{1},\ldots)=\left(\lambda x_{1}, \lambda x_{2},\ldots \right)$$  
+>>3. Supongamos $\lambda\neq 0$ entonces $x_{1}=0$ entonces $x_{2}=0$ etc que es absurdo
+>>4. Entonces $\lambda=0$ pero entonces $x_{1}=0$ etc entonces $x=0$ absurdo    
+>>5. Mostrando que $\sigma_{p}(S)=\emptyset$ 
+>>6. Mas adelante es trivial mostrar que $\sigma(S)=\{ 0 \}$ porque vamos a mostrar que para los operadores compactos el espectro es exactamente los auto valores
 
 >[!Remark]
 >Ahora consideramos el caso $\lambda\neq0$ primero introduzcamos algunos resultados

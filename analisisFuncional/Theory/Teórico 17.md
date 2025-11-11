@@ -148,7 +148,7 @@ n^{-1} a_n, & \text{si } n \leq k, \\
 >>[!Proof]-
 >>6. Si $T$ mismo tuviera rango finito, el resultado sería trivial, así que asumimos que no lo tiene. 
 >>7. Entonces $Im(T)$ tiene dimension infinita por lo tanto $\overline{ImT}$ tambien
->>8. Por [[Teórico 2#^5c7207]] el conjunto $\overline{ImT}$ es un espacio de Hilbert por [[#^dec284]] es separable, por el [[Teórico 3#^a44e0c]] tiene una base ortonormal $\{e_n\}$
+>>8. Por [[Teórico 2#^5c7207]] el conjunto $\overline{ImT}$ es un espacio de Hilbert por [[Teórico 17#^dec284]] es separable, por el [[Teórico 3#^a44e0c]] tiene una base ortonormal $\{e_n\}$
 >>9. Para cada entero $k \geq 1$, sea $P_k$ la proyección ortogonal de $\overline{ImT}$ sobre el subespacio lineal $M_k = \text{Sp}\{e_1, \dots, e_k\}$ (que es cerrado por dim finita) y sea $T_k = P_k T$. 
 >>10. Por definicion $ImT_{k} \subset M_k$ luego $T_k$ tiene rango finito. Y por definicion es acotado, dado que tanto $P_{k}$ como $T_{k}$ son acotados enotnces $$\lVert T_{k} \rVert=\lVert P_{k}T \rVert\leq \lVert P_{k} \rVert\lVert T \rVert\leq \lVert T \rVert$$ 
 >>11. Mostraremos que $\|T_k - T\| \to 0$ a medida que $k \to \infty$.
