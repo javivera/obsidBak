@@ -14,12 +14,12 @@
 >[!Proposition] 
 >Si $\alpha$ es una curva suave, entonces $\beta$ es una curva suave.
 >>[!Proof]-
->>1. Si $\alpha$ es suave (clase $C^\infty$), entonces $\alpha'$ es suave.
->>2. La función $\sigma(t) = \int_a^t \|\alpha'(u)\| du$ tiene derivada $\sigma'(t) = \|\alpha'(t)\|$.
->>3. Como $\alpha$ es regular, $\alpha'(t) \neq 0$. 
->>4. La función norma $\|\cdot\|$ es suave en $\mathbb{R}^n \setminus \{0\}$.Por tanto, $\sigma'(t)$ es suave, lo que implica que $\sigma(t)$ es suave.
->>5. Además, como $\sigma'(t) > 0$, por el Teorema de la Función Inversa (versión $C^\infty$), la función inversa $\sigma^{-1}$ es suave.
->>6. Finalmente, $\beta = \alpha \circ \sigma^{-1}$ es composición de funciones suaves, luego $\beta$ es suave.
+>>4. Si $\alpha$ es suave (clase $C^\infty$), entonces $\alpha'$ es suave.
+>>5. La función $\sigma(t) = \int_a^t \|\alpha'(u)\| du$ tiene derivada $\sigma'(t) = \|\alpha'(t)\|$.
+>>6. Como $\alpha$ es regular, $\alpha'(t) \neq 0$. 
+>>7. La función norma $\|\cdot\|$ es suave en $\mathbb{R}^n \setminus \{0\}$.Por tanto, $\sigma'(t)$ es suave, lo que implica que $\sigma(t)$ es suave.
+>>8. Además, como $\sigma'(t) > 0$, por el Teorema de la Función Inversa (versión $C^\infty$), la función inversa $\sigma^{-1}$ es suave.
+>>9. Finalmente, $\beta = \alpha \circ \sigma^{-1}$ es composición de funciones suaves, luego $\beta$ es suave.
 
 >[!Definition] Curvatura $\kappa$ 
 >Sea $\alpha : (a, b) \to \mathbb{R}^n$ una curva de rapidez unitaria. La **curvatura** de $\alpha$ es la función
@@ -31,10 +31,10 @@
 > $$T = \alpha', \quad N = \alpha''/\|\alpha''\| = \alpha''/\kappa \quad \text{y} \quad B = T \times N$$
 >Para cada $t \in (a,b)$, $\{T(t), N(t), B(t)\}$ es una base ortonormal de $\mathbb{R}^3$.
 >>[!Proof]-
->>1. Como $\alpha$ tiene rapidez unitaria, $\|T\| = \|\alpha'\| = 1$. Claramente, $\|N\| = 1$.
->>2. Derivando con respecto a $t$ la expresión $1 = \|\alpha'(t)\|^2 = \langle \alpha'(t), \alpha'(t) \rangle$ tenemos que $$ 0 = 2 \langle \alpha''(t), \alpha'(t) \rangle = 2 \langle N(t) \kappa(t), T(t) \rangle = 2\kappa(t) \langle N(t), T(t) \rangle $$que vale para todo $t$. 
->>3. Como $\kappa$ nunca se anula por hipótesis, resulta que $\langle T, N \rangle = 0$
->>4. Además, $\langle B, T \rangle = \langle T\times N, N \rangle = 0$ analogo $\langle B,N\rangle=0$  y $$ \|B\| = \|T \times N\| = \|T\| \|N\|\sin\left( \frac{\pi}{2} \right) = 1.1.1=1 $$
+>>10. Como $\alpha$ tiene rapidez unitaria, $\|T\| = \|\alpha'\| = 1$. Claramente, $\|N\| = 1$.
+>>11. Derivando con respecto a $t$ la expresión $1 = \|\alpha'(t)\|^2 = \langle \alpha'(t), \alpha'(t) \rangle$ tenemos que $$ 0 = 2 \langle \alpha''(t), \alpha'(t) \rangle = 2 \langle N(t) \kappa(t), T(t) \rangle = 2\kappa(t) \langle N(t), T(t) \rangle $$que vale para todo $t$. 
+>>12. Como $\kappa$ nunca se anula por hipótesis, resulta que $\langle T, N \rangle = 0$
+>>13. Además, $\langle B, T \rangle = \langle T\times N, N \rangle = 0$ analogo $\langle B,N\rangle=0$  y $$ \|B\| = \|T \times N\| = \|T\| \|N\|\sin\left( \frac{\pi}{2} \right) = 1.1.1=1 $$
 
 >[!Proposition] Ecuaciones de Frenet
 >Se cumple que
@@ -44,16 +44,16 @@
 > Comentario. Las ecuaciones (1) a veces se escriben de la forma
 > $$\begin{cases} T' = & \kappa N \\ N' = & -\kappa T & +\tau B \\ B' = & & -\tau N \end{cases}$$
 >>[!Proof]-
->>1. Tenemos que $$ T' = (\alpha')' = \alpha'' = \|\alpha''\| \frac{\alpha''}{\|\alpha''\|} = \kappa N. $$
->>2. Como sabemos que $\{T, N, B\}$ es una base ortonormal, podemos escribir $$ N' = \langle N', T \rangle T + \langle N', N \rangle N + \langle N', B \rangle B. $$
->>3. $\langle N', N \rangle = 0$, pues $1=\|N\|^{2} = (N,N)$ y luego derivando 
->>4. "Integrando"podemos obtener $$ \langle N', T \rangle = \langle N, T \rangle' - \langle N, T' \rangle = 0 - \langle N, \kappa N \rangle = -\kappa \|N\|^2 = -\kappa. $$
->>5. De esta manera $$ N' = -\kappa T + 0.N + \tau B $$ Donde definimos $\langle N', B \rangle=\tau$.
->>6. Ahora escribimos $$ B' = \langle B', T \rangle T + \langle B', N \rangle N + \langle B', B \rangle B. $$
->>7. Tenemos que $\langle B', B \rangle = 0$, pues $\|B\| = \text{constante}$. 
->>8. También, $$ \langle B', N \rangle = \langle B, N \rangle' - \langle B, N' \rangle = 0 - \langle B, \kappa T + \tau B \rangle = -\tau \|B\|^2 = -\tau. $$
->>9. Analogamente $$\langle B', T \rangle=\langle B,T\rangle'-\langle B,T '\rangle=0-\langle B,\kappa N\rangle=0$$
->>10. Mostrando que $B'=-\tau N$ 
+>>14. Tenemos que $$ T' = (\alpha')' = \alpha'' = \|\alpha''\| \frac{\alpha''}{\|\alpha''\|} = \kappa N. $$
+>>15. Como sabemos que $\{T, N, B\}$ es una base ortonormal, podemos escribir $$ N' = \langle N', T \rangle T + \langle N', N \rangle N + \langle N', B \rangle B. $$
+>>16. $\langle N', N \rangle = 0$, pues $1=\|N\|^{2} = (N,N)$ y luego derivando 
+>>17. "Integrando"podemos obtener $$ \langle N', T \rangle = \langle N, T \rangle' - \langle N, T' \rangle = 0 - \langle N, \kappa N \rangle = -\kappa \|N\|^2 = -\kappa. $$
+>>18. De esta manera $$ N' = -\kappa T + 0.N + \tau B $$ Donde definimos $\langle N', B \rangle=\tau$.
+>>19. Ahora escribimos $$ B' = \langle B', T \rangle T + \langle B', N \rangle N + \langle B', B \rangle B. $$
+>>20. Tenemos que $\langle B', B \rangle = 0$, pues $\|B\| = \text{constante}$. 
+>>21. También, $$ \langle B', N \rangle = \langle B, N \rangle' - \langle B, N' \rangle = 0 - \langle B, \kappa T + \tau B \rangle = -\tau \|B\|^2 = -\tau. $$
+>>22. Analogamente $$\langle B', T \rangle=\langle B,T\rangle'-\langle B,T '\rangle=0-\langle B,\kappa N\rangle=0$$
+>>23. Mostrando que $B'=-\tau N$ 
 
 >[!Definition] Plano osculador, normal y osculador afín
 >Para cada $t$, el plano generado por $T(t)$ y $N(t)$, o sea,
