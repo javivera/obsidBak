@@ -6,7 +6,7 @@
       {
         "id": "36abdb87a26e65ac",
         "type": "tabs",
-        "dimension": 49.166666666666664,
+        "dimension": 49.16666666666666,
         "children": [
           {
             "id": "36b3ac1e25590571",
@@ -28,7 +28,7 @@
       {
         "id": "746ca06c0bd74836",
         "type": "tabs",
-        "dimension": 50.833333333333336,
+        "dimension": 50.83333333333334,
         "children": [
           {
             "id": "5127e43ee1c8a762",
@@ -56,21 +56,9 @@
               "icon": "lucide-file",
               "title": "Definiciones"
             }
-          },
-          {
-            "id": "190d36648f3ca4bb",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.10.3"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.10.3"
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -127,8 +115,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "e4c509da46b3a57e",
@@ -221,7 +208,7 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "190d36648f3ca4bb",
+  "active": "37b185bc040546f6",
   "lastOpenFiles": [
     "solution.md",
     "Definiciones.md",

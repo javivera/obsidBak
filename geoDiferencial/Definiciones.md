@@ -117,6 +117,8 @@
 >>	6. Por definición, $\alpha$ es una hélice. $\square$
 
 
+asd
+
 >[!Definition]
 > Sea $\alpha : [a, b] \to \mathbb{R}^n$ una curva regular de longitud $L$. Se define la **curvatura** de $\alpha$ en el instante $t$ mediante
 > $$\kappa_{\alpha}(t) = \kappa_{\beta}(\sigma(t)),$$
