@@ -6,18 +6,59 @@
       {
         "id": "36abdb87a26e65ac",
         "type": "tabs",
+        "dimension": 49.166666666666664,
         "children": [
           {
             "id": "36b3ac1e25590571",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "solution.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "solution"
             }
           }
         ]
+      },
+      {
+        "id": "746ca06c0bd74836",
+        "type": "tabs",
+        "dimension": 50.83333333333333,
+        "children": [
+          {
+            "id": "5127e43ee1c8a762",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Practicos/GD - Pr2.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "GD - Pr2"
+            }
+          },
+          {
+            "id": "37b185bc040546f6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Definiciones.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "Definiciones"
+            }
+          }
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -91,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Practicos/jpgs/GD - Pr2-2.png",
+                "file": "Definiciones.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,7 +142,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for GD - Pr2-2"
+              "title": "Backlinks for Definiciones"
             }
           },
           {
@@ -152,7 +193,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 429.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -165,36 +206,38 @@
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
       "obsidian-git:Open Git source control": false,
-      "copilot:Open Copilot Chat": false,
       "terminal:Open terminal": false
     }
   },
-  "active": "36b3ac1e25590571",
+  "active": "37b185bc040546f6",
   "lastOpenFiles": [
+    "solution.md",
     "Definiciones.md",
-    "Resueltos/solutions.md",
-    "GD - Apunte.pdf",
+    "Practicos/GD - Pr2.pdf",
     "Practicos/jpgs/GD - Pr2-2.png",
+    "solve_ex1.py",
+    "Practicos/GD - Pr4.pdf",
+    "Practicos/jpgs/GD - Pr4.png",
+    "Practicos/jpgs/GD - Pr3.png",
+    "Practicos/jpgs/GD - Pr3.jpg",
     "Practicos/jpgs/GD - Pr2-1.png",
     "Practicos/GD - Pr3.pdf",
-    "Practicos/GD - Pr2.pdf",
-    "Practicos/GD - Pr1.pdf",
-    "solution.md",
+    "Examenes/GD - 1erP (2025).md",
+    "Examenes/GD - 1erP (2025).pdf",
+    "Examenes/Resueltos",
+    "Examenes/untitled folder",
+    "Primer parcial de Geometría Diferencial.md",
+    "Practicos/Resueltos/solutions.md",
+    "Practicos/Resueltos",
+    "Theory",
+    "Theroy",
+    "Resueltos/solutions.md",
     "Untitled.md",
     "Practicos/GD-Pr2-Ej4-solucion.md",
     "Practicos/jpgs/GD - Pr2.-2.png",
     "Practicos/jpgs/GD - Pr2.png-2.png",
     "Practicos/jpgs/GD - Pr2.png-1.png",
     "GDPr2.jpg-1.jpg",
-    "Practicos/GD - Pr8.pdf",
-    "Practicos/GD - Pr7.pdf",
-    "Practicos/GD - Pr6.pdf",
-    "Practicos/GD - Pr5.pdf",
-    "Practicos/GD - Pr4.pdf",
-    "Practicos/jpgs/GD - Pr3.jpg-1.jpg",
-    "Practicos/jpgs/GD - Pr2.jpg-2.jpg",
-    "Practicos/jpgs/GD - Pr2.jpg-1.jpg",
-    "Practicos/jpgs/GD - Pr1.jpg-1.jpg",
-    "Practicos/jpgs"
+    "Practicos/jpgs/GD - Pr3.jpg-1.jpg"
   ]
 }

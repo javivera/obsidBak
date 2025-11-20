@@ -74,7 +74,7 @@ tags:
 >>- Isometria
 >>	1. Por que por definicion $\lVert J_{X}(x) \rVert=\lVert F_{x} \rVert=\lVert x \rVert$  por [[Teórico 12#^30c58d]]
 >>- (a)
->>	1. Inyectiva es por ser una isometria. Sobreyectiva es por que $J_{X}(X)=Im(J_{X})$ 
+>>	1. Es sobreyectiva por que $J_{X}(X)=Im(J_{X})$ y recordemos que isometria sobreyectiva implica inversible
 >>- (b) 
 >>	1. Como $X''$ es Banach entonces $\overline{J_{X}(X)}$ es Banach (por ser cerrado en un Banach) y esta claro que $J_{X}(X)$ es denso en $\overline{J_{X}(X)}$    
 

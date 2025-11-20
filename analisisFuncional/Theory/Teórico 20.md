@@ -27,7 +27,12 @@ dateCreated: 2024-11-10,20:16
 >>8. De hecho, es una base para $\mathcal{H}$. Para ver esto, como $\{ e_{n} \}$ bon de $\overline{Im(T)}$ Y análogo $\{ z_{m} \}$ consdierando que $P$ es proyectar en $\overline{ImT}$ entonces $I-P$ es proyectar en $\ker(T)$. Tenemos
 >>$$ x = P x + (I - P) x = \sum_{n=1}^{r(T)} (Px, e_n) e_n + \sum_{m=1}^{n(T)} ( (I - P) x, z_m ) z_m=\sum^{r(T)}_{n=1} (x,e_{n})e_{n}+\sum^{n(T)}_{n=1} (x,z_{m})z_{m}$$
 >>9. Usando $((I-P)x,e_{n})=0$ (por que como $P$ es proyectar en $\overline{Im(T)}$ entonces $I-P$ es proyectar en $\ker T$) por lo tanto $(Px,e_{n})=(x,e_{n})$ y, de forma similar, $((I - P) x, z_m) = (x, z_m)$ para cada $m$ (Por que $P$ es proyectar en $\overline{Im(T)}$ entonces $(Px,z_{m})=0$) 
->>10. Entonces por definicion $E$ es BON para $\mathcal{H}$.
+>>10. Entonces por definicion $E$ es BON para $\mathcal{H}$
+>
+>>[!idea]-
+>>1. $\ker T\subseteq \mathcal{H}$ entonces es separable ergo tiene base $\{ z_{m} \}^{n(T)}$ 
+>>2. Afirmamos $\{ z_{m} \}^{n(T)}\cup\{ e_{n} \}^{r(T)}$ 
+>>3. Sea $P_{\overline{ImT}}$ entonces $I-P=P_{\ker (T)}$ por lo tanto  $$x = P x + (I - P) x = \sum_{n=1}^{r(T)} (Px, e_n) e_n + \sum_{m=1}^{n(T)} ( (I - P) x, z_m ) z_m=\sum^{r(T)}_{n=1} (x,e_{n})e_{n}+\sum^{n(T)}_{n=1} (x,z_{m})z_{m}$$
 
 >[!Remark]
 >En el Teorema [[Teórico 19#^23a090]] discutimos la existencia de soluciones de las ecuaciones (NH) para el caso de un operador compacto general $T$. Cuando $T$ es auto-adjunto, podemos usar la representación de $T$ en [[Teórico 19#^e7a5da]] para dar una representación correspondiente de las soluciones.
@@ -43,15 +48,15 @@ dateCreated: 2024-11-10,20:16
 >$$ x = \sum_{\substack{n=1\\n \not\in E}}^{r(T)}  \frac{(p, e_n)}{\lambda_n - \lambda} e_n - \frac{1}{\lambda}(I - P)p + z, \tag{7.15} $$
 >donde $z = \sum_{n \in E} \alpha_n e_n$ es un elemento arbitrario de $\ker(T - \lambda I)$.
 >>[!Proof]-
->>1. La existencia de soluciones de (7.12) bajo las condiciones establecidas sigue de [[Teórico 19#^23a090]] 
->>2. Para mostrar que las soluciones tienen la forma indicada, notemos que, dado que $\{e_n\}_{n=1}^{r(T)}$ es una base ortonormal de $\overline{ImT} = (\ker T)^\perp$, tenemos $$ x = \sum_{n=1}^{r(T)} (x, e_n) e_n + (I - P)x, \quad p = \sum_{n=1}^{r(T)} (p, e_n) e_n + (I - P)p, $$Recordar $(I-P)x\in \overline{ImT}^{\perp}$ entonces $(x, e_n) = (Px + (I - P)x, e_n) = (Px, e_n)$
->>3. Entonnces (usando la representacion de [[Teórico 19#^e7a5da]]) $$\sum^{r(T)}_{n=1} (p,e_{n})e_{n}+(I-P)p=p=(T-\lambda I)x=\sum^{r(T)}_{n=1} (x,e_{n})(\lambda_{n}-\lambda)e_{n}-\lambda(I-P)x$$    
->>4. Tomando el producto interior de ambos lados de esta fórmula con $e_k$, para cualquier $1 \leq k \leq r(T)$, y dado que $\lambda$ no es un autovalor, tenemos
+>>4. La existencia de soluciones de (7.12) bajo las condiciones establecidas sigue de [[Teórico 19#^23a090]] 
+>>5. Para mostrar que las soluciones tienen la forma indicada, notemos que, dado que $\{e_n\}_{n=1}^{r(T)}$ es una base ortonormal de $\overline{ImT} = (\ker T)^\perp$, tenemos $$ x = \sum_{n=1}^{r(T)} (x, e_n) e_n + (I - P)x, \quad p = \sum_{n=1}^{r(T)} (p, e_n) e_n + (I - P)p, $$Recordar $(I-P)x\in \overline{ImT}^{\perp}$ entonces $(x, e_n) = (Px + (I - P)x, e_n) = (Px, e_n)$
+>>6. Entonnces (usando la representacion de [[Teórico 19#^e7a5da]]) $$\sum^{r(T)}_{n=1} (p,e_{n})e_{n}+(I-P)p=p=(T-\lambda I)x=\sum^{r(T)}_{n=1} (x,e_{n})(\lambda_{n}-\lambda)e_{n}-\lambda(I-P)x$$    
+>>7. Tomando el producto interior de ambos lados de esta fórmula con $e_k$, para cualquier $1 \leq k \leq r(T)$, y dado que $\lambda$ no es un autovalor, tenemos
 >>$$ (x, e_k)(\lambda_k - \lambda) = (p, e_k), $$
->>5. por lo tanto
+>>8. por lo tanto
 >>$$ (x, e_k) = \frac{(p, e_k)}{\lambda_k - \lambda}. \tag{7.16} $$
->>6. Además, tomando la proyección ortogonal de ambos lados de la fórmula anterior sobre $\ker T$ obtenemos $$ -\lambda (I - P)x = (I - P)p. \quad\text{osea}\quad (I-P)x= -\frac{1}{\lambda}(I-P)p$$ Notar $(I-p)(Tx-\lambda x)=(I-p)(Tx)-\lambda (I-p)x$ pero $Tx\in \overline{ImT}= kerT^{\perp}$ entonces $(I-P)Tx=0$     
->>7. La fórmula (7.13) sigue inmediatamente de estos dos resultados. 
->>8. Esto prueba la alternativa (a). La demostración de la alternativa (b) es similar. 
->>9. Nótese que cuando $k \in E$, las condiciones (7.14) aseguran que la primera ecuación en (7.16) es satisfecha por coeficientes arbitrarios $(x, e_k) = \alpha_k$ (y evitamos la dificultad causada por el término $\lambda_n - \lambda$ en el denominador). El término correspondiente $\alpha_k e_k$ contribuye al elemento arbitrario en $\ker(T - \lambda I)$ en la expresión para la solución $x$.
+>>9. Además, tomando la proyección ortogonal de ambos lados de la fórmula anterior sobre $\ker T$ obtenemos $$ -\lambda (I - P)x = (I - P)p. \quad\text{osea}\quad (I-P)x= -\frac{1}{\lambda}(I-P)p$$ Notar $(I-p)(Tx-\lambda x)=(I-p)(Tx)-\lambda (I-p)x$ pero $Tx\in \overline{ImT}= kerT^{\perp}$ entonces $(I-P)Tx=0$     
+>>10. La fórmula (7.13) sigue inmediatamente de estos dos resultados. 
+>>11. Esto prueba la alternativa (a). La demostración de la alternativa (b) es similar. 
+>>12. Nótese que cuando $k \in E$, las condiciones (7.14) aseguran que la primera ecuación en (7.16) es satisfecha por coeficientes arbitrarios $(x, e_k) = \alpha_k$ (y evitamos la dificultad causada por el término $\lambda_n - \lambda$ en el denominador). El término correspondiente $\alpha_k e_k$ contribuye al elemento arbitrario en $\ker(T - \lambda I)$ en la expresión para la solución $x$.
 

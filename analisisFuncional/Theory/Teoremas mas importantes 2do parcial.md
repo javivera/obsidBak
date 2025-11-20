@@ -84,16 +84,16 @@
 >Tal que $$f_{W_{1}}(\alpha z_{1}+w)=\alpha\delta_{1}+f_{W}(w)\leq p(\alpha z_{1}+w)\quad \forall \alpha\in \mathbb{R}\quad\forall w\in W\quad (a)$$
 >En particular $f_{W_{1}}$ es lineal y extension de $f_{W}$
 >>[!Proof]-
->>19. $\forall u,v\in W$ es $$f_{W}(u)+f_{W}(v)=f_{W}(u+v)\leq \lvert f_{W}(u+v) \rvert\leq p(u+v)\leq p(u-z_{1})+p(v+z_{1})$$ (Por sublineal) 
->>20. entonces $f_{W}(u)-p(u-z_{1})\leq -f_{W}(v)+p(v+z_{1})$
->>21. Sea $\delta_{1}=\inf \{ -f_{W}(v)+p(v+z_{1}):v\in W \}>-\infty$ (2. Nos dice que esta acotado)
->>22. Entonces ahora definimos $f_{W_{1}}(\alpha z_{1}+w)=\alpha \delta_{1}+f_{W}(w)$
->>23. $-\delta_{1} +f_{W}(u)\leq p(u-z_{1})$ (Usando infimo en 2.)
->>24. $\delta_{1} +f_{W}(v)\leq p(v+z_{1})$ (Usando infimo en 2.)
->>25. Si $\alpha <0$ multiplicamos 5. por $-\alpha$ y escribiendo $w=-\alpha u$ obtenemos $(a)$
->>26. Si $\alpha >0$ multiplicamos 6. por $\alpha$ y escribiendo $w=\alpha v$ obtebemos $(a)$
->>27. Si $\alpha =0$ trivial
->>28. Entonces $f_{W_{1}}$ cumple la desigualdad 
+>>1. $\forall u,v\in W$ es $$f_{W}(u)+f_{W}(v)=f_{W}(u+v)\leq \lvert f_{W}(u+v) \rvert\leq p(u+v)\leq p(u-z_{1})+p(v+z_{1})$$ (Por sublineal) 
+>>2. entonces $f_{W}(u)-p(u-z_{1})\leq -f_{W}(v)+p(v+z_{1})$
+>>3. Sea $\delta_{1}=\inf \{ -f_{W}(v)+p(v+z_{1}):v\in W \}>-\infty$ (2. Nos dice que esta acotado)
+>>4. Entonces ahora definimos $f_{W_{1}}(\alpha z_{1}+w)=\alpha \delta_{1}+f_{W}(w)$
+>>5. $-\delta_{1} +f_{W}(u)\leq p(u-z_{1})$ (Usando infimo en 2.)
+>>6. Ahora por definicion de infimo $\delta _1\leq -f_{W}(v)+p(v+z_{1})$ por lo tanto $\delta_{1} +f_{W}(v)\leq p(v+z_{1})$
+>>7. Si $\alpha <0$ multiplicamos 5. por $-\alpha$ y escribiendo $w=-\alpha u$ obtenemos $(a)$
+>>8. Si $\alpha >0$ multiplicamos 6. por $\alpha$ y escribiendo $w=\alpha v$ obtebemos $(a)$
+>>9. Si $\alpha =0$ trivial
+>>10. Entonces $f_{W_{1}}$ cumple la desigualdad 
 
 >[!Theorem] Hahn-Banach sobre $\mathbb{R}$ MEMO
 >$X$ espacio vectorial $p : X\rightarrow \mathbb{R}$ [[Teórico 10#^dafca5]]. 
@@ -792,15 +792,15 @@ n^{-1} a_n, & \text{si } n \leq k, \\
 >>6. lo que, como $\lambda_1 \neq \lambda_2$, implica que $(e_1, e_2) = 0$.
 
 >[!Theorem]
->El número de valores propios no nulos de $T$ (repetidos según multiplicidad) es igual a $r(T)$. El conjunto de autovectores $\{e_n\}_{n=1}^{r(T)}$ construido arriba (osea de autovalor no nulo) es una base ortonormal para $\overline{ImT}$ y el operador $T$ tiene la representación
->$$ T x = \sum_{n=1}^{r(T)} \lambda_n (x, e_n) e_n, \quad \text{donde} \quad \{\lambda_n\}_{n=1}^{r(T)} \text{ es el conjunto de valores propios no nulos de } T. \tag{7.10} $$
+>$T$ autoadjunta y compacta. El número de valores propios no nulos de $T$ (repetidos según multiplicidad) es igual a $r(T)$. El conjunto de autovectores $\{e_n\}_{n=1}^{r(T)}$ construido arriba (osea de autovalor no nulo) es una base ortonormal para $\overline{ImT}$ y el operador $T$ tiene la representación
+>$$ T x = \sum_{n=1}^{r(T)} \lambda_n (x, e_n) e_n, $$ Con $\{\lambda_n\}_{n=1}^{r(T)}$ El conjunto de valores propios no nulos de $T$ 
 >>[!Proof]-
->>1. Sea $M = \overline{Sp} \{e_n\}_{n=1}^{J}$, tal que $\{e_n\}_{n=1}^{J}$ es una base ortonormal para $M$ (por definicion de BON). Mostraremos que $M = \text{Im}T$, y por lo tanto, debemos tener $J = r(T)$ (en el caso finito o infinito). 
+>>1. Sea $M = \overline{Sp} \{e_n\}_{n=1}^{J}$, tal que $\{e_n\}_{n=1}^{J}$ es una base ortonormal para $M$ (por definicion de BON). Mostraremos que $M = \overline{ImT}$, y por lo tanto, debemos tener $J = r(T)$ (en el caso finito o infinito). 
 >>2. Recordemos que si $r(T) < \infty$ entonces $ImT$ = $\overline{ImT}$. 
 >>3. Devuelta por BON, para cualquier $u \in M$ tenemos que $u = \sum_{n=1}^{J} \alpha_n e_n$, donde $\alpha_n = (u, e_n)\quad n = 1, \dots, J$. Así, si $J = \infty$, tenemos
 >>$$ u = \lim_{k \to \infty} \sum_{n=1}^k \alpha_n \lambda_n^{-1} T e_n = \lim_{k \to \infty} T \left( \sum_{n=1}^k \alpha_n \lambda_n^{-1} e_n \right) \in \overline{ImT} ,$$mostrando que $M \subset \overline{ImT}$; 
 >>4. Un argumento similar se aplica cuando $J$ es finito (sin los límites). 
->>5. Ahora mostraremos que $M^{\perp} \subset \ker T$, esto nos diria $M\supset \ker (T)^{\perp}=\overline{ImT}$ (ultima igualdad vista en [[Teórico 19#^17c4c5]]) por lo tanto $\ker (T)^{\perp}=\overline{ImT}$ lo que implicaria que $M= \overline{ImT}$ que es lo que queriamos probar 
+>>5. Ahora mostraremos que $M^{\perp} \subset \ker T$, esto nos diria $M\supset \ker (T)^{\perp}=\overline{ImT}$ (ultima igualdad vista en [[Teórico 19#^17c4c5]]). Lo que implicaria que $M= \overline{ImT}$ que es lo que queriamos probar 
 >>6. Si $J = \infty$ y $u \in M$, tenemos
 >>$$ T u = T \left( \lim_{k \to \infty} \sum_{n=1}^k (u,e_{n}) e_n \right) = \lim_{k \to \infty} \sum_{n=1}^k \lambda_n (u,e_{n}) e_n \in M$$
 >> y de nuevo, un cálculo similar se aplica (sin los límites) si $J < \infty$. 

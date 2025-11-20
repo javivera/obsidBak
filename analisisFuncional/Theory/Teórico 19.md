@@ -18,7 +18,7 @@ dateCreated: 2024-11-10,19:55
 >>2. La alternativa (a) corresponde al caso $\lambda \in \rho(T)$ y $\overline{\lambda}\in \rho(T^{*})$ 
 >>3. mientras que la alternativa (b) corresponde al caso $\lambda \in \sigma_p(T)$ y $\overline{\lambda}\in \sigma_{p}(T^{*})$   
 >>4. En este caso, $m_\lambda = n(T - \lambda I)=n(T^{*}-\overline{\lambda} I)$. (seria la dimension del autoespacio) y obviamente todos los avecs asociados $\{ x_{n} \}$ son solucion de la homogenea por defincion de autovalor. Analogo con $T^{*}-\overline{\lambda} I$ e $\{ y_{n} \}$    
->>5. Ademas se sigue de [[Teórico 18#^937fe3]] que las condiciones sobre $p, q$ en (b) aseguran que $$\begin{align}\text{ La ecuacion no homogenea tiene solucion } x &\iff p \in \text{Im}(T - \lambda I)=\ker(T^{*}-\lambda I)^{\perp}\\ & \iff(p,w) \quad\forall w\in Ker(T^{*}-\lambda I )\in \mathbb{N}\\ & \iff (p,y_{n})\quad n=1,\ldots,m_{\lambda}\end{align}$$
+>>5. Ademas se sigue de [[Teórico 18#^937fe3]] que las condiciones sobre $p, q$ en (b) aseguran que $$\begin{align}\text{ La ecuacion no homogenea tiene solucion } x &\iff p \in \text{Im}(T - \lambda I)=\ker(T^{*}-\overline \lambda I)^{\perp}\\ & \iff(p,w) \quad\forall w\in Ker(T^{*}-\overline \lambda I )\in \mathbb{N}\\ & \iff (p,y_{n})\quad n=1,\ldots,m_{\lambda}\end{align}$$
 >>6. Analogamente sale $(q,x_{n})=0$ 
 
 ^23a090
@@ -114,17 +114,20 @@ dateCreated: 2024-11-10,19:55
 >>$$\lambda_1(e_1, e_2) = (T e_1, e_2) = (e_1, T e_2) = \lambda_2(e_1, e_2)$$
 >>6. lo que, como $\lambda_1 \neq \lambda_2$, implica que $(e_1, e_2) = 0$.
 
+^935f31
+
 >[!Remark]
->En vista del Teorema 7.33, ahora podemos ordenar los valores propios de $T$ en la forma de una lista no vacía, finita o una lista numerable infinita $\lambda_1, \lambda_2, \dots$, de manera que $|\lambda_n|$ disminuye a medida que $n$ aumenta y cada valor propio $\lambda_n$ se repite en la lista según su multiplicidad (más precisamente, si $\lambda$ es un valor propio de $T$ con multiplicidad $m_\lambda > 0$, entonces $\lambda$ se repite exactamente $m_\lambda$ veces en la lista). Además, para cada $n$ podemos usar el algoritmo de Gram-Schmidt para construir una base ortonormal de cada espacio Ker$(T - \lambda_n I)$ que consista en exactamente $m_\lambda$ autovectores. Así, listando los autovectores construidos en el mismo orden que los valores propios, obtenemos una lista de autovectores correspondientes de la forma $e_1, \dots, e_J$ o $e_1, e_2, \dots$. Por la construcción, los autovectores en esta lista correspondientes al mismo valor propio son ortogonales, mientras que por el Teorema 7.33, los autovectores correspondientes a valores propios diferentes son ortogonales. Por lo tanto, la lista completa es un conjunto ortonormal.
+>En vista del [[Teórico 19#^935f31]], ahora podemos ordenar los valores propios de $T$ en la forma de una lista no vacía, finita o una lista numerable infinita $\lambda_1, \lambda_2, \dots$, de manera que $|\lambda_n|$ disminuye a medida que $n$ aumenta y cada valor propio $\lambda_n$ se repite en la lista según su multiplicidad (más precisamente, si $\lambda$ es un valor propio de $T$ con multiplicidad $m_\lambda > 0$, entonces $\lambda$ se repite exactamente $m_\lambda$ veces en la lista). Además, para cada $n$ podemos usar el algoritmo de Gram-Schmidt para construir una base ortonormal de cada espacio Ker$(T - \lambda_n I)$ que consista en exactamente $m_\lambda$ autovectores. Así, listando los autovectores construidos en el mismo orden que los valores propios, obtenemos una lista de autovectores correspondientes de la forma $e_1, \dots, e_J$ o $e_1, e_2, \dots$. Por la construcción, los autovectores en esta lista correspondientes al mismo valor propio son ortogonales, mientras que por el Teorema 7.33, los autovectores correspondientes a valores propios diferentes son ortogonales. Por lo tanto, la lista completa es un conjunto ortonormal.
 >En este momento no sabemos cuántos valores propios no nulos existen. Para tratar con el caso finito e infinito, denotaremos este número por $J$, donde $J$ puede ser un entero finito o ``$J = \infty$'', y escribiremos las listas en la forma $\{\lambda_n\}_n^J, \{e_n\}_n^J$. Demostraremos que $J$ es, de hecho, igual a $r(T)$, el rango de $T$ (que puede ser finito o infinito aquí). También demostraremos que $\{e_n\}_n^J$ es una base ortonormal para el espacio de Hilbert Im$T$.
 
 ^840d86
 
 >[!Theorem] MEMO
 >El número de valores propios no nulos de $T$ (repetidos según multiplicidad) es igual a $r(T)$. El conjunto de autovectores $\{e_n\}_{n=1}^{r(T)}$ construido arriba (osea de autovalor no nulo) es una base ortonormal para $\overline{ImT}$ y el operador $T$ tiene la representación
->$$ T x = \sum_{n=1}^{r(T)} \lambda_n (x, e_n) e_n, \quad \text{donde} \quad \{\lambda_n\}_{n=1}^{r(T)} \text{ es el conjunto de valores propios no nulos de } T. \tag{7.10} $$
+>$$ T x = \sum_{n=1}^{r(T)} \lambda_n (x, e_n) e_n$$
+>Donde $\{\lambda_n\}_{n=1}^{r(T)}$ es el conjunto de valores propios no nulos de $T$
 >>[!Proof]-
->>1. Sea $M = \overline{Sp} \{e_n\}_{n=1}^{J}$, tal que $\{e_n\}_{n=1}^{J}$ es una base ortonormal para $M$ (por definicion de BON). Mostraremos que $M = \text{Im}T$, y por lo tanto, debemos tener $J = r(T)$ (en el caso finito o infinito). 
+>>1. Sea $M = \overline{Sp} \{e_n\}_{n=1}^{J}$, tal que $\{e_n\}_{n=1}^{J}$ es una base ortonormal para $M$ (por definicion de BON). Mostraremos que $M =\overline{ImT}$, y por lo tanto, debemos tener $J = r(T)$ (en el caso finito o infinito). 
 >>2. Recordemos que si $r(T) < \infty$ entonces $ImT$ = $\overline{ImT}$. 
 >>3. Devuelta por BON, para cualquier $u \in M$ tenemos que $u = \sum_{n=1}^{J} \alpha_n e_n$, donde $\alpha_n = (u, e_n)\quad n = 1, \dots, J$. Así, si $J = \infty$, tenemos
 >>$$ u = \lim_{k \to \infty} \sum_{n=1}^k \alpha_n \lambda_n^{-1} T e_n = \lim_{k \to \infty} T \left( \sum_{n=1}^k \alpha_n \lambda_n^{-1} e_n \right) \in \overline{ImT} ,$$mostrando que $M \subset \overline{ImT}$; 
@@ -142,6 +145,16 @@ dateCreated: 2024-11-10,19:55
 >> 13. Así que $T_N$ debe ser el operador cero. En otras palabras, $T v = T_N v = 0$ para todo $v \in N$, lo que hemos afirmado antes, y por lo tanto completa la prueba de que $M = \overline{ImT}$.
 >> 14. Finalmente, para cualquier $x \in \mathcal{H}$ tenemos que $(I - P)x \in M^\perp=\ker T$ entonces $T((I-P)x)=0$ por 13. Ademas $((I-P)x,e_{n})=0$ por lo tanto $(Px,e_{n})=(x,e_{n})$  
 >> 15. Por lo tanto $$Tx = T(Px + (I - P)x) =T(Px)=\sum^{J}_{n=1}\lambda_{n}(Px,e_{n})e_{n} = \sum_{n=1}^{J} \lambda_n (x, e_n)e_n$$ según el cálculo anterior.
+>
+>>[!idea]-
+>> 1. Defino $M=\overline{\mathrm{Sp}}\{e_n\}_{n=1}^J$ donde los $e_n$ son los autovectores de autovalores no nulos. Queremos probar que $M=\overline{\mathrm{Im}T}$.
+>> 2. Para cualquier $u\in M$, se obtiene $$ u = \lim_{k \to \infty} \sum_{n=1}^k \alpha_n \lambda_n^{-1} T e_n = \lim_{k \to \infty} T \left( \sum_{n=1}^k \alpha_n \lambda_n^{-1} e_n \right) \in \overline{ImT} $$, así que $M\subseteq\overline{\mathrm{Im}T}$.
+>> 3. Mostramos que $M^\perp\subseteq\ker T$. Primero notamos  que $T(M)\subseteq M$, de donde $M^\perp$ es invariante por $T$.
+>> 4. Llamamos $T_N$ a la restricción de $T$ a $N=M^\perp$. Es compacto en $N$ porque $T$ es compacto y $N$ es cerrado.
+>> 5. Si $T_N\neq 0$, por compacto tendría un autovalor no nulo $\lambda$ con autovector $\tilde e\in N$. Absurdo por que aveces están en $M$ 
+>> 6. Conclusión: $T_N=0$, es decir, $T(N)=\{0\}$, lo cual implica $N\subseteq\ker T$.
+>> 7. Por tanto $\ker T^\perp=\overline{\mathrm{Im}T}\subseteq M$
+>> 8. Finalmente, para todo $x$, como $(I-P)x\in M^\perp=\ker T$, se cumple $T((I-P)x)=0$, y usando $(Px,e_n)=(x,e_n)$ obtenemos $$Tx = T(Px + (I - P)x) =T(Px)=\sum^{J}_{n=1}\lambda_{n}(Px,e_{n})e_{n} = \sum_{n=1}^{J} \lambda_n (x, e_n)e_n$$
 
 ^e7a5da
 

@@ -24,7 +24,7 @@ $$\sigma_p(S) = \{\lambda : \lambda \text{ es un autovalor de } S\}, \quad \rho(
 
 >[!Remark]
 >Puede suceder que $S$ compacto y $\sigma_{p}(S)=\emptyset$ por ejemplo $S\in B(\ell^{2})$ dado por $$S(x_{1},x_{2},\ldots)=\left( 0,x_{1}, \frac{x_{2}}{2} ,\ldots\right)$$ Además $\sigma(S)=\{ 0 \}$
->>[!Proof]
+>>[!Proof]-
 >>1. Es trivial ver que es compacto dado que si $\{ x_{n} \}$ esta acotado entonces $\sum^{\infty}_{n=1}|x_{n}|^{2}\leq M$ por lo tanto $|x_{n}|\leq M\quad\forall n\in \mathbb{N}$ por lo tanto $|S(x_{n})|\leq \frac{M}{n-1}$ para cada $n\in \mathbb{N}$ que tiende a $0$  
 >>2. Sea $\lambda \in \sigma_{p}(S)$ de autovector $x\neq 0$ entonces $$\left( 0,x_{1}, \frac{x_{2}}{2},\ldots \right)=S(x_{1},\ldots)=\lambda (x_{1},\ldots)=\left(\lambda x_{1}, \lambda x_{2},\ldots \right)$$  
 >>3. Supongamos $\lambda\neq 0$ entonces $x_{1}=0$ entonces $x_{2}=0$ etc que es absurdo
@@ -96,13 +96,21 @@ $$\sigma_p(S) = \{\lambda : \lambda \text{ es un autovalor de } S\}, \quad \rho(
 >>$$(T - \lambda_k I) e = \alpha_1 (\lambda_1 - \lambda_k) e_1 + \dots + \alpha_k (\lambda_{k-1} - \lambda_k) e_{k-1}$$Mostrando que si $e \in M_k$, entonces $(T - \lambda_k I) e \in M_{k-1}$
 >>5. De forma similar, si $e \in M_k$, entonces $T e \in M_k$.
 >>6. A continuación, $M_k$ es un subespacio cerrado de $M_{k+1}$ y no igual a $M_{k+1}$, por lo que el complemento ortogonal de $M_k$ en $M_{k+1}$ es un subespacio lineal no trivial de $M_{k+1}$. 
->>7. Por lo tanto, existe un vector unitario $y_{k+1} \in M_{k+1}$ tal que $(y_{k+1}, e) = 0$ para todo $e \in M_k$ y $\|y_{k+1} - e\|= \lVert y_{k+1} \rVert+\lVert e \rVert\geq 1$ (esto último por que son ortogonales y unitarios ambos) 
+>>7. Por lo tanto, existe un vector unitario $y_{k+1} \in M_{k+1}$ tal que $(y_{k+1}, e) = 0$ para todo $e \in M_k$ y $\|y_{k+1} - e\|^{2}= \lVert y_{k+1} \rVert^{2}+\lVert e \rVert^{2}\geq 1$ (esto último por que $y_{k+1}$ es unitario) 
 >>8. Repitiendo este proceso inductivamente, construimos una sucesión $\{y_n\}$.
 >>9. Ahora, por la construcción de la sucesión $\{y_n\}$, para cualquier $m, n$ con $n > m$, tenemos
 >>$$\|T y_n - T y_m\| = |\lambda_n| \|y_n - \lambda_n^{-1} [(T - \lambda_n I) y_n + T y_m]\| \geq |\lambda_n| \geq t_0$$ 
->>Dado que por 4. $-(T - \lambda_n I) y_n \in M_{n-1}$. Y por 5. $Ty_{m}\in M_{m}\subseteq M_{n-1}$ por qué $n-1\geq m$ entonces por 7. la norma es mayor que $1 .|\lambda_{n}|$   
+>>Dado que por 4. $(T - \lambda_n I) y_n \in M_{n-1}$. Y por 5. $Ty_{m}\in M_{m}\subseteq M_{n-1}$ por qué $n-1\geq m$ entonces por 7. la norma es mayor que $1 .|\lambda_{n}|$   
 >>10. Esto muestra que la sucesión $\{T y_n\}$ no puede tener una subsecuencia convergente. 
 >>11. Esto contradice la compacidad de $T$ (notar que $\{ y_{n} \}$ es unitaria ósea acotada) lo que prueba el teorema. 
+>
+>>[!idea]-
+>> 1. Suponemos que existe $t_0>0$ y una sucesión de autovalores distintos $\{\lambda_n\}$ con $|\lambda_n|\ge t_0$ y autovectores unitarios $\{e_n\}$.
+>> 2. Construimos inductivamente una sucesión unitaria $\{y_n\}$ tomando $y_1=e_1$ y luego eligiendo $y_{k+1}\in M_{k+1}$ ortogonal a $M_k$, donde $M_k=\mathrm{Sp}\{e_1,\dots,e_k\}$.
+>> 3. Se muestra que $(T-\lambda_k I)e\in M_{k-1}$ y $Te\in M_k$ para cualquier $e\in M_k$, lo cual preserva la estructura en bloques.
+>> 4. La ortogonalidad garantiza $\|y_{k+1}-e\|\ge 1$ para todo $e\in M_k$, asegurando separación fuerte entre los $y_n$.
+>> 5. Entonces si $n>m$ considerando $(T-\lambda_n I)y_n, Ty_m\in M_{n-1}$, se obtiene (intercalando $\lambda_{n}y_{n}$) $$\|T y_n - T y_m\| = |\lambda_n| \|y_n - \lambda_n^{-1} [(T - \lambda_n I) y_n + T y_m]\| \geq |\lambda_n| \geq t_0$$
+>> 6. Así $\{Ty_n\}$ no tiene subsucesión convergente, contradiciendo la compacidad de $T$.
 
 ^301f9e
 
@@ -131,7 +139,7 @@ $$\sigma_p(S) = \{\lambda : \lambda \text{ es un autovalor de } S\}, \quad \rho(
 >ver el Ejercicio 7.18. Este operador puede escribirse en forma de "matriz" como
 >$$M \left[ \begin{array}{c} x \\ y \end{array} \right] = \left[ \begin{array}{cc} A & B \\ C & D \end{array} \right] \left[ \begin{array}{c} x \\ y \end{array} \right]$$
 >donde, formalmente, usamos las reglas estándar de multiplicación de matrices para evaluar el producto de matrices, aunque los elementos en las matrices son operadores o vectores – esto es válido siempre que mantengamos el orden correcto de los operadores y vectores.
->Además si $$M_{1}=\left[\begin{array}{cc} A & B \\ 0 & I_{\gamma} \end{array}\right]\quad M_{1}=\left[\begin{array}{cc} A & 0 \\ C & I_{\gamma} \end{array}\right]$$ entonces $A$ invertible implica $M_{1}$ y $M_{2}$ son inversible. De hecho $$M_{1}^{-1}=\left[\begin{array}{cc} A^{-1} & A^{-1}B \\ 0 & I_{\gamma} \end{array}\right]\quad M_{2}^{-1}=\left[\begin{array}{cc} A^{-1} & 0 \\ -CA^{-1} & I_{\gamma} \end{array}\right]$$ (Notar que entonces si $M_{1}$ o $M_{2}$ no son invertibles enonces $A$ no lo es)   
+>Además si $$M_{1}=\left[\begin{array}{cc} A & B \\ 0 & I_{\gamma} \end{array}\right]\quad M_{2}=\left[\begin{array}{cc} A & 0 \\ C & I_{\gamma} \end{array}\right]$$ entonces $A$ invertible implica $M_{1}$ y $M_{2}$ son inversible. De hecho $$M_{1}^{-1}=\left[\begin{array}{cc} A^{-1} & A^{-1}B \\ 0 & I_{\gamma} \end{array}\right]\quad M_{2}^{-1}=\left[\begin{array}{cc} A^{-1} & 0 \\ -CA^{-1} & I_{\gamma} \end{array}\right]$$ (Notar que entonces si $M_{1}$ o $M_{2}$ no son invertibles enonces $A$ no lo es)   
 >Y Si $A$ no inversible entonces $$\ker M_{1}=ker A\times \{ 0 \}\quad \land \quad\ker M_{2}=\{ (x,y)\in X\times Y:x\in ker A,y=-Cx\}$$
 >Y de aca podemos concluir (lo usamos despues) $$\dim(\ker(M_{1}))=\dim(\ker(A))\quad\land \quad\dim\ker(M_{2})=\dim\ker(A)$$   
 
@@ -155,11 +163,21 @@ $$\sigma_p(S) = \{\lambda : \lambda \text{ es un autovalor de } S\}, \quad \rho(
 >>9. Usando $I = P_M + P_N$ y recordamos $N = \text{Ker } T^*$, tenemos que
 >>$$(T^* - \overline{\lambda}  I)(u + v) = (T^* - \overline{\lambda}  I) u -\overline{\lambda}  v= I(T^{*} -\overline{\lambda} I)u-\overline{\lambda} v=P_M(T^* - \overline{\lambda}  I) u + P_N T^* u - \overline{\lambda}  v$$
 >>10. Por lo tanto, $T^* - \lambda I$ puede representarse en forma de matriz por
->>$$(T^* - \overline{\lambda}  I) \begin{bmatrix} u \\ v \end{bmatrix} = \begin{bmatrix} P_M(T^* - \overline{\lambda}  I)|_M & 0 \\ P_M(T^*)|_M & -\overline{\lambda} I|_{N} \end{bmatrix} \begin{bmatrix} u \\ v \end{bmatrix}$$
+>>$$(T^* - \overline{\lambda}  I) \begin{bmatrix} u \\ v \end{bmatrix} = \begin{bmatrix} P_M(T^* - \overline{\lambda}  I)|_M & 0 \\ P_N(T^*)|_M & -\overline{\lambda} I|_{N} \end{bmatrix} \begin{bmatrix} u \\ v \end{bmatrix}$$
 >>11. Se puede probar que $A^{*}=P_{M}(T^{*}-\overline{\lambda}I|_{M})$, y aca vale lo mismo o $A^{*}$ es invertible o $n(A^{*})>0$ devuelta por dimension finita y usando el teorema de antes de nuevo llegamos a que o bien $T^{*}-\overline{\lambda} I$ es inversible o bien $n(T^{*}-\overline{\lambda}I)=n(A^{*})>0$
 >>12. De nuevo por álgebra lineal finita, $n(A^*) = n(A)$ (osea en dimension finita $n(T)=n(T^{*})$) 
 >>13. Se sigue de esto que si $n(A) = 0$, entonces $T - \lambda I$ invertible y ademas $n(A^{*})=0$ entonces $T^* - \overline{\lambda} I$ son invertibles, mientras que si $n(A) > 0$ entonces $n(T^* - \overline{\lambda} I)=n(T - \lambda I)  = n(A) > 0$
 >>14. Entonces $\lambda \in \sigma_p(T)$ y $\bar{\lambda} \in \sigma_p(T^*)$.
+>
+>>[!idea]-
+>> 1. Sea $M=\mathrm{Im}\,T$ y $N=\ker T^*=M^\perp$. Como $M$ es finito-dimensional es cerrado y todo $x$ se descompone como $x=u+v$ con $u\in M$, $v\in N$.
+>> 2. Entonces: $$(T - \lambda I) \begin{bmatrix} u \\ v \end{bmatrix} = \begin{bmatrix} A & T|_N \\ 0 & -\lambda I|_N \end{bmatrix} \begin{bmatrix} u \\ v \end{bmatrix}$$ donde $A=(T-\lambda I)|_M$.
+>> 3. Como $A:M\to M$ es finito-dimensional: o $A$ es invertible o $n(A)>0$. En finito dimensión, $A$ no invertible $\iff$ no inyectiva.
+>> 4. Si $A$ es invertible, usando la matriz triangular se ve que $T-\lambda I$ es invertible.
+>> 5. Si $n(A)>0$, entonces $n(T-\lambda I)=n(A)>0$, lo cual significa $\lambda\in\sigma_p(T)$.
+>> 6. Para el adjunto, escribimos $(T^*-\bar\lambda I)(u+v)=P_M(T^*-\bar\lambda I)u+P_NT^*u-\bar\lambda v$ usando $I=P_{M}+P_{N}$ y obtenemos $$(T^{*}  - \overline \lambda I) \begin{bmatrix} u \\ v \end{bmatrix} =\begin{bmatrix} B & 0 \\ P_NT^* & -\bar\lambda I|_N \end{bmatrix}\begin{bmatrix} u \\ v \end{bmatrix}$$
+>> 7. Con $B=P_{M}(T^{*}-\overline{\lambda}I)|_{M}$ La misma dicotomía de 5. vale para $B$. 
+>> 8. Ademas $B=A^{*}$ asi que por dim finita $n(B)=n(A)$ se termina haciendo lo mismo que en 4.
 
 ^eeeb64
 
@@ -190,6 +208,17 @@ $$\sigma_p(S) = \{\lambda : \lambda \text{ es un autovalor de } S\}, \quad \rho(
 >>5. Dado que $S$ y $S^*$ son invertibles, se sigue que $$T - \lambda I \quad\land\quad T^* - \lambda I \quad\text{son invertibles} \iff  G - \lambda I \quad \land\quad G^* - \lambda I \quad \text{son invertibles}$$y que $n(T - \lambda I) = n(G - \lambda I)$ y $n(T^{*}-\overline{\lambda}I)=n(G^{*}-\overline{\lambda}I)$ por [[Teórico 18#^19d507]]
 >>6. Ahora, como $\text{Im} G \subset \text{Im} T_F$ el operador $G$ tiene rango finito, los primeros resultados del teorema siguen de [[Teórico 18#^eeeb64]]
 >>7. Ósea o $G$ cumple $\lambda\in \sigma_{p}(G)$ (ósea $G-\lambda I$ es no inversible $\iff$  $T-\lambda I$ no es invertible $\iff$ $\lambda\in \sigma_{p}(T)$  ) o $G$ cumple que $\lambda\in \rho(G)$ ósea ($G-\lambda I$ es inversible $\iff$  $T-\lambda I$ es invertible $\iff$ $\lambda\in \rho(T)$  ) análogo $T^{*}$ 
+>>
+>
+>>[!idea]-
+>> 1. Se reduce el problema al caso de rango finito: por aproximación compacta existe $T_F$ de rango finito con $\|\lambda^{-1}(T-T_F)\|<1/2$.
+>> 2. Entonces $S=I-\lambda^{-1}(T-T_F)$ es invertible y también lo es $S^*$.
+>> 3. Definimos $G=T_F S^{-1}$ y se obtiene $T-\lambda I=(G-\lambda I)S$ y $T^*-\bar\lambda I=S^*(G^*-\bar\lambda I)$.
+>> 4. Como $S$ y $S^*$ son invertibles, la invertibilidad y la nulidad de $T-\lambda I$ y $T^*-\bar\lambda I$ coinciden exactamente con las de $G-\lambda I$ y $G^*-\bar\lambda I$.
+>> 5. El operador $G$ tiene rango finito porque $\mathrm{Im}\,G\subseteq\mathrm{Im}\,T_F$.
+>> 6. Aplicamos entonces el caso de rango finito: o bien $G-\lambda I$ es invertible (lo mismo para $T-\lambda I$) o bien $n(G-\lambda I)>0$ (y lo mismo para $T-\lambda I$), lo cual significa $\lambda\in\sigma_p(G)$ y por lo tanto $\lambda\in\sigma_p(T)$.
+>> 7. El mismo análisis vale para $G^*$ y $T^*$, de modo que simultáneamente $\bar\lambda\in\rho(T^*)$ o $\bar\lambda\in\sigma_p(T^*)$, y las nulidades coinciden y son finitas.
+
 
 ^3f6266
 
