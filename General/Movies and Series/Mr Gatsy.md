@@ -1,14 +1,13 @@
 **Type**:: [[Movie]]
-**Watched on**:: 2025-10-01
-**Year**:: 2015
-**Genre**:: 
-**Director / Creator**:: Jean-Marc Vallée
-**Main Cast**:: Jake Gyllenhaal
+**Watched on**:: 2025-11-21
+**Year**:: 2013
+**Director / Creator**:: Baz Luhrmann
+**Main Cast**:: Leonardo Di Caprio
 
 ---
 
 ## 📝 Summary
-Emotiva, Trauma,Perdida, Dolor, Amor, Vinculos, Identidad
+Nostalgia, lo que puedo ser y no fué, evasion, aceptacion del paso del tiempo, tristeza,
 
 ## 🎯 Impressions
 Thoughts, standout scenes, character arcs, directing, visuals, etc.
@@ -22,4 +21,4 @@ Other similar movies, sequels, actors you like, etc.
 ## 🧠 Quotes / Notes
 > Any quotes or deeper takeaways.
 
-#media/movies
+- [ ] #media/movie

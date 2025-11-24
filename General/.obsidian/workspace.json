@@ -48,9 +48,51 @@
               "icon": "lucide-file",
               "title": "Demolition"
             }
+          },
+          {
+            "id": "12afabe9fae9e21b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Movies and Series/Murderbot.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Murderbot"
+            }
+          },
+          {
+            "id": "24ac49950764b892",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Movies and Series/Babylon.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Babylon"
+            }
+          },
+          {
+            "id": "394fcb1b3bb6c788",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mank.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Mank"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -194,15 +236,23 @@
       "media-extended:Open media": false
     }
   },
-  "active": "839fd72ba996816d",
+  "active": "394fcb1b3bb6c788",
   "lastOpenFiles": [
-    "templates/Movie Template.md",
-    "Movies and Series/Demolition.md",
-    "Untitled 1.md",
-    "Quotes.md",
-    "Untitled.md",
+    "Movies and Series/Mr Gatsy.md",
+    "Mank.md",
+    "Movies and Series/Babylon.md",
     "Movies and Series/Murderbot.md",
+    "Movies and Series/Demolition.md",
+    "Hermanos Karamazov.md",
+    "Vervaeke.md",
     "JBP.md",
+    "Lenguaje.md",
+    "Papel pintado.md",
+    "Untitled.md",
+    "The Begging of Infinity.md",
+    "The righteouss mind. Haidt.md",
+    "templates/Movie Template.md",
+    "Quotes.md",
     "Movies and Series",
     "templates"
   ]

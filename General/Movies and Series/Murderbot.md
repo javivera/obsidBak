@@ -1,4 +1,4 @@
-**Type**:: [[Movie]] / [[Series]]
+**Type**:: [[Series]]
 **Watched on**:: 2025-06-30
 **Year**:: 2025
 **Genre**:: Comedy / SciFi

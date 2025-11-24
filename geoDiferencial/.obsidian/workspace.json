@@ -6,7 +6,7 @@
       {
         "id": "36abdb87a26e65ac",
         "type": "tabs",
-        "dimension": 49.16666666666666,
+        "dimension": 41.91176470588235,
         "children": [
           {
             "id": "36b3ac1e25590571",
@@ -28,7 +28,7 @@
       {
         "id": "746ca06c0bd74836",
         "type": "tabs",
-        "dimension": 50.83333333333334,
+        "dimension": 58.08823529411765,
         "children": [
           {
             "id": "5127e43ee1c8a762",
@@ -115,7 +115,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "e4c509da46b3a57e",
@@ -212,7 +213,11 @@
   "lastOpenFiles": [
     "solution.md",
     "Definiciones.md",
+    "Pasted image 20251122173149.png",
+    "Pasted image 20251122172334.png",
     "Practicos/GD - Pr2.pdf",
+    "Pasted image 20251122150201.png",
+    "Pasted image 20251122145538.png",
     "Practicos/jpgs/GD - Pr2-2.png",
     "solve_ex1.py",
     "Practicos/GD - Pr4.pdf",
@@ -233,10 +238,6 @@
     "Resueltos/solutions.md",
     "Untitled.md",
     "Practicos/GD-Pr2-Ej4-solucion.md",
-    "Practicos/jpgs/GD - Pr2.-2.png",
-    "Practicos/jpgs/GD - Pr2.png-2.png",
-    "Practicos/jpgs/GD - Pr2.png-1.png",
-    "GDPr2.jpg-1.jpg",
-    "Practicos/jpgs/GD - Pr3.jpg-1.jpg"
+    "Practicos/jpgs/GD - Pr2.-2.png"
   ]
 }
