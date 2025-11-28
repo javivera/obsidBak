@@ -466,6 +466,8 @@
 >>11. La verificación de los apartados (1) y (2) de la definición de superficie regular es la misma de que los gráficos de funciones son superficies regulares, con $\mathcal{V}$ también como arriba.
 >>12. Osea que para cada $q\in S$ tengo un entorno donde puedo armar una carta. Entonces $S$ es superficie 
 
+^14271e
+
 >[!Proposition]
 >Sea $S$ una superficie regular y sea $p \in S$. Si una función $\varphi : U \to \mathbb{R}^3$ satisface las condiciones del apartado (1) de la definición de superficie regular, entonces satisface también las del (2).
 >>[!Proof]
@@ -617,7 +619,7 @@
 >>	1. Sea $x \in T_pS$. Sea $\alpha : (-\varepsilon, \varepsilon) \to S$ una curva suave tal que $\alpha(0) = p$, $\alpha(-\varepsilon, \varepsilon) \subset \varphi(U)$ y $\alpha'(0) = x$. 
 >>	2. Tenemos que $$ \varphi^{-1}(\alpha(t)) = (u(t), v(t)) $$para ciertas funciones suaves $u, v : (-\varepsilon, \varepsilon) \to \mathbb{R}$ [[Definiciones#^408c1f]]
 >>	3. Así $$ \alpha(t) = \varphi(u(t), v(t)). $$
->>	4. Por la regla de la cadena (multiplicando la matriz $D\varphi$ con el vector $(u'(0),v'(0))$) , $$ \alpha'(0) = \varphi_u(u(0), v(0))u'(0) + \varphi_v(u(0), v(0))v'(0). $$ (notar $\varphi_{u}$ es un vector) 
+>>	4. Por la regla de la cadena (multiplicando la matriz $D\varphi$ con el vector $(u'(0),v'(0))$) , $$ \alpha'(0) = \varphi_u(u(0), v(0))u'(0) + \varphi_v(u(0), v(0))v'(0). $$ (notar $\varphi_{u}$ es un vector)(esto prueba tambien que es base) 
 >>	5. Ademas por 1. $\varphi(q)=p=\alpha (0)=\varphi(u(0),v(0))$ entonces $q=(u(0),v(0))$  $$x = \alpha'(0) = \varphi_u(q)u'(0) + \varphi_v(q)v'(0)$$que pertenece a la imagen de $d\varphi_q$, pues $\varphi_u(q) = d\varphi_q(e_1)$ y $\varphi_v(q) = d\varphi_q(e_2)$.
 >>- $\supset$
 >>	1. Dado $(a, b) \in \mathbb{R}^2$, escribimos $$ d\varphi_q(a, b) = d\varphi_q\left(\frac{d}{dt}\Big|_0 (q + t(a, b))\right) = \frac{d}{dt}\Big|_0 \varphi(q + t(a, b)) = \alpha'(0), $$donde $\alpha(t) = \varphi(q + t(a, b))$, que es una curva suave en $S$ con $\alpha(0) = \varphi(q) = p$ (Notar $d\varphi_{q}$ es la diferencial y usamos regla de cadena notar que diferencial de $\varphi$ evaluada $q+t(a,b)=\alpha (t)$ evaluada en $0$ que es $q$ todo eso multiplicado por $\frac{d}{dt}\Big|_0 (q + t(a, b))$   pero multiplicar matriz por vector es lo mismo que evaluar la transformacion lineal dada por la matriz)  
@@ -637,14 +639,14 @@
 >$$ v^{\perp} = \{u \in \mathbb{R}^3 \mid \langle v, u \rangle = 0\}. $$
 
 >[!Proposition] Espacio tangente de una superficie implícita
->Sea $A$ un subconjunto abierto de $\mathbb{R}^3$, sea $F : A \to \mathbb{R}$ una función suave con valor regular $y$, y sea $S$ la superficie $F^{-1}(\{y\})$. Entonces, para todo $p \in S$,
+>Sea $A$ un subconjunto abierto de $\mathbb{R}^3$, sea $F : A \to \mathbb{R}$ una función suave con valor regular $y$, y sea $S$ la superficie $F^{-1}(\{y\})$ [[Definiciones#^14271e]]. Entonces, para todo $p \in S$,
 >
 >$$ T_pS = \ker(dF_p) = \big( (\nabla F)_p \big)^{\perp}. $$
 >Notar $dF_{p}=\nabla F_{p}:\mathbb{R}^{3}\rightarrow \mathbb{R}$ osea es un vector en $\mathbb{R}^{3}$ tambien una transformacion lineal y se evalua con un vector de $\mathbb{R}^{3}$ que es lo mismo que hacer el producto interno (evaluar una "matriz" (vector) es multiplicar la matriz)       
 >>[!Proof]-
 >>- $\subset$) 
->>	1. Sea $X \in T_pS$. Sea $\alpha : (-\varepsilon, \varepsilon) \to S$ una curva suave tal que $\alpha(0) = p$, y $\alpha'(0) = X$. 
->>	2. Veamos que $X \in \ker(dF_p)$.Por la regla de la cadena,$$ dF_p(X) = dF_p(\alpha'(0)) = \frac{d}{dt}\Big|_0 F(\alpha(t)) = \frac{d}{dt}\Big|_0 y = 0. $$
+>>	1. Sea $x \in T_pS$. Sea $\alpha : (-\varepsilon, \varepsilon) \to S$ una curva suave tal que $\alpha(0) = p$, y $\alpha'(0) = x$. 
+>>	2. Veamos que $x \in \ker(dF_p)$.Por la regla de la cadena,$$ dF_p(x) = dF_p(\alpha'(0)) = \frac{d}{dt}\Big|_0 F(\alpha(t)) = \frac{d}{dt}\Big|_0 y = 0. $$
 >>- $\supset$) 
 >>	1. Sabemos de la proposición anterior que $T_pS$ es un subespacio de dimensión 2.
 >>	2. Además, acabamos de mostrar que está contenido en $\ker(dF_p)$. Entonces resta solo mostrar que $\ker(dF_p)$ tiene dimensión 2.
@@ -652,10 +654,54 @@
 >>	4. Así,
 >>$$ \dim(\ker(dF_p)) = 3 - \dim(\text{Imagen}(dF_p)) = 3 - 1 = 2, $$
 
+>[!Example]-
+>Sea $S$ la esfera de radio 1 centrada en el origen y sea $p \in S$. Entonces $$ T_pS = p^{\perp}. $$
+>>[!Proof]
+>>1. En efecto, $S = F^{-1}(\{1\})$, donde 1 es un valor regular de $F(x, y, z) = x^2 + y^2 + z^2$.
+>>2. Calculamos $$ \nabla F(x, y, z) = (2x, 2y, 2z). $$
+>>3. Luego $(\nabla F)_p = 2p \ne 0$ para todo $p \in S$ y así, $(\nabla F)_p^{\perp} = (2p)^{\perp} = p^{\perp}$.
+
+>[!Definition]
+>Sea $f : S \to \mathbb{R}^n$ una función suave y sea $p \in S$. Se define $df_p : T_pS \to \mathbb{R}^n$ mediante
+>$$ df_p(\alpha'(0)) = (f \circ \alpha)'(0) = \frac{d}{dt}\Big|_0 f(\alpha(t)), $$
+>donde $\alpha : (-\varepsilon, \varepsilon) \to S$ es una función suave con $\alpha(0) = p$.
+
+>[!Proposition]
+>La definición es buena y $df_p$ es lineal; se llama la **diferencial** de $f$ en $p$.
+>>[!Proof]-
+>>1. Sean $\alpha, \beta : (-\varepsilon, \varepsilon) \to S$ dos curvas suaves con $$ \alpha(0) = \beta(0) = p \quad \text{y} \quad \alpha'(0) = \beta'(0). $$
+>>2. Debemos mostrar que $$ (f \circ \alpha)'(0) = (f \circ \beta)'(0). $$
+>>3. Sea $\varphi : U \to \mathbb{R}^3$ un sistema coordenado de $S$ con $p \in \varphi(U)$, digamos, $p = \varphi(u_o, v_o)$.
+>>4. Achicando $\varepsilon$ si fuera necesario, tenemos que las trayectorias de $\alpha$ y $\beta$ están contenidas en $\varphi(U)$ y $$ \alpha(t) = \varphi(u(t), v(t)), \quad \beta(t) = \varphi(x(t), y(t)), $$donde $u, v, x, y : (-\varepsilon, \varepsilon) \to \mathbb{R}$ son funciones suaves, por el lema del diagrama triangular, y satisfacen $x(0) = u(0) = u_o$ e $y(0) = v(0) = v_o$. 
+>>5. Calculamos $$ \alpha'(0) = \varphi_u(u_o, v_o)u'(0) + \varphi_v(u_o, v_o)v'(0), $$ $$ \beta'(0) = \varphi_u(u_o, v_o)x'(0) + \varphi_v(u_o, v_o)y'(0). $$
+>>6. Como $\alpha'(0) = \beta'(0)$, resulta que $$ u'(0) = x'(0) \quad \text{y} \quad v'(0) = y'(0). \quad (9) $$
+>>7. Ahora calculamos $$ (f \circ \alpha)'(0) = \frac{d}{dt}\Big|_0 (f \circ \varphi)(u(t), v(t)) = (f \circ \varphi)_u(u_o, v_o)u'(0) + (f \circ \varphi)_v(u_o, v_o)v'(0), $$que por (9) es igual a $(f \circ \beta)'(0)$, como deseábamos. Así, $df_p$ está bien definida.
+>>8. Veamos ahora que $df_p$ es lineal. Llamando $a = u'(0)$ y $b = v'(0)$, tenemos por lo anterior que $$ df_p(a\varphi_u(u_o, v_o) + b\varphi_v(u_o, v_o)) = a(f \circ \varphi)_u(u_o, v_o) + b(f \circ \varphi)_v(u_o, v_o), $$con lo cual $df_p$ es lineal.
+
+>[!Proposition]
+>Sea $M$ superficie y $f : M \to \mathbb{R}^3$ una función suave tal que $f(M)$ está contenida en una superficie $N$ y sea $p \in M$. Entonces
+>$$ df_p : T_pM \to T_{f(p)}N $$
+>y si $\varphi : U \to \mathbb{R}^3$ y $\psi : V \to \mathbb{R}^3$ son sistemas coordenados de $M$ y $N$, alrededor de $p$ y $f(p)$ respectivamente, con $f(\varphi(U)) \subset \psi(V)$, se cumple que
+>$$ [df_p]_{\{\varphi_u(\bar{p}), \varphi_v(\bar{p})\}, \{\psi_x(\bar{q}), \psi_y(\bar{q})\}} = \left[ d(\psi^{-1} \circ f \circ \varphi)_{\bar{p}} \right]_{\text{can}}, \quad (10) $$
+>donde $\varphi(\bar{p}) = p$ y $\psi(\bar{q}) = f(p)$.
+>O sea, la matriz de la diferencial de una función entre superficies, en un punto de la superficie de partida, respecto de bases formadas por vectores coordenados, es igual a la matriz jacobiana de la función puesta en coordenadas, en el punto correspondiente del mapa de partida.
+>>[!Proof]-
+>>1. La primera afirmación se deja como ejercicio.
+>>2. Para mostrar la segunda, escribimos $$ (\psi^{-1} \circ f \circ \varphi)(u, v) = (x(u, v), y(u, v)). \quad (11) $$
+>>3. Como $\varphi_u(\bar{p}) = \frac{\partial \varphi}{\partial u}(\bar{p}) = \frac{d}{dt}\Big|_0 \varphi(\bar{p} + te_1)$, tenemos que $$ df_p(\varphi_u(\bar{p})) = \frac{d}{dt}\Big|_0 (f(\varphi(\bar{p} + te_1))) = (f \circ \varphi)_u(\bar{p}). $$
+>>4. Pero $f(\varphi(u, v)) = \psi(x(u, v), y(u, v))$ por $(11)$ luego, por la regla de la cadena en varias variables, $$ df_p(\varphi_u(\bar{p})) = \psi_x(\bar{q})x_u(\bar{q}) + \psi_y(\bar{q})y_u(\bar{q}). $$
+>>5. Entones en paso 3. tomamos $df_{p}$ y lo evaluamos en la primera coordenada de entrada de la base $\varphi_{u}(\bar{p})$ y en el paso 4. escribimos ese resultado en la base de salida. 
+>>6. Por lo tanto la primera columna de $[df_p]_{\{\varphi_u(\bar{p}), \varphi_v(\bar{p})\}, \{\psi_x(\bar{q}), \psi_y(\bar{q})\}}$ es igual a $(x_u(\bar{q}), y_u(\bar{q}))^t$. 
+>>7. Pero $(x_u(\bar{q}), y_u(\bar{q}))^t$ es trivialmente la primera columna de $\left[ d(\psi^{-1} \circ f \circ \varphi)_{\bar{p}} \right]_{\text{can}}$
+>>8. Con argumentos similares se ve que las segundas columnas de las matrices en (10) también coinciden
+
+>[!Definition]
+>Sea $f : S \to \mathbb{R}$ una función suave definida en una superficie $S$. Un punto $p \in S$ se dice **crítico** para $f$ si $df_p = 0$ (o sea, $df_p$ es la transformación lineal nula).
+
 >[!Example]
->Sea $S$ la esfera de radio 1 centrada en el origen y sea $p \in S$. Entonces
->$$ T_pS = p^{\perp}. $$
->En efecto, $S = F^{-1}(\{1\})$, donde 1 es un valor regular de $F(x, y, z) = x^2 + y^2 + z^2$.
->Calculamos
->$$ \nabla F(x, y, z) = (2x, 2y, 2z). $$
->Luego $(\nabla F)_p = 2p \ne 0$ para todo $p \in S$ y así, $(\nabla F)_p^{\perp} = (2p)^{\perp} = p^{\perp}$.
+>Sea $h : S \to \mathbb{R}$ la función altura respecto del vector unitario $u \in \mathbb{R}^3$, definida por
+>$$ h(q) = \langle q, u \rangle. $$
+>Un punto $p \in S$ es crítico para $h$ si y solo si $T_pS \perp u$. Esto resulta de que
+>$$ dh_p(X) = \langle X, u \rangle $$
+>para todo $X \in T_pS$: Si $X = \alpha'(0)$ para una curva suave $\alpha : (-\varepsilon, \varepsilon) \to S$ con $\alpha(0) = p$, tenemos que
+>$$ dh_p(X) = dh_p(\alpha'(0)) = \frac{d}{dt}\Big|_0 h(\alpha(t)) = \frac{d}{dt}\Big|_0 \langle \alpha(t), u \rangle = \langle \alpha'(0), u \rangle = \langle X, u \rangle. $$
