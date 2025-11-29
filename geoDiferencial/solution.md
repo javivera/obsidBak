@@ -133,3 +133,84 @@ Denotemos con una barra los elementos de la curva reorientada $\beta$.
 ### Conclusión
 Ni la curvatura ni la torsión cambian al recorrer la curva en sentido opuesto.
 
+
+---
+
+# Solución del Ejercicio 3
+
+## Enunciado
+Considerar la hélice circular $\alpha(s) = (a \cos(s/c), a \sin(s/c), b s/c)$, con $c^2 = a^2 + b^2$.
+a) Mostrar que $\alpha$ tiene rapidez unitaria.
+b) Hallar el triedro de Frenet de $\alpha$ y calcular la curvatura y la torsión.
+c) Hallar el plano osculador y el plano osculador afín de $\alpha$ en $s = \pi$.
+
+## Solución
+
+### a) Rapidez Unitaria
+Calculamos el vector tangente $\alpha'(s)$:
+$$ \alpha'(s) = \left( -\frac{a}{c} \sin(s/c), \frac{a}{c} \cos(s/c), \frac{b}{c} \right) $$
+Calculamos su norma al cuadrado:
+$$ \|\alpha'(s)\|^2 = \frac{a^2}{c^2} \sin^2(s/c) + \frac{a^2}{c^2} \cos^2(s/c) + \frac{b^2}{c^2} $$
+$$ = \frac{a^2}{c^2} (\sin^2(s/c) + \cos^2(s/c)) + \frac{b^2}{c^2} = \frac{a^2 + b^2}{c^2} $$
+Dado que $c^2 = a^2 + b^2$, tenemos:
+$$ \|\alpha'(s)\|^2 = \frac{c^2}{c^2} = 1 $$
+Por lo tanto, $\|\alpha'(s)\| = 1$, y la curva está parametrizada por longitud de arco.
+
+### b) Triedro de Frenet, Curvatura y Torsión
+
+**Vector Tangente Unitario $T(s)$:**
+$$ T(s) = \alpha'(s) = \left( -\frac{a}{c} \sin(s/c), \frac{a}{c} \cos(s/c), \frac{b}{c} \right) $$
+
+**Curvatura $\kappa(s)$ y Vector Normal $N(s)$:**
+Calculamos $T'(s)$:
+$$ T'(s) = \left( -\frac{a}{c^2} \cos(s/c), -\frac{a}{c^2} \sin(s/c), 0 \right) $$
+La curvatura es $\kappa(s) = \|T'(s)\|$:
+$$ \kappa(s) = \sqrt{ \frac{a^2}{c^4} \cos^2(s/c) + \frac{a^2}{c^4} \sin^2(s/c) } = \frac{|a|}{c^2} $$
+Asumiendo $a > 0$, tenemos $\kappa(s) = \frac{a}{c^2}$.
+
+El vector normal es $N(s) = \frac{T'(s)}{\kappa(s)}$:
+$$ N(s) = \frac{c^2}{a} \left( -\frac{a}{c^2} \cos(s/c), -\frac{a}{c^2} \sin(s/c), 0 \right) = (-\cos(s/c), -\sin(s/c), 0) $$
+
+**Vector Binormal $B(s)$:**
+$$ B(s) = T(s) \times N(s) = \begin{vmatrix} i & j & k \\ -\frac{a}{c}\sin(s/c) & \frac{a}{c}\cos(s/c) & \frac{b}{c} \\ -\cos(s/c) & -\sin(s/c) & 0 \end{vmatrix} $$
+$$ = \left( \frac{b}{c}\sin(s/c), -\frac{b}{c}\cos(s/c), \frac{a}{c}\sin^2(s/c) + \frac{a}{c}\cos^2(s/c) \right) $$
+$$ = \left( \frac{b}{c}\sin(s/c), -\frac{b}{c}\cos(s/c), \frac{a}{c} \right) $$
+
+**Torsión $\tau(s)$:**
+Calculamos $B'(s)$:
+$$ B'(s) = \left( \frac{b}{c^2}\cos(s/c), \frac{b}{c^2}\sin(s/c), 0 \right) $$
+Sabemos que $B'(s) = -\tau(s) N(s)$.
+$$ -\tau(s) (-\cos(s/c), -\sin(s/c), 0) = \left( \frac{b}{c^2}\cos(s/c), \frac{b}{c^2}\sin(s/c), 0 \right) $$
+Comparando componentes:
+$$ \tau(s) \cos(s/c) = \frac{b}{c^2} \cos(s/c) \implies \tau(s) = \frac{b}{c^2} $$
+
+**Resumen:**
+- $T(s) = \left( -\frac{a}{c} \sin(s/c), \frac{a}{c} \cos(s/c), \frac{b}{c} \right)$
+- $N(s) = (-\cos(s/c), -\sin(s/c), 0)$
+- $B(s) = \left( \frac{b}{c}\sin(s/c), -\frac{b}{c}\cos(s/c), \frac{a}{c} \right)$
+- $\kappa = \frac{a}{c^2}$
+- $\tau = \frac{b}{c^2}$
+
+### c) Plano Osculador en $s = \pi$
+
+El plano osculador en un punto $\alpha(s)$ es el plano generado por $T(s)$ y $N(s)$, que pasa por $\alpha(s)$. Su vector normal es $B(s)$.
+
+Evaluamos en $s = \pi$:
+$$ \alpha(\pi) = \left( a \cos(\pi/c), a \sin(\pi/c), \frac{b\pi}{c} \right) $$
+$$ B(\pi) = \left( \frac{b}{c}\sin(\pi/c), -\frac{b}{c}\cos(\pi/c), \frac{a}{c} \right) $$
+
+La ecuación del plano es:
+$$ \langle (x, y, z) - \alpha(\pi), B(\pi) \rangle = 0 $$
+$$ \frac{b}{c}\sin(\pi/c)(x - a\cos(\pi/c)) - \frac{b}{c}\cos(\pi/c)(y - a\sin(\pi/c)) + \frac{a}{c}\left(z - \frac{b\pi}{c}\right) = 0 $$
+
+Multiplicando por $c$:
+$$ b\sin(\pi/c)x - ab\sin(\pi/c)\cos(\pi/c) - b\cos(\pi/c)y + ab\cos(\pi/c)\sin(\pi/c) + az - \frac{ab\pi}{c} = 0 $$
+Los términos constantes con funciones trigonométricas se cancelan:
+$$ b\sin(\pi/c)x - b\cos(\pi/c)y + az - \frac{ab\pi}{c} = 0 $$
+
+**Plano Osculador Afín:**
+Es el mismo plano, descrito como el conjunto de puntos $P$ tales que $P = \alpha(\pi) + \lambda T(\pi) + \mu N(\pi)$.
+$$ T(\pi) = \left( -\frac{a}{c} \sin(\pi/c), \frac{a}{c} \cos(\pi/c), \frac{b}{c} \right) $$
+$$ N(\pi) = (-\cos(\pi/c), -\sin(\pi/c), 0) $$
+Entonces:
+$$ (x, y, z) = \left( a \cos(\pi/c), a \sin(\pi/c), \frac{b\pi}{c} \right) + \lambda \left( -\frac{a}{c} \sin(\pi/c), \frac{a}{c} \cos(\pi/c), \frac{b}{c} \right) + \mu (-\cos(\pi/c), -\sin(\pi/c), 0) $$

@@ -104,7 +104,7 @@
 >>- $(\Rightarrow)$
 >>	1. Por definicion de helice $\alpha'$ y $u$ son unitarios
 >>	2. $\langle \alpha'(t), u \rangle = \cos \theta$, donde $\theta$ es el ángulo entre $\alpha'(t)$ y $u$, que es constante por hipótesis.
->>	3. Mostrar como ejercicio que $|\cos \theta| < 1$.
+>>	3. Si $|\cos \theta| = 1$, entonces $T(t) = \pm u$ es constante, lo que implica que $\alpha$ es una recta y $\kappa = 0$, contradiciendo la hipótesis. Así, $|\cos \theta| < 1$.
 >>	4. Derivamos miembro a miembro $$ 0 = \langle T', u \rangle + \langle T, u' \rangle = \langle \kappa N, u \rangle + 0 = \kappa \langle N, u \rangle$$
 >>	5. Como $\kappa$ es nunca nula $\langle N, u \rangle = 0$. 
 >>	6. Derivamos nuevamente $$ 0 = \langle N', u \rangle + \langle N, u' \rangle = \langle -\kappa T + \tau B, u \rangle = -\kappa \langle T, u \rangle + \tau \langle B, u \rangle = -\kappa \cos \theta + \tau \langle B, u \rangle . \quad (3) $$
@@ -228,6 +228,7 @@
 >>16. Sea $p \in C_{t_1}$, o sea, $\|p - c(t_1)\| = r(t_1)$. Veamos que $p$ está en el interior de $C_{t_2}$ o sea, $\|p - c(t_2)\| < r(t_2)$. Calculamos
 >>$$ \begin{align} \|p - c(t_2)\| & = \|p - c(t_1) + c(t_1) - c(t_2)\| \\ & \le \|p - c(t_1)\| + \|c(t_1) - c(t_2)\| \\ & \le r(t_1) + r(t_2) - r(t_1) = r(t_2), \end{align} $$
 >>con lo cual $\|p - c(t_2)\| \le r(t_2)$.
+>>17. Como $r(t_1) < r(t_2)$, la inclusión es estricta y las circunferencias no se tocan. $\square$
 
 # Transformaciones Rigidas
 
@@ -320,6 +321,8 @@
 >>6. Luego, $C(0) = T(0) - u = u - u = 0$ y es fácil ver que $C$ preserva distancias. 
 >>7. Por lo anterior, $C$ es ortogonal y en consecuencia, $T(x) = C(x) + u$ con $C$ ortogonal
 >>8. Osea $T$ es euclidea 
+
+^427a25
 
 >[!Remark]
 >Veamos a continuacion que como era de esperar la definicion de transformacion euclideana le da al origen un protagonismo que no tiene
@@ -570,7 +573,9 @@
 >[!Definition]
 >Sean $M$ y $N$ dos superficies regulares, decimos que $F:M\rightarrow N$ es suave en $p \in M$ si existen cartas $\varphi:U\rightarrow M$ con $p \in \varphi(U)$ y $\psi: V\rightarrow N$ con $F(p)\in \psi (V)$ tales que $$\psi ^{-1}\circ F\circ \varphi: U\rightarrow V$$ es suave como funcion entre abiertos de $R_{2}$ 
 
->[!Definition]
+^477389
+
+>[!Definition] Difeomorfismo
 >Sean $M$ y $N$ superficies regulares. Una función suave $F : M \to N$ se dice **difeomorfismo** si tiene inversa $F^{-1} : N \to M$ y esta es suave. En este caso, $M$ y $N$ se dicen **difeomorfas**.
 
 >[!Example]- Ejemplos de difeomorfismos
@@ -661,7 +666,7 @@
 >>2. Calculamos $$ \nabla F(x, y, z) = (2x, 2y, 2z). $$
 >>3. Luego $(\nabla F)_p = 2p \ne 0$ para todo $p \in S$ y así, $(\nabla F)_p^{\perp} = (2p)^{\perp} = p^{\perp}$.
 
->[!Definition]
+>[!Definition] Diferencial
 >Sea $f : S \to \mathbb{R}^n$ una función suave y sea $p \in S$. Se define $df_p : T_pS \to \mathbb{R}^n$ mediante
 >$$ df_p(\alpha'(0)) = (f \circ \alpha)'(0) = \frac{d}{dt}\Big|_0 f(\alpha(t)), $$
 >donde $\alpha : (-\varepsilon, \varepsilon) \to S$ es una función suave con $\alpha(0) = p$.
@@ -678,7 +683,7 @@
 >>7. Ahora calculamos $$ (f \circ \alpha)'(0) = \frac{d}{dt}\Big|_0 (f \circ \varphi)(u(t), v(t)) = (f \circ \varphi)_u(u_o, v_o)u'(0) + (f \circ \varphi)_v(u_o, v_o)v'(0), $$que por (9) es igual a $(f \circ \beta)'(0)$, como deseábamos. Así, $df_p$ está bien definida.
 >>8. Veamos ahora que $df_p$ es lineal. Llamando $a = u'(0)$ y $b = v'(0)$, tenemos por lo anterior que $$ df_p(a\varphi_u(u_o, v_o) + b\varphi_v(u_o, v_o)) = a(f \circ \varphi)_u(u_o, v_o) + b(f \circ \varphi)_v(u_o, v_o), $$con lo cual $df_p$ es lineal.
 
->[!Proposition]
+>[!Proposition] Matriz diferencial entre superficies
 >Sea $M$ superficie y $f : M \to \mathbb{R}^3$ una función suave tal que $f(M)$ está contenida en una superficie $N$ y sea $p \in M$. Entonces
 >$$ df_p : T_pM \to T_{f(p)}N $$
 >y si $\varphi : U \to \mathbb{R}^3$ y $\psi : V \to \mathbb{R}^3$ son sistemas coordenados de $M$ y $N$, alrededor de $p$ y $f(p)$ respectivamente, con $f(\varphi(U)) \subset \psi(V)$, se cumple que
@@ -695,13 +700,250 @@
 >>7. Pero $(x_u(\bar{q}), y_u(\bar{q}))^t$ es trivialmente la primera columna de $\left[ d(\psi^{-1} \circ f \circ \varphi)_{\bar{p}} \right]_{\text{can}}$
 >>8. Con argumentos similares se ve que las segundas columnas de las matrices en (10) también coinciden
 
->[!Definition]
+^717add
+
+>[!Definition] Punto critico
 >Sea $f : S \to \mathbb{R}$ una función suave definida en una superficie $S$. Un punto $p \in S$ se dice **crítico** para $f$ si $df_p = 0$ (o sea, $df_p$ es la transformación lineal nula).
 
->[!Example]
+>[!Example]- Ejemplo de punto critico
 >Sea $h : S \to \mathbb{R}$ la función altura respecto del vector unitario $u \in \mathbb{R}^3$, definida por
 >$$ h(q) = \langle q, u \rangle. $$
 >Un punto $p \in S$ es crítico para $h$ si y solo si $T_pS \perp u$. Esto resulta de que
 >$$ dh_p(X) = \langle X, u \rangle $$
 >para todo $X \in T_pS$: Si $X = \alpha'(0)$ para una curva suave $\alpha : (-\varepsilon, \varepsilon) \to S$ con $\alpha(0) = p$, tenemos que
 >$$ dh_p(X) = dh_p(\alpha'(0)) = \frac{d}{dt}\Big|_0 h(\alpha(t)) = \frac{d}{dt}\Big|_0 \langle \alpha(t), u \rangle = \langle \alpha'(0), u \rangle = \langle X, u \rangle. $$
+
+# El hessiano de una función en un punto crítico
+
+>[!Remark]
+>Sea $f : S \to \mathbb{R}$ una función suave definida en una superficie $S$ y sean $p \in S$ y $u \in T_pS$.
+>Ahora nos planteamos la siguiente pregunta: ¿Está bien definida la noción de derivar dos veces la función $f$ en la dirección de $u$?
+>La respuesta es no. Dadas dos curvas suaves $\alpha, \beta$ en $S$ con $$ \alpha(0) = \beta(0) = p \quad \text{y} \quad \alpha'(0) = \beta'(0) = u, $$no se cumple necesariamente que $(f \circ \alpha)''(0) = (f \circ \beta)''(0)$, como lo muestra el siguiente ejemplo.
+
+>[!Example]- Contraejemplo derivada segunda
+>Sean $S = \{(x, y, 0) \mid x, y \in \mathbb{R}\}$ y
+>$$ f : S \to \mathbb{R}, \quad f(x, y, 0) = y. $$
+>Sean $p = (0, 0, 0)$ y $u = (0, 1, 0)$.
+>Para cada $c \in \mathbb{R}$, sea $\alpha_c : \mathbb{R} \to \mathbb{R}^3$ la curva suave en $S$ definida por
+>$$ \alpha_c(t) = (t, ct^2, 0), $$
+>que cumple $\alpha_c(0) = p$ y $\alpha_c'(0) = u$. Calculamos
+>$$ (f \circ \alpha_c)''(0) = \frac{d^2}{dt^2}\Big|_0 ct^2 = 2c, $$
+>que depende de $c$.
+
+>[!Remark]
+>En el práctico se ve que si $p$ es crítico para $f$, entonces el hessiano de $f$ en $p$,
+>$$ \text{Hess}_p(f) : T_pS \to \mathbb{R}, $$
+>está **bien definido** por
+>$$ \text{Hess}_p(f)(u) = (f \circ \alpha)''(0), $$
+>donde $\alpha$ es una curva suave cualquiera en $S$ con $\alpha(0) = p$ y $\alpha'(0) = u$.
+
+>[!Theorem] Teorema de la función inversa
+>Sea $F : A \to \mathbb{R}^n$ una función suave definida en un subconjunto abierto $A$ de $\mathbb{R}^n$ y sea $p \in A$. Si $dF_p$ es un isomorfismo, entonces existe un abierto $U$ alrededor de $p$ tal que $F(U)$ es abierto y $F|_U : U \to F(U)$ es biyectiva y tiene inversa suave.
+
+^3e597f
+
+>[!Remark]
+>Considerando que en dimension finita las transformaciones lineal isomorfas son biyectibas. El teorema, de manera informal, implica que si $F$ es infinitesimalmente biyectiva entonces $F$ es localmente biyectiva.
+
+>[!Theorem] Teorema de la función inversa para superficies
+>Sea $f : M \to N$ una función suave entre superficies y sea $p \in M$. Si $df_p : T_pM \to T_{f(p)}N$ es un isomorfismo, entonces existen subconjuntos abiertos $\mathcal{U}$ y $\mathcal{V}$ de $\mathbb{R}^3$ alrededor de $p$ y $f(p)$, respectivamente, tales que
+>$$ f|_{M \cap \mathcal{U}} : M \cap \mathcal{U} \to N \cap \mathcal{V} $$
+>es un difeomorfismo.
+>>[!Proof]- Prueba del teorema
+>>La idea de la prueba es poner $f$ en coordenadas y aplicar el teorema de la función inversa del cálculo en varias variables.
+>>1. Como $f$ es suave, existen sistemas coordenados $\varphi : U \to M$ y $\psi : V \to N$, con $p \in \varphi(U)$ y $f(\varphi(U)) \subset \psi(V)$. Sabemos que la siguiente función es suave: $$ F =_{\text{def}} \psi^{-1} \circ f \circ \varphi. $$![[Pasted image 20251128191624.png]]
+>>2. Por una proposición de la clase pasada (ver (10)),$$ [df_p]_{\{\varphi_u(\bar{p}), \varphi_v(\bar{p})\}, \{\psi_x(\bar{q}), \psi_y(\bar{q})\}} = [dF_{\bar{p}}]_{\text{can}}, $$donde $\varphi(\bar{p}) = p$ y $\psi(\bar{q}) = f(p)$.
+>>3. Como $df_p$ es un isomorfismo, la matriz de la izquierda es no singular. Luego la matriz de la derecha también lo es, y entonces $dF_{\bar{p}}$ es un isomorfismo. 
+>>4. En consecuencia, por el teorema de la función inversa del cálculo, existen abiertos $U'$ y $V'$ alrededor de $\bar{p}$ y $\bar{q}$, respectivamente, tales que $$ F|_{U'} : U' \to V' $$es un difeomorfismo. 
+>>5. Así $$ \psi^{-1} \circ f \circ \varphi|_{U'} = F|_{U'} $$es un difeomorfismo.
+>>6. Como $\varphi|_{U'}$ y $\psi|_{V'}$ son sistemas coordenados, $$ \varphi(U') = M \cap \mathcal{U} \quad \text{y} \quad \psi(V') = N \cap \mathcal{V} $$para ciertos abiertos $\mathcal{U}, \mathcal{V}$ de $\mathbb{R}^3$, y de allí se deduce la afirmación del teorema.
+
+^2e965b
+
+>[!Corollary]
+>Si $f : M \to N$ es una biyección suave y $df_p : T_pM \to T_{f(p)}N$ es un isomorfismo para todo $p \in M$, entonces $f^{-1}$ es suave. La justificación queda como ejercicio.
+>>[!Proof]-
+>>1. Como $f$ biyectiva dado $q\in N$ existe unico $p \in M$ tal que $f(p)=q$   
+>>2. Como $df_{p}$ es iso entonces tenemos $f|_{M \cap \mathcal{U}} : M \cap \mathcal{U} \to N \cap \mathcal{V}$ difeomorfismo por [[Definiciones#^2e965b]]
+>>3. Por ser difeo su inversa $(f|_{M\cap \mathcal{U}})^{-1}$ es suave 
+>>4. Como $f$ es biyectiva $(f|_{M\cap \mathcal{U}})^{-1}=f^{-1}|_{N\cap\mathcal{V}}$ 
+>>5. Entonces mostramos que $f^{-1}$ es suave para un entorno de $q$ y esto lo podemos hacer para cualquier $q$. Entonces $f^{-1}$ es suave   
+   
+# Áreas de regiones de superficies contenidas en abiertos coordenados
+
+>[!Theorem] Teorema del cambio de variables
+>Sea $U$ un subconjunto abierto de $\mathbb{R}^n$ y sea $h : U \to \mathbb{R}^n$ una función suave tal que $\det(dh_q) \neq 0$ para todo $q \in U$. Sea $V = h(U)$, que es un subconjunto abierto de $\mathbb{R}^n$ ([[Definiciones#^3e597f]]), y sea $f : V \to \mathbb{R}$ una función suave. Sean $A$ un subconjunto cerrado y acotado contenido en $U$ y $B = h(A)$. Entonces
+>$$ \int_A (f \circ h) |\det(dh_q)| = \int_B f. $$
+
+>[!Definition] Area de superficie regular
+>Sea $S$ una superficie regular, sea $\psi : V \to S$ un sistema coordenado de $S$ y sea $B$ un subconjunto cerrado y acotado contenido en $V$. Se define
+>$$ \text{área}(\psi(B)) = \int_B \|\psi_u(u, v) \times \psi_v(u, v)\| \, du \, dv. $$
+>(Recordar que $\|X \times Y\|$ es el área del paralelogramo en $\mathbb{R}^3$ generado por $X$ e $Y$.)
+
+>[!Proposition]
+>El área de $\psi(B)$ está bien definida.
+>>[!Proof]-
+>>1. Supongamos que $\varphi : U \to S$ es un sistema coordenado de $S$ tal que $\psi(B) \subset \varphi(U)$ y que $\psi(B) = \varphi(A)$.
+>>2. Llamamos $h = \psi^{-1} \circ \varphi = (h^1, h^2)$. ![[Pasted image 20251128192025.png]]
+>>3. Debemos calcular
+>>$$ \text{área}(\varphi(A)) = \int_A \|\varphi_x(x, y) \times \varphi_y(x, y)\| \, dx \, dy. $$
+>>4. Por 2. $\varphi = \psi \circ h$ luego $$ \varphi_x = \psi_u(h) h^1_x + \psi_v(h) h^2_x \quad \text{y} \quad \varphi_y = \psi_u(h) h^1_y + \psi_v(h) h^2_y. $$
+>>5. Luego, como el producto cruz es bilineal y antisimétrico $$\begin{align} \|\varphi_x \times \varphi_y\| & = \|(\psi_u(h) h^1_x + \psi_v(h) h^2_x) \times (\psi_u(h) h^1_y + \psi_v(h) h^2_y)\| \\ & = \|(h^1_x h^2_y - h^1_y h^2_x) \psi_u(h) \times \psi_v(h)\| \\& = |\det(dh)| \|(\psi_u \times \psi_v)(h)\|\end{align} $$
+>>6. Luego $$\begin{align}\text{área}(\varphi(A)) &= \int_A \|\varphi_x(x, y) \times \varphi_y(x, y)\| \, dx \, dy\\&=\int_{A} |\det(dh)| \|(\psi_u \times \psi_v)(h)\|\\&=\int_{B}\lVert \psi_{x}\times\psi_{y} \rVert && ( h(A)=B \text{ por 2.}) \\&=\text{area}(\psi(B))\end{align}$$ Por el teorema del cambio de variables (Notar $h(A)=B$ por 2.) 
+
+>[!Example]- Funcion que preserva areas
+>Sean $P = \{(x, y, 0) \mid 0 < x < \pi\}$ y $C = \{(x, y, z) \mid x^2 + y^2 = 1\}$ y sea
+>$$ f : P \to C, \quad f(x, y, 0) = (\cos(2x), \sin(2x), \frac{1}{2}y). $$
+>Veamos que $f$ preserva áreas de regiones. Sea $A \subset P$ un subconjunto cerrado y acotado.
+>Tenemos que
+>$$ \text{área}(A) = \int_A 1 \quad \text{y} \quad \text{área}(f(A)) = \int_A \|\varphi_x(x, y) \times \varphi_y(x, y)\| \, dx \, dy, $$
+>donde $\varphi(x, y) = (\cos(2x), \sin(2x), \frac{1}{2}y)$. Pero
+>$$ \|\varphi_x(x, y) \times \varphi_y(x, y)\| = \|2(-\sin(2x), \cos(2x), 0) \times (0, 0, \frac{1}{2})\| = 1, $$
+>de donde $\text{area}(f(A)) =\text{area}(A)$.
+
+# Isometrías locales
+
+>[!Definition] Isometría local
+>Una función suave $f : M \to N$ entre dos superficies es una **isometría local** si preserva longitudes de curvas, es decir, si para toda curva suave $\alpha : [a, b] \to M$ se cumple que
+>$$ \text{long}(\alpha) = \text{long}(f \circ \alpha). $$
+
+>[!Exercise]
+>Si $f : M \to N$ es la restricción de una transformación euclidiana de $\mathbb{R}^3$, entonces $f$ es una isometría local.
+
+>[!Example]- Ejemplo de isometria local
+>Sean $P = \{(x, y, 0) \mid x, y \in \mathbb{R}\}$ y $C = \{(x, y, z) \mid x^2 + y^2 = 1\}$ y sea
+>$$ f : P \to C, \quad f(x, y, 0) = (\cos x, \sin x, y). $$
+>Veamos que $f$ es una isometría local. Sea $\alpha : [a, b] \to P$ una curva suave. Escribimos
+>$$ \alpha(t) = (x(t), y(t), 0). $$
+>Luego $\text{long}(\alpha) = \int_a^b \|\alpha'(t)\| \, dt = \int_a^b \sqrt{x'(t)^2 + y'(t)^2} \, dt$. Ahora, como
+>$$ \|(f \circ \alpha)'(t)\| = \|(-x'(t) \sin x(t), x'(t) \cos x(t), y'(t))\| $$
+>$$ = \sqrt{x'(t)^2 (\cos^2 x(t) + \sin^2 x(t)) + y'(t)^2} $$
+>$$ = \sqrt{x'(t)^2 + y'(t)^2}, $$
+>tenemos que $\text{long}(\alpha) = \text{long}(f \circ \alpha)$.
+
+>[!Example]- Ejemplo de algo que no es isometria local
+>La función de la franja plana al cilindro del ejemplo de funciones que preservan áreas no es una isometría local. En efecto, la curva $\alpha : [0, 1] \to P$, $\alpha(t) = (\pi/2, t, 0)$ tiene longitud 1, mientras que $f \circ \alpha : [0, 1] \to C$, que está dada por
+>$$ (f \circ \alpha)(t) = (\cos(\pi), \sin(\pi), \frac{1}{2}t) = (-1, 0, \frac{1}{2}t), $$
+>tiene longitud $1/2$.
+
+>[!Definition] Isometría
+>Una isometría local que es un difeomorfismo se llama **isometría**.
+
+>[!Proposition] Caracterización de isometría local
+>Una función suave $f : M \to N$ entre dos superficies es una isometría local si y solo si $df_p : T_pM \to T_{f(p)}N$ es una isometría lineal para todo $p \in M$.
+>>[!Proof]-
+>>- $\Leftarrow$) Se muestra en el práctico.
+>>- $\Rightarrow$) 
+>>	1. Sea $p \in M$. Basta ver que $\|df_p(u)\| = \|u\|$ para todo $u \in T_pM$.
+>>	2. Sea $\alpha : (-\varepsilon, \varepsilon) \to M$ una curva suave en $M$ con $\alpha(0) = p$ y $\alpha'(0) = u$.
+>>	3. Por hipótesis, para todo $0 \le s < \varepsilon$ se cumple que $$ \text{long}(\alpha|_{[0, s]}) = \text{long}(f \circ \alpha|_{[0, s]}), $$o equivalentemente,$$ \int_0^s \|\alpha'(t)\| \, dt = \int_0^s \|(f \circ \alpha)'(t)\| \, dt. $$
+>>	4. Derivando por derecha en ambos miembros con respecto a $s$ (Teorema Fundamental del Calculo) en $s=0$, obtenemos $$ \|\alpha'(0)\| = \|(f \circ \alpha)'(0)\| = \|df_p(\alpha'(0))\|, $$con lo cual $\|df_p(u)\| = \|u\|$, como queríamos.
+
+>[!Definition] Coeficientes de la primera forma fundamental
+>Sea $\varphi : U \to M$ un sistema coordenado de una superficie $M$. Los **coeficientes de la primera forma fundamental** de $\varphi$ son las funciones
+>$$ E : U \to \mathbb{R}, \quad F : U \to \mathbb{R} \quad \text{y} \quad G : U \to \mathbb{R} $$
+>definidas por
+>$$ E(u, v) = \|\varphi_u(u, v)\|^2, \quad F(u, v) = \langle \varphi_u(u, v), \varphi_v(u, v) \rangle \quad \text{y} \quad G(u, v) = \|\varphi_v(u, v)\|^2. $$
+
+>[!Remark]- Explicacion de 1era forma fundamental
+>Estas funciones indican de qué manera el mapeo $\varphi$ deforma el mapa $U$ y pueden pensarse como escalas infinitesimales. Por ejemplo, en el caso $F \equiv 0$, $d\varphi_{(u, v)}$ lleva la base ortonormal $\{e_1, e_2\}$ a la base ortogonal $\{\varphi_u(u, v), \varphi_v(u, v)\}$, cuyos elementos tienen normas $\sqrt{E(u, v)}$ y $\sqrt{G(u, v)}$, respectivamente. Luego, estos números son las proporciones en las que $\varphi$ deforma el mapa $U$ cerca de $(u, v)$, en las diferentes direcciones.
+
+>[!Example]- Ejemplo de hallar coeficientes 1era forma fundamental
+>Hallamos los coeficientes de la primera forma fundamental de las coordenas esféricas
+>$$ \varphi : (-\pi, \pi) \times (-\pi/2, \pi/2) \to S^2, \quad \varphi(s, t) = (\cos t (\cos s, \sin s), \sin t). $$
+>Calculamos
+>$$ \varphi_s(s, t) = (\cos t (-\sin s, \cos s), 0) \quad \text{y} \quad \varphi_t(s, t) = (-\sin t (\cos s, \sin s), \cos t). $$
+>Así,
+>$$ E(s, t) = \|\varphi_s(s, t)\|^2 = \cos^2 t, \quad F(s, t) = 0 \quad \text{y} \quad G(s, t) = \|\varphi_t(s, t)\|^2 = 1. $$
+
+>[!Proposition] Misma 1era forma sii isometria
+>Sean $\varphi : U \to M$ y $\bar{\varphi} : U \to N$ sistemas coordenados de dos superficies $M$ y $N$ definidos en el mismo conjunto abierto $U$, y sean $E, F, G$ y $\bar{E}, \bar{F}, \bar{G}$ los coeficientes de las primeras formas fundamentales de $\varphi$ y $\bar{\varphi}$, respectivamente. Entonces $E = \bar{E}, F = \bar{F}$ y $G = \bar{G}$ si y solo si $\bar{\varphi} \circ \varphi^{-1} : \varphi(U) \to \bar{\varphi}(U)$ es una isometría entre superficies.
+>>[!Proof]-
+>>- Difemorfismo
+>>	1. Llamamos $f = \bar{\varphi} \circ \varphi^{-1} : \varphi(U) \to \bar{\varphi}(U)$, que es un difeomorfismo pues en coordenadas $\varphi$ y $\bar{\varphi}$ es la identidad. Osea $\bar{\varphi}^{-1}\circ f\circ\varphi=Id_{U}$.
+>>	2. Entonces por [[Definiciones#^477389]] $f$ es suave
+>>	3. Ver que es inversible es facil dado que por definicion de carta $\varphi$ es inversible en $\varphi(U)$
+>>- $\Rightarrow$) 
+>>	1. Dados $p \in \varphi(U)$ y $X \in T_p\varphi(U)$ debemos ver que $\|df_p(X)\| = \|X\|$.
+>>	2. Supongamos que $p = \varphi(q)$. Como $\{\varphi_u(q), \varphi_v(q)\}$ es una base de $T_pM$, entonces $$ X = a\varphi_u(q) + b\varphi_v(q) $$para ciertos $a, b \in \mathbb{R}$. 
+>>	3. Luego $$ \begin{align}\|X\|^2 &= a^2 \|\varphi_u(q)\|^2 + 2ab \langle \varphi_u(q), \varphi_v(q) \rangle + b^2 \|\varphi_v(q)\|^2 \\&= a^2 E(q) + 2ab F(q) + b^2 G(q). \end{align}$$
+>>	4. Por otra parte, $$ \begin{align}df_p(X)& = a \, df_p(\varphi_u(q)) + b \, df_p(\varphi_v(q)) \\&= a \, (f \circ \varphi)_u(q) + b \, (f \circ \varphi)_v(q)\\&= a \, \bar{\varphi}_u(q) + b \, \bar{\varphi}_v(q)\end{align}$$ Recordar: $df_{p}(\varphi_{u}(q))=\frac{d}{dt}|_{0}(f(\varphi(q+te_{1})))=(f\circ\varphi)_{u}(q)$ para el segundo igual recordar la definicion de derivada parcial y considerar que la primera coordenada de $\varphi$ es $u$ osea seria $x_{1}$ es $u$   
+>>	5. Así, con un cálculo análogo al de $\|X\|^2$ llegamos a que $$ \|df_p(X)\|^2 = a^2 \bar{E}(q) + 2ab \bar{F}(q) + b^2 \bar{G}(q)$$
+>>	6. Como por hipótesis $E = \bar{E}, F = \bar{F}$ y $G = \bar{G}$, resulta que $\|df_p(X)\| = \|X\|$, como queríamos.
+>>- $\Leftarrow$) La prueba es similar y no la hacemos.
+
+^7286f3
+
+>[!Example]- Isometría local entre el helicoide y la catenoide
+>Recordemos que el helicoide es la superficie dada por la imagen de $\psi : \mathbb{R}^2 \to \mathbb{R}^3$,
+>$$ \psi(s, t) = (0, 0, s) + t (\cos s, \sin s, 0) = (t \cos s, t \sin s, s). $$
+>La catenoide $C$ es por definición la superficie de revolución con curva perfil $\alpha : \mathbb{R} \to \mathbb{R}^2$ dada por
+>$$ \alpha(t) = (\cosh t, t), $$
+>o sea, $C = \bar{\varphi}(\mathbb{R}^2)$, donde
+>$$ \bar{\varphi}(u, v) = (\cosh v (\cos u, \sin u), v). $$
+>Sea $M$ la región del helicoide comprendida entre los planos $z = 0$ y $z = 2\pi$ y sea $N$ la catenoide menos el meridiano $u = 0$, o equivalentemente,
+>$$ M = \psi(U) \quad \text{y} \quad N = \bar{\varphi}(U), $$
+>donde $U = (0, 2\pi) \times \mathbb{R}$. Entonces $M$ y $N$ son isométricas.
+>>[!Proof]-
+>>1. Encontraremos una isometría $f : M \to N$ que lleva los rayos del helicoide en los meridianos de la catenoide.
+>>2. Consideramos el sistema coordenado $\varphi : U \to M$ dado por $$ \varphi(u, v) = \psi(u, \sinh v) = (\sinh v (\cos u, \sin u), u). $$
+>>3. Veremos que el difeomorfismo $$ f : M \to N, \quad f = \bar{\varphi} \circ \varphi^{-1} $$es una isometría. 
+>>4. Basta verificar que $\bar{E} = E, \bar{F} = F$ y $\bar{G} = G$, donde $E, F, G$ y $\bar{E}, \bar{F}, \bar{G}$ son los coeficientes de las primeras formas fundamentales de $\varphi$ y $\bar{\varphi}$, respectivamente.
+>>5. Para el helicoide calculamos $$ \varphi_u(u, v) = (\sinh v (-\sin u, \cos u), 1) \quad \text{y} \quad \varphi_v(u, v) = (\cosh v (\cos u, \sin u), 0). $$
+>>6. Luego $$ E(u, v) = \|\varphi_u(u, v)\|^2 = \sinh^2 v (\sin^2 u + \cos^2 u) + 1 = \cosh^2 v, $$$$ F(u, v) = \langle \varphi_u(u, v), \varphi_v(u, v) \rangle = 0$$$$ G(u, v) = \|\varphi_v(u, v)\|^2 = \cosh^2 v. $$
+>>7. De la misma manera se calculan $\bar{E}, \bar{F}, \bar{G}$ y resultan iguales a $E, F, G$. En consecuencia, $f$ es una isometría
+
+>[!Lemma]
+>Antes de la prueba, escribimos el área del paralelogramo generado por $X, Y \in \mathbb{R}^3$ en términos de $\|X\|, \|Y\|$ y $\langle X, Y \rangle$. Si $X, Y \in \mathbb{R}^3$, entonces
+>$$ \|X \times Y\|^2 = \det \begin{pmatrix} \|X\|^2 & \langle X, Y \rangle \\ \langle X, Y \rangle & \|Y\|^2 \end{pmatrix}. $$
+>>[!Proof]-
+>>Sea $\theta$ el ángulo que forman $X$ y $Y$. Sabemos que
+>>$$ \|X \times Y\| = \|X\| \|Y\| \sin \theta. $$
+>>De allí,
+>>$$ \begin{align} \|X \times Y\|^2 & = \|X\|^2 \|Y\|^2 \sin^2 \theta = \|X\|^2 \|Y\|^2 (1 - \cos^2 \theta) \\ & = \|X\|^2 \|Y\|^2 \left( 1 - \frac{\langle X, Y \rangle^2}{\|X\|^2 \|Y\|^2} \right) \\ & = \|X\|^2 \|Y\|^2 - \langle X, Y \rangle^2, \end{align} $$
+>>como queríamos. $\square$
+
+^e69a37
+
+>[!Proposition] Isometrias preservan areas
+>Si $f : M \to N$ es una isometría, entonces preserva áreas de regiones en abiertos coordenados.
+>>[!Proof]-
+>>1. Sea $\varphi : U \to M$ un sistema coordenado y sea $A$ un subconjunto cerrado y acotado de $U$. 
+>>2. Como $f$ es una isometría, $f$ es un difeomorfismo, y por lo tanto $\bar{\varphi} := f \circ \varphi$ es un sistema coordenado de $N$. (Recordar, basicamente un sistema coordenado es un difeomorfismo entre $U$ y un abierto ($N\cap\mathcal{V}$)  de la superficie en este caso $N$) 
+>>3. Sean $E, F, G$ y $\bar{E}, \bar{F}, \bar{G}$ los coeficientes de la primera forma fundamental de $\varphi$ y $\bar{\varphi}$, respectivamente. Por el [[Definiciones#^e69a37]] $$ \|\varphi_u \times \varphi_v\| = \sqrt{EG - F^2} \quad \text{y} \quad \|\bar{\varphi}_u \times \bar{\varphi}_v\| = \sqrt{\bar{E}\bar{G} - \bar{F}^2}, $$
+>>4. Ahora $\bar{\varphi}\circ\varphi ^{-1}=f$ que es una isometria entonces por [[Definiciones#^7286f3]] los coeficientes de la 1era forma son iguales. Con lo cual $\lVert \varphi_{u}\times\varphi_{v} \rVert=\lVert \bar\varphi_{u}\times\bar\varphi_{v} \rVert$ 
+>>5. Integrando sobre $A$ obtenemos que $$ \text{área } \varphi(A) = \text{área } \bar{\varphi}(A) $$como deseábamos.
+
+>[!Definition] Superficie rígida
+>Una superficie $M$ se dice **rígida** si para toda isometría $f : M \to N$, donde $N$ es una superficie, se cumple que $f = F|_M$ para cierta transformación euclidiana $F : \mathbb{R}^3 \to \mathbb{R}^3$.
+
+>[!Example]-
+>La franja $M = \{(s, t, 0) \in \mathbb{R}^3 \mid 0 < s < \pi\}$ no es rígida. En efecto, existe una isometría $f : M \to N$, donde $N$ es la mitad del cilindro $\{(x, y, z) \mid x^2 + y^2 = 1, y > 0\}$, dada por
+>$$ f(s, t, 0) = (\cos s, \sin s, t), $$
+>que no es la restricción a $M$ de ninguna transformación euclideana $F$. De hecho, si una tal $F$ existiera, para $p = (\frac{\pi}{3}, 0, 0)$ y $q = (\frac{2\pi}{3}, 0, 0)$ se debería cumplir que
+>$$ d(p, q) = d(F(p), F(q)), $$ (Dado que transformaciones euclideanas preservan distancia por definicion) 
+>pero el miembro izquierdo vale $\frac{\pi}{3}$ y el derecho $1$.
+
+>[!Remark]
+>El teorema de rigidez de la esfera afirma que la esfera de radio 1 centrada en el origen es rígida. Sin embargo, un pequeño casquete de esfera (es decir la intersección de la esfera con un semiespacio, digamos, por ejemplo $\{(x, y, z) \mid z > 3/4\}$) no es rígido.
+>>[!Proof]
+
+
+>[!Remark]
+>Sea $f : M \to N$ una isometría entre superficies. No siempre es claro que exista un continuo de isometrías $f_t : M \to N_t$ con $f_0$ igual a la identidad en $M$ y $f_1 = f$. Por ejemplo, $M$ como en la figura, y $N$ análoga, pero con una de las montañas para abajo. ![[Pasted image 20251129101703.png]]
+>Aprovechamos para comentar que para dar explícitamente una parametrización del plano con montañas es muy conveniente haber requerido en un comienzo sólo diferenciabilidad de clase $C^3$ de las cartas coordenadas: Sea $h$ la función de gráfico rojo. ![[Pasted image 20251129101733.png]]
+>Necesitamos que las tres primeras derivadas de $h$ en $x$ por derecha sean nulas (para empalmar bien). Podemos conseguir un polinomio $h$ así. Si trabajáramos en clase $C^\infty$, necesitaríamos que todas las derivadas en $x$ por derecha fuera cero. El único polinomio que cumple eso el es idénticamente nulo. Las funciones con esa propiedad tienen fórmulas más complicadas, que involucran, por ejemplo, $e^{-1/t}$.
+
+>[!Remark]
+>Otra familia de mucho interés de difeomorfismos entre superficies, además de los que preservan áreas y las isometrías, es la de los difeomorfismos conformes. Un difeomorfismo local $f : M \to N$ se dice **conforme** si preserva los ángulos, o sea, para todo par de curvas $\alpha$ y $\beta$ en $M$ con $\alpha(0) = \beta(0)$, el ángulo entre $\alpha'(0)$ y $\beta'(0)$ es igual al ángulo ente $(f \circ \alpha)'(0)$ y $(f \circ \beta)'(0)$.
+>Como es de imaginar, mapeos conformes de la Tierra tenían importancia en navegación.
+>Se puede mostrar que la proyección estereográfica del plano a la esfera es una aplicación conforme.
+
+# Superficies regladas
+
+>[!Definition] Superficie reglada
+>Una superficie $M$ se dice **reglada** si para todo $p \in M$ existe una carta coordenada $\varphi : U \to \mathbb{R}^3$ con $p \in \varphi(U)$ de la forma
+>$$ \varphi : (a, b) \times (c, d) \to M, \quad \varphi(s, t) = \alpha(s) + t v(s), $$
+>donde $\alpha : (a, b) \to \mathbb{R}^3$ y $v : (a, b) \to \mathbb{R}^3$ son curvas suaves, llamadas **curva base** y **curva directriz** de $\varphi$, respectivamente.
+>
+>Como $\varphi$ es una carta coordenada, se cumple que $\{\alpha'(s), v(s)\}$ es linealmente independiente para todo $s$. En particular, $\alpha$ es regular y $v$ nunca nula.
