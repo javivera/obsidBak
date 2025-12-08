@@ -4,46 +4,49 @@
     "type": "split",
     "children": [
       {
-        "id": "36abdb87a26e65ac",
-        "type": "tabs",
-        "dimension": 41.91176470588235,
-        "children": [
-          {
-            "id": "36b3ac1e25590571",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "solution.md",
-                "mode": "preview",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "solution"
-            }
-          }
-        ]
-      },
-      {
         "id": "746ca06c0bd74836",
         "type": "tabs",
-        "dimension": 58.08823529411765,
+        "dimension": 55.00000000000001,
         "children": [
           {
             "id": "5127e43ee1c8a762",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Practicos/GD - Pr2.pdf"
+                "file": "Practicos/Resueltos/GD - Pr2.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
               },
-              "icon": "lucide-file-text",
+              "icon": "lucide-file",
               "title": "GD - Pr2"
             }
           },
           {
-            "id": "37b185bc040546f6",
+            "id": "7a7baf061c940d58",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Practicos/Resueltos/GD - Pr3.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "GD - Pr3"
+            }
+          }
+        ]
+      },
+      {
+        "id": "795fecf8289dbd3d",
+        "type": "tabs",
+        "dimension": 45,
+        "children": [
+          {
+            "id": "8c50361748cab17a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -57,8 +60,7 @@
               "title": "Definiciones"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -209,34 +211,34 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "37b185bc040546f6",
+  "active": "5127e43ee1c8a762",
   "lastOpenFiles": [
-    "Pasted image 20251129101733.png",
-    "Pasted image 20251129101703.png",
-    "solve_ex3.py",
-    "Imagenes/Pasted image 20251128192025.png",
-    "Imagenes/Pasted image 20251128191624.png",
-    "Imagenes/Pasted image 20251122173149.png",
-    "Imagenes/Pasted image 20251122172334.png",
-    "Imagenes/Pasted image 20251122150201.png",
-    "Imagenes/Pasted image 20251122145538.png",
-    "Imagenes",
-    "read_pdf_v2.py",
-    "Pasted image 20251128192025.png",
-    "Pasted image 20251128191624.png",
-    "read_pdf.py",
-    "solution.md",
+    "Practicos/Resueltos/GD - Pr3.md",
+    "Practicos/Resueltos/GD - Pr2.md",
     "Definiciones.md",
-    "Pasted image 20251122173149.png",
+    "extract_pdf.py",
     "Practicos/GD - Pr2.pdf",
-    "solve_ex1.py",
-    "Practicos/GD - Pr4.pdf",
-    "Practicos/GD - Pr3.pdf",
+    "Pasted image 20251205225053.png",
+    "Imagenes/Pasted image 20251205192041.png",
+    "Imagenes/Pasted image 20251205192019.png",
+    "Imagenes/Pasted image 20251205191936.png",
+    "Imagenes/Pasted image 20251204200638.png",
+    "Imagenes/Pasted image 20251130182416.png",
+    "Imagenes/Pasted image 20251129153434.png",
+    "Imagenes/Pasted image 20251129101733.png",
+    "Imagenes/Pasted image 20251129101703.png",
+    "GD - Lista Teoremas.pdf",
+    "Theory/GD - Lista Teoremas.pdf",
+    "Examenes/GD - Lista Teoremas.pdf",
+    "Examenes/GD - Examen Final.pdf",
+    "Examenes/GD - 2doParcial.pdf",
+    "Pasted image 20251205192041.png",
+    "read_exercises.py",
+    "solution.md",
+    "solve_ex3.py",
+    "Imagenes",
     "Examenes/GD - 1erP (2025).md",
-    "Examenes/GD - 1erP (2025).pdf",
-    "Examenes/Resueltos",
     "Primer parcial de Geometría Diferencial.md",
-    "Practicos/Resueltos/solutions.md",
     "Resueltos/solutions.md",
     "Untitled.md",
     "Practicos/GD-Pr2-Ej4-solucion.md"

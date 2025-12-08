@@ -15,6 +15,8 @@
 >>2. De allí, $\|\beta' \circ \sigma\| = 1$. 
 >>3. Como $\sigma$ es sobre $[0, L]$, tenemos que $\|\beta'\| = 1$.
 
+^f2ee92
+
 >[!Proposition] 
 >Si $\alpha$ es una curva suave, entonces $\beta$ es una curva suave.
 >>[!Proof]-
@@ -121,7 +123,6 @@
 >>	5. Finalmente $$ \langle \alpha'(t), u \rangle = \langle T(t), (\cos \theta) T(t) + (\sin \theta) B(t) \rangle = \cos \theta, $$que es constante. 
 >>	6. Por definición, $\alpha$ es una hélice. $\square$
 
-
 >[!Definition] Curvatura de reparametrizacion
 >Sea $\alpha : [a, b] \to \mathbb{R}^3$ una curva regular de longitud $L$. Se define la **curvatura** de $\alpha$ en el instante $t$ mediante
 > $$\kappa_{\alpha}(t) = \kappa_{\beta}(\sigma(t)),$$
@@ -133,9 +134,11 @@
 >>2. Tenemos que $\alpha(t) = \beta(\sigma(t))$ entonces $\alpha'(t) = \beta'(\sigma(t))\sigma'(t)$ y $$ \alpha''(t) = \beta''(\sigma(t))(\sigma'(t))^2 + \beta'(\sigma(t))\sigma''(t)$$
 >>3. Entonces, como $x \times x = 0$ para todo $x \in \mathbb{R}^3$, y usando distributiva en producto escalar y ademas que la imagen de $\sigma$ es un escalar, tenemos: $$ \alpha' \times \alpha'' = \beta'(\sigma)\sigma' \times (\beta''(\sigma)(\sigma')^2 + \beta'(\sigma)\sigma'') = \beta'(\sigma) \times \beta''(\sigma)(\sigma')^3 $$
 >>4. Tomando norma miembro a miembro y usando 1. $$ \|\alpha' \times \alpha''\| = \|\beta'(\sigma) \times \beta''(\sigma)\| |\sigma'|^3 = \|\beta'(\sigma) \times \beta''(\sigma)\| \|\alpha'(t)\|^3. $$
->>5. Como $\|\beta'\| = 1$, resulta que $\langle \beta', \beta'' \rangle = 0$. osea el angulo entre ellos es 0  
->>6. Así por 5. , defincion de producto cruz y $\beta''=\kappa_{\beta} N$ $$ \|\beta'(\sigma) \times \beta''(\sigma)\| = \|\beta'(\sigma)\| \|\beta''(\sigma)\|\lVert \cos(0) \rVert  = \lVert \beta''(\sigma) \rVert =\kappa_\beta(\sigma). $$
+>>5. Como $\|\beta'\| = 1$, resulta que $\langle \beta', \beta'' \rangle = 0$ (Derivando) . Osea el angulo entre ellos es 90  
+>>6. Así por 5. , defincion de producto cruz y definicion de curvatura $$ \|\beta'(\sigma) \times \beta''(\sigma)\| = \|\beta'(\sigma)\| \|\beta''(\sigma)\|\left\lVert  \sin\left( \frac{\pi}{2} \right)  \right\rVert  = \lVert \beta''(\sigma) \rVert =\kappa_\beta(\sigma). $$
 >>7. En consecuencia $$ \kappa_\alpha = \kappa_\beta(\sigma) = \frac{\|\alpha' \times \alpha''\|}{\|\alpha'\|^3}$$como deseábamos.  
+
+^f3efb8
 
 # Curvas Planas
 
@@ -500,7 +503,6 @@
 
 # Funciones suaves definidas en superficies
 
-
 >[!Remark]
 >Las funciones suaves del cálculo de varias variables están definidas en subconjuntos abiertos de $\mathbb{R}^n$.
 
@@ -601,12 +603,19 @@
 >>20. Veamos que $f$ tiene inversa suave. La proponemos de la forma $$ g : M \to C, \quad g(x, y, z) = \lambda(x, y, z)(x, y, z). $$Para que llegue a $C$ necesitamos que $$ (\lambda(x, y, z)x)^2 + (\lambda(x, y, z)y)^2 = 1. $$Equivalentemente, $\lambda(x, y, z) = 1/\sqrt{x^2 + y^2}$. 
 >>21. Así, consideramos$$ g(x, y, z) = \frac{1}{\sqrt{x^2 + y^2}}(x, y, z). $$
 >>22. Dejamos como ejercicio verificar que $g$ es suave (por ser la restricción de la función suave $G : A \to \mathbb{R}^3$ definida por la misma fórmula en un abierto $A$ de $\mathbb{R}^3$, ¿quién es $A$?) y que es la inversa de $f$.
->- Dado un cilindro como el del ejemplo anterior tenemos $\varphi:\mathbb{R}^{2}\rightarrow\mathbb{R}^{3}$ dada por $$\varphi(s,t)=(\cos s,\sin s,t)$$ es parametrizacion suryectiva del cilindro $C$. A partir de esto tenemos que $F:C\rightarrow C$ dada por $$F(\varphi(s, t)) = \varphi(s + t, t). $$ es un difeomorfismo entre cilindros.
+>- **Torsión del cilindro (Cylinder Twist):** Sea $C$ el cilindro $x^2 + y^2 = 1$. Consideremos la aplicación $F : C \to C$ que "retuerce" el cilindro un ángulo igual a la altura $z$. En coordenadas cilíndricas, si un punto es $(\cos s, \sin s, t)$, su imagen es $(\cos(s+t), \sin(s+t), t)$.
 >>[!Proof]-
->>23. Notemos que como $\varphi$ esta definida en todo $\mathbb{R}^{2}$ tenemos muchos valores repetidos en el dominio que van a una misma imagen. Entonces debemos ver que $F$ manda esos valores reptidos en la imagen a un mismo valor
->>24. Veamos $F$ está bien definida. Notar $\varphi(\mathbb{R}^2) = C$ y se verifica que $\varphi(s, t) = \varphi(s', t')$ esto implica que $\varphi(s + t, t) = \varphi(s' + t', t')$. En efecto, $\varphi(s, t) = \varphi(s', t')$ solo si $t' = t$ y $s' = s + 2k\pi$ con $k \in \mathbb{Z}$, con lo cual $$ \varphi(s' + t', t') = (\cos(s' + t'), \sin(s' + t'), t') = (\cos(s + 2k\pi + t), \sin(s + 2k\pi + t), t) = \varphi(s + t, t). $$
->>25. La función $F$ es suave pues $F \circ \varphi$ es suave pues $\varphi$ es suave por ser carta y $\varphi(s+t,t)$ es $\varphi$ compuesta con desplazar en primera coordenada que es suave 
->>26. (para estar más ajustados a la definición, se puede restringir $\varphi$ a franjas verticales de ancho menor que $2\pi$, con el fin de que resulte inyectiva).
+>>23. Definimos $F$ explícitamente usando la parametrización $\varphi(s, t) = (\cos s, \sin s, t)$. Si $p = \varphi(s, t)$, entonces $F(p) = \varphi(s+t, t)$.
+>>24. **Buena definición:** Debemos ver que $F(p)$ no depende de la elección de $(s, t)$. Si $\varphi(s, t) = \varphi(s', t')$, entonces $t = t'$ y $s' = s + 2k\pi$ para algún $k \in \mathbb{Z}$. Luego
+>>    $$ F(\varphi(s', t')) = \varphi(s' + t', t') = \varphi(s + 2k\pi + t, t) = (\cos(s+t+2k\pi), \sin(s+t+2k\pi), t) = \varphi(s+t, t) = F(\varphi(s, t)). $$
+>>25. **Suavidad:** Podemos escribir $F$ en coordenadas cartesianas como restricción de una función suave en $\mathbb{R}^3$. Si $p = (x, y, z) \in C$, entonces $x = \cos s, y = \sin s, z = t$.
+>>    $$ F(x, y, z) = (\cos(s+z), \sin(s+z), z) = (\cos s \cos z - \sin s \sin z, \sin s \cos z + \cos s \sin z, z) $$
+>>    $$ = (x \cos z - y \sin z, x \sin z + y \cos z, z). $$
+>>    Esta expresión define una función suave $\tilde{F} : \mathbb{R}^3 \to \mathbb{R}^3$, por lo que su restricción $F$ a la superficie regular $C$ es suave.
+>>26. **Inversa:** La inversa $G : C \to C$ deshace la torsión, es decir, rota un ángulo $-z$.
+>>    $$ G(x, y, z) = (x \cos z + y \sin z, -x \sin z + y \cos z, z). $$
+>>    Claramente $G$ es suave (por el mismo argumento) y se verifica fácilmente que $G \circ F = \text{id}_C$ y $F \circ G = \text{id}_C$.
+>>    Por lo tanto, $F$ es un difeomorfismo.
 >>27. La inversa está dada por $F^{-1}(\varphi(s, t)) = \varphi(s - t, t)$. Los mismos argumentos que se aplicaron para $\varphi$ sirven para mostrar que $F^{-1}$ está bien definida y es suave. Se verifica fácilmente que $F \circ F^{-1} = F^{-1} \circ F = \text{id}_C$.
 
 # Plano Tangente
@@ -674,14 +683,14 @@
 >[!Proposition]
 >La definición es buena y $df_p$ es lineal; se llama la **diferencial** de $f$ en $p$.
 >>[!Proof]-
->>1. Sean $\alpha, \beta : (-\varepsilon, \varepsilon) \to S$ dos curvas suaves con $$ \alpha(0) = \beta(0) = p \quad \text{y} \quad \alpha'(0) = \beta'(0). $$
->>2. Debemos mostrar que $$ (f \circ \alpha)'(0) = (f \circ \beta)'(0). $$
->>3. Sea $\varphi : U \to \mathbb{R}^3$ un sistema coordenado de $S$ con $p \in \varphi(U)$, digamos, $p = \varphi(u_o, v_o)$.
->>4. Achicando $\varepsilon$ si fuera necesario, tenemos que las trayectorias de $\alpha$ y $\beta$ están contenidas en $\varphi(U)$ y $$ \alpha(t) = \varphi(u(t), v(t)), \quad \beta(t) = \varphi(x(t), y(t)), $$donde $u, v, x, y : (-\varepsilon, \varepsilon) \to \mathbb{R}$ son funciones suaves, por el lema del diagrama triangular, y satisfacen $x(0) = u(0) = u_o$ e $y(0) = v(0) = v_o$. 
->>5. Calculamos $$ \alpha'(0) = \varphi_u(u_o, v_o)u'(0) + \varphi_v(u_o, v_o)v'(0), $$ $$ \beta'(0) = \varphi_u(u_o, v_o)x'(0) + \varphi_v(u_o, v_o)y'(0). $$
->>6. Como $\alpha'(0) = \beta'(0)$, resulta que $$ u'(0) = x'(0) \quad \text{y} \quad v'(0) = y'(0). \quad (9) $$
->>7. Ahora calculamos $$ (f \circ \alpha)'(0) = \frac{d}{dt}\Big|_0 (f \circ \varphi)(u(t), v(t)) = (f \circ \varphi)_u(u_o, v_o)u'(0) + (f \circ \varphi)_v(u_o, v_o)v'(0), $$que por (9) es igual a $(f \circ \beta)'(0)$, como deseábamos. Así, $df_p$ está bien definida.
->>8. Veamos ahora que $df_p$ es lineal. Llamando $a = u'(0)$ y $b = v'(0)$, tenemos por lo anterior que $$ df_p(a\varphi_u(u_o, v_o) + b\varphi_v(u_o, v_o)) = a(f \circ \varphi)_u(u_o, v_o) + b(f \circ \varphi)_v(u_o, v_o), $$con lo cual $df_p$ es lineal.
+>>4. Sean $\alpha, \beta : (-\varepsilon, \varepsilon) \to S$ dos curvas suaves con $$ \alpha(0) = \beta(0) = p \quad \text{y} \quad \alpha'(0) = \beta'(0). $$
+>>5. Debemos mostrar que $$ (f \circ \alpha)'(0) = (f \circ \beta)'(0). $$
+>>6. Sea $\varphi : U \to \mathbb{R}^3$ un sistema coordenado de $S$ con $p \in \varphi(U)$, digamos, $p = \varphi(u_o, v_o)$.
+>>7. Achicando $\varepsilon$ si fuera necesario, tenemos que las trayectorias de $\alpha$ y $\beta$ están contenidas en $\varphi(U)$ y $$ \alpha(t) = \varphi(u(t), v(t)), \quad \beta(t) = \varphi(x(t), y(t)), $$donde $u, v, x, y : (-\varepsilon, \varepsilon) \to \mathbb{R}$ son funciones suaves, por el lema del diagrama triangular, y satisfacen $x(0) = u(0) = u_o$ e $y(0) = v(0) = v_o$. 
+>>8. Calculamos $$ \alpha'(0) = \varphi_u(u_o, v_o)u'(0) + \varphi_v(u_o, v_o)v'(0), $$ $$ \beta'(0) = \varphi_u(u_o, v_o)x'(0) + \varphi_v(u_o, v_o)y'(0). $$
+>>9. Como $\alpha'(0) = \beta'(0)$, resulta que $$ u'(0) = x'(0) \quad \text{y} \quad v'(0) = y'(0). \quad (9) $$
+>>10. Ahora calculamos $$ (f \circ \alpha)'(0) = \frac{d}{dt}\Big|_0 (f \circ \varphi)(u(t), v(t)) = (f \circ \varphi)_u(u_o, v_o)u'(0) + (f \circ \varphi)_v(u_o, v_o)v'(0), $$que por (9) es igual a $(f \circ \beta)'(0)$, como deseábamos. Así, $df_p$ está bien definida.
+>>11. Veamos ahora que $df_p$ es lineal. Llamando $a = u'(0)$ y $b = v'(0)$, tenemos por lo anterior que $$ df_p(a\varphi_u(u_o, v_o) + b\varphi_v(u_o, v_o)) = a(f \circ \varphi)_u(u_o, v_o) + b(f \circ \varphi)_v(u_o, v_o), $$con lo cual $df_p$ es lineal.
 
 >[!Proposition] Matriz diferencial entre superficies
 >Sea $M$ superficie y $f : M \to \mathbb{R}^3$ una función suave tal que $f(M)$ está contenida en una superficie $N$ y sea $p \in M$. Entonces
@@ -691,14 +700,14 @@
 >donde $\varphi(\bar{p}) = p$ y $\psi(\bar{q}) = f(p)$.
 >O sea, la matriz de la diferencial de una función entre superficies, en un punto de la superficie de partida, respecto de bases formadas por vectores coordenados, es igual a la matriz jacobiana de la función puesta en coordenadas, en el punto correspondiente del mapa de partida.
 >>[!Proof]-
->>1. La primera afirmación se deja como ejercicio.
->>2. Para mostrar la segunda, escribimos $$ (\psi^{-1} \circ f \circ \varphi)(u, v) = (x(u, v), y(u, v)). \quad (11) $$
->>3. Como $\varphi_u(\bar{p}) = \frac{\partial \varphi}{\partial u}(\bar{p}) = \frac{d}{dt}\Big|_0 \varphi(\bar{p} + te_1)$, tenemos que $$ df_p(\varphi_u(\bar{p})) = \frac{d}{dt}\Big|_0 (f(\varphi(\bar{p} + te_1))) = (f \circ \varphi)_u(\bar{p}). $$
->>4. Pero $f(\varphi(u, v)) = \psi(x(u, v), y(u, v))$ por $(11)$ luego, por la regla de la cadena en varias variables, $$ df_p(\varphi_u(\bar{p})) = \psi_x(\bar{q})x_u(\bar{q}) + \psi_y(\bar{q})y_u(\bar{q}). $$
->>5. Entones en paso 3. tomamos $df_{p}$ y lo evaluamos en la primera coordenada de entrada de la base $\varphi_{u}(\bar{p})$ y en el paso 4. escribimos ese resultado en la base de salida. 
->>6. Por lo tanto la primera columna de $[df_p]_{\{\varphi_u(\bar{p}), \varphi_v(\bar{p})\}, \{\psi_x(\bar{q}), \psi_y(\bar{q})\}}$ es igual a $(x_u(\bar{q}), y_u(\bar{q}))^t$. 
->>7. Pero $(x_u(\bar{q}), y_u(\bar{q}))^t$ es trivialmente la primera columna de $\left[ d(\psi^{-1} \circ f \circ \varphi)_{\bar{p}} \right]_{\text{can}}$
->>8. Con argumentos similares se ve que las segundas columnas de las matrices en (10) también coinciden
+>>12. La primera afirmación se deja como ejercicio.
+>>13. Para mostrar la segunda, escribimos $$ (\psi^{-1} \circ f \circ \varphi)(u, v) = (x(u, v), y(u, v)). \quad (11) $$
+>>14. Como $\varphi_u(\bar{p}) = \frac{\partial \varphi}{\partial u}(\bar{p}) = \frac{d}{dt}\Big|_0 \varphi(\bar{p} + te_1)$, tenemos que $$ df_p(\varphi_u(\bar{p})) = \frac{d}{dt}\Big|_0 (f(\varphi(\bar{p} + te_1))) = (f \circ \varphi)_u(\bar{p}). $$
+>>15. Pero $f(\varphi(u, v)) = \psi(x(u, v), y(u, v))$ por $(11)$ luego, por la regla de la cadena en varias variables, $$ df_p(\varphi_u(\bar{p})) = \psi_x(\bar{q})x_u(\bar{q}) + \psi_y(\bar{q})y_u(\bar{q}). $$
+>>16. Entones en paso 3. tomamos $df_{p}$ y lo evaluamos en la primera coordenada de entrada de la base $\varphi_{u}(\bar{p})$ y en el paso 4. escribimos ese resultado en la base de salida. 
+>>17. Por lo tanto la primera columna de $[df_p]_{\{\varphi_u(\bar{p}), \varphi_v(\bar{p})\}, \{\psi_x(\bar{q}), \psi_y(\bar{q})\}}$ es igual a $(x_u(\bar{q}), y_u(\bar{q}))^t$. 
+>>18. Pero $(x_u(\bar{q}), y_u(\bar{q}))^t$ es trivialmente la primera columna de $\left[ d(\psi^{-1} \circ f \circ \varphi)_{\bar{p}} \right]_{\text{can}}$
+>>19. Con argumentos similares se ve que las segundas columnas de las matrices en (10) también coinciden
 
 ^717add
 
@@ -893,7 +902,7 @@
 >>6. Luego $$ E(u, v) = \|\varphi_u(u, v)\|^2 = \sinh^2 v (\sin^2 u + \cos^2 u) + 1 = \cosh^2 v, $$$$ F(u, v) = \langle \varphi_u(u, v), \varphi_v(u, v) \rangle = 0$$$$ G(u, v) = \|\varphi_v(u, v)\|^2 = \cosh^2 v. $$
 >>7. De la misma manera se calculan $\bar{E}, \bar{F}, \bar{G}$ y resultan iguales a $E, F, G$. En consecuencia, $f$ es una isometría
 
->[!Lemma]
+>[!Lemma] Lema previo
 >Antes de la prueba, escribimos el área del paralelogramo generado por $X, Y \in \mathbb{R}^3$ en términos de $\|X\|, \|Y\|$ y $\langle X, Y \rangle$. Si $X, Y \in \mathbb{R}^3$, entonces
 >$$ \|X \times Y\|^2 = \det \begin{pmatrix} \|X\|^2 & \langle X, Y \rangle \\ \langle X, Y \rangle & \|Y\|^2 \end{pmatrix}. $$
 >>[!Proof]-
@@ -926,15 +935,22 @@
 
 >[!Remark]
 >El teorema de rigidez de la esfera afirma que la esfera de radio 1 centrada en el origen es rígida. Sin embargo, un pequeño casquete de esfera (es decir la intersección de la esfera con un semiespacio, digamos, por ejemplo $\{(x, y, z) \mid z > 3/4\}$) no es rígido.
->>[!Proof]
-
+>>[!Proof]-
+>>6. Consideremos una superficie $N$ de curvatura constante $K=1$ que no sea un trozo de esfera (por ejemplo, una superficie de revolución generada por una curva perfil adecuada distinta de la circunferencia).
+>>7. Por el Teorema de Minding, dado que el casquete $M$ y $N$ tienen la misma curvatura constante, son localmente isométricas. Es decir, existe una isometría $f: M \to V \subset N$ (si $M$ es suficientemente pequeño).
+>>8. Sin embargo, esta isometría no proviene de una transformación rígida (congruencia). Si lo fuera, preservaría la segunda forma fundamental y, por tanto, las curvaturas principales. En el casquete esférico, todos los puntos son umbilicales ($k_1 = k_2 = 1$), mientras que en $N$ podemos elegir una región donde los puntos no sean umbilicales ($k_1 \neq k_2$ con $k_1 k_2 = 1$).
+>>9. Por lo tanto, $f$ es una isometría pero no es la restricción de una transformación euclidiana.
 
 >[!Remark]
->Sea $f : M \to N$ una isometría entre superficies. No siempre es claro que exista un continuo de isometrías $f_t : M \to N_t$ con $f_0$ igual a la identidad en $M$ y $f_1 = f$. Por ejemplo, $M$ como en la figura, y $N$ análoga, pero con una de las montañas para abajo. ![[Pasted image 20251129101703.png]]
+>Sea $f : M \to N$ una isometría entre superficies. No siempre es claro que exista un continuo de isometrías $f_t : M \to N_t$ con $f_0$ igual a la identidad en $M$ y $f_1 = f$ y $t\in [0,1]$. 
+>Por ejemplo, $M$ como en la figura, y $N$ análoga, pero con una de las montañas para abajo. No necesariamente se puede deformar de forma continua la superficie con las dos montañas para arriba para llegar a los superficie con una montaña para abajo.![[Pasted image 20251129101703.png]]
+>Pero si es cierto que hay isometria entre estas dos superficies por que (intuitivamente) se preserva las distancias sin importar si la montana esta para arriba o para abajo.
+
+>[!Remark]
 >Aprovechamos para comentar que para dar explícitamente una parametrización del plano con montañas es muy conveniente haber requerido en un comienzo sólo diferenciabilidad de clase $C^3$ de las cartas coordenadas: Sea $h$ la función de gráfico rojo. ![[Pasted image 20251129101733.png]]
 >Necesitamos que las tres primeras derivadas de $h$ en $x$ por derecha sean nulas (para empalmar bien). Podemos conseguir un polinomio $h$ así. Si trabajáramos en clase $C^\infty$, necesitaríamos que todas las derivadas en $x$ por derecha fuera cero. El único polinomio que cumple eso el es idénticamente nulo. Las funciones con esa propiedad tienen fórmulas más complicadas, que involucran, por ejemplo, $e^{-1/t}$.
 
->[!Remark]
+>[!Remark] Otros tipos de difeomorfismos
 >Otra familia de mucho interés de difeomorfismos entre superficies, además de los que preservan áreas y las isometrías, es la de los difeomorfismos conformes. Un difeomorfismo local $f : M \to N$ se dice **conforme** si preserva los ángulos, o sea, para todo par de curvas $\alpha$ y $\beta$ en $M$ con $\alpha(0) = \beta(0)$, el ángulo entre $\alpha'(0)$ y $\beta'(0)$ es igual al ángulo ente $(f \circ \alpha)'(0)$ y $(f \circ \beta)'(0)$.
 >Como es de imaginar, mapeos conformes de la Tierra tenían importancia en navegación.
 >Se puede mostrar que la proyección estereográfica del plano a la esfera es una aplicación conforme.
@@ -947,3 +963,849 @@
 >donde $\alpha : (a, b) \to \mathbb{R}^3$ y $v : (a, b) \to \mathbb{R}^3$ son curvas suaves, llamadas **curva base** y **curva directriz** de $\varphi$, respectivamente.
 >
 >Como $\varphi$ es una carta coordenada, se cumple que $\{\alpha'(s), v(s)\}$ es linealmente independiente para todo $s$. En particular, $\alpha$ es regular y $v$ nunca nula.
+
+>[!Remark]
+>El plano, el cilindro y el helicoide son superficies regladas.
+
+>[!Example] 
+>Sea $H = \{(x, y, z) \in \mathbb{R}^3 \mid x^2 + y^2 - z^2 = 1\}$ el hiperboloide de una hoja.
+>![Hiperboloide](https://upload.wikimedia.org/wikipedia/commons/5/50/Hyperb1N.png)
+>Algunas propiedades:
+>- a) El subconjunto $H$ es una superficie regular por el teorema de la superficie implícita.
+>- b) Es una superficie de revolución con curva perfil una hipérbola a $45^\circ$. De hecho, cortando $H$ con un plano que contiene al eje $z$ se obtienen las dos ramas de la hipérbola.
+>- c) Intersecando $H$ con un plano paralelo al eje $z$ a distancia 1 de este, resultan dos rectas que se cortan en un ángulo recto.
+
+>[!Remark] El Hipernoloide es birreglado
+>Veamos que $H$ es **birreglada**.
+>![Hyperboloid Animation](https://upload.wikimedia.org/wikipedia/commons/d/d3/Hyperboloid-1s-rot.svg)
+>>[!Proof]-
+>>1. Sea $\alpha : \mathbb{R} \to \mathbb{R}^3$, $\alpha(s) = (\cos s, \sin s, 0)$ y para $\varepsilon = \pm 1$ sea $$ v_\varepsilon : \mathbb{R} \to \mathbb{R}^3, \quad v_\varepsilon(s) = \frac{1}{\sqrt{2}} (\varepsilon(-\sin s, \cos s), 1). $$
+>>2. Verifiquemos que $\varphi_\varepsilon : \mathbb{R}^2 \to \mathbb{R}^3, \quad \varphi_\varepsilon(s, t) = \alpha(s) + t v_\varepsilon(s)$ es una parametrización suryectiva de $H$.
+>>   Sea $T = t/\sqrt{2}$. Entonces las coordenadas son:
+>>   $$ x = \cos s - \varepsilon T \sin s, \quad y = \sin s + \varepsilon T \cos s, \quad z = T. $$
+>>   Calculamos $x^2 + y^2 = (\cos s - \varepsilon T \sin s)^2 + (\sin s + \varepsilon T \cos s)^2 = 1 + T^2 = 1 + z^2$.
+>>   Por lo tanto, la imagen está contenida en $H$.
+>>   Para la suryectividad, dado $(x, y, z) \in H$, tomamos $t = z\sqrt{2}$ (o sea $T=z$). El sistema lineal para $\cos s$ y $\sin s$ tiene determinante $1+z^2 \neq 0$. Resolviendo obtenemos un único punto en el círculo unitario (pues $x^2+y^2=1+z^2$), lo que determina $s$ (módulo $2\pi$). Así, todo punto de $H$ es alcanzado. De allí se deduce que $H$ es birreglada.
+
+>[!Definition]
+>Una parametrización $(s, t) \mapsto \alpha(s) + t v(s)$ de una superficie reglada se dice **nunca cilíndrica** si $\|v(s)\| = 1$ y $v'(s) \neq 0$ para todo $s$.
+>Si $(s, t) \mapsto \alpha(s) + t v(s)$ es nunca cilíndrica, la curva $\alpha$ se llama **curva guía** o **curva de estrechez** si $\alpha'(s) \perp v'(s)$ para todo $s$.
+
+>[!Exercise]
+>Las parametrizaciones $\varphi_\varepsilon$ del hiperboloide $H$ de una hoja de arriba, con $\varepsilon = \pm 1$, son nunca cilíndricas y $\alpha(s) = (\cos s, \sin s, 0)$ es una curva de estrechez para ambas parametrizaciones.
+>>[!Proof]-
+>>- **Nunca cilíndrica**:
+>>   1. Recordemos que $v_\varepsilon(s) = \frac{1}{\sqrt{2}} (\varepsilon(-\sin s, \cos s), 1)$.
+>>   2. Calculamos su norma: $$ \|v_\varepsilon(s)\|^2 = \frac{1}{2} (\sin^2 s + \cos^2 s + 1) = \frac{1}{2}(1+1) = 1. $$
+>>   3. Calculamos su derivada: $$ v_\varepsilon'(s) = \frac{1}{\sqrt{2}} (\varepsilon(-\cos s, -\sin s), 0). $$
+>>   4. Vemos que $\|v_\varepsilon'(s)\| = \frac{1}{\sqrt{2}} \neq 0$ para todo $s$. Por lo tanto, es nunca cilíndrica.
+>>- **Curva de estrechez**:
+>>   1. Debemos verificar que $\alpha'(s) \perp v_\varepsilon'(s)$.
+>>   2. Tenemos $\alpha(s) = (\cos s, \sin s, 0)$, luego $\alpha'(s) = (-\sin s, \cos s, 0)$.
+>>   3. Calculamos el producto interno: $$\begin{align} \langle \alpha'(s), v_\varepsilon'(s) \rangle & = \left\langle (-\sin s, \cos s, 0), \frac{\varepsilon}{\sqrt{2}} (-\cos s, -\sin s, 0) \right\rangle\\ & = \frac{\varepsilon}{\sqrt{2}} (\sin s \cos s - \cos s \sin s + 0)\\& = 0\end{align} $$por lo tanto, $\alpha$ es una curva de estrechez.
+
+>[!Remark] Curvas base no son unicas
+>Las curvas base no son distinguidas geométricamente: Si $(s, t) \mapsto \alpha(s) + t v(s)$ es una parametrización reglada de una superficie $M$, entonces
+>$$ (s, \tau) \mapsto \alpha(s) + f(s) v(s) + \tau v(s) = \beta(s) + \tau v(s) \quad (12) $$
+>también es una parametrización reglada de $M$, con curva base $\beta(s) = \alpha(s) + f(s) v(s)$, siempre que $|f|$ sea pequeño y $s, t$ se restrinjan lo suficiente.
+
+>[!Example]-
+>El eje del helicoide (recta roja en la figura de abajo) es la curva guía. La hélice verde puede tomarse también como curva base de una parametrización del helicoide.
+>![[Pasted image 20251129153434.png]]
+
+>[!Exercise]
+>Si para las parametrizaciones regladas del hiperboloide de una hoja tomamos $f$ constante, la nueva curva base describe una circunferencia en un plano horizontal.
+
+>[!Proposition] Unicidad de curva guia en nunca cilindricas
+>La curva guia de una parametrización nunca cilíndrica es única en el siguiente sentido: Si en (12) $\alpha$ y $\beta$ son ambas curvas guías, entonces coinciden.
+>>[!Proof]-
+>>4. Como $\beta$ es curva guía vale $$ 0 = \langle \beta', v' \rangle = \langle \alpha' + f'v + fv', v' \rangle = \langle \alpha', v' \rangle + f' \langle v, v' \rangle + f \langle v', v' \rangle = f \|v'\|^2 $$pues $\langle \alpha', v' \rangle = 0$ (ya que $\alpha$ es curva guía), y $\langle v', v \rangle = 0$ ya que $v$ es unitario. 
+>>5. Como $\|v'\|$ es nunca nulo, entonces $f = 0$ y por lo tanto, $\alpha = \beta$.
+
+>[!Remark]
+>Si los rayos de la superficie reglada fueran láser los puntos de la curva guía serían los más brillantes.
+
+# Orientación de superficies
+
+>[!Remark]
+>Vamos a explorar cuántos lados tiene una superficie.
+
+>[!Definition] Superficie orientable
+>Se dice que una una superficie $S$ es **orientable** si existe una función continua $n : S \to \mathbb{R}^3$ que cumple $\|n(p)\| = 1$ y $n(p) \perp T_pS$ para todo $p \in S$.
+>La condición $n(p) \perp T_pS$ significa que $\langle n(p), u \rangle = 0$ para todo $u \in T_pS$. Una función $n$ así es un **campo normal unitario** de $S$ y se denomina una **orientación** de la superficie $S$.
+
+>[!Remark]
+>Las superficies orientables tienen al menos dos lados, determinados por $n$ y $-n$.
+
+>[!Example] Ejemplos de superficies orientables
+>- El plano $z = 0$ es orientable. La verificación se deja como ejercicio.
+>- La esfera $S$ de centro $0$ y radio $r > 0$ es orientable. 
+>>[!Proof]-
+>>1. En efecto, $S = \{p \in \mathbb{R}^3 \mid \|p\| = r\}$ y sea $$ n : S \to \mathbb{R}^3, \quad n(p) = \frac{p}{r}. $$
+>>2. La función $n$ es continua, pues el la restricción a $S$ de la función definida por la misma fórmula en el abierto $\mathbb{R}^3 - \{0\} \to \mathbb{R}^3$.
+>>3. También, $\|n(p)\| = 1$ y $(\frac{p}{r})^\perp = p^\perp = T_pS$ para todo $p \in S$ (la última afirmación se mostró para $r = 1$ usando la descripción de los planos tangentes a una superficie implícita; para $r$ arbitrario es similar).
+>- Las superficies de revolución son orientables. En particular sea $M$ la superficie de revolución con curva perfil $$ \alpha : (a, b) \to \mathbb{R}^2, \quad \alpha(t) = (r(t), h(t)), $$inyectiva con inversa continua, con $r(t) > 0$ para todo $t$. Entonces $M$ es orientable 
+>>[!Proof]-
+>>4. Sea $\varphi : \mathbb{R} \times (a, b) \to M$,$$ \varphi(s, t) = (r(t) (\cos s, \sin s), h(t)), $$y definimos $n : M \to \mathbb{R}^3$ mediante $$ n(\varphi(s, t)) = \frac{\varphi_s(s, t) \times \varphi_t(s, t)}{\|\varphi_s(s, t) \times \varphi_t(s, t)\|}. $$
+>>5. Claramente $n(\varphi(s, t)) \perp T_{\varphi(s, t)}M$ y $\|n(\varphi(s, t))\| = 1$ para todo $s, t$.
+>>6. Veamos que $\varphi$ está bien definida. Observamos que $M$ es la imagen de $\varphi$ y verificamos $$ n(\varphi(s, t)) = n(\varphi(s', t')) $$
+>>7. si $\varphi(s, t) = \varphi(s', t')$. Esto ocurre si y solo si $t' = t$ (pues $\alpha$ es inyectiva) y $s' = s + 2k\pi$ para cierto $k \in \mathbb{Z}$. Como $\varphi(s, t) = \varphi(s + 2k\pi, t)$, tenemos que $$ \varphi_s(s, t) = \varphi_s(s + 2k\pi, t) \quad \text{y} \quad \varphi_t(s, t) = \varphi_t(s + 2k\pi, t) $$para todo $s, t$. Entonces $n$ está bien definida.
+>>8. Para ver que $n$ es continua, notamos que $n \circ \varphi|_{I \times (a, b)}$ es continua y $\varphi|_{I \times (a, b)}$ es un sistema coordenado de $M$ para todo intervalo $I$ de longitud menor que $2\pi$.
+>>9. Si $\alpha$ está definida en todo $\mathbb{R}$ y es periódica, se procede de manera similar.
+
+>[!Definition] Cinta de Möbius
+>La cinta de Möbius es el conjunto $M = \{\varphi(s, t) \mid s \in \mathbb{R}, |t| < r\}$ dada por$$ \varphi(s, t) = \alpha(s) + t v(s), $$donde $$ \alpha(s) = (\cos s, \sin s, 0) \quad \text{y} \quad v(s) = \cos(\frac{s}{2}) \alpha(s) + \sin(\frac{s}{2}) (0, 0, 1). $$Se puede demostrar que $M$ es una superficie regular si $r > 0$ es suficientemente pequeño. ¿Es isométrica a la cinta de Möbius que construimos con papel?
+
+>[!Proposition]
+>La cinta de Möbius no es orientable.
+>>[!Proof]-
+>>10. Supongamos que existe una función $n : M \to \mathbb{R}^3$ continua tal que $\|n(p)\| = 1$ y $n(p) \perp T_pM$ para todo $p \in M$.
+>>11. Definimos la función $$ N : \mathbb{R} \to \mathbb{R}^3, \quad N(s) = n(\alpha(s)), \quad (13) $$que es continua pues es composición de funciones continuas.
+>>12. Por otro lado $$ \varphi_s(s, t) = \alpha'(s) + t v'(s) \quad \text{y} \quad \varphi_t(s, t) = v(s); $$en particular, $\varphi_s(s, 0) = \alpha'(s)$ y $\varphi_t(s, 0) = v(s)$. 
+>>13. Luego,$$ (\varphi_s \times \varphi_t)(s, 0) = \alpha'(s) \times v(s), $$que está en $(T_{\varphi(s, t)}M)^\perp$ y además unitario, pues $\|\alpha'(s)\| = 1 = \|v(s)\|$ y $\alpha'(s) \perp v(s)$.
+>>14. Así, para cada $s$ $$ N(s) = \varepsilon(s) \alpha'(s) \times v(s) $$para cierta función $\varepsilon : \mathbb{R} \to \mathbb{R}$ con valores en el conjunto $\{-1, 1\}$.
+>>15. Veamos que $\varepsilon$ es constante. Para eso despejamos $$ \varepsilon(s) = \langle N(s), \alpha'(s) \times v(s) \rangle, $$que es una función continua de $s$. 
+>>16. Por el teorema de los valores intermedios, $\varepsilon$ es constante igual a $1$ o constante igual a $-1$.
+>>17. Ahora calculamos $$ N(0) = \varepsilon(0) \alpha'(0) \times v(0) \quad \text{y} \quad N(2\pi) = \varepsilon(2\pi) \alpha'(2\pi) \times v(2\pi). $$
+>>18. Como $\alpha$ es periódica de período $2\pi$, $\alpha'$ también lo es; así $\alpha'(2\pi) = \alpha'(0)$
+>>19. También, es fácil verificar que $v(2\pi) = -v(0)$. Entonces $N(2\pi) = -N(0)$. Pero esto implica por (13) que $$ n(\alpha(2\pi)) = -n(\alpha(0)), $$lo cual es absurdo, pues $\alpha(2\pi) = \alpha(0)$. 
+>>20. En consecuencia, $M$ no es orientable. $\square$
+
+>[!Remark]
+>La cinta de Möbius tiene un solo lado.
+
+>[!Proposition]
+>Las orientaciones (campos noramales unitarios)   de superficies son de clase $C^2$.
+>>[!Proof]-
+>>21. Sea $n : M \to \mathbb{R}^3$ una orientación en la superficie $M$. Ver que $n$ es de clase $C^2$ es ver que lo es un punto arbitrario $p$ de $M$. 
+>>22. Sea $\varphi : U \to M$ una carta coordenada con $U$ conexo y $p \in \varphi(U)$.
+>>23. Sea $N : U \to \mathbb{R}^3$ definida por $$ N(u, v) = \frac{\varphi_u(u, v) \times \varphi_v(u, v)}{\|\varphi_u(u, v) \times \varphi_v(u, v)\|}. $$
+>>24. Notemos que tanto $N(u, v)$ como $n(\varphi(u, v))$ son vectores normales unitarios a $M$ en $\varphi(u, v)$. Por lo tanto, $n(\varphi(u, v)) = \pm N(u, v)$.
+>>25. Consideremos la función $f: U \to \mathbb{R}$ dada por $f(u, v) = \langle n(\varphi(u, v)), N(u, v) \rangle$. Como $n$ y $N$ son continuas, $f$ es continua. 
+>>26. Además, su imagen está contenida en $\{-1, 1\}$. Pues son paralelos
+>>27. Como $U$ es conexo, $f$ debe ser constante. Pues $f(U)$ debe ser conexo por que $f$ es continua 
+>>28. Luego, $n(\varphi(u, v)) = N(u, v)$ para todo $(u, v) \in U$ o $n(\varphi(u, v)) = -N(u, v)$ para todo $(u, v) \in U$.
+>>29. En cualquier caso, $n \circ \varphi$ coincide con $\pm N$, que es una función de clase $C^2$ (de hecho $C^\infty$ si la superficie lo es) (El producto cruz es $C^{\infty}$)  pues $\varphi$ lo es y el denominador no se anula. Esto prueba que $n$ es de clase $C^2$. 
+
+# Curvatura de superficies. El operador de forma
+
+>[!Remark]
+>Para ver cómo se curva una superficie vemos cómo varían los planos tangentes, o equivalentemente, cómo varían los vectores normales.
+
+>[!Definition] Aplicación de Gauss
+>Sea $M$ una superficie regular con una orientación $n : M \to \mathbb{R}^3$. Dado que $n$ es unitaria la podemos pensar como $n : M \to S^2$, que llega a la esfera de radio 1 centrada en el origen, se llama **aplicación de Gauss**.
+>Como $T_qS^2 = q^\perp$ para todo $q \in S^2$, tenemos que para todo $p \in M$ se cumple que
+>$$ dn_p : T_pM \to T_{n(p)}S^2 = n(p)^\perp = T_pM. $$
+>En particular, $dn_p$ es una transformación lineal de $T_pM$ en sí mismo.
+
+>[!Proposition]
+>Toda superficie regular es localmente orientable. Esto significa que para todo punto $p \in M$, existe un entorno abierto $V \subset M$ de $p$ tal que $V$ es una superficie orientable.
+>>[!Proof]-
+>>1. Sea $p \in M$. Por definición de superficie regular, existe una carta coordenada $\varphi: U \to V$ tal que $U \subset \mathbb{R}^2$ es abierto, $p \in V \subset M$ y $V$ es un abierto de $M$.
+>>2. Podemos definir una orientación en $V$ mediante la función $n: V \to \mathbb{R}^3$ dada por:$$ n(q) = \frac{\varphi_u(u, v) \times \varphi_v(u, v)}{\|\varphi_u(u, v) \times \varphi_v(u, v)\|} $$donde $q = \varphi(u, v)$.
+>>3. Esta función está bien definida porque $\varphi$ es un difeomorfismo (localmente) (como es difeo es biyectiva, cada $q$ corresponde a un único $(u, v)$) y el denominador es no nulo por la regularidad de la carta. 
+>>4. Además, es continua (de hecho suave) y unitaria. Esto es por que el producto cruz es $C^{\infty}$
+>>5. Y ademas $n(q)$ es ortogonal a $T_q M$ (por que $T_{q}M$ es generado por $\varphi_u$ y $\varphi_v$).
+>>6. Por lo tanto, $V$ es orientable. Como $p$ es arbitrario, $M$ es localmente orientable
+
+>[!Definition] Operador de forma
+>Sea $M$ una superficie con una orientación $n$ y sea $p \in M$. Se define
+>$$ A_p = -dn_p : T_pM \to T_pM $$
+>y se llama el **operador de forma de $M$ en $p$ respecto de la orientación $n$**.
+
+>[!Theorem]
+>El operador de forma de $M$ en $p$ diagonaliza en una base ortonormal de $T_pM$, es decir, existe una base ortonormal $\{X, Y\}$ de $T_pM$ tal que
+>$$ A_p(X) = k_1 X \quad \text{y} \quad A_p(Y) = k_2 Y, $$
+>con $k_1 \ge k_2$.
+>>[!Proof]-
+>>1. Un teorema de Algebra Lineal afirma que $T$ autoadjunta sii $T$ diagonaliza ortonormalmente por lo tanto basta ver que $A_p$ es autoadjunta, o sea, que $$ \langle -dn_p(u), v \rangle = \langle u, -dn_p(v) \rangle $$para todo $u, v \in T_pM$. 
+>>2. Como el producto interno es bilineal, basta verificarlo para $$ u = \varphi_x(q) \quad \text{y} \quad v = \varphi_y(q), $$donde $\varphi : U \to M$ es un sistema coordenado con $\varphi(q) = p$ (Esto es por que $\varphi_{x}(q)$ y $\varphi_{y}(q)$ son base y despues usando linealidad).
+>>3. Debemos ver entonces que $$ \langle dn_p(\varphi_x(q)), \varphi_y(q) \rangle = \langle \varphi_x(q), dn_p(\varphi_y(q)) \rangle, \quad (15) $$o lo que es lo mismo $$ \left\langle \frac{\partial}{\partial x}\Big|_q n \circ \varphi, \varphi_y(q) \right\rangle = \left\langle \varphi_x(q), \frac{\partial}{\partial y}\Big|_q n \circ \varphi \right\rangle. $$
+>>4. Por otro lado, sabemos que para todo $x, y$ vale$$ \langle n(\varphi(x, y)), \varphi_x(x, y) \rangle = 0, \quad (16) $$$$ \langle n(\varphi(x, y)), \varphi_y(x, y) \rangle = 0. \quad (17) $$ Por que $\varphi_{x}$ y $\varphi_{y}$ generan el plano tangente  
+>>5. Derivamos miembro a miembro la expresión (16) con respecto a $y$ en $q$ y obtenemos $$ \left\langle \frac{\partial}{\partial y}\Big|_q (n \circ \varphi), \varphi_x(q) \right\rangle + \langle n(q), \varphi_{xy}(q) \rangle = 0. $$Análogamente, derivamos (17) con respecto a $x$ y evaluamos en $q$: $$ \left\langle \frac{\partial}{\partial x}\Big|_q (n \circ \varphi), \varphi_y(q) \right\rangle + \langle n(q), \varphi_{yx}(q) \rangle = 0. $$
+>>6. Restamos miembro a miembro y como las derivadas cruzadas $\varphi_{xy}$ y $\varphi_{yx}$ son iguales, resulta que (15) es verdadera, como queríamos. $\square$
+
+>[!Definition] Curvatura Gaussiana y Media
+>Los vectores $X$ y $Y$ se llaman **direcciones principales** en $p$ y $k_1, k_2$ se denominan **curvaturas principales** en $p$.
+>Un vector $Z \neq 0$ en $T_pM$ que satisface $\langle A_p(Z), Z \rangle = 0$ se dice un **vector asintótico** en $p$.
+>Las **curvaturas gaussiana** y **media** de $M$ en $p$ son, respectivamente,
+>$$ K(p) = k_1 k_2 \quad \text{y} \quad H(p) = \frac{1}{2} (k_1 + k_2). $$
+
+>[!Example]- Calculando alguna curvatura media y Gaussiana 
+>Sea $M$ la silla de montar, gráfico de la función $f : \mathbb{R}^2 \to \mathbb{R}$ dada por $f(x, y) = x^2 - 3y^2$ y sea $p = (0, 0, 0)$.
+>Sea $\varphi : \mathbb{R}^2 \to M$ el sistema coordenado definido por $\varphi(x, y) = (x, y, x^2 - 3y^2)$ y sea $n : M \to S^2$ la orientación
+>$$ n(\varphi(x, y)) = \frac{(\varphi_x \times \varphi_y)(x, y)}{\|(\varphi_x \times \varphi_y)(x, y)\|} = \frac{(1, 0, 2x) \times (0, 1, -6y)}{\|(1, 0, 2x) \times (0, 1, -6y)\|} $$
+>$$ = \frac{(-2x, 6y, 1)}{\sqrt{4x^2 + 36y^2 + 1}}. $$
+>Tenemos que
+>$$ T_pM = \text{span } \{\varphi_x(0, 0), \varphi_y(0, 0)\} = \text{span } \{(1, 0, 0), (0, 1, 0)\} = \mathbb{R}^2 \times \{0\}. $$
+>Calculamos
+>$$ dn_p(e_1) = dn_p(\varphi_x(0, 0)) = dn_p \left( \frac{d}{dx}\Big|_0 \varphi(x, 0) \right) = \frac{d}{dx}\Big|_0 n(\varphi(x, 0)) $$
+>$$ = \frac{d}{dx}\Big|_0 (4x^2 + 36y^2 + 1)^{-1/2} (-2x, 6y, 1) = \dots = -2e_1. $$
+>De la misma manera, $dn_p(e_2) = 6e_2$.
+>Así, $A_p(e_1) = 2e_1$ y $A_p(e_2) = -6e_2$. Luego, $e_1$ y $e_2$ son direcciones principales de $M$ en $p$ y las curvaturas principales son $k_1 = 2$ y $k_2 = -6$. De allí,
+>$$ K(p) = -12 \quad \text{y} \quad H(p) = -2. $$
+>Veamos ahora si existen vectores asintóticos $Z$ en $p$. Escribimos $Z = ae_1 + be_2$ y planteamos
+>$$ 0 = \langle A(Z), Z \rangle = \langle A(ae_1 + be_2), ae_1 + be_2 \rangle = \langle aA(e_1) + bA(e_2), ae_1 + be_2 \rangle \quad (14) $$
+>$$ = \langle 2ae_1 - 6be_2, ae_1 + be_2 \rangle = 2a^2 - 6b^2, $$
+>que vale si y solo si $2a^2 = 6b^2$, o equivalentemente, $|a| = \sqrt{3}|b|$. Luego los cuatro vectores
+>$$ Z = \pm \sqrt{3} e_1 \pm e_2 $$
+>y sus múltiplos no nulos son exactamente los vectores asintóticos para $M$ en $p$.
+
+^d6595a
+
+>[!Remark]-
+>Las direcciones $X$ y $Y$ son aquellas donde la superficie más se curva (respectivamente, menos se curva) cerca de $p$.
+>En la dirección de los vectores asintóticos en $p$ es donde, a nivel infinitesimal, la superficie corta al plano tangente afín en $p$.
+
+>[!Remark]
+>Si $K(p) \le 0$, o sea si $k_1, k_2$ tienen distintos signo o alguno vale cero, entonces necesariamente existen vectores asintóticos de $M$ en $p$. Se justifica con un cálculo análogo a (14) en [[Definiciones#^d6595a]], poniendo $k_1$ y $k_2$ en vez de $2$ y $-6$.
+>De la misma manera se muestra que no hay vectores asintóticos en $p$ si $K(p) > 0$.
+>En el práctico se ve que las direcciones principales son bisectrices de las asintóticas.
+
+>[!Exercise]
+>Si se considera la orientación $\bar{n} = -n$ en vez de $n$, resultan
+>$$ \bar{k}_1 = -k_2, \quad \bar{k}_2 = -k_1, \quad \bar{K} = K \quad \text{y} \quad \bar{H} = -H. $$
+
+>[!Definition] Clasificación de puntos
+>Sea $M$ una superficie. Un punto $p \in M$ se dice
+>- **elíptico** si $K(p) > 0$ (cuenco)
+>- **hiperbólico** si $K(p) < 0$ (silla de montar)
+>- **parabólico** si una de las curvaturas principales es cero y la otra no (canaleta)
+>- **planar** si $k_1 = k_2 = 0$.
+>
+>El punto $p$ se dice **umbílico** si $k_1 = k_2$ (es planar o un caso especial de punto elíptico).
+
+>[!Remark]-
+>El gráfico de la función $x^4 + y^4$ parece un cuenco cerca del origen, pero se ve en el práctico que este es un punto planar de la superficie, pues la curvatura detecta el segundo orden.
+
+>[!Definition] Línea de curvatura y asintótica
+>Una curva regular $\alpha$ en una superficie $M$ se llama **línea de curvatura** de $M$ si para todo $t$ se cumple que $\alpha'(t)$ es un múltiplo de una dirección principal en $\alpha(t)$, y se llama **línea asintótica** de $M$ si $\alpha'(t)$ es un vector tangente asintótico en $\alpha(t)$, para todo $t$.
+
+>[!Remark]
+>En el práctico se ve que los paralelos y los meridianos de una superficie de revolución son líneas de curvatura.
+
+>[!Example]- Ejemplo de linea de curvatura y asintotica
+>Sea $C$ el cilindro $\{(x, y, z) \mid x^2 + y^2 = r^2\}$ y sea $\varphi(s, t) = (r \cos s, r \sin s, t)$.
+>Calculamos
+>$$ \varphi_s(s, t) = (-r \sin s, r \cos s, 0) \quad \text{y} \quad \varphi_t(s, t) = (0, 0, 1). $$
+>La orientación $\varphi$ está bien definida por
+>$$ n(\varphi(s, t)) = \frac{(\varphi_s \times \varphi_t)(s, t)}{\|(\varphi_s \times \varphi_t)(s, t)\|} = \frac{(r \cos s, r \sin s, 0)}{r} = (\cos s, \sin s, 0). $$
+>Calculamos
+>$$ \begin{align} A_{\varphi(s, t)}(\varphi_s(s, t)) & = -dn_{\varphi(s, t)}(\varphi_s(s, t))\\& = -(n \circ \varphi)_s(s, t) \\ &= -(-\sin s, \cos s, 0) = (\sin s, -\cos s, 0) \\& = -\frac{1}{r} \varphi_s(s, t).\end{align} $$
+>De la misma forma obtenemos
+>$$ A_{\varphi(s, t)}(\varphi_t(s, t)) = 0. $$
+>De esa información concluimos que $\frac{1}{r} \varphi_s(s, t)$ y $\varphi_t(s, t)$ son direcciones principales,
+>$$ k_1 \equiv 0, \quad k_2 \equiv -\frac{1}{r}, \quad K \equiv 0, \quad H \equiv -\frac{1}{2r}, $$
+>y que las curvas coordenadas son líneas de curvatura. Además, las curva $t \mapsto \varphi(s_o, t)$ es una línea asintótica para todo $s_o$.
+
+>[!Example]- Ejemplo de linea de curvatura y asintotica
+>Sea $M$ el toro $T(R, r)$ parametrizado por
+>$$ \varphi(s, t) = ((R + r \cos t)(\cos s, \sin s), r \sin t) $$
+>(con $0 < r < R$) y sea $\alpha : \mathbb{R} \to M$ el paralelo superior,
+>$$ \alpha(s) = \varphi(s, \pi/2) = (R(\cos s, \sin s), r). $$
+>Veamos que $\alpha$ es una línea de curvatura y también línea asintótica de $M$.
+>Sea $n : M \to \mathbb{R}^3$,
+>$$ n(\varphi(s, t)) = \frac{\varphi_s(s, t) \times \varphi_t(s, t)}{\|\varphi_s(s, t) \times \varphi_t(s, t)\|}, $$
+>que vimos que está bien definido pues $M$ es una superficie de revolución. Tenemos que
+>$$ n(\alpha(s)) = n(\varphi(s, \pi/2)) = (0, 0, 1) $$
+>para todo $s$. Luego,
+>$$ A_{\alpha(s)}(\alpha'(s)) = -dn_{\alpha(s)}(\alpha'(s)) = -\frac{d}{ds}(n \circ \alpha)(s) = -\frac{d}{ds}(0, 0, 1) = 0. $$
+>Como $\|\alpha'(s)\| = \|(R(-\sin s, \cos s), 0)\| = R$. Entonces $\alpha'(s)/R$ es una dirección principal de $M$ en el punto $\alpha(s)$ y por lo tanto $\alpha$ es una línea de curvatura.
+>Calculamos $\langle A_{\alpha(s)}(\alpha'(s)), \alpha'(s) \rangle = 0$ y en consecuencia $\alpha'(s)$ es un vector asintótico en $\alpha(s)$ y así, $\alpha$ es una línea asintótica.
+>Notemos que una de las curvaturas principales en $\alpha(s)$ es cero, lo cual implica que la curvatura gaussiana se anula en $\alpha(s)$: $K(\alpha(s)) = 0$ para todo $s$.
+
+>[!Remark]- Repaso Lineal
+>Antes de seguir necesitamos repasar ciertas nociones de Álgebra Lineal.
+>Sea $T : V \to V$ una transformación lineal de un espacio vectorial $V$ **en sí mismo** (no es necesario que $V$ tenga un producto interno). Se definen $$ \det(T) = \det(A) \quad \text{y} \quad \text{tr}(T) = \text{tr}(A), $$donde $A = [T]_{\mathcal{B}}$ para cualquier base $\mathcal{B}$ de $V$. La definición es buena, porque si $\bar{\mathcal{B}}$ es otra base de $V$, se tiene que $$ [T]_{\bar{\mathcal{B}}} = P [T]_{\mathcal{B}} P^{-1} $$para cierta matriz invertible $P$ (la matriz de cambio de base) y además para todo par de matrices $X$ e $Y$ vale$$ \det(XY) = \det(X) \det(Y) \quad \text{y} \quad \text{tr}(XY) = \text{tr}(YX). $$
+
+>[!Proposition]
+>Sea $A_p$ el operador de forma de una superficie $M$ en el punto $p$. Entonces
+>$$ K(p) = \det(A_p) \quad \text{y} \quad H(p) = \frac{1}{2} \text{tr}(A_p). $$
+>>[!Proof]-
+>>1. Sean $k_1$ y $k_2$ las curvaturas principales y $X, Y$ las direcciones principales en $p$. Tenemos que $$ K(p) = k_1 k_2 = \det \begin{pmatrix} k_1 & 0 \\ 0 & k_2 \end{pmatrix} = \det([A_p]_{\{X, Y\}}) = \det(A_p). $$
+>>2. La justificación de la afirmación para $H$ es similar y se deja como ejercicio.
+
+>[!Remark]
+>La proposición permite a veces obtener $K(p)$ y $H(p)$ sin necesidad de hallar previamente las direcciones y las curvaturas principales en $p$. Por ejemplo, si $\varphi : U \to M$ es un sistema coordenado con $p \in \varphi(q)$, podemos calcular
+>$$ [dn_p]_{\{\varphi_u(q), \varphi_v(q)\}} = \begin{pmatrix} a & b \\ c & d \end{pmatrix}. $$
+>(Notar $det(-A)=det(A)$ si $A \in \mathbb{R}^{n \times n}$ con $n$ par, con lo cual $det(A_{p})=det(-dn_{p})=det(dn_{p})$). En ese caso tendremos $K(p) = ad - cb$  y $H(p) = -\frac{1}{2}(a + d)$
+
+# La curvatura normal
+
+>[!Remark]
+>Ahora nos preguntamos cuánto se curva una superficie en una dirección $v \in T_pM$, no necesariamente principal. En lo que sigue en $M$ tendremos una orientación $n : M \to S^2$ fija.
+
+>[!Definition] Curvatura normal
+>Sea $M$ una superficie regular y sea $\alpha : (-\varepsilon, \varepsilon) \to M$ una curva suave de rapidez unitaria con $\alpha(0) = p$. Se define la **curvatura normal** de $\alpha$ en $M$ en $p$ como la componente de la aceleración de $\alpha$ en cero según $n(p)$, o sea,
+>$$ \langle \alpha''(0), n(p) \rangle. $$
+
+>[!Proposition]
+>Se cumple que
+>$$ \langle \alpha''(0), n(p) \rangle = \langle A_p(\alpha'(0)), \alpha'(0) \rangle. $$
+>>[!Proof]-
+>>1. Como la curva $\alpha$ está en $M$, su velocidad es tangente, o sea $$ \langle \alpha'(s), n(\alpha(s)) \rangle = 0 $$para todo $s$. 
+>>2. Derivando miembro a miembro y evaluando en $s = 0$ obtenemos $$ \langle \alpha''(0), n(\alpha(0)) \rangle + \langle \alpha'(0), (n \circ \alpha)'(0) \rangle = 0 $$para todo $s$, o equivalentemente $$ \langle \alpha''(0), n(p) \rangle = - \langle \alpha'(0), dn_p(\alpha'(0)) \rangle = \langle \alpha'(0), A_p(\alpha'(0)) \rangle, $$como queríamos.
+
+^852d07
+
+>[!Corollary]
+>Dado un vector unitario $v \in T_pM$, todas las curvas $\beta$ en $M$ con rapidez unitaria tales que $\beta(0) = p$ y $\beta'(0) = v$ tienen la misma curvatura normal en $p$.
+
+>[!Definition] Curvatura normal en una dirección
+>Dado un vector unitario $v \in T_pM$, la **curvatura normal** de $M$ en la **dirección** $v$ es
+>$$ \kappa_{n, p}(v) = \langle A_p v, v \rangle. $$
+
+>[!Remark]
+>En la siguiente proposición vemos la **fórmula de Euler**, que da las curvaturas normales en coordenadas polares del plano tangente.
+
+>[!Proposition] Fórmula de Euler
+>Sean $X, Y$ direcciones principales en un punto $p$ de una superficie $M$, y sean $k_1, k_2$ las correspondientes curvaturas principales en $p$. Entonces
+>$$ \kappa_{n, p}(\cos \theta X + \sin \theta Y) = k_1 \cos^2 \theta + k_2 \sin^2 \theta \quad (18) $$
+>para todo $\theta \in \mathbb{R}$.
+>>[!Proof]-
+>>1. El miembro izquierdo es por definición $$ \langle A_p(\cos \theta X + \sin \theta Y), \cos \theta X + \sin \theta Y \rangle = \langle \cos \theta k_1 X + \sin \theta k_2 Y, \cos \theta X + \sin \theta Y \rangle, $$que coincide con el segundo miembro de (18) pues $\{X, Y\}$ es una base ortonormal.
+
+>[!Corollary]
+>Se cumple que $\kappa_{n, p}(X) = k_1$, $\kappa_{n, p}(Y) = k_2$ y
+>$$ k_2 \le \kappa_{n, p}(\cos \theta X + \sin \theta Y) \le k_1 $$
+>para todo $\theta$.
+>Esto provee una justificación a un enunciado informal anterior que afirmaba que las direcciones principales son aquellas partiendo de $p$ donde la superficie más se curva y menos se curva.
+
+>[!Proposition]
+>Si la trayectoria de la recta $\alpha(t) = p + tu$ (con $\|u\| = 1$) está contenida en una superficie $M$, entonces $\alpha$ es una línea asintótica de $M$.
+>>[!Proof]-
+>>2. Debemos verificar que $\alpha'(t)$ es una dirección asintótica en $T_{\alpha(t)}M$, para todo $t$. 
+>>3. Ahora usando [[Definiciones#^852d07]] $$ k_{n,p}(\alpha ')=\langle A_{\alpha(t)}\alpha'(t), \alpha'(t) \rangle = \langle \alpha''(t), n(\alpha(t)) \rangle = \langle 0,n(\alpha (t))\rangle= 0 $$
+
+>[!Example] Linea asintotica en el cilindro
+>En el cilindro la recta vertical seria $\alpha (t)=(1,0,0)+t(0,0,1)$  
+
+>[!Proposition]
+>Ninguna curva $\alpha$ en $M$ de rapidez unitaria con $\alpha(0) = p$ y $\alpha'(0) = v$ se curva menos que $|\kappa_{n,p}(v)|$.
+>>[!Proof]-
+>>4. Sea $\kappa_\alpha$ la curvatura de la curva $\alpha$. Por la desigualdad de Cauchy-Schwarz tenemos que
+>>$$ \kappa_\alpha(0) =\lVert \alpha ''(0) \rVert = \|\alpha''(0)\| \lVert n(p) \rVert \ge |\langle \alpha''(0), n(p) \rangle| = |\kappa_{n,p}(v)|. $$
+
+>[!Remark]
+>¿Habrá alguna curva como en la proposición cuya curvatura sea exactamente $|\kappa_{n,p}(v)|$? Antes de responder a la pregunta, presentamos la siguiente proposición.
+
+>[!Proposition]
+>Sea $M$ una superficie con una orientación $n$. Sean $p \in M$ y $v \in T_pM$ con $\|v\| = 1$ y sea $P$ el plano normal a $M$ por $p$ en la dirección $v$, o sea,
+>$$ P = \{q \in \mathbb{R}^3 \mid \langle q - p, n(p) \times v \rangle = 0\}. $$
+>Entonces existe una curva $\beta : (-\varepsilon, \varepsilon) \to M$ con $\beta(0) = p$ y su trayectoria contenida en $P \cap M$.
+>>[!Proof]-
+>>5. Sea $\varphi : U \to M$ un sistema coordenado con $\varphi(0, 0) = p$. Llamamos $$ f : U \to \mathbb{R}, \quad f(u, v) = \langle \varphi(u, v) - p, n(p) \times v \rangle. $$
+>>6. Se cumple que $f(0, 0) = 0$ y que $$ f(u, v) = 0 \quad \text{si y solo si} \quad \varphi(u, v) \in M \cap P, \quad (19) $$
+>>7. Así que nos interesa el conjunto de nivel cero de $f$ cerca de $(0, 0)$. Veremos que es una curva, usando el Teorema de la Función Implícita. Basta mostrar que $0$ es un valor regular de $f$ cerca de $(0, 0)$. 
+>>8. Calculamos $$ f_u(0, 0) = \langle \varphi_u(0, 0), n(p) \times v \rangle \quad \text{y} \quad f_v(0, 0) = \langle \varphi_v(0, 0), n(p) \times v \rangle. $$
+>>9. Como $\varphi_u(0, 0)$ y $\varphi_v(0, 0)$ forman una base de $T_pM$, alguno de ellos no es ortogonal a $n(p) \times v \in T_pM$ (verificarlo como ejercicio). 
+>>10. Supongamos que se trata del segundo (si no, se procede de manera análoga). Entonces $f_v(0, 0) \neq 0$. Por el Teorema de la Función Implícita, existe $h : (-\varepsilon, \varepsilon) \to \mathbb{R}$ con $h(0) = 0$ tal que $f(t, h(t)) = 0$ para todo $t$. 
+>>11. Equivalentemente, por (19), $\varphi(t, h(t)) \in M \cap P$ para todo $t$. Entonces $\beta(t) = \varphi(t, h(t))$ cumple las condiciones requeridas.
+
+>[!Proposition]
+>Sea $\beta$ la curva de la proposición anterior. Entonces
+>$$ \kappa_\beta(0) = |\kappa_{n,p}(v)|. $$
+>>[!Proof]-
+>>12. Sea $\alpha$ la reparametrización por longitud de arco de $\beta$ (existe pues $\beta$ es regular; verificarlo). Por definición, $\kappa_\beta(0) = \kappa_\alpha(0)$.
+>>13. Como $\alpha$ y $\beta$ tienen la misma trayectoria, se cumple que $$ \langle \alpha(s) - p, n(p) \times v \rangle = 0 $$para todo $s$. 
+>>14. Derivando dos veces y evaluando cada vez en $s = 0$ tenemos $$ \langle \alpha'(0), n(p) \times v \rangle = 0, \quad (20) $$$$ \langle \alpha''(0), n(p) \times v \rangle = 0. \quad (21) $$
+>>15. Como $\alpha'(0) \perp n(p)$ y $\|\alpha'(0)\| = 1$, de (20) resulta que $\alpha'(0) = \pm v$. (Recordemos por definicion $\lVert v \rVert=1$)  
+>>16. Suponemos que $\alpha'(0) = v$ (si no, consideramos $\bar{\alpha}(s) = \alpha(-s)$).
+>>17. Por otra parte, como $\|\alpha'(s)\|^2 = 1$ para todo $s$ (por ser reparametrizacion [[Definiciones#^f2ee92]]), tenemos que $$ 0 = \langle \alpha''(0), \alpha'(0) \rangle = \langle \alpha''(0), v \rangle. $$
+>>18. Entonces, por (21), $\alpha''(0)$ es un múltiplo de $n(p)$ y por lo tanto $$ \alpha''(0) = \langle \alpha''(0), n(p) \rangle n(p). $$
+>>19. Así, como $n(p)$ es unitario $$ \kappa_\alpha(0) = \|\alpha''(0)\| = \|\langle \alpha''(0), n(p) \rangle n(p)\| = |\langle \alpha''(0), n(p) \rangle| \|n(p)\| = |\kappa_{n,p}(v)|, $$como deseábamos.
+
+# Caracterización de las superficies umbílicas conexas
+
+>[!Remark]
+>Sea $p$ un punto en una superficie $M$. Recordamos que $p$ se dice **umbílico** si la curvaturas principales de $M$ en $p$ coinciden ($k_1 = k_2 =_{\text{def}} k_o$). En particular, el operador de forma de $M$ en $p$ es $k$ veces la identidad: Para todo $Z \in T_pM$ se cumple que $$ A_p(Z) = k_o Z. $$
+>Equivalentemente, todo vector unitario de $T_pM$ es una dirección principal. También, para cualquier base $\mathcal{B}$ de $T_pM$ vale $$ [A_p]_{\mathcal{B}} = \begin{pmatrix} k_o & 0 \\ 0 & k_o \end{pmatrix}. $$
+>Para no arrastrar el signo en argumentos posteriores escribimos $k = -k_o$ y así tenemos para todo $Z$ que $$ dn_p(Z) = kZ. $$
+
+>[!Theorem]
+>Si todos los puntos de una superficie conexa $M$ son umbílicos, entonces $M$ está contenida en una esfera o en un plano.
+>>[!Proof]-
+>>1. Recordemos primero que si $U$ es un subconjunto abierto **conexo** de $\mathbb{R}^2$ y $f : U \to \mathbb{R}^m$ satisface $f_u = f_v = 0$, entonces $f$ es constante.
+>>2. **Primer paso.** La curvatura principal $k$ en cada abierto coordenado **conexo** es constante.
+>>3. Sabemos por hipótesis que $dn_q(Z) = k(q)Z$ para todo $Z \in T_qM$.
+>>4. Sea $\varphi : U \to M$ un sistema coordenado de $M$ con $U$ conexo. Calculamos $$ (n \circ \varphi)_u(u, v) = dn_{\varphi(u, v)}(\varphi_u(u, v)) = k(\varphi(u, v))\varphi_u(u, v) = \lambda(u, v)\varphi_u(u, v), \quad (22) $$$$ (n \circ \varphi)_v(u, v) = dn_{\varphi(u, v)}(\varphi_v(u, v)) = k(\varphi(u, v))\varphi_v(u, v) = \lambda(u, v)\varphi_v(u, v) \quad (23) $$(hemos definido $\lambda = k \circ \varphi$). 
+>>5. Derivamos (22) con respecto a $v$ y (23) con respecto a $u$ y obtenemos $$ (n \circ \varphi)_{uv} = \lambda_v \varphi_u + \lambda \varphi_{uv} \quad \text{y} \quad (n \circ \varphi)_{vu} = \lambda_u \varphi_v + \lambda \varphi_{vu} $$(se deja como ejercicio mostrar que $\lambda$ es suave).
+>>6. Ahora restamos miembro a miembro, y como las derivadas cruzadas son iguales tenemos que $$ 0 = \lambda_v \varphi_u - \lambda_u \varphi_v, $$lo que implica que $\lambda_u = \lambda_v = 0$, ya que $\{\varphi_u(u, v), \varphi_v(u, v)\}$ es base de $T_{\varphi(u, v)}M$. 
+>>7. Luego $\nabla \lambda = 0$ y como $U$ es conexo resulta $\lambda$ constante y por lo tanto $k$ es constante en $\varphi(U)$.
+>>8. **Segundo paso.** Cada abierto coordenado conexo está contenido en un plano o en una esfera.
+>>9. **Caso $\lambda = 0$.** Tenemos $(n \circ \varphi)_u = 0 = (n \circ \varphi)_v$. Luego $N =_{\text{def}} n \circ \varphi$ es constante en $U$. 
+>>10. Sea $p \in \varphi(U)$, digamos $p = \varphi(u_o, v_o)$. Veamos que $\varphi(U)$ está contenido en el plano $P = \{q \in \mathbb{R}^3 \mid \langle q - p, N \rangle = 0\}$.
+>>11. Llamando $f(u, v) = \langle \varphi(u, v) - p, N \rangle$, queremos que $f$ sea constante igual a cero. 
+>>12. Calculamos $$ f_u = \langle \varphi_u, N \rangle = \langle \varphi_u, n \circ \varphi \rangle = 0, $$pues $\varphi_u(u, v) \in T_{\varphi(u, v)}M \perp n(\varphi(u, v))$. 
+>>13. De la misma manera, $f_v = 0$. Luego $f$ es constante, pues $U$ es conexo. 
+>>14. Como $f(u_o, v_o) = \langle p - p, n(p) \rangle = 0$, resulta $f = 0$.
+>>15. **Caso $\lambda \neq 0$.** Queremos que mostrar que $\varphi(U)$ está contenida en una esfera.
+>>16. Veamos que la aplicación $$ C : U \to \mathbb{R}^3, \quad C(u, v) = \varphi(u, v) - \frac{1}{k} n(\varphi(u, v)) $$es constante (y será el centro de la esfera). 
+>>17. Derivamos $$ C_u(u, v) = \varphi_u(u, v) - \frac{1}{k} dn_{\varphi(u, v)}(\varphi_u(u, v)) = \varphi_u(u, v) - \frac{1}{k} k \varphi_u(u, v) = 0, $$y análogamente, $C_v = 0$. 
+>>18. Como $U$ es conexo, $C$ es constante, digamos, $C = C_o$.
+>>19. Para ver $\varphi(U)$ está en una esfera centrada en $C_o$, basta que todos los puntos de $\varphi(U)$ estén a la misma distancia de $C_o$, o equivalentemente, que la función $$ g : U \to \mathbb{R}, \quad g(u, v) = \|\varphi(u, v) - C_o\|^2 $$es constante. La verificación de este hecho se deja como ejercicio.
+>>20. **Tercer paso.** La superficie entera $M$ está contenida en una esfera o en un plano. Lo hacemos solo para el caso $k = 0$.
+>>21. Sea $p \in M$ y sea $\varphi : U \to M$ un sistema coordenado con $U$ conexo y $p \in \varphi(U)$. 
+>>22. Por el paso 2, $\varphi(U)$ está en un plano, digamos en $P = \{p' \in \mathbb{R}^3 \mid \langle p' - p, N \rangle = 0\}$. 
+>>23. El objetivo es probar que $M \subset P$. Dado $q \in M$, debemos mostrar que $q \in P$.
+>>24. Como $M$ es conexa, existe una curva $\alpha : [0, 1] \to M$ suave a trozos tal que $\alpha(0) = p$ y $\alpha(1) = q$. 
+>>25. Sean $$ A = \{t \in [0, 1] \mid \alpha(s) \in P \text{ y } (T_{\alpha(s)}M) \perp N \text{ para todo } s \in [0, t]\} \quad \text{y} \quad \tau = \sup A. $$(el conjunto $A$ es no vacío pues $0 \in A$). 
+>>26. Comentario: Avanzamos por $\alpha$ mientras la curva se mantenga en el plano $P$ y $N$ sea normal a la superficie. Esta última condición es motivada por el ejemplo de la curva $\beta : \mathbb{R} \to \mathbb{R}^3$ definida por $\beta(t) = (t, t^4, 0)$ si $t \ge 0$ y $\beta(t) = (t, 0, t^4)$ si $t < 0$, que es suave, pero cambia abruptamente de plano en $t = 0$ (notar que la torsión en $t = 0$ no está definida, ya que allí la curvatura es cero).
+>>27. Veamos que primero que $\alpha(\tau) \in P$. En efecto, $$ \langle \alpha(\tau) - p, N \rangle = \lim_{t \to \tau^-} \langle \alpha(t) - p, N \rangle = \lim_{t \to \tau^-} 0 = 0. $$
+>>28. Así, si $\tau = 1$ tenemos que $q = \alpha(1) \in P$, como queríamos.
+>>29. Ahora suponemos que $\tau < 1$ y llegaremos a una contradicción. 
+>>30. Por el paso 2 existe un sistema coordenado $\psi : V \to M$ con $V$ conexo tal que $\alpha(\tau) \in \psi(V)$ y $\psi(V)$ está contenido en un plano, digamos $Q$.
+>>31. Existe $\varepsilon > 0$ tal que $\alpha(t) = \psi(x(t), y(t))$ para todo $t \in (\tau - \varepsilon, \tau + \varepsilon)$. Si $\tau - \varepsilon < s < \tau$, se cumple que $$ N \perp T_{\alpha(s)}M = \text{span } \{\psi_x(x(s), y(s)), \psi_y(x(s), y(s))\} = T_{\alpha(s)}Q. $$
+>>32. Como $T_{\alpha(s)}P \perp N$ y $P$ y $Q$ comparten el punto $\alpha(s)$, resulta que $Q = P$. 
+>>33. En consecuencia, $\alpha(t) \in P$ y $(T_{\alpha(t)}M) \perp N$ para todo $t \in (\tau - \varepsilon, \tau + \varepsilon)$, lo que contradice que $\tau$ es el supremo de $A$
+
+>[!Remark] Comentarios finales sobre curvatura
+>1. Las superficies regladas tienen curvatura gaussiana $K \le 0$. ¿Con qué resultado de la página 57 se puede justificar la afirmación? En la curva de estrechez (si existe) la curvatura negativa es más pronunciada (o sea, menor). En otras palabras, para cada recta de la regla, la curvatura alcanza el mínimo al intersecar la curva guía.
+>2. Las superficies con curvatura media idénticamente nula, $H = 0$, se denominan **superficies mínimas**. Entre los ejemplos tenemos el plano, el helicoide y la catenoide. Si sumergimos un alambre en agua jabonosa obtenemos una superficie mínima. Además, una región pequeña de una superficie mínima tiene área mínima entre la cercanas que comparten el borde con ella.
+
+# Geodésicas
+
+>[!Definition] Geodésica
+>Sea $M$ una superficie con una orientación $n$. Se dice que una curva suave $\gamma : (a, b) \to M$ es una **geodésica** de $M$ si existe una función $\lambda : (a, b) \to \mathbb{R}$ tal que
+>$$ \gamma''(t) = \lambda(t) n(\gamma(t)) $$
+>para todo $t \in (a, b)$, o sea, si en cada instante la aceleración de $\gamma$ es normal a la superficie.
+>Esta noción claramente no cambia si se remplaza la orientación $n$ por su opuesta $-n$.
+
+>[!Remark]
+>Como la aceleración es normal, no se percibe desde la superficie; es como si la curva tuviera "aceleración nula en $M$".
+
+>[!Proposition] Geodesicas tienen rapidez constante
+>Las geodésicas tienen rapidez constante.
+>>[!Proof]-
+>>1. Sea $\gamma$ una geodésica en un superficie $M$ con una orientación $n$. 
+>>2. Calculamos $$ \begin{align} \frac{d}{dt} \|\gamma'(t)\|^2 & = \frac{d}{dt} \langle \gamma'(t), \gamma'(t) \rangle = 2 \langle \gamma''(t), \gamma'(t) \rangle \\ & = 2 \langle \lambda(t) n(\gamma(t)), \gamma'(t) \rangle \\ &= 2\lambda(t) \langle n(\gamma(t)), \gamma'(t) \rangle \\& = 0 \end{align} $$
+>>pues $\gamma'(t) \in T_{\gamma(t)}M \perp n(\gamma(t))$.
+
+^4deef6
+
+>[!Example] 
+>Las curvas constantes en una superficie son trivialmente geodésicas. Si $c \in \mathbb{R}$ y $\gamma$ es una geodésica de una superficie, entonces la curva $\sigma$ definida por $\sigma(t) = \gamma(ct)$ en el dominio adecuado, también lo es.
+>>[!Proof]-
+>>1. **Curvas constantes:** Sea $\gamma(t) = p$ para todo $t$. Entonces $\gamma'(t) = 0$ y $\gamma''(t) = 0$. Como el vector nulo es múltiplo de cualquier vector (en particular, $0 = 0 \cdot n(p)$), se satisface la ecuación de la geodésica con $\lambda(t) = 0$.
+>>2. **Reescalamiento:** Sea $\gamma$ una geodésica, es decir, $\gamma''(u) = \lambda(u) n(\gamma(u))$. Sea $\sigma(t) = \gamma(ct)$.
+>>   Calculamos sus derivadas:
+>>   $$ \sigma'(t) = c \gamma'(ct) $$
+>>   $$ \sigma''(t) = c^2 \gamma''(ct) $$
+>>   Sustituyendo la condición de geodésica para $\gamma$:
+>>   $$ \sigma''(t) = c^2 (\lambda(ct) n(\gamma(ct))) = (c^2 \lambda(ct)) n(\sigma(t)). $$
+>>   Esto muestra que la aceleración de $\sigma$ es normal a la superficie (es un múltiplo escalar del normal), por lo que $\sigma$ es una geodésica. $\square$
+
+>[!Example]
+>Sea $S$ la esfera de radio 1 centrada en el origen. Entonces los círculos máximos recorridos con rapidez unitaria son geodésicas.
+>>[!Proof]-
+>>1. Recordamos que un círculo máximo es por definición la intersección de la esfera con un plano que pasa por el origen.
+>>2. Supongamos que un cículo máximo resulta de intersecar la esfera con un plano con base ortonormal $\{u, v\}$. Entonces $$ \gamma(t) = \cos t \, u + \sin t \, v $$es una parametrización de rapidez unitaria. 
+>>3. La trayectoria de $\gamma$ claramente está en el plano, y está en la esfera pues $\|\gamma(t)\| = 1$ para todo $t$ (verificarlo).
+>>4. Tomamos la orientación $n$ hacia afuera, o sea, $n(p) = p$ para todo $p \in S$. 
+>>5. Calculamos $$ \gamma'(t) = -\sin t \, u + \cos s \, v \quad \text{y} \quad \gamma''(t) = -\cos t \, u - \sin t \, v. $$
+>>6. Luego $\gamma''(t) = -\gamma(t) = -n(\gamma(t))$. 
+>>7. Así, podemos tomar $\lambda$ constante igual a $-1$ y por lo tanto $\gamma$ es una geodésica. $\square$
+
+# Curvatura geodésica
+
+>[!Definition] Marco móvil
+>Sea $M$ una superficie con orientación $n$ y sea $\alpha : (a, b) \to M$ una curva de rapidez unitaria. Para cada $t \in (a, b)$, llamamos
+>$$ u(t) = \alpha'(t) \quad \text{y} \quad v(t) = n(\alpha(t)) \times \alpha'(t). $$
+>Para cada $t$, $\{u(t), v(t)\}$ es una base ortonormal de $T_{\gamma(t)}M$ (verificarlo).
+>El par $\{u, v\}$ se llama **marco móvil** a lo largo de $\alpha$ asociado a la orientación $n$.
+
+>[!Remark]
+>El concepto definido a continuación indica cuánto se aparta de ser geodésica una curva de rapidez unitaria en una superficie, o en otras palabras, cuánto se curva una curva en una superficie, y hacia dónde.
+
+>[!Definition] Curvatura geodésica
+>Sea $\alpha : (a, b) \to M$ una curva de rapidez unitaria en una superficie $M$ con orientación $n$. La **curvatura geodésica** de $\alpha$ en el instante $t$ se define por
+>$$ \kappa_{g, \alpha}(t) = \langle \alpha''(t), v(t) \rangle. $$
+
+>[!Exercise]
+>Si $\alpha$ es una curva de rapidez unitaria en $\mathbb{R}^2$, y $\bar{\alpha}(t) = (\alpha(t), 0)$ es una curva en la superficie $\{(x, y, 0) \mid x, y \in \mathbb{R}\}$ provista de la orientación $n(x, y, 0) = (0, 0, 1)$, entonces la curvatura geodésica de $\bar{\alpha}$ coincide con la curvatura signada de $\alpha$.
+>>[!Proof]-
+>>1. Sea $\alpha(t) = (x(t), y(t))$. Entonces $\bar{\alpha}(t) = (x(t), y(t), 0)$.
+>>2. El vector tangente unitario es $u(t) = \bar{\alpha}'(t) = (x'(t), y'(t), 0)$.
+>>3. El vector normal a la superficie es $n = (0, 0, 1)$.
+>>4. Calculamos $v(t) = n \times u(t) = (0, 0, 1) \times (x'(t), y'(t), 0) = (-y'(t), x'(t), 0)$.
+>>5. Calculamos la segunda derivada: $\bar{\alpha}''(t) = (x''(t), y''(t), 0)$.
+>>6. La curvatura geodésica es:
+>>   $$ \kappa_{g, \bar{\alpha}}(t) = \langle \bar{\alpha}''(t), v(t) \rangle = x''(t)(-y'(t)) + y''(t)x'(t) = x'(t)y''(t) - y'(t)x''(t). $$
+>>7. Esta expresión coincide exactamente con la definición de la curvatura signada $k(t)$ para una curva plana de rapidez unitaria. $\square$
+
+>[!Proposition]
+>La curva $\alpha$ es geodésica si y solo si $\kappa_{g, \alpha} = 0$. Además se cumple
+>$$ (\kappa_\alpha)^2 = (\kappa_{g, \alpha})^2 + (\kappa_{n, \alpha})^2. $$
+>>[!Proof]-
+>>8. Para cada $t$, $\{u(t), v(t), n(\alpha(t))\}$ es una base ortonormal de $\mathbb{R}^3$. Luego $$ \begin{align}\alpha'' &= \langle \alpha'', u \rangle u + \langle \alpha'', v \rangle v + \langle \alpha'', n \circ \alpha \rangle (n \circ \alpha) \quad(24)\\ &  = 0 + \kappa_{g, \alpha} v + \kappa_{n, \alpha} (n \circ \alpha) \end{align} $$ya que el primer término se anula, pues $$ \langle \alpha'', u \rangle = \langle \alpha'', \alpha' \rangle = \frac{1}{2} 2 \langle \alpha'', \alpha' \rangle = \frac{1}{2} \frac{d}{dt}\big|_0 \|\alpha'\|^2 = 0. $$ (recordar [[Definiciones#^4deef6]]) 
+>>9. Primero probamos la segunda afirmación. Como $\{v(t), n(\alpha(t))\}$ es un conjunto ortonormal para todo $t$. Deducimos de (24) (usando ortnormalidad y el producto interno) que $$ (\kappa_\alpha)^2 = \|\alpha''\|^2 = (\kappa_{g, \alpha})^2 + (\kappa_{n, \alpha})^2. $$
+>>10. Por otro lado, si $\alpha$ es una geodésica, entonces existe una función $\lambda : (a, b) \to \mathbb{R}$ tal que $\alpha''(t) = \lambda(t) (n \circ \alpha)(t)$ para todo $t$. 
+>>11. Luego $$ \kappa_{g, \alpha} = \langle \alpha'', v \rangle = \langle \lambda (n \circ \alpha), v \rangle = 0, $$ya que $v(t) \in T_{\alpha(t)}M$.
+>>12. Ahora, si la función $\kappa_{g, \alpha}$ es cero, tenemos por (24) que $\alpha'' = \kappa_{n, \alpha} (n \circ \alpha)$. 
+>>13. Así, para cada $t$, $\alpha''(t)$ es un múltiplo de $n(\alpha(t))$ y por lo tanto $\alpha$ es geodésica.
+
+>[!Remark]
+>La primera parte de la prueba muestra que $|\kappa_{g, \alpha}|$ es la norma de la proyección ortogonal de $\alpha''$ sobre el plano tangente correspondiente.
+
+>[!Example]- Ejemplo de curvatura geodesica
+>Sea $S$ la esfera de radio 1 centrada en el origen, orientada mediante $n(p) = p$ para todo $p \in S$. Sea $\varphi : \mathbb{R} \times (-\frac{\pi}{2}, \frac{\pi}{2}) \to S$ dada por
+>$$ \varphi(x, y) = (\cos y \cos x, \cos y \sin x, \sin y) = (\cos y (\cos x, \sin x), \sin y), $$
+>y sea $\beta(x) = \varphi(x, y_o)$, que recorre el paralelo de altura $\sin y_o$ (o sea, de latitud $y_o$). Sea $\alpha$ la reparametrización de $\beta$ por longitud de arco, es decir,
+>$$ \alpha(s) = \left( \cos y_o \left( \cos \left( \frac{s}{\cos y_o} \right), \sin \left( \frac{s}{\cos y_o} \right) \right), \sin y_o \right). $$
+>A continuación hallamos la curvatura geodésica de $\alpha$. Calculamos
+>$$ n(\alpha(s)) = \alpha(s) $$
+>Por otro lado $$ u(s) = \alpha'(s) = \left( -\sin \left( \frac{s}{\cos y_o} \right), \cos \left( \frac{s}{\cos y_o} \right), 0 \right) $$
+>Ademas
+>$$ v(s) = n(\alpha(s)) \times u(s) = \left( -\sin y_o \cos \left( \frac{s}{\cos y_o} \right), -\sin y_o \sin \left( \frac{s}{\cos y_o} \right), \cos y_o \right) $$
+>Y finalmente
+>$$ \alpha''(s) = -\frac{1}{\cos y_o} \left( \cos \left( \frac{s}{\cos y_o} \right), \sin \left( \frac{s}{\cos y_o} \right), 0 \right). $$
+>De allí,
+>$$ \kappa_{g, \alpha}(s) = \langle \alpha''(s), v(s) \rangle = \tan y_o \quad (\text{constante}). $$
+>Notamos para usarlo más adelante que esto es lo mismo que
+>$$ \langle u', v \rangle = \tan y_o. \quad (25) $$
+>Observamos que
+>$$ \lim_{y_o \to (\frac{\pi}{2})^-} \kappa_{g, \alpha}(s) = \infty \quad \text{y} \quad \lim_{y_o \to (-\frac{\pi}{2})^+} \kappa_{g, \alpha}(s) = -\infty $$
+>y que la curvatura geodésica de $\alpha$ es positiva si $y_o > 0$ y negativa si $y_o < 0$.
+>En la siguiente figura vemos el marco móvil $\{u, v\}$ ($u$ en azul y $v$ en rojo), salvo que no tienen la longitud adecuada si el radio de la esfera es 1.
+>![[Pasted image 20251130182416.png]]
+
+# Campos paralelos a lo largo de curvas
+
+>[!Remark]
+>En contraste con el caso en que la superficie es un plano en $\mathbb{R}^3$, para la cual todos los espacios tangentes coinciden, para una superficie arbitraria $M$ no hay en general una correspondencia natural entre $T_pM$ y $T_qM$ si $p \neq q$ (si bien ambos son espacios vectoriales isomorfos).
+
+>[!Definition] Campo a lo largo de una curva
+>Sea $\alpha : (a, b) \to M$ una curva suave de rapidez unitaria en una superficie $M$. Un **campo $W$ en $M$ a lo largo de $\alpha$** es una función suave $W : (a, b) \to \mathbb{R}^3$ tal que $W(t) \in T_{\alpha(t)}M$ para todo $t \in (a, b)$.
+
+>[!Definition] Campo paralelo
+>Sea $M$ una superficie con una orientación $n$. Un campo $W$ a lo largo de una curva $\alpha$ en $M$ de rapidez unitaria se dice **paralelo a lo largo de $\alpha$** si $W'(t)$ es un múltiplo de $n(\alpha(t))$ para todo $t$. Equivalentemente, si para todo $t$ vale
+>$$ W'(t) \perp T_{\alpha(t)}M. $$
+
+>[!Remark]
+>Como la variación de $W$ es perpendicular a la superficie, desde la misma se percibe a $W$ como constante; $W$ varía lo estrictamente necesario para mantenerse tangente a $M$.
+
+>[!Example] Ejemplo de campo pararlelo
+>Sea $P$ el plano $z = 0$ y $\alpha$ una curva de rapidez unitaria en $P$. Para todo $t$ tenemos que $T_{\alpha(t)}P = P = (0, 0, 1)^\perp$ y así un campo es paralelo a lo largo de $\alpha$ si y solo si es constante.
+
+>[!Proposition]
+>Un campo paralelo a lo largo de una curva en una superficie tiene norma constante.
+>>[!Proof]-
+>>1. Calculamos $$ \frac{d}{dt} \|W(t)\|^2 = 2 \langle W(t), W'(t) \rangle = 0 $$pues $W(t) \in T_{\alpha(t)}M$ por definicion. Y por ser paralelo $W'(t)\perp T_{\alpha (t)}M$ 
+
+>[!Remark]
+>En el práctico se ve que si $\gamma$ es una geodésica de una superficie $M$ y $W$ es un campo paralelo a lo largo de $\gamma$, entonces $W$ forma un ángulo constante con $\gamma'$. También, que una curva $\alpha$ en $M$ es geodésica si y solo si $\alpha'$ es un campo paralelo a lo largo de $\alpha$.
+
+>[!Remark]
+>Esto último concuerda con la idea de que al recorrer una geodésica "vamos derecho en la superficie"; la velocidad "no cambia de dirección".
+
+>[!Example]- Campo paralelo en la esfera
+>Sea $S$ la esfera de radio 1 centrada en el origen y sea $\alpha$ una reparametrización por longitud de arco del paralelo de altura $\sin y_o$.
+>Buscamos un campo $W$ paralelo a lo largo de $\alpha$ tal que $W(0) = \alpha'(0)$.
+>Como $W$ es paralelo a lo largo de $\alpha$, $\|W\|$ es constante. Luego $\|W\| = \|W(0)\| = \|\alpha'(0)\| = 1$.
+>Como $\{u(t), v(t)\}$ es una base de $T_{\alpha(t)}S$ para todo $t$, tenemos que
+>$$ W(t) = \cos \theta(t) u(t) + \sin \theta(t) v(t) \in T_{\alpha(t)}S \quad (26) $$
+>para cierta función $\theta$ a valores reales. Nuestro objetivo es encontrar $\theta$.
+>Para cualquier marco móvil, como $\{u, v\}$ es ortonormal, se cumple que
+>$$ \|u\| = \|v\| = 1 \quad \text{y} \quad \langle u, v \rangle = 0. $$
+>De las primeras identidades se deduce que $\langle u, u' \rangle = \langle v, v' \rangle = 0$, y de la segunda, que
+>$$ \langle u', v \rangle + \langle u, v' \rangle = 0. $$
+>En nuestro caso particular sabemos que $\langle u'(t), v(t) \rangle = \tan(y_o)$ para todo $t$. Luego, $\langle u, v' \rangle = -\tan(y_o)$ (también constante).
+>Calculamos
+>$$ W' = -\theta' \sin \theta u + \cos \theta u' + \theta' \cos \theta v + \sin \theta v'. \quad (27) $$
+>Planteamos $W'(t) \perp T_{\alpha(t)}M$, o equivalentemente,
+>$$ \langle W', u \rangle = 0 = \langle W', v \rangle. $$
+>Evaluando estas expresiones en $W'$ como en (27) (recordar $u=\alpha '$ es unitario por eso $\langle u,u'\rangle$), tenemos
+>$$ 0 = \langle W', u \rangle = -\theta' \sin \theta - \sin \theta \tan(y_o), \quad (28) $$
+>$$ 0 = \langle W', v \rangle = \cos \theta \tan(y_o) + \theta' \cos \theta. $$
+>Por lo tanto $$(\theta'+\tan(y_{0}))\cos\theta+(\theta'+\tan(y_{0}))\sin(\theta)=0$$  
+>Como $\cos \theta$ y $\sin \theta$ no se anulan simultáneamente, resulta $\theta' = -\tan(y_o)$.
+>Vemos que $W(t)$ como en (26), con $\theta(t) = -t \tan(y_o)$ es el campo paralelo a lo largo de $\alpha$ buscado. En efecto, se verifica que $W(0) = \alpha'(0)$ pues $\theta(0) = 0$ y es paralelo pues satisface las ecuaciones (28).
+
+>[!Exercise]
+>Encontrar el campo $W$ paralelo a lo largo de $\alpha$ tal que $W(0) = v(0)$.
+>>[!Proof]-
+>>2. Sabemos del ejemplo anterior que un campo paralelo $W$ a lo largo de $\alpha$ tiene la forma $W(t) = \cos \theta(t) u(t) + \sin \theta(t) v(t)$ con $\theta'(t) = -\tan(y_o)$.
+>>3. Integrando, tenemos $\theta(t) = -t \tan(y_o) + C$.
+>>4. La condición inicial es $W(0) = v(0)$. Evaluando en $t=0$:
+>>   $$ W(0) = \cos(C) u(0) + \sin(C) v(0). $$
+>>5. Como queremos $W(0) = v(0)$, igualando coeficientes en la base $\{u(0), v(0)\}$ obtenemos $\cos(C) = 0$ y $\sin(C) = 1$.
+>>6. Podemos tomar $C = \pi/2$.
+>>7. Sustituyendo en la expresión de $W(t)$:
+>>   $$ W(t) = \cos(-t \tan(y_o) + \pi/2) u(t) + \sin(-t \tan(y_o) + \pi/2) v(t). $$
+>>8. Usando las identidades trigonométricas $\cos(x + \pi/2) = -\sin(x)$ y $\sin(x + \pi/2) = \cos(x)$, y la paridad de las funciones:
+>>   $$ \cos(-t \tan(y_o) + \pi/2) = -\sin(-t \tan(y_o)) = \sin(t \tan(y_o)) $$
+>>   $$ \sin(-t \tan(y_o) + \pi/2) = \cos(-t \tan(y_o)) = \cos(t \tan(y_o)) $$
+>>9. Finalmente, el campo buscado es:
+>>   $$ W(t) = \sin(t \tan(y_o)) u(t) + \cos(t \tan(y_o)) v(t). $$
+
+>[!Remark]- Pendulo Focault
+>Los campos paralelos a lo largo de paralelos de la Tierra están relacionados con el péndulo de Foucault.
+
+>[!Remark]- Triangulo Equilatero en esfera
+>Sea $W$ un campo paralelo a lo largo de los tres lados de un triángulo equilátero esférico con lados geodésicos de longitud $\frac{\pi}{2}$, parametrizados por longitud de arco. Se cumple que $W(3\frac{\pi}{2})$ se obtiene de rotar $W(0)$ en un ángulo recto. Ver la primera imagen de [Berry Phase](http://materia.fisica.unimi.it/manini/berryphase.html) (recordar que los campos paralelos a lo largo de geodésicas forman un ángulo constante con la curva base).
+
+>[!Remark]- Derivada covariante
+>Sea $M$ una superficie y sea $\alpha : (a, b) \to M$ una curva suave de rapidez unitaria. Dado un campo $W$ a lo largo de $\alpha$, existe el concepto de **derivada covariante** de $W$, que es un campo $\frac{DW}{dt}$ a lo largo de $\alpha$ (en particular, $\frac{DW}{dt}(t) \in T_{\alpha(t)}M$ para todo $t \in (a, b)$), que mide cuantitativamente cuánto se aparta $W$ de ser paralelo a lo largo de $\alpha$. La búsqueda de una definición precisa adecuada queda como ejercicio optativo.
+
+# Ecuación diferencial para las coordenadas de una geodésica
+
+>[!Remark] Condiciones para geodesicas
+>Sea $\varphi : U \to M$ un sistema coordenado de la superficie $M$ y sea $\gamma : (a, b) \to M$ una curva suave con trayectoria contenida en $\varphi(U)$. Tenemos que $\gamma(t) = \varphi(u(t), v(t))$ para ciertas funciones $u, v$, para todo $t$.
+>Recordamos que $\gamma$ es geodésica si y solo si $\gamma''(t) \perp T_{\gamma(t)}M$ para todo $t$, o equivalentemente,$$ \langle \gamma''(t), \varphi_u(u(t), v(t)) \rangle = \langle \gamma''(t), \varphi_v(u(t), v(t)) \rangle = 0 $$para todo $t$. Por que $\forall w\in T_{\gamma(t)}M \quad0=\langle\gamma'',w\rangle$ osea $0=\langle\gamma'',a\varphi_{u}+b\varphi_{v}\rangle\quad\forall a,b\in \mathbb{F}$ por lo tanto tomando $a=0, b=1$ o $a=1,b=0$ llegamos a lo que queriamos 
+>Calculamos $$ \gamma' = \varphi_u(u, v) u' + \varphi_v(u, v) v' $$$$ \gamma'' = (\varphi_u(u, v))' u' + \varphi_u(u, v) u'' + (\varphi_v(u, v))' v' + \varphi_v(u, v) v''. $$
+>Por abuso de notación, omitimos escribir $(u, v)$: $$ \gamma'' = (\varphi_{uu} u' + \varphi_{uv} v') u' + \varphi_u u'' + (\varphi_{vu} u' + \varphi_{vv} v') v' + \varphi_v v''. $$
+>Ahora, hacemos producto escalar contra $\varphi_u$ y $\varphi_v$ y obtenemos:$$ 0 = \langle \varphi_u, \varphi_{uu} (u')^2 + \varphi_{uv} v' u' + \varphi_u u'' + \varphi_{vu} u' v' + \varphi_{vv} (v')^2 + \varphi_v v'' \rangle $$
+>$$ 0 = \langle \varphi_v, \varphi_{uu} (u')^2 + \varphi_{uv} v' u' + \varphi_u u'' + \varphi_{vu} u' v' + \varphi_{vv} (v')^2 + \varphi_v v'' \rangle $$
+>Distribuyendo las sumas, como $\varphi_{uv} = \varphi_{vu}$, resulta:$$ 0 = \langle \varphi_u, \varphi_{uu} \rangle (u')^2 + 2 \langle \varphi_u, \varphi_{uv} \rangle v' u' + \langle \varphi_u, \varphi_{vv} \rangle (v')^2 + \langle \varphi_u, \varphi_u \rangle u'' + \langle \varphi_u, \varphi_v \rangle v'', \quad (29) $$
+>$$ 0 = \langle \varphi_v, \varphi_{uu} \rangle (u')^2 + 2 \langle \varphi_v, \varphi_{uv} \rangle v' u' + \langle \varphi_v, \varphi_{vv} \rangle (v')^2 + \langle \varphi_v, \varphi_u \rangle u'' + \langle \varphi_v, \varphi_v \rangle v''. $$
+>Así, la curva $\gamma$ es geodésica si y solo si $u$ y $v$ satisfacen este sistema de ecuaciones diferenciales.
+
+^4bc198
+
+>[!Remark]
+>El siguiente teorema afirma que las isometrías locales llevan geodésicas en geodésicas. Esto dice que el concepto de geodésica es **intrínseco**, a pesar de que la definición es **extrínseca**, ya que involucra el campo normal a la superficie.
+
+>[!Theorem] Isometrías locales preservan geodésicas
+>Sea $f : M \to N$ una isometría local entre dos superficies y sea $\gamma : (a, b) \to M$ una geodésica en $M$. Entonces $f \circ \gamma$ es una geodésica de $N$.
+>>[!Proof]-
+>>1. Antes de demostrarlo, repasamos que dado $p \in M$, existe un sistema coordenado $\varphi : U \to M$ con $p \in \varphi(U)$ tal que $\bar{\varphi} = f \circ \varphi : U \to N$ es un sistema coordenado de $N$ que satisface $\bar{E} = E$, $\bar{F} = F$ y $\bar{G} = G$, donde $E, F, G$ y $\bar{E}, \bar{F}, \bar{G}$ son los coeficientes de la primera forma fundamental de $\varphi$ y $\bar{\varphi}$, respectivamente. Veamoslo
+>>- Igualdad de coeficientes
+>>	1. Como la propiedad de ser geodésica es local, podemos considerar subintervalos de $(a, b)$ cuyas imágenes están contenidas en abiertos coordenados.
+>>	2. Veremos a continuación que en la primera ecuación de (29) los coeficientes de $(u')^2$, $v' u'$, $(v')^2$, $u''$ y $v''$ dependen solo de $E, F, G$ y sus derivadas parciales.
+>>	3. El coeficiente de $u''$ es $\langle \varphi_u, \varphi_u \rangle = E$. 
+>>	4. El coeficiente de $v''$ es $\langle \varphi_u, \varphi_v \rangle = F$. 
+>>	5. El coeficiente de $(u')^2$ es $$ \langle \varphi_u, \varphi_{uu} \rangle = \frac{1}{2} \langle \varphi_u, \varphi_u \rangle_u = \frac{1}{2} E_u. $$
+>>	6. El coeficiente de $u' v'$ es $$ \langle \varphi_{uv}, \varphi_u \rangle = \frac{1}{2} \langle \varphi_u, \varphi_u \rangle_v = \frac{1}{2} E_v. $$
+>>	7. El coeficiente de $(v')^2$ es$$ \langle \varphi_u, \varphi_{vv} \rangle, $$que reconocemos como una función por la derivada de otra. 
+>>	8. Por la regla para derivar el producto, tenemos que $$ \langle \varphi_u, \varphi_{vv} \rangle = \langle \varphi_u, \varphi_v \rangle_v - \langle \varphi_{uv}, \varphi_v \rangle = F_{v}-\frac{1}{2}\langle\varphi_{v},\varphi_{v}\rangle_{u} = F_v - \frac{1}{2} G_u $$
+>>	9. Se procede análogamente para los coeficientes de la segunda ecuación en (29).
+>>- $\bar{\varphi}$ es carta  
+>>	1. Como $f$ es una isometría local, entonces es un difeo local, esto es por que isometria local me dice que $df_{p}$ es isometria lineal y mas aun isomorfismo por que estamos en dimension finita. Entonces por [[Definiciones#^2e965b]] tenemos que $f$ es difeomorfismo entre vecindades de $p$ y $f(p)$. Esto nos daria el difeomorfismo
+>>	2. Con lo cual, achicando $U$ si es necesario (para que sea difeo osea tenga la inversa y suavidad que necesitamos para ser carta), $\bar{\varphi} := f \circ \varphi$ es un sistema coordenado de $N$ y dado que $f$ es isometria los coeficientes de la primera forma fundamental de $\bar{\varphi}$ son también $E, F, G$. 
+>>- Terminamos la demo
+>>	1. Usamos la carta del paso 1. de la primera parte para poner en coordenadas $\gamma(t) = \varphi(u(t), v(t))$ entonces $f\circ\gamma=f\circ\varphi(u(t),v(t))=\bar{\varphi}(u(t),v(t))$ 
+>>	2. Mostrado en la primera parte las condiciones para que $\bar{\varphi}=f \circ \gamma$ sea geodésica son exactamente las mismas que para que $\gamma$ lo sea. Osea para que $\gamma$ sea geodesica $u,v$ y sus derivadas deben cumplir las ecuaciones de [[Definiciones#^4bc198]]. Es evidente que si $u,v$ y derivadas cumplen para $\gamma$ entonces cumplen para $f\circ\gamma$ por que los coeficientes de 1era forma son los mismos.    
+>>	3. Por lo tanto como $\gamma$ es geodesica $f\circ\gamma$ lo es tambien  
+
+^0cb445
+
+>[!Exercise]
+>Sea $P$ el plano horizontal apoyado en el polo norte de la esfera $S$ de radio 1 centrada en el origen. Mostrar que la proyección central de $P$ en $S$, es decir $p \mapsto p/\|p\|$, lleva trayectorias de geodésicas en trayectorias de geodésicas, pero que no lleva geodésicas en geodésicas.
+>>[!Proof]- Solución
+>>1. **Trayectorias:** Las geodésicas de $P$ son rectas. Sea $L$ una recta en $P$. El conjunto de puntos de la recta junto con el origen determina un plano $\Pi$ en $\mathbb{R}^3$ (si la recta no pasa por el origen, lo cual es cierto pues $P$ está en $z=1$).
+>>2. La proyección central $f(p) = p/\|p\|$ mapea un punto $p \in L$ a la intersección del rayo que une el origen con $p$ y la esfera $S$.
+>>3. Como $p \in \Pi$, el rayo está contenido en $\Pi$. Por lo tanto, la imagen $f(L)$ está contenida en la intersección de $\Pi$ con $S$.
+>>4. La intersección de un plano que pasa por el origen con la esfera es un círculo máximo. Por lo tanto, la imagen de la trayectoria de la geodésica en $P$ es un arco de círculo máximo, que es la trayectoria de una geodésica en $S$.
+>>5. **Parametrización:** Sea $\alpha(t)$ una geodésica en $P$ con rapidez unitaria. Entonces $\alpha(t)$ recorre una recta con velocidad constante.
+>>6. Sea $\beta(t) = f(\alpha(t)) = \alpha(t)/\|\alpha(t)\|$. Para que $\beta$ sea una geodésica en $S$, debería tener rapidez constante.
+>>7. Sin embargo, un cálculo muestra que la rapidez de $\beta$ no es constante. Intuitivamente, a medida que $\alpha(t)$ se aleja del polo norte en el plano, el rayo proyectante barre ángulos más lentamente sobre la esfera.
+>>8. Formalmente, $\|\beta'(t)\| = \frac{\sqrt{\\|\alpha(t)\\|^2 \\|\alpha'(t)\\|^2 - \langle \alpha(t), \alpha'(t) \rangle^2}}{\\|\alpha(t)\\|^2}$. Como $\|\alpha(t)\|$ varía con $t$ (crece cuando $t \to \infty$), la rapidez no es constante. Por lo tanto, $f$ no preserva geodésicas (como curvas parametrizadas).
+
+>[!Remark]
+>El siguiente teorema afirma que las isometrías locales entre superficies **preservan la curvatura gaussiana**. Se dice que la curvatura gaussiana es **intrínseca**.
+
+>[!Theorem] Teorema Egregium de Gauss
+>Sean $M$ y $N$ dos superficies con funciones de curvatura gaussiana $K_M$ y $K_N$, respectivamente. Si $f : M \to N$ es una isometría local entonces
+>$$ K_N(f(p)) = K_M(p) $$
+>para todo $p \in M$.
+>>[!Proof]- Idea de la prueba
+>>1. Dado $p \in M$, sea $\varphi : U \to M$ un sistema coordenado. Consideramos el campo normal $n$ en $\varphi(U)$ dado por $$ n \circ \varphi = \frac{\varphi_u \times \varphi_v}{\|\varphi_u \times \varphi_v\|}. $$
+>>2. Sabemos que $$ K_M \circ \varphi = \det(-dn_\varphi)=\det(dn_\varphi) = \det([dn_\varphi]_{\{\varphi_u, \varphi_v\}}). $$
+>>3. Los coeficientes de esa matriz involucran $\varphi_u, \varphi_v$ y sus derivadas parciales.
+>>4. Usando las técnicas de la prueba del teorema anterior, los escribimos en términos de $E, F, G$ y sus derivadas parciales.
+>>5. Como $f$ es una isometría local, entonces es un difeo local, con lo cual, achicando $U$ si es necesario, $\bar{\varphi} := f \circ \varphi: U\rightarrow N$ es un sistema coordenado de $N$ y ademas $\bar{\varphi}\circ\varphi ^{-1}=f$ que es una isometria entre $M$ y $N$ entonces por [[Definiciones#^7286f3]] tenemos $E=\bar{E}, F=\bar{F}, G=\bar{G}$, 
+>>6. De la misma manera que arriba, $K_N \circ \bar{\varphi}$ se escribe en función de $\bar{E}, \bar{F}, \bar{G}$. 
+>>7. Por lo tanto $K_N \circ \bar{\varphi} = K_M \circ \varphi$, y de allí, $K_N \circ f = K_M$
+
+>[!Example]
+>No existen isometrías locales del plano a las esferas, pues el primero tiene curvatura gaussiana constante cero y la esfera de radio $r$ tiene curvatura constante $1/r^2$. Notar las implicaciones en cartografía.
+
+>[!Remark]
+>Se puede mostrar que la cinta que Möbius que presentamos algunas clases atrás tiene curvatura gaussiana estrictamente negativa (como ocurre en general con las superficies regladas nunca cilíndricas). Luego no es de las que se construyen uniendo las puntas de una cinta de papel.
+
+>[!Remark]
+>El Teorema Egregium sienta las bases para concebir un universo curvo sin necesidad de que se curve **en** un ambiente más grande.
+
+>[!Remark]
+>Hace algunas clases habíamos enunciado que la esfera es rígida, es decir, se deforma solo si se estira o encoge (o sea, alguna curva cambia la longitud), pero que un casquete pequeño no lo es.
+>Por otro lado, se puede demostrar lo siguiente: Si $M$ y $N$ son dos superficies con la misma curvatura gaussiana *constante*, dados $p \in M$ y $q \in N$, existen entornos abiertos de $p$ y $q$ en $M$ y $N$, respectivamente, que son isométricos.
+>Entonces el ejercicio 10 del práctico 7 provee un ejemplo de una superficie que no es localmente congruente a la esfera de radio 1, pero sus conjuntos abiertos pequeños son isométricos a abiertos pequeños de la esfera.
+
+# Existencia y unicidad de geodésicas
+
+>[!Proposition] Unicida de Geodesica
+>Sea $M$ una superficie. Dados $p \in M$ y $v \in T_pM$, existe una geodésica $\gamma$ en $M$ tal que $\gamma(0) = p$ y $\gamma'(0) = v$, definida en cierto intervalo abierto $I$ que contiene al cero.
+>Se verifica la siguiente noción de unicidad: Si $\sigma : J \to M$ es una geodésica definida en un intervalo abierto $J$, con las mismas condiciones iniciales, es decir, $\sigma(0) = p$ y $\sigma'(0) = v$, entonces $\gamma$ y $\sigma$ coinciden en la intersección $I \cap J$.
+>>[!Proof]-
+>>1. Elegimos $\varphi:U\rightarrow M$ una carta con $p \in \varphi(U)$. Por continuidad de $\sigma,\gamma$ tenemos que existe un intervalo $I_{0}\subseteq I\cap J$ con $0\in I_{0}$ tal que $\sigma(I_{0}),\gamma(I_{0})\subseteq I_{0}$      
+>>2. Luego si ponemos a $\gamma$ en coordenadas, $\gamma(s) = \varphi(x(s), y(s))$, entonces $(x(s), y(s))$ satisface el sistema de ecuaciones diferenciales de orden 2 que vimos más arriba
+>>3. Si ponemos $\sigma$ en coordenadas tenemos $\sigma(s)=\varphi(\bar{x}(s),\bar{y}(s))$, pero entonces $(\bar{x}(s),\bar{y}(s))$ tambien cumple las mismas ecuaciones 
+>>4. Luego por unicidad de ODE tenemos $(\bar{x}(s),\bar{y}(s))=(x(s),y(s))$ mostrando que $\gamma=\sigma$
+
+^e70295
+
+>[!Remark]
+>Sea $S$ la esfera de radio 1 centrada en el origen. Sabemos que los círculos máximos son trayectorias de geodésicas. Ahora vemos que no hay otras
+
+>[!Proposition]
+>Toda geodésica no constante en $S$ tiene como trayectoria a un arco de círculo máximo.
+>>[!Proof]-
+>>1. Sea $\gamma$ una geodésica no constante en $S$. Como el enunciado se refiere a la trayectoria, podemos suponer sin pérdida de generalidad que $\|\gamma'\| = 1$.
+>>2. Llamamos $p = \gamma(0)$ y $v = \gamma'(0)$. Tenemos que $v \in T_pS = p^\perp$. Luego $\{p, v\}$ es un subconjunto ortonormal de $\mathbb{R}^3$. 
+>>3. Sea $\sigma : \mathbb{R} \to S$ definida por $\sigma(s) = p\cos s + v\sin s$. Ya vimos que $\sigma$ es geodésica de $S$ y se verifica fácilmente que $\sigma(0) = p$ y $\sigma'(0) = v$. 
+>>4. Por la unicidad, $\gamma(s) = \sigma(s)$ para todo $s$ en el dominio de $\gamma$. 
+>>5. Así, la trayectoria de $\gamma$ está en el cículo máximo determinado por la base $\{p, v\}$.
+
+>[!Remark]
+>En el práctico se encuentran todas las geodésicas del cilindro. Si el cilindro está bruñido, las geodésicas se pueden visualizar como hilos tirantes sobre él.
+
+>[!Remark]
+>Ahora vemos otra aplicación de la existencia y unicidad de geodésicas.
+
+>[!Proposition]
+>Sea $M$ una superficie regular y sea $P$ un plano que intersecta a $M$ en la trayectoria de una curva $\alpha$ de rapidez unitaria. Si la reflexión respecto de $P$ lleva $M$ en $M$, entonces $\alpha$ es una geodésica de $M$.
+>>[!Proof]-
+>>6. Sin pérdida de generalidad podemos suponer que $P = \{(x, y, 0) \mid x, y \in \mathbb{R}\}$ y $\alpha(t) = (u(t), v(t), 0)$. (Notar que el enunciado nos dice que $\alpha \subseteq P$) 
+>>7. Se cumple que $\alpha'(0) = (u'(0), v'(0), 0)$ y que la reflexión respecto de $P$ está dada por $R(x, y, z) = (x, y, -z)$.
+>>8. Sea $\gamma$ una geodésica en $M$ con $\gamma(0) = \alpha(0)$ y $\gamma'(0) = \alpha'(0)$. 
+>>9. Supongamos que $\gamma(t) = (x(t), y(t), z(t))$ para todo $t$. Luego $$ \gamma'(0) = (x'(0), y'(0), z'(0)) = (u'(0), v'(0), 0). $$
+>>10. Sea $\beta$ la curva en $M$ definida por $$ \beta(t) = R(\gamma(t)). $$
+>>11. Como $R$ es una transformación euclidiana (aunque no rígida) que lleva $M$ en $M$, entonces $R|_M : M \to M$ es una isometría de $M$. [[Definiciones#^0cb445]] nos asegura que lleva geodésicas de $M$ en geodésicas de $M$. Entonces $\beta$ también es una geodésica de $M$.
+>>12. Claramente, $\beta(0) = \gamma(0) = \alpha(0)$, pues $\alpha(0) \in P$. Y por que $R$ es reflexion sobre $P$ 
+>>13. Como $R$ es una transformación lineal, tenemos que $$ \beta'(0) = (dR)_{\gamma(0)}(\gamma'(0)) = R(\alpha'(0)) = \alpha'(0) = \gamma'(0), $$pues $\alpha'(0)$ también está en $P$ (Por definicion de $\alpha$). 
+>>14. De esta manera, $\gamma$ y $\beta$ son dos geodésicas con el mismo punto inicial y la misma velocidad inicial. 
+>>15. Por [[Definiciones#^e70295]], las curvas coinciden en alguna interseccion de sus dominios, cerca del $0$. Luego, $$ \beta(t) = R(\gamma(t)) = R(x(t), y(t), z(t)) = (x(t), y(t), -z(t)) $$es igual a $$ \gamma(t) = (x(t), y(t), z(t)) $$para todo $t$. 
+>>16. Por lo tanto, $z(t) = 0$ para todo $t$ y así ambas curvas están en $P$, y en particular en la intersección de $P$ con $M$, que es la trayectoria de $\alpha$.
+>>17. Finalmente, como además $\alpha, \gamma$ y $\beta$ tienen rapidez unitaria, el mismo punto incial y la misma velocidad inicial, las tres curvas son iguales en un intervalo cerca del $0$. 
+>>18. Obviamente esto lo podriamos haber hecho para cualqueir punto no necesariamente el $0$. Así, $\alpha$ es una geodésica en $M$.
+
+# Distancia en una superficie y propiedades minimizantes de las geodésicas
+
+>[!Definition]
+>Sea $M$ una superficie conexa y sean $p, q$ dos puntos de $M$. Se define la **distancia** entre $p$ y $q$ en $M$ mediante
+>$$ d(p, q) = \inf \{ \text{long}(\alpha) \mid \alpha \text{ es una curva suave a trozos en } M \text{ que une } p \text{ con } q \}. $$
+>Notar que el conjunto es no vacío pues $M$ es conexa.
+
+>[!Exercise]
+>Mostrar que $d(p, q) \ge \|p - q\|$ para todo $p, q \in M$.
+
+>[!Remark]
+>Ahora mostramos que el ínfimo no siempre es mínimo.
+
+>[!Example]
+>Sea $P$ el plano $z = 0$ y sea $M = P - \{(0, 0, 0)\}$. Sean $p = (-1, 0, 0)$ y $q = (1, 0, 0)$ dos puntos en $M$. Para cada $y > 0$ sea $\alpha_y$ una curva suave a trozos en $M$, inyectiva, que une $p$ con $q$, con una trayectoria como la roja en el dibujo. ![[Pasted image 20251204200638.png]]
+>Tenemos que
+>$$ \lim_{y \to 0^+} \text{long}(\alpha_y) = \lim_{y \to 0^+} 2\sqrt{1 + y^2} = 2. $$
+>Luego, $d(p, q) \le 2$. (por def de ínfimo) 
+>Pero no existe ninguna curva en $M$ que une $p$ con $q$ de longitud menor o igual que 2, porque vimos en un ejercicio al comienzo de la materia que las únicas curvas de longitud mínima en $P$ que unen $p$ con $q$ son reparametrizaciones del *segmento* que los une. Como este segmento contiene al origen, que no está en $M$, se concluye lo deseado. Además, los argumentos implican que $d(p, q) = 2$.
+
+>[!Theorem]
+>Sea $\gamma$ una curva suave a trozos con rapidez unitaria que une dos puntos $p$ y $q$ de una superficie y realiza la distancia entre ellos (o sea, $d(p, q) = \text{long}(\gamma)$). Entonces $\gamma$ es una geodésica (en particular, es suave).
+>>[!Proof]
+>>No lo demostramos. Quien tenga interés puede ver el Teorema 5.9 del libro *Elements of Differential Geometry* de Millman y Parker.
+
+>[!Remark] Observaciones
+>- En la esfera de radio 1 centrada en el origen, una geodésica de longitud mayor que $\pi$ no realiza la distancia entre sus extremos (su trayectoria es un arco de círculo máximo de longitud mayor que $\pi$).
+>- Dos puntos de una superficie pueden estar unidos por dos geodésicas que realizan la distancia entre ellos, con trayectorias distintas. Por ejemplo, el polo norte y el polo sur de la esfera unidos por dos meridianos distintos.
+
+>[!Proposition]
+>Sean $p$ y $q$ dos puntos en la esfera de radio 1 centrada en el origen. Entonces
+>$$ d(p, q) = \angle(p, q). $$
+>Recordar que el ángulo entre dos vectores unitarios $p$ y $q$ de $\mathbb{R}^n$ es $\arccos(\langle p, q \rangle)$, es decir, el único número $\theta$ en el intervalo $[0, \pi]$ tal que $\cos \theta = \langle p, q \rangle$.
+
+>[!Theorem]
+>Las geodésicas minimizan distancias localmente. Más precisamente, si $\gamma : (a, b) \to M$ es una geodésica de la superficie $M$ y $t_o \in (a, b)$, entonces existe $\delta > 0$ tal que
+>$$ \gamma|_{[t_o - \delta, t_o + \delta]} $$
+>realiza la distancia entre sus extremos y además, si otro segmento geodésico lo hace, tiene la misma trayectoria.
+
+>[!Remark] 
+>A continuación presentamos un teorema que describe las trayectorias de las geodésicas en una superficie de revolución.
+>Antes de enunciarlo, repasamos de una clase pasada una de las ecuaciones diferenciales que satisfacen las coordenadas $u, v$ de una geodésica $\gamma(t) = \varphi(u(t), v(t))$, donde $\varphi$ es un sistema coordenado:$$ 0 = \langle \varphi_u, \varphi_{uu} \rangle (u')^2 + 2 \langle \varphi_u, \varphi_{uv} \rangle v' u' + \langle \varphi_u, \varphi_{vv} \rangle (v')^2 + \langle \varphi_u, \varphi_u \rangle u'' + \langle \varphi_u, \varphi_v \rangle v''. \quad (30) $$
+>Después habíamos enunciado un teorema que afirma que las isometrías locales llevan geodésicas en geodésicas. En la prueba de ese teorema habíamos escrito los coeficientes de $(u')^2$, $v' u'$, $(v')^2$, $u''$ y $v''$ en la ecuación en términos de los coeficientes $E, F$ y $G$ de la primera forma fundamental de $\varphi$ y sus derivadas parciales, como sigue: $$ \langle \varphi_u, \varphi_{uu} \rangle = \frac{1}{2} E_u, \quad \langle \varphi_{uv}, \varphi_u \rangle = \frac{1}{2} E_v, \quad \langle \varphi_u, \varphi_{vv} \rangle = F_v - \frac{1}{2} G_u, \quad (31) $$$$ \langle \varphi_u, \varphi_u \rangle = E, \quad \langle \varphi_u, \varphi_v \rangle = F. $$
+
+^259071
+
+>[!Theorem] Teorema de Clairaut
+>Sea $\gamma$ una curva de rapidez unitaria en una superficie de revolución. Para cada $s$, sea $\rho(s)$ la distancia de $\gamma(s)$ al eje y sea $\theta(s)$ el ángulo que forma $\gamma'(s)$ con el paralelo que pasa por $\gamma(s)$.
+>Si $\gamma$ es geodésica, entonces
+>$$ \rho(s) \cos \theta(s) $$
+>es constante. La recíproca vale si $\sin(\theta(s)) \neq 0$ para todo $s$.
+>>[!Proof]-
+>>1. Suponemos que la superficie de revolución tiene curva perfil $\alpha(v) = (r(v), h(v))$ de rapidez unitaria.
+>>2. Consideramos el sistema coordenado asociado $$ \varphi(u, v) = (r(v)(\cos u, \sin u), h(v)). $$
+>>3. Calculamos los vectores coordenados $$ \varphi_u(u, v) = (r(v)(-\sin u, \cos u), 0) \quad \text{y} \quad \varphi_v(u, v) = (r'(v)(\cos u, \sin u), h'(v)). $$
+>>4. Tenemos que $$ E(u, v) = \|\varphi_u(u, v)\|^2 = (r(v))^2, $$$$ F(u, v) = \langle \varphi_u(u, v), \varphi_v(u, v) \rangle = 0, $$$$ G(u, v) = \|\varphi_v(u, v)\|^2 = \|\alpha'(v)\|^2 = 1. $$
+>>5. Ahora ponemos $\gamma$ en coordenadas $$ \gamma(s) = \varphi(u(s), v(s)). $$
+>>6. Supongamos que $\gamma$ es geodésica. Entonces $\gamma$ satisface la ecuación diferencial (30). 
+>>7. Para ver cómo es en nuestro caso, usando [[Definiciones#^259071]], calculamos $$ E_v(u, v) = 2r(v)r'(v), \quad E_u(u, v) = 0, \quad F_v - \frac{1}{2} G_u = 0, $$$$ E(u, v) = (r(v))^2, \quad F(u, v) = 0. $$
+>>8. Así que esa ecuación diferencial resulta ser $$ 0 = 2r(v)r'(v) u' v' + (r(v))^2 u'' = ((r(v))^2 u')'. \quad (32) $$
+>>9. Por otro lado, $\rho(s) = r(v(s))$ por que es la distancia hacia el eje $z$ que es $\sqrt{ x^{2}+y^{2} }$ en este caso $|r(v)|\sqrt{\cos(u)^{2}+\sin(u)^{2}}=r(v)$  
+>>10. Ademas $\theta(s)$ es el ángulo que forma $\gamma'(s)$ con el vector coordenado $\varphi_u(u(s), v(s))$. Por que cualquier paralelo es $\beta(u)=\varphi(u,v_{0})$ (osea fijamos la altura en $v_{0}$) entonces $\beta'(u)=\varphi_{u}(u,v_{0})$ ahora si evaluamos esto en un punto generico de la superfiecie dado por $\gamma$, osea $u(s),v(s)$ tenemos $\varphi_{u}(u(s),v(s))$ es la derivada del paralelo en ese punto. Osea tenemos a $\gamma'$ y la derivada del paralelo en el plano tangente asi que podemos comprar angulos      
+>>11. Calculamos $$ \begin{align}\rho \cos \theta &= r(v) \frac{\langle \gamma', \varphi_u(u, v) \rangle}{\|\gamma'\| \|\varphi_u(u, v)\|}\\& = r(v) \frac{\langle \varphi_u(u, v) u' + \varphi_v(u, v) v', \varphi_u(u, v) \rangle}{\|\varphi_u(u, v)\|} \\& = r(v) \frac{E(u, v) u'}{\sqrt{E(u, v)}} \\ &= r(v) \sqrt{E(u, v)} u'\\& = r(v) \sqrt{(r(v))^2} u' \\&= (r(v))^2 u'\end{align}$$que es constante por (32).
+>>12. La recíproca no la demostramos.
+
+>[!Remark]
+>Si $\rho$ es una función decreciente, entonces $\cos \theta$ crece (para mantener el producto constante) y así $\theta$ decrece, pues $\cos$ es decreciente en el intervalo $(0, \pi)$.
+
+>[!Remark]
+>El Teorema de Clairaut es un caso particular de un resultado de Emmy Noether, una de las primeras mujeres alemanas a las se les permitió asistir a clases de matemática en la universidad, pero que sufrió muchas discriminaciones en su carrera profesional por ser mujer. Pueden consultar en wikipedia. El teorema de Noether es más general y limpio. Nosotros nos conformamos con uno particular y con muchas cuentas, pero más concreto (lo de Noether es más abstracto).
+>![[Pasted image 20251205191936.png]]
+
+>[!Example] Un problema de geodésicas en el cono
+>Un vaquero se encuentra al pie de una montaña de hielo sin fricción formada por un cono con una base circular con un ángulo de inclinación $\theta$. Lanza su lazo, que se desliza perfectamente sobre la punta del cono, lo tensa y trata de escalar. ¿Cómo debe ser el ángulo $\theta$ para que el vaquero pueda escalar la montaña de hielo?
+>>[!Proof]- Solución
+>>1. Consideramos un sector circular de ángulo $\beta$, como en la figura. Identificamos los segmentos $\ell_1$ y $\ell_2$, que suponemos de longitud 1, y obtenemos un cono.
+>>2. Ahora relacionamos $\beta$ con el ángulo de inclinación $\theta$ del cono. Sea $r$ el radio del círculo base del cono. Luego la circunferencia de la base mide $2\pi r$, que es igual a $\beta$, por construcción (el arco del sector circular se convierte en la circunferencia base).
+>>3. Como $\ell_1 = \ell_2 = 1$ (la generatriz del cono es 1), tenemos que $r = \sin(\text{semiángulo del cono})$. Pero el problema define $\theta$ como el ángulo de inclinación de la base, así que el radio $r$ es la proyección de la generatriz: $r = \cos \theta$.
+>>4. Entonces, $\beta = 2\pi r = 2\pi \cos \theta$, de donde $\cos \theta = \frac{\beta}{2\pi}$.
+>>5. Una soga tirante en el cono determina una geodésica cuyos extremos son el mismo punto, donde está situado el vaquero, que llamamos $p$. Podemos suponer sin pérdida de generalidad que $p$ es el punto donde $P$ se une con $Q$ al armar el cono con el sector circular ![[Pasted image 20251205192019.png]]
+>>6. Ahora bien, la aplicación que lleva el sector circular en el cono es una isometría (localmente, fuera del vértice), las isometrías llevan geodésicas en geodésicas, y las trayectorias geodésicas del plano son segmentos de rectas.
+>>7. Como la única manera de que un segmento de recta en el sector circular una $P$ con $Q$ (que son el mismo punto en el cono) es que el segmento esté completamente contenido en el sector.
+>>8. Esto requiere que el ángulo $\beta$ sea menor que $\pi$. Si $\beta \ge \pi$, el segmento que une un punto en un borde con su identificado en el otro borde pasaría "por fuera" del sector (o por el vértice, que no es parte de la superficie regular).
+>>9. Por lo tanto, se tiene que
+>>   $$ \cos \theta = \frac{\beta}{2\pi} < \frac{\pi}{2\pi} = \frac{1}{2}. $$ ![[Pasted image 20251205192041.png]]
+>>10. Esto implica que $\theta > \arccos(1/2) = \pi/3 = 60^\circ$.
+>>11. Así, el ángulo de inclinación debe ser mayor a $60^\circ$ para que la geodésica (el lazo tenso) no se "salga" o se "trabe" en el vértice, permitiendo al vaquero escalar.
+
+# Una interpretación métrica de la curvatura gaussiana
+
+>[!Remark]
+>Sea $M$ una superficie y sean $p \in M$ y $r > 0$. Se define $$ C_r(p) = \{q \in M \mid d(q, p) = r\}. $$
+>Por ejemplo, si $M$ es el plano $z = 0$ y $p \in M$, $C_r(p)$ es una circunferencia de longitud $2\pi r$ centrada en $p$.
+
+>[!Proposition]
+>Sea $S$ la esfera de radio $R$ centrada en el origen, sea $p = (0, 0, R)$ el polo norte y sea $0 < r < \pi R$. Entonces $C_r(p)$ es una circunferencia de longitud $2\pi R \sin(r/R)$. Además, el polinomio de Taylor de orden 3 de la función $r \mapsto \text{long}(C_r(p))$ alrededor del origen es
+>$$ 2\pi r - \frac{2\pi}{3!} K(p) r^3. \quad (33) $$
+>>[!Proof]-
+>>1. Así como lo vimos para la esfera de radio 1, para la de radio $R$ también vale que las trayectorias son arcos de círculos máximos y para todo $q, q' \in S$ se cumple que $d(q, q') = R(\angle(q, q'))$.
+>>2. En el dibujo observamos que $C_r(p)$ es un paralelo de radio $\rho = R \sin(r/R)$, y así es una circunferencia con la longitud deseada. ![[Pasted image 20251205225053.png]]
+>>3. Llamando $f(r) = \text{long}(C_r(p))$, calculamos $$ f(0) = 0, \quad f'(0) = 2\pi, \quad f''(0) = 0 \quad \text{y} \quad f'''(0) = -\frac{2\pi}{R^2}. $$
+>>4. Como $K(p) = \frac{1}{R^2}$, la expresión para el polinomio de Taylor es verdadera.
+
+>[!Remark]
+>Dado un punto $p$ de una superficie $M$ cualquiera, si $r > 0$ es suficientemente pequeño, $C_r(p)$ es una la trayectoria de una curva cerrada suave en $M$ y el polinomio de Taylor de orden 3 de la función $r \mapsto \text{long}(C_r(p))$ alrededor del origen también está dado por (33).
+>De manera informal podemos decir lo siguiente: Supongamos que un jardinero que vive en una superficie $M$ clava una estaca en un punto $p$ y marca el borde $C$ de un cantero con un hilo tirante atado a la estaca, de longitud $r$ suficientemente chica. Entonces la longitud de $C$ será mayor o menor que $2\pi r$ si $K(p)$ es negativa o positiva, respectivamente. Esto provee otra interpretación ingenua de que la curvatura gaussiana es intrínseca, como asegura el Teorema Egregium de Gauss.
+# Métricas riemannianas conformes
+
+>[!Definition]
+>Sea $U$ un subconjunto abierto de $\mathbb{R}^n$. Una **métrica riemanniana conforme** en $U$ es una función positiva $g : U \to \mathbb{R}$ junto con una manera de medir longitudes de curvas en $U$ de manera posiblemente distinta de la usual: Si $\alpha : [a, b] \to U$ es una curva suave, entonces
+>$$ \text{long}_g(\alpha) = \int_a^b \|\alpha'(t)\| g(\alpha(t)) \, dt. $$
+
+>[!Example]
+>Si $\varphi : U \to M$ es un sistema coordenado con $E = G = g^2$ y $F = 0$, entonces la nueva forma de definir longitudes en $U \subset \mathbb{R}^2$ resulta ser la que declara la longitud de una curva $\alpha$ en el mapa como la longitud de la curva $\varphi \circ \alpha$ en $M$. La verificación se deja como ejercicio.
+
+>[!Example] El plano hiperbólico
+>Sean
+>$$ H = \{(x, y) \in \mathbb{R}^2 \mid y > 0\} \quad \text{y} \quad g : H \to \mathbb{R}, \,\, g(x, y) = \frac{1}{y}. $$
+>Si $\alpha : [a, b] \to H$, $\alpha(t) = (x(t), y(t))$ es una curva suave, entonces
+>$$ \text{long}_g(\alpha) = \int_a^b \sqrt{(x'(t))^2 + (y'(t))^2} \frac{1}{y(t)} \, dt. $$
+
+>[!Remark]
+>Como en $U$ están definidas las longitudes de curvas (si bien de manera no tradicional), está definida la distancia entre dos puntos de $U$ y tiene sentido preguntarse cuáles son las curvas en $U$ que localmente la minimizan. También tiene sentido la noción de isometría entre $U$ y otro abierto $U'$ con una métrica riemanniana conforme $G'$, o entre $U$ y una superficie regular $M$.
+>Se puede mostrar que para el plano hiperbólico $H$, las curvas que locamente minimizan la distancia son, por un lado, las rectas verticales (intersecadas con $H$), y por el otro, las semicircunferencias en $H$ centradas en el eje $x$.
+>También es verdad que las traslaciones $(x, y) \mapsto (x + c, y)$ y las homotecias $(x, y) \mapsto (\lambda x, \lambda y)$, con $c \in \mathbb{R}$ y $\lambda > 0$, son isometrías de $H$. Se prueba que la franja
+>$$ \{(x, y) \in H \mid |x| < 1 \text{ e } y > 1\} $$
+>es isométrica a la tractoide (ejercicio 11 del práctico 7) menos un meridiano. Eso justifica decir, Teorema Egregium mediante, que el plano hiperbólico $H$ tiene curvatura constante igual a $-1$.
+>
+>El plano hiperbólico (salvo con la métrica duplicada en sentido horizontal) resulta ser una manera muy conveniente, en cierto sentido, de describir la relación entre las diferentes campanas de Gauss (parametrizadas por la media $\mu \in \mathbb{R}$ y la varianza $\sigma > 0$). Se puede ver en [este paper](https://arxiv.org/pdf/1210.2354.pdf).
+>El ejemplo muestra que aunque una situación se parametrice con $x, y$ reales, la distancia eucídea no siempre es adecuada.
