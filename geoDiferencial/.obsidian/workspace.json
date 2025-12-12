@@ -6,7 +6,7 @@
       {
         "id": "746ca06c0bd74836",
         "type": "tabs",
-        "dimension": 55.00000000000001,
+        "dimension": 51.5686274509804,
         "children": [
           {
             "id": "5127e43ee1c8a762",
@@ -15,7 +15,7 @@
               "type": "markdown",
               "state": {
                 "file": "Practicos/Resueltos/GD - Pr2.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false,
                 "backlinks": false
               },
@@ -30,7 +30,7 @@
               "type": "markdown",
               "state": {
                 "file": "Practicos/Resueltos/GD - Pr3.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false,
                 "backlinks": false
               },
@@ -38,12 +38,13 @@
               "title": "GD - Pr3"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "795fecf8289dbd3d",
         "type": "tabs",
-        "dimension": 45,
+        "dimension": 48.431372549019606,
         "children": [
           {
             "id": "8c50361748cab17a",
@@ -52,7 +53,7 @@
               "type": "markdown",
               "state": {
                 "file": "Definiciones.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false,
                 "backlinks": false
               },
@@ -211,11 +212,11 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "5127e43ee1c8a762",
+  "active": "7a7baf061c940d58",
   "lastOpenFiles": [
+    "Definiciones.md",
     "Practicos/Resueltos/GD - Pr3.md",
     "Practicos/Resueltos/GD - Pr2.md",
-    "Definiciones.md",
     "extract_pdf.py",
     "Practicos/GD - Pr2.pdf",
     "Pasted image 20251205225053.png",

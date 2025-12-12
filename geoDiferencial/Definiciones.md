@@ -344,6 +344,8 @@
 > $$ R_{z, \theta}(x) = R_\theta(x - z) + z = R_{\theta}(x)+z-R_{\theta}(z) =R_{\theta}(x)+b$$
 > Osea rotar alrededor del punto $z$ es una transformacion euclidea 
 
+^ff0d1a
+
 >[!Remark]
 > En el práctico se ve que toda transformación rígida del plano es una traslación o una rotación alrededor de algún punto.
 

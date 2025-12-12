@@ -1,14 +1,10 @@
-# Soluciones — Geometría Diferencial — Práctico 2
-
----
-
 >[!Example] Ejercicio 1
 >Sea $\alpha(t)=\dfrac{e^{t}}{\sqrt{3}}(\cos t,\,\sin t,\,1)$ graficar y hallar reparametrizacion por longitud de arco $\beta$ con $\beta(0)=\alpha (0)$. Calcular el triedo de Frenet, la curvatura y la torsion de $\beta$
 >>[!Proof]-
 >>- Reparametrización por longitud de arco.
 >>	1. Calculemos la velocidad: $$\displaystyle \alpha'(t)=\frac{e^{t}}{\sqrt{3}}(\cos t-\sin t,\;\sin t+\cos t,\;1)$$
 >>	2. Su norma: $$\|\alpha'(t)\|=\frac{e^{t}}{\sqrt{3}}\sqrt{(\cos t-\sin t)^2+(\sin t+\cos t)^2+1}=\frac{e^{t}}{\sqrt{3}}\sqrt{2+1}=e^{t}$$
->>	3. Por tanto la longitud desde $0$ a $t$ es $$\displaystyle s(t)=\int_{0}^{t} e^{u}\,du=e^{t}-1$$(tomamos $s(0)=0$). 
+>>	3. Por tanto la longitud desde $0$ a $t$ es $$\displaystyle s(t)=\int_{0}^{t} e^{u}\,du=e^{t}-1$$(el borde inferior esta dado por la condicion $s(0)=0$). 
 >>	4. Invirtiendo, $t=\ln(s+1)$. La reparametrización por longitud de arco es $$\displaystyle \beta(s)=\alpha(\ln(s+1))=\frac{s+1}{\sqrt{3}}\big(\cos(\ln(s+1)),\,\sin(\ln(s+1)),\,1\big)$$
 >>- Tiedro de Frenet, curvatura y torsión.
 >>	1. Es conveniente trabajar con el parámetro $t$ y luego pasar a $s$. El vector tangente unitario es $$\displaystyle T(t)=\frac{\alpha'(t)}{\|\alpha'(t)\|}=\frac{1}{\sqrt{3}}(\cos t-\sin t,\;\sin t+\cos t,\;1)$$
