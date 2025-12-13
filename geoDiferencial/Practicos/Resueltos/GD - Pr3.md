@@ -146,7 +146,10 @@
 >>2. Fijar $t_0$. Sean $\{T_\alpha, N_\alpha, B_\alpha\}$ y $\{T_\beta, N_\beta, B_\beta\}$ los marcos en $t_0$.
 >>3. Definimos $$C(T_{\alpha }(t_{0})):=T_{\beta}(t_{0})\quad C(N_{\alpha }(t_{0}))=N_{\beta}(t_{0})\quad C(B_{\alpha }(t_{0}))=B_{\beta}(t_{0})$$ Como son bases entonces queda bien definida $C$      
 >>4. Ahora definimos $\Phi(x):=C(x-\alpha (t_{0}))+\beta(t_{0})$ y $\tilde{\alpha }=\Phi\circ\alpha$ 
->>5. Notar que $\Phi(x)=C(x)-C(\alpha (t_{0}))+\beta(t_{0})$ entonces $d\Phi_{x}=C$ por que $C$ es lineal  
->>6. Claramente $\tilde{\alpha }(t_{0})=\beta(t_{0})$. Ademas $$\tilde{\alpha }'(t)=(\Phi\circ\alpha)' (t)= d\Phi_{{\alpha(t) }}(\alpha '(t))=\Phi'(t)$$    
->>7. Por el Teorema Fundamental (unicidad de solución de EDOs), $\gamma(t) = \beta(t)$ para todo $t$.
->>8. Así $\beta = F \circ \alpha$, son congruentes.
+>>5. Notar que $\Phi(x)=C(x)-C(\alpha (t_{0}))+\beta(t_{0})$ entonces $d\Phi_{x}=C$ (Por que $C$ es lineal. Sale usando que $C$ cumple la definicion de diferneciabilidad) 
+>>6. Claramente $\tilde{\alpha }(t_{0})=\beta(t_{0})$. Ademas $$\tilde{\alpha }'(t_{0})=(\Phi\circ\alpha)' (t_{0})= d\Phi_{{\alpha(t_{0}) }}(\alpha '(t_{0}))=C\alpha '(t_{0})$$
+>>7. Ademas usando que $C$ es ortogonal tenemos $$\lVert \tilde{\alpha }'(t_{0}) \rVert=\lVert C\alpha '(t_{0}) \rVert=\langle C\alpha '(t_{0}),C\alpha '(t_{0})\rangle=\langle \alpha '(t_{0}),\alpha '(t_{0})\rangle=\lVert \alpha '(t_{0}) \rVert$$  
+>>8. Por lo tanto $$T_{\tilde{\alpha }}(t_{0})=\frac{\tilde{\alpha }'(t_{0})}{\lVert \tilde{\alpha }'(t_{0}) \rVert}=C\left( \frac{\alpha '(t_{0})}{\lVert \alpha (t_{0}) \rVert} \right)=C(T_{\alpha })=T_{\beta }(t_{0})$$
+>>9. Luego misma idea $$\tilde{\alpha }''(t_{0})=C\alpha ''(t_{0})$$ por lo tanto $N_{\tilde{\alpha }}(t_{0})=N_{\beta}(t_{0})$ 
+>>10. Y entonces finalmente $B_{\tilde{\alpha }(t_{0})}=B_{\beta}(t_{0})$ 
+>>11. Luego por la unicidad de [[Definiciones#^d9aef1]] tenemos que $\tilde{\alpha }=\beta$. Probando que $\alpha$ y $\beta$ son congruentes, osea una es una transformacion rigida de la otra

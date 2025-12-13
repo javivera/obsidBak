@@ -196,6 +196,8 @@
 >>[!Proof]
 >>No damos la prueba.
 
+^d9aef1
+
 >[!Proposition]
 >La longitud de cualquier curva suave $\alpha : [a, b] \to \mathbb{R}^n$ con $\alpha(a) = p$ y $\alpha(b) = q$ es mayor o igual que $\|q - p\|$.
 >>[!Proof]-

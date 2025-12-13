@@ -14,13 +14,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Practicos/Resueltos/GD - Pr2.md",
+                "file": "Practicos/Resueltos/GD - Pr4.md",
                 "mode": "preview",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "GD - Pr2"
+              "title": "GD - Pr4"
             }
           },
           {
@@ -38,8 +38,7 @@
               "title": "GD - Pr3"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "795fecf8289dbd3d",
@@ -212,11 +211,13 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "7a7baf061c940d58",
+  "active": "5127e43ee1c8a762",
   "lastOpenFiles": [
-    "Definiciones.md",
-    "Practicos/Resueltos/GD - Pr3.md",
+    "Imagenes/Pasted image 20251205225053.png",
     "Practicos/Resueltos/GD - Pr2.md",
+    "Practicos/Resueltos/GD - Pr3.md",
+    "Practicos/Resueltos/GD - Pr4.md",
+    "Definiciones.md",
     "extract_pdf.py",
     "Practicos/GD - Pr2.pdf",
     "Pasted image 20251205225053.png",
