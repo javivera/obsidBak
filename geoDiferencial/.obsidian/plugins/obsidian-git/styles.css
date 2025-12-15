@@ -101,12 +101,10 @@
 .workspace-leaf-content[data-type="git-history-view"]
     .tree-item-self:hover
     .clickable-icon {
-    color: var(--icon-color-hover);
 }
 
 /* Highlight an item as active if it's diff is currently opened */
 .is-active .git-tools .buttons > * {
-    color: var(--nav-item-color-active);
 }
 
 .git-author {
@@ -130,7 +128,6 @@
 }
 
 .workspace-leaf-content[data-type="diff-view"] .d2h-file-header {
-    background-color: var(--background-primary);
     border-bottom: 1px solid var(--interactive-accent);
     font-family: var(--font-monospace);
     height: 35px;
@@ -152,7 +149,6 @@
 .workspace-leaf-content[data-type="diff-view"] .d2h-lines-added {
     border: 1px solid #b4e2b4;
     border-radius: 5px 0 0 5px;
-    color: #399839;
     padding: 2px;
     text-align: right;
     vertical-align: middle;
@@ -161,7 +157,6 @@
 .workspace-leaf-content[data-type="diff-view"] .d2h-lines-deleted {
     border: 1px solid #e9aeae;
     border-radius: 0 5px 5px 0;
-    color: #c33;
     margin-left: 1px;
     padding: 2px;
     text-align: left;
@@ -207,7 +202,6 @@
 }
 
 .workspace-leaf-content[data-type="diff-view"] .d2h-file-collapse.d2h-selected {
-    background-color: #c8e1ff;
 }
 
 .workspace-leaf-content[data-type="diff-view"] .d2h-file-collapse-input {
@@ -276,7 +270,6 @@
     .workspace-leaf-content[data-type="diff-view"]
     .d2h-code-side-line
     del {
-    background-color: #ffb6ba;
 }
 
 .theme-dark .workspace-leaf-content[data-type="diff-view"] .d2h-code-line del,
@@ -284,7 +277,6 @@
     .workspace-leaf-content[data-type="diff-view"]
     .d2h-code-side-line
     del {
-    background-color: #8d232881;
 }
 
 .workspace-leaf-content[data-type="diff-view"] .d2h-code-line del,
@@ -303,7 +295,6 @@
     .workspace-leaf-content[data-type="diff-view"]
     .d2h-code-side-line
     ins {
-    background-color: #97f295;
     text-align: left;
 }
 
@@ -312,7 +303,6 @@
     .workspace-leaf-content[data-type="diff-view"]
     .d2h-code-side-line
     ins {
-    background-color: #1d921996;
     text-align: left;
 }
 
@@ -343,12 +333,10 @@
 }
 
 .workspace-leaf-content[data-type="diff-view"] .d2h-code-linenumber {
-    background-color: var(--background-primary);
     border: solid var(--background-modifier-border);
     border-width: 0 1px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    color: var(--text-muted);
     cursor: pointer;
     display: inline-block;
     position: absolute;
@@ -361,12 +349,10 @@
 }
 
 .workspace-leaf-content[data-type="diff-view"] .d2h-code-side-linenumber {
-    background-color: var(--background-primary);
     border: solid var(--background-modifier-border);
     border-width: 0 1px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    color: var(--text-muted);
     cursor: pointer;
     display: inline-block;
     overflow: hidden;
@@ -387,7 +373,6 @@
 
 .workspace-leaf-content[data-type="diff-view"] .d2h-code-side-emptyplaceholder,
 .workspace-leaf-content[data-type="diff-view"] .d2h-emptyplaceholder {
-    background-color: var(--background-primary);
     border-color: var(--background-modifier-border);
 }
 
@@ -407,57 +392,44 @@
 }
 
 .theme-light .workspace-leaf-content[data-type="diff-view"] .d2h-del {
-    background-color: #fee8e9;
-    border-color: #e9aeae;
 }
 
 .theme-light .workspace-leaf-content[data-type="diff-view"] .d2h-ins {
-    background-color: #dfd;
-    border-color: #b4e2b4;
 }
 
 .theme-dark .workspace-leaf-content[data-type="diff-view"] .d2h-del {
-    background-color: #521b1d83;
     border-color: #691d1d73;
 }
 
 .theme-dark .workspace-leaf-content[data-type="diff-view"] .d2h-ins {
-    background-color: rgba(30, 71, 30, 0.5);
-    border-color: #13501381;
 }
 
 .workspace-leaf-content[data-type="diff-view"] .d2h-info {
-    background-color: var(--background-primary);
     border-color: var(--background-modifier-border);
-    color: var(--text-normal);
 }
 
 .theme-light
     .workspace-leaf-content[data-type="diff-view"]
     .d2h-file-diff
     .d2h-del.d2h-change {
-    background-color: #fdf2d0;
 }
 
 .theme-dark
     .workspace-leaf-content[data-type="diff-view"]
     .d2h-file-diff
     .d2h-del.d2h-change {
-    background-color: #55492480;
 }
 
 .theme-light
     .workspace-leaf-content[data-type="diff-view"]
     .d2h-file-diff
     .d2h-ins.d2h-change {
-    background-color: #ded;
 }
 
 .theme-dark
     .workspace-leaf-content[data-type="diff-view"]
     .d2h-file-diff
     .d2h-ins.d2h-change {
-    background-color: rgba(37, 78, 37, 0.418);
 }
 
 .workspace-leaf-content[data-type="diff-view"] .d2h-file-list-wrapper {
@@ -465,14 +437,12 @@
 }
 
 .workspace-leaf-content[data-type="diff-view"] .d2h-file-list-wrapper a {
-    color: #3572b0;
     text-decoration: none;
 }
 
 .workspace-leaf-content[data-type="diff-view"]
     .d2h-file-list-wrapper
     a:visited {
-    color: #3572b0;
 }
 
 .workspace-leaf-content[data-type="diff-view"] .d2h-file-list-header {
@@ -514,29 +484,23 @@
 }
 
 .workspace-leaf-content[data-type="diff-view"] .d2h-icon {
-    fill: currentColor;
     margin-right: 10px;
     vertical-align: middle;
 }
 
 .workspace-leaf-content[data-type="diff-view"] .d2h-deleted {
-    color: #c33;
 }
 
 .workspace-leaf-content[data-type="diff-view"] .d2h-added {
-    color: #399839;
 }
 
 .workspace-leaf-content[data-type="diff-view"] .d2h-changed {
-    color: #d0b44c;
 }
 
 .workspace-leaf-content[data-type="diff-view"] .d2h-moved {
-    color: #3572b0;
 }
 
 .workspace-leaf-content[data-type="diff-view"] .d2h-tag {
-    background-color: var(--background-primary);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -564,17 +528,13 @@
 /* ====================== Line Authoring Information ====================== */
 
 .cm-gutterElement.obs-git-blame-gutter {
-    /* Add background color to spacing inbetween and around the gutter for better aesthetics */
     border-width: 0px 2px 0.2px 2px;
     border-style: solid;
-    border-color: var(--background-secondary);
-    background-color: var(--background-secondary);
 }
 
 .cm-gutterElement.obs-git-blame-gutter > div,
 .line-author-settings-preview {
     /* delegate text color to settings */
-    color: var(--obs-git-gutter-text);
     font-family: monospace;
     height: 100%; /* ensure, that age-based background color occupies entire parent */
     text-align: right;
@@ -591,12 +551,10 @@
 
 .git-unified-diff-view,
 .git-split-diff-view .cm-deletedLine .cm-changedText {
-    background-color: #ee443330;
 }
 
 .git-unified-diff-view,
 .git-split-diff-view .cm-insertedLine .cm-changedText {
-    background-color: #22bb2230;
 }
 
 .git-obscure-prompt[git-is-obscured="true"] #git-show-password:after {

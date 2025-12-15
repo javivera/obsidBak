@@ -444,7 +444,7 @@
 >El punto (2) de la definición de superficie regular requiere la existencia de inversas a derecha continuas locales $\Phi$. Las necesitamos para excluir subconjuntos como el siguiente:
 >![[Pasted image 20251122145538.png]]
 
->[!Example] 
+>[!Example] Un ejemplo de algo que no es superficie regular
 >Veamos un ejemplo de aplicacion suave, inyectiva y con diferencial inyectiva pero que no llega a ser carta por que no es inversible localmente 
 >Sean $\alpha : (-\pi, \pi) \to \mathbb{R}^2$ y $\varphi : U = (-\pi, \pi) \times \mathbb{R} \to \mathbb{R}^3$ definidas por
 >$$ \alpha(s) = \sin s (\cos s, 1) \quad \text{y} \quad \varphi(s, t) = (\alpha(s), t). $$
@@ -462,6 +462,8 @@
 >>	3. Tenemos que $$ \lim_{n \to \infty} p_n = \lim_{n \to \infty} \varphi\left(-\pi + \frac{1}{n}, 0\right) = (\sin(-\pi) (\cos(-\pi), 1), 0) = ((0, 0), 0) = \varphi(0, 0). $$
 >>	4. Suponemos que existen $\mathcal{V}$ y $\Phi$ como en el enunciado (osea una inversa local). Como $\Phi$ es continua, resulta $$ \lim_{n \to \infty} \Phi(p_n) = \Phi(\varphi(0, 0)) = (0, 0). $$
 >>	5. Por otro lado $$ \lim_{n \to \infty} \Phi(p_n) = \lim_{n \to \infty} \Phi\left(\varphi\left(-\pi + \frac{1}{n}, 0\right)\right) = \lim_{n \to \infty} \left(-\pi + \frac{1}{n}, 0\right) = (-\pi, 0), $$con lo cual llegamos a un absurdo.
+
+^3d284b
 
 >[!Theorem] Teorema de la superficie implícita
 >Sea $F : A \to \mathbb{R}$ una función suave, donde $A$ es un subconjunto abierto de $\mathbb{R}^3$. Sea $y \in \text{Imagen}(F)$ y sea
@@ -482,6 +484,8 @@
 >Sea $S$ una superficie regular y sea $p \in S$. Si una función $\varphi : U \to \mathbb{R}^3$ satisface las condiciones del apartado (1) de la definición de superficie regular, entonces satisface también las del (2).
 >>[!Proof]
 >>No damos la prueba.
+
+^595bfc
 
 >[!Remark]
 >- Se usa para obtener cartas coordenadas cuando por alguna razón ya sabemos que el subconjunto es una superficie regular, por ejemplo, a través del Teorema de la Superficie Implícita, o porque ya hemos hemos encontrado algunas cartas que cubren toda la superficie y para ellas hemos verificado (1) y (2).
