@@ -359,13 +359,13 @@
 >[!Theorem] Teorema de Chasles
 >Toda transformación rígida de $\mathbb{R}^3$ es un tirabuzón.
 >>[!Proof]-
->>6. Supongamos que la transformación rígida es $T$, dada por $T(x) = Cx + u$, donde $C$ es una rotación, es decir una transformación ortogonal con $\det C = 1$.
->>7. Consideramos solo el caso particular en que $$ C = \begin{pmatrix} R_\theta & 0 \\ 0 & 1 \end{pmatrix}, $$ donde $R_\theta$ es la rotación en ángulo $\theta$ en el plano $x$-$y$. En cierto sentido se trata del caso general, pues vimos que cualquier rotación tiene esa forma en cierta base ortonormal.
->>8. Escribimos $$ x = \begin{pmatrix} x' \\ a \end{pmatrix} \quad \text{y} \quad u = \begin{pmatrix} u' \\ b \end{pmatrix}, $$ donde $x', u' \in \mathbb{R}^2$ y $a, b \in \mathbb{R}$.
->>9. Si $R_\theta$ es la identidad, entonces $T$ es la traslación en $u$.
->>10. Si no, tenemos que $$ T(x) = \begin{pmatrix} R_\theta & 0 \\ 0 & 1 \end{pmatrix} \begin{pmatrix} x' \\ a \end{pmatrix} + \begin{pmatrix} u' \\ b \end{pmatrix} = \begin{pmatrix} R_\theta x' + u' \\ a + b \end{pmatrix}. $$
->>11. Luego, $x' \mapsto R_\theta x' + u'$ es una transformación rígida del plano que no es una traslación. Sabemos que es la rotación en el mismo ángulo $\theta$ alrededor de cierto $z \in \mathbb{R}^2$. Entonces $$ T(x) = \begin{pmatrix} R_{z, \theta} x' \\ a + b \end{pmatrix} = \begin{pmatrix} R_\theta (x' - z) + z \\ a \end{pmatrix} + \begin{pmatrix} 0 \\ b \end{pmatrix}. $$
->>12. El primer término representa la rotación alrededor de la recta vertical $\{z\} \times \mathbb{R}$ y el segundo, la traslación vertical en $b$. $\square$
+>>1. Supongamos que la transformación rígida es $T$, dada por $T(x) = Cx + u$, donde $C$ es una rotación, es decir una transformación ortogonal con $\det C = 1$.
+>>2. Consideramos solo el caso particular en que $$ C = \begin{pmatrix} R_\theta & 0 \\ 0 & 1 \end{pmatrix}, $$ donde $R_\theta$ es la rotación en ángulo $\theta$ en el plano $x$-$y$. En cierto sentido se trata del caso general, pues vimos que cualquier rotación tiene esa forma en cierta base ortonormal.
+>>3. Escribimos $$ x = \begin{pmatrix} x' \\ a \end{pmatrix} \quad \text{y} \quad u = \begin{pmatrix} u' \\ b \end{pmatrix}, $$ donde $x', u' \in \mathbb{R}^2$ y $a, b \in \mathbb{R}$.
+>>4. Si $R_\theta$ es la identidad, entonces $T$ es la traslación en $u$.
+>>5. Si no, tenemos que $$ T(x) = \begin{pmatrix} R_\theta & 0 \\ 0 & 1 \end{pmatrix} \begin{pmatrix} x' \\ a \end{pmatrix} + \begin{pmatrix} u' \\ b \end{pmatrix} = \begin{pmatrix} R_\theta x' + u' \\ a + b \end{pmatrix}. $$
+>>6. Luego, $x' \mapsto R_\theta x' + u'$ es una transformación rígida del plano que no es una traslación. Sabemos que es la rotación en el mismo ángulo $\theta$ alrededor de cierto $z \in \mathbb{R}^2$. Entonces $$ T(x) = \begin{pmatrix} R_{z, \theta} x' \\ a + b \end{pmatrix} = \begin{pmatrix} R_\theta (x' - z) + z \\ a \end{pmatrix} + \begin{pmatrix} 0 \\ b \end{pmatrix}. $$
+>>7. El primer término representa la rotación alrededor de la recta vertical $\{z\} \times \mathbb{R}$ y el segundo, la traslación vertical en $b$. $\square$
 
 # Repaso de cálculo en varias variables
 
@@ -549,12 +549,13 @@
 >Sea $S\subseteq \mathbb{R}^{3}$ una superficie regular y sea $p \in S$. Una función $f : S \to \mathbb{R}^n$ se dice **suave en** $p$ si existe una carta coordenada $\varphi : U \to \mathbb{R}^3$ de $S$ con $p \in \varphi(U)$ tal que $f \circ \varphi : U \to \mathbb{R}^n$ es suave en $\varphi^{-1}(p)$.
 >La función $f$ se dice **suave** si es suave en $p$ para todo $p \in S$.
 
->[!Example]-
->- Sea $S$ una superficie regular contenida en un subconjunto abierto $A$ de $\mathbb{R}^3$ y sea $F : A \to \mathbb{R}^n$ una función suave. Entonces $F|_S : S \to \mathbb{R}^n$ es suave. En efecto, sea $p \in S$ y sea $\varphi$ un sistema coordenado cuya imagen lo contenga. Como $S \subset A$,
->$$ F|_S \circ \varphi = F \circ \varphi, $$
->que es la composición de funciones suaves.
->Un caso particular se da cuando $A = \mathbb{R}^3$ y $F$ es la **función altura** respecto de un vector unitario $u \in \mathbb{R}^3$, es decir $F(q) = \langle q, u \rangle$.
->
+>[!Proposition] Restriccion de suave a superficie es suave
+>Sea $S$ una superficie regular contenida en un subconjunto abierto $A$ de $\mathbb{R}^3$ y sea $F : A \to \mathbb{R}^n$ una función suave. Entonces $F|_S : S \to \mathbb{R}^n$ es suave. 
+>>[!Proof]-
+>>En efecto, sea $p \in S$ y sea $\varphi$ un sistema coordenado cuya imagen lo contenga. Como $S \subset A$,$$ F|_S \circ \varphi = F \circ \varphi, $$que es la composición de funciones suaves.
+
+>[!Example]- Ejemplos de funciones suaves
+>- Un caso particular se da cuando $A = \mathbb{R}^3$ y $F$ es la **función altura** respecto de un vector unitario $u \in \mathbb{R}^3$, es decir $F(q) = \langle q, u \rangle$.
 >- Sea $S$ una superficie regular y sea $\varphi : U \to \mathbb{R}^3$ una carta coordenada de $S$. Tenemos que $\varphi(U)$ también es una superficie regular (en el práctico se ve que la intersección de una superficie regular con un abierto de $\mathbb{R}^3$ es una superficie regular). Resulta que $\varphi^{-1} : \varphi(U) \to \mathbb{R}^2$ es suave. En efecto, $\varphi^{-1} \circ \varphi = \text{id}|_U : U \to U \subset \mathbb{R}^2$ es suave. Resumiendo: Las funciones coordenadas son suaves.
 
 >[!Proposition]
@@ -566,22 +567,16 @@
 
 ^1bccd0
 
->[!Definition] Restriccion de funcion suave es suave
->Sea $L:\mathbb{R}^{3}\rightarrow \mathbb{R}^{n}$ suave entonces y sea $F=L|_{S}:S\rightarrow \mathbb{R}^{n}$ con $S$ una superficie entonces $F$ es suave.
->>[!Proof]-
->>1. Sea $\varphi :\mathbb{R}^{n}\rightarrow S$ cualquier carta de $S$ entonces $F\circ \varphi =L\circ\varphi$
->>2. Pero $L$ y $\varphi$ son suaves entonces $F\circ\varphi$ lo es. Mostrando que $F$ es suave
-
 >[!Proposition]
 >Sean $M$ y $N$ dos superficies regulares y sea $F : M \to \mathbb{R}^3$ una función suave tal que $F(M) \subset N$. Entonces para todo $p \in M$ existen sistemas coordenados $\varphi : U \to M$ y $\psi : V \to N$ de $M$ y $N$ respectivamente tales que $p \in \varphi(U)$, $F(\varphi(U)) \subset \psi(V)$ y $\psi^{-1} \circ F \circ \varphi$ es suave.
 >>[!Proof]- Idea de la prueba
 >>3. Como $\psi$ es un sistema coordenado, tenemos que $\psi(V) = N \cap \mathcal{V}$, donde $\mathcal{V}$ es un subconjunto abierto de $\mathbb{R}^3$. 
 >>4. Sea $\bar{\varphi} : \bar{U} \to M$ un sistema coordenado con $p \in \bar{\varphi}(\bar{U})$. Como $F$ es suave, la composicion con cualquier carta es suave [[Definiciones#^1bccd0]]
->>5. Entonces $F \circ \bar{\varphi} : \bar{U} \to \mathbb{R}^3$ es suave, y en particular es continua, resulta que $U :=(F \circ \bar{\varphi})^{-1}(\mathcal{V})$ es abierto en $\bar{U}$. 
->>6. Podemos tomar $\varphi = \bar{\varphi}|_U$, que es un sistema coordenado de $M$ que va a cumplir que $F(\varphi(U)) \subset \psi(V)$ y satisfacer que $\psi^{-1} \circ F \circ \varphi$ es suave, por el lema del diagrama triangular.
+>>5. Entonces $F \circ \bar{\varphi} : \bar{U} \to \mathbb{R}^3$ es suave, y en particular es continua, resulta que $U :=(F \circ \bar{\varphi})^{-1}(\psi (\mathcal{V}))$ es abierto en $\bar{U}$. 
+>>6. Podemos tomar $\varphi = \bar{\varphi}|_U$, que es un sistema coordenado de $M$ que va a cumplir que $F(\varphi(U)) \subset \psi(V)$ y satisface que $\psi^{-1} \circ F \circ \varphi$ es suave, por el lema del diagrama triangular.
 
->[!Definition]
->Sean $M$ y $N$ dos superficies regulares, decimos que $F:M\rightarrow N$ es suave en $p \in M$ si existen cartas $\varphi:U\rightarrow M$ con $p \in \varphi(U)$ y $\psi: V\rightarrow N$ con $F(p)\in \psi (V)$ tales que $$\psi ^{-1}\circ F\circ \varphi: U\rightarrow V$$ es suave como funcion entre abiertos de $R_{2}$ 
+>[!Definition] Suavidad entre superficies regulares
+>Sean $M$ y $N$ dos superficies regulares, decimos que $F:M\rightarrow N$ es suave en $p \in M$ si existen cartas $\varphi:U\rightarrow M$ con $p \in \varphi(U)$ y $\psi: V\rightarrow N$ con $F(p)\in \psi (V)$ tales que $$\psi ^{-1}\circ F\circ \varphi: U\rightarrow V$$ es suave como funcion entre abiertos de $\mathbb{R}^{2}$ 
 
 ^477389
 
@@ -632,7 +627,7 @@
 >Sea $S$ una superficie regular y sea $p \in S$. El **plano tangente** a $S$ o **espacio tangente** a $S$ en el punto $p$ se define mediante
 >$$ T_pS = \{\alpha'(0) \mid \alpha \text{ es una curva suave en } S \text{ con } \alpha(0) = p\}. $$
 
->[!Proposition]
+>[!Proposition] Plano tangente es dado por derivadas parciales
 >Sea $\varphi : U \to \mathbb{R}^3$ un sistema coordenado de la superficie $S$ con $p \in \varphi(U)$, $p = \varphi(q)$. Entonces $T_pS$ es la imagen de la transformación lineal $d\varphi_q : \mathbb{R}^2 \to \mathbb{R}^3$, es decir
 >$$ T_pS = d\varphi_q(\mathbb{R}^2). $$
 >En particular, $T_pS$ es un subespacio vectorial de dimensión dos de $\mathbb{R}^3$ y $\{\varphi_u(q), \varphi_v(q)\}$ es una base de $T_pS$.
@@ -645,6 +640,10 @@
 >>	5. Ademas por 1. $\varphi(q)=p=\alpha (0)=\varphi(u(0),v(0))$ entonces $q=(u(0),v(0))$  $$x = \alpha'(0) = \varphi_u(q)u'(0) + \varphi_v(q)v'(0)$$que pertenece a la imagen de $d\varphi_q$, pues $\varphi_u(q) = d\varphi_q(e_1)$ y $\varphi_v(q) = d\varphi_q(e_2)$.
 >>- $\supset$
 >>	1. Dado $(a, b) \in \mathbb{R}^2$, escribimos $$ d\varphi_q(a, b) = d\varphi_q\left(\frac{d}{dt}\Big|_0 (q + t(a, b))\right) = \frac{d}{dt}\Big|_0 \varphi(q + t(a, b)) = \alpha'(0), $$donde $\alpha(t) = \varphi(q + t(a, b))$, que es una curva suave en $S$ con $\alpha(0) = \varphi(q) = p$ (Notar $d\varphi_{q}$ es la diferencial y usamos regla de cadena notar que diferencial de $\varphi$ evaluada $q+t(a,b)=\alpha (t)$ evaluada en $0$ que es $q$ todo eso multiplicado por $\frac{d}{dt}\Big|_0 (q + t(a, b))$   pero multiplicar matriz por vector es lo mismo que evaluar la transformacion lineal dada por la matriz)  
+>>- Base
+>>	1. Notar que $d\varphi_{q}(e_{1}),d\varphi_{q}(e_{2})$ es base del $T_{p}S$ por que por ser lineal $d\varphi_{q}$ manda vectores li en vectores li y ademas $T_{p}S$ tiene dimension 2.
+
+^095a44
 
 >[!Remark]
 >A pesar de que $T_pS$ es un subespacio de $\mathbb{R}^3$, se acostumbra dibujarlo con el cero apoyado en $p$.
@@ -708,14 +707,14 @@
 >donde $\varphi(\bar{p}) = p$ y $\psi(\bar{q}) = f(p)$.
 >O sea, la matriz de la diferencial de una función entre superficies, en un punto de la superficie de partida, respecto de bases formadas por vectores coordenados, es igual a la matriz jacobiana de la función puesta en coordenadas, en el punto correspondiente del mapa de partida.
 >>[!Proof]-
->>12. La primera afirmación se deja como ejercicio.
->>13. Para mostrar la segunda, escribimos $$ (\psi^{-1} \circ f \circ \varphi)(u, v) = (x(u, v), y(u, v)). \quad (11) $$
->>14. Como $\varphi_u(\bar{p}) = \frac{\partial \varphi}{\partial u}(\bar{p}) = \frac{d}{dt}\Big|_0 \varphi(\bar{p} + te_1)$, tenemos que $$ df_p(\varphi_u(\bar{p})) = \frac{d}{dt}\Big|_0 (f(\varphi(\bar{p} + te_1))) = (f \circ \varphi)_u(\bar{p}). $$
->>15. Pero $f(\varphi(u, v)) = \psi(x(u, v), y(u, v))$ por $(11)$ luego, por la regla de la cadena en varias variables, $$ df_p(\varphi_u(\bar{p})) = \psi_x(\bar{q})x_u(\bar{q}) + \psi_y(\bar{q})y_u(\bar{q}). $$
->>16. Entones en paso 3. tomamos $df_{p}$ y lo evaluamos en la primera coordenada de entrada de la base $\varphi_{u}(\bar{p})$ y en el paso 4. escribimos ese resultado en la base de salida. 
->>17. Por lo tanto la primera columna de $[df_p]_{\{\varphi_u(\bar{p}), \varphi_v(\bar{p})\}, \{\psi_x(\bar{q}), \psi_y(\bar{q})\}}$ es igual a $(x_u(\bar{q}), y_u(\bar{q}))^t$. 
->>18. Pero $(x_u(\bar{q}), y_u(\bar{q}))^t$ es trivialmente la primera columna de $\left[ d(\psi^{-1} \circ f \circ \varphi)_{\bar{p}} \right]_{\text{can}}$
->>19. Con argumentos similares se ve que las segundas columnas de las matrices en (10) también coinciden
+>>1. La primera afirmación se deja como ejercicio.
+>>2. Para mostrar la segunda, escribimos $$ (\psi^{-1} \circ f \circ \varphi)(u, v) = (x(u, v), y(u, v)). \quad (11) $$
+>>3. Como $\varphi_u(\bar{p}) = \frac{\partial \varphi}{\partial u}(\bar{p}) = \frac{d}{dt}\Big|_0 \varphi(\bar{p} + te_1)$, tenemos que $$ df_p(\varphi_u(\bar{p})) = \frac{d}{dt}\Big|_0 (f(\varphi(\bar{p} + te_1))) = (f \circ \varphi)_u(\bar{p}). $$
+>>4. Pero $f(\varphi(u, v)) = \psi(x(u, v), y(u, v))$ por $(11)$ luego, por la regla de la cadena en varias variables, $$ df_p(\varphi_u(\bar{p})) = \psi_x(\bar{q})x_u(\bar{q}) + \psi_y(\bar{q})y_u(\bar{q}). $$
+>>5. Entones en paso 3. tomamos $df_{p}$ y lo evaluamos en la primera coordenada de entrada de la base $\varphi_{u}(\bar{p})$ y en el paso 4. escribimos ese resultado en la base de salida. 
+>>6. Por lo tanto la primera columna de $[df_p]_{\{\varphi_u(\bar{p}), \varphi_v(\bar{p})\}, \{\psi_x(\bar{q}), \psi_y(\bar{q})\}}$ es igual a $(x_u(\bar{q}), y_u(\bar{q}))^t$. 
+>>7. Pero $(x_u(\bar{q}), y_u(\bar{q}))^t$ es trivialmente la primera columna de $\left[ d(\psi^{-1} \circ f \circ \varphi)_{\bar{p}} \right]_{\text{can}}$
+>>8. Con argumentos similares se ve que las segundas columnas de las matrices en (10) también coinciden
 
 ^717add
 
@@ -777,20 +776,24 @@
 
 ^2e965b
 
->[!Corollary]
+>[!Corollary] Corolario de Teo Func Inversa
 >Si $f : M \to N$ es una biyección suave y $df_p : T_pM \to T_{f(p)}N$ es un isomorfismo para todo $p \in M$, entonces $f^{-1}$ es suave. La justificación queda como ejercicio.
 >>[!Proof]-
 >>1. Como $f$ biyectiva dado $q\in N$ existe unico $p \in M$ tal que $f(p)=q$   
->>2. Como $df_{p}$ es iso entonces tenemos $f|_{M \cap \mathcal{U}} : M \cap \mathcal{U} \to N \cap \mathcal{V}$ difeomorfismo por [[Definiciones#^2e965b]]
+>>2. Como $df_{p}$ es iso entonces tenemos $f|_{M \cap \mathcal{U}} : M \cap \mathcal{U} \to N \cap \mathcal{V}$ difeomorfismo por [[Definiciones#^2e965b]] (obviamente aca $q\in N\cap \mathcal{V}$) 
 >>3. Por ser difeo su inversa $(f|_{M\cap \mathcal{U}})^{-1}$ es suave 
->>4. Como $f$ es biyectiva $(f|_{M\cap \mathcal{U}})^{-1}=f^{-1}|_{N\cap\mathcal{V}}$ 
->>5. Entonces mostramos que $f^{-1}$ es suave para un entorno de $q$ y esto lo podemos hacer para cualquier $q$. Entonces $f^{-1}$ es suave   
-   
+>>4. Como $f$ es biyectiva osea por unicidad de inversa $(f|_{M\cap \mathcal{U}})^{-1}=f^{-1}|_{N\cap\mathcal{V}}$ 
+>>5. Entonces mostramos que $f^{-1}$ es suave localmente para un entorno de $q$ y esto lo podemos hacer para cualquier $q$. Entonces $f^{-1}$ es suave   
+
+^409ff8
+
 # Áreas de regiones de superficies contenidas en abiertos coordenados
 
 >[!Theorem] Teorema del cambio de variables
 >Sea $U$ un subconjunto abierto de $\mathbb{R}^n$ y sea $h : U \to \mathbb{R}^n$ una función suave tal que $\det(dh_q) \neq 0$ para todo $q \in U$. Sea $V = h(U)$, que es un subconjunto abierto de $\mathbb{R}^n$ ([[Definiciones#^3e597f]]), y sea $f : V \to \mathbb{R}$ una función suave. Sean $A$ un subconjunto cerrado y acotado contenido en $U$ y $B = h(A)$. Entonces
 >$$ \int_A (f \circ h) |\det(dh_q)| = \int_B f. $$
+
+^17a44b
 
 >[!Definition] Area de superficie regular
 >Sea $S$ una superficie regular, sea $\psi : V \to S$ un sistema coordenado de $S$ y sea $B$ un subconjunto cerrado y acotado contenido en $V$. Se define
@@ -801,11 +804,11 @@
 >El área de $\psi(B)$ está bien definida.
 >>[!Proof]-
 >>1. Supongamos que $\varphi : U \to S$ es un sistema coordenado de $S$ tal que $\psi(B) \subset \varphi(U)$ y que $\psi(B) = \varphi(A)$.
->>2. Llamamos $h = \psi^{-1} \circ \varphi = (h^1, h^2)$. ![[Pasted image 20251128192025.png]]
+>>2. Llamamos $h(x,y) = \psi^{-1} \circ \varphi = (h^1(x,y), h^2(x,y))$. ![[Pasted image 20251128192025.png]]
 >>3. Debemos calcular
 >>$$ \text{área}(\varphi(A)) = \int_A \|\varphi_x(x, y) \times \varphi_y(x, y)\| \, dx \, dy. $$
->>4. Por 2. $\varphi = \psi \circ h$ luego $$ \varphi_x = \psi_u(h) h^1_x + \psi_v(h) h^2_x \quad \text{y} \quad \varphi_y = \psi_u(h) h^1_y + \psi_v(h) h^2_y. $$
->>5. Luego, como el producto cruz es bilineal y antisimétrico $$\begin{align} \|\varphi_x \times \varphi_y\| & = \|(\psi_u(h) h^1_x + \psi_v(h) h^2_x) \times (\psi_u(h) h^1_y + \psi_v(h) h^2_y)\| \\ & = \|(h^1_x h^2_y - h^1_y h^2_x) \psi_u(h) \times \psi_v(h)\| \\& = |\det(dh)| \|(\psi_u \times \psi_v)(h)\|\end{align} $$
+>>4. Por 2. $\varphi(x,y) = (\psi \circ h)(x,y)$ luego $$ \varphi_x = \psi_u(h) h^1_x + \psi_v(h) h^2_x \quad \text{y} \quad \varphi_y = \psi_u(h) h^1_y + \psi_v(h) h^2_y. $$
+>>5. Luego, como el producto cruz es bilineal y antisimétrico $$\begin{align} \|\varphi_x \times \varphi_y\| & = \|(\psi_u(h) h^1_x + \psi_v(h) h^2_x) \times (\psi_u(h) h^1_y + \psi_v(h) h^2_y)\|\\&= \lVert (h_{x}^{1}h_{y}^{1})  (\psi_{u}\times\psi_{u})+(h_{x}^{2}h_{y}^{1})  (\psi_{v}\times\psi_{u})+ (h_{x}^{1}h_{y}^{2})  (\psi_{u}\times\psi_{v})+(h_{x}^{2}h_{y}^{2})  (\psi_{v}\times\psi_{v})+\rVert \\&=\lVert (h_{x}^{2}h_{y}^{1})  (\psi_{v}\times\psi_{u})+(h_{x}^{1}h_{y}^{2})  (\psi_{u}\times\psi_{v}) \rVert \\&=\lVert - (h_{x}^{2}h_{y}^{1})  (\psi_{u}\times\psi_{v})+ (h_{x}^{1}h_{y}^{2})  (\psi_{u}\times\psi_{v})  \rVert \\ & = \|(h^1_x h^2_y - h^1_y h^2_x) \psi_u(h) \times \psi_v(h)\| \\& = |\det(dh)| \|(\psi_u \times \psi_v)(h)\|\end{align} $$
 >>6. Luego $$\begin{align}\text{área}(\varphi(A)) &= \int_A \|\varphi_x(x, y) \times \varphi_y(x, y)\| \, dx \, dy\\&=\int_{A} |\det(dh)| \|(\psi_u \times \psi_v)(h)\|\\&=\int_{B}\lVert \psi_{x}\times\psi_{y} \rVert && ( h(A)=B \text{ por 2.}) \\&=\text{area}(\psi(B))\end{align}$$ Por el teorema del cambio de variables (Notar $h(A)=B$ por 2.) 
 
 >[!Example]- Funcion que preserva areas
@@ -930,6 +933,8 @@
 >>3. Sean $E, F, G$ y $\bar{E}, \bar{F}, \bar{G}$ los coeficientes de la primera forma fundamental de $\varphi$ y $\bar{\varphi}$, respectivamente. Por el [[Definiciones#^e69a37]] $$ \|\varphi_u \times \varphi_v\| = \sqrt{EG - F^2} \quad \text{y} \quad \|\bar{\varphi}_u \times \bar{\varphi}_v\| = \sqrt{\bar{E}\bar{G} - \bar{F}^2}, $$
 >>4. Ahora $\bar{\varphi}\circ\varphi ^{-1}=f$ que es una isometria entonces por [[Definiciones#^7286f3]] los coeficientes de la 1era forma son iguales. Con lo cual $\lVert \varphi_{u}\times\varphi_{v} \rVert=\lVert \bar\varphi_{u}\times\bar\varphi_{v} \rVert$ 
 >>5. Integrando sobre $A$ obtenemos que $$ \text{área } \varphi(A) = \text{área } \bar{\varphi}(A) $$como deseábamos.
+
+^31299e
 
 >[!Definition] Superficie rígida
 >Una superficie $M$ se dice **rígida** si para toda isometría $f : M \to N$, donde $N$ es una superficie, se cumple que $f = F|_M$ para cierta transformación euclidiana $F : \mathbb{R}^3 \to \mathbb{R}^3$.
@@ -1064,20 +1069,22 @@
 >[!Definition] Cinta de Möbius
 >La cinta de Möbius es el conjunto $M = \{\varphi(s, t) \mid s \in \mathbb{R}, |t| < r\}$ dada por$$ \varphi(s, t) = \alpha(s) + t v(s), $$donde $$ \alpha(s) = (\cos s, \sin s, 0) \quad \text{y} \quad v(s) = \cos(\frac{s}{2}) \alpha(s) + \sin(\frac{s}{2}) (0, 0, 1). $$Se puede demostrar que $M$ es una superficie regular si $r > 0$ es suficientemente pequeño. ¿Es isométrica a la cinta de Möbius que construimos con papel?
 
->[!Proposition]
+>[!Proposition] Cinta Mobius no es orientable
 >La cinta de Möbius no es orientable.
 >>[!Proof]-
->>10. Supongamos que existe una función $n : M \to \mathbb{R}^3$ continua tal que $\|n(p)\| = 1$ y $n(p) \perp T_pM$ para todo $p \in M$.
->>11. Definimos la función $$ N : \mathbb{R} \to \mathbb{R}^3, \quad N(s) = n(\alpha(s)), \quad (13) $$que es continua pues es composición de funciones continuas.
->>12. Por otro lado $$ \varphi_s(s, t) = \alpha'(s) + t v'(s) \quad \text{y} \quad \varphi_t(s, t) = v(s); $$en particular, $\varphi_s(s, 0) = \alpha'(s)$ y $\varphi_t(s, 0) = v(s)$. 
->>13. Luego,$$ (\varphi_s \times \varphi_t)(s, 0) = \alpha'(s) \times v(s), $$que está en $(T_{\varphi(s, t)}M)^\perp$ y además unitario, pues $\|\alpha'(s)\| = 1 = \|v(s)\|$ y $\alpha'(s) \perp v(s)$.
->>14. Así, para cada $s$ $$ N(s) = \varepsilon(s) \alpha'(s) \times v(s) $$para cierta función $\varepsilon : \mathbb{R} \to \mathbb{R}$ con valores en el conjunto $\{-1, 1\}$.
->>15. Veamos que $\varepsilon$ es constante. Para eso despejamos $$ \varepsilon(s) = \langle N(s), \alpha'(s) \times v(s) \rangle, $$que es una función continua de $s$. 
->>16. Por el teorema de los valores intermedios, $\varepsilon$ es constante igual a $1$ o constante igual a $-1$.
->>17. Ahora calculamos $$ N(0) = \varepsilon(0) \alpha'(0) \times v(0) \quad \text{y} \quad N(2\pi) = \varepsilon(2\pi) \alpha'(2\pi) \times v(2\pi). $$
->>18. Como $\alpha$ es periódica de período $2\pi$, $\alpha'$ también lo es; así $\alpha'(2\pi) = \alpha'(0)$
->>19. También, es fácil verificar que $v(2\pi) = -v(0)$. Entonces $N(2\pi) = -N(0)$. Pero esto implica por (13) que $$ n(\alpha(2\pi)) = -n(\alpha(0)), $$lo cual es absurdo, pues $\alpha(2\pi) = \alpha(0)$. 
->>20. En consecuencia, $M$ no es orientable. $\square$
+>>1. Supongamos que existe una función $n : M \to \mathbb{R}^3$ continua tal que $\|n(p)\| = 1$ y $n(p) \perp T_pM$ para todo $p \in M$.
+>>2. Definimos la función $$ N : \mathbb{R} \to \mathbb{R}^3, \quad N(s) = n(\alpha(s)), \quad (13) $$que es continua pues es composición de funciones continuas.
+>>3. Por otro lado $$ \varphi_s(s, t) = \alpha'(s) + t v'(s) \quad \text{y} \quad \varphi_t(s, t) = v(s); $$en particular, $\varphi_s(s, 0) = \alpha'(s)$ y $\varphi_t(s, 0) = v(s)$. 
+>>4. Luego,$$ (\varphi_s \times \varphi_t)(s, 0) = \alpha'(s) \times v(s), $$que está en $(T_{\varphi(s, 0)}M)^\perp$ y además unitario, pues $\|\alpha'(s)\| = 1 = \|v(s)\|$ y $\alpha'(s) \perp v(s)$. ($\lVert A\times B \rVert=\lVert A \rVert\lVert B \rVert cos(\theta_{A,B})$) 
+>>5. Así, para cada $s$ $$ N(s) = \varepsilon(s) \alpha'(s) \times v(s) $$para cierta función $\varepsilon : \mathbb{R} \to \mathbb{R}$ con valores en el conjunto $\{-1, 1\}$. (Obviamente $N(s)$ esta en $(T_{\varphi(s,0)}M)^{\perp}$ por que $\varphi(s,0)=\alpha (s)$) 
+>>6. Veamos que $\varepsilon$ es constante. Para eso despejamos $$ \varepsilon(s) = \langle N(s), \alpha'(s) \times v(s) \rangle, $$que es una función continua de $s$. 
+>>7. Por el teorema de los valores intermedios, $\varepsilon$ es constante igual a $1$ o constante igual a $-1$.
+>>8. Ahora calculamos $$ N(0) = \varepsilon(0) \alpha'(0) \times v(0) \quad \text{y} \quad N(2\pi) = \varepsilon(2\pi) \alpha'(2\pi) \times v(2\pi). $$
+>>9. Como $\alpha$ es periódica de período $2\pi$, $\alpha'$ también lo es; así $\alpha'(2\pi) = \alpha'(0)$
+>>10. También, es fácil verificar que $v(2\pi) = -v(0)$. Entonces $N(2\pi) = -N(0)$. Pero esto implica por (13) que $$ n(\alpha(2\pi)) = -n(\alpha(0)), $$lo cual es absurdo, pues $\alpha(2\pi) = \alpha(0)$. 
+>>11. En consecuencia, $M$ no es orientable. $\square$
+
+^dff491
 
 >[!Remark]
 >La cinta de Möbius tiene un solo lado.
@@ -1085,15 +1092,15 @@
 >[!Proposition]
 >Las orientaciones (campos noramales unitarios)   de superficies son de clase $C^2$.
 >>[!Proof]-
->>21. Sea $n : M \to \mathbb{R}^3$ una orientación en la superficie $M$. Ver que $n$ es de clase $C^2$ es ver que lo es un punto arbitrario $p$ de $M$. 
->>22. Sea $\varphi : U \to M$ una carta coordenada con $U$ conexo y $p \in \varphi(U)$.
->>23. Sea $N : U \to \mathbb{R}^3$ definida por $$ N(u, v) = \frac{\varphi_u(u, v) \times \varphi_v(u, v)}{\|\varphi_u(u, v) \times \varphi_v(u, v)\|}. $$
->>24. Notemos que tanto $N(u, v)$ como $n(\varphi(u, v))$ son vectores normales unitarios a $M$ en $\varphi(u, v)$. Por lo tanto, $n(\varphi(u, v)) = \pm N(u, v)$.
->>25. Consideremos la función $f: U \to \mathbb{R}$ dada por $f(u, v) = \langle n(\varphi(u, v)), N(u, v) \rangle$. Como $n$ y $N$ son continuas, $f$ es continua. 
->>26. Además, su imagen está contenida en $\{-1, 1\}$. Pues son paralelos
->>27. Como $U$ es conexo, $f$ debe ser constante. Pues $f(U)$ debe ser conexo por que $f$ es continua 
->>28. Luego, $n(\varphi(u, v)) = N(u, v)$ para todo $(u, v) \in U$ o $n(\varphi(u, v)) = -N(u, v)$ para todo $(u, v) \in U$.
->>29. En cualquier caso, $n \circ \varphi$ coincide con $\pm N$, que es una función de clase $C^2$ (de hecho $C^\infty$ si la superficie lo es) (El producto cruz es $C^{\infty}$)  pues $\varphi$ lo es y el denominador no se anula. Esto prueba que $n$ es de clase $C^2$. 
+>>12. Sea $n : M \to \mathbb{R}^3$ una orientación en la superficie $M$. Ver que $n$ es de clase $C^2$ es ver que lo es un punto arbitrario $p$ de $M$. 
+>>13. Sea $\varphi : U \to M$ una carta coordenada con $U$ conexo y $p \in \varphi(U)$.
+>>14. Sea $N : U \to \mathbb{R}^3$ definida por $$ N(u, v) = \frac{\varphi_u(u, v) \times \varphi_v(u, v)}{\|\varphi_u(u, v) \times \varphi_v(u, v)\|}. $$
+>>15. Notemos que tanto $N(u, v)$ como $n(\varphi(u, v))$ son vectores normales unitarios a $M$ en $\varphi(u, v)$. Por lo tanto, $n(\varphi(u, v)) = \pm N(u, v)$.
+>>16. Consideremos la función $f: U \to \mathbb{R}$ dada por $f(u, v) = \langle n(\varphi(u, v)), N(u, v) \rangle$. Como $n$ y $N$ son continuas, $f$ es continua. 
+>>17. Además, su imagen está contenida en $\{-1, 1\}$. Pues son paralelos
+>>18. Como $U$ es conexo, $f$ debe ser constante. Pues $f(U)$ debe ser conexo por que $f$ es continua 
+>>19. Luego, $n(\varphi(u, v)) = N(u, v)$ para todo $(u, v) \in U$ o $n(\varphi(u, v)) = -N(u, v)$ para todo $(u, v) \in U$.
+>>20. En cualquier caso, $n \circ \varphi$ coincide con $\pm N$, que es una función de clase $C^2$ (de hecho $C^\infty$ si la superficie lo es) (El producto cruz es $C^{\infty}$)  pues $\varphi$ lo es y el denominador no se anula. Esto prueba que $n$ es de clase $C^2$. 
 
 # Curvatura de superficies. El operador de forma
 
@@ -1135,9 +1142,11 @@
 
 >[!Definition] Curvatura Gaussiana y Media
 >Los vectores $X$ y $Y$ se llaman **direcciones principales** en $p$ y $k_1, k_2$ se denominan **curvaturas principales** en $p$.
->Un vector $Z \neq 0$ en $T_pM$ que satisface $\langle A_p(Z), Z \rangle = 0$ se dice un **vector asintótico** en $p$.
 >Las **curvaturas gaussiana** y **media** de $M$ en $p$ son, respectivamente,
 >$$ K(p) = k_1 k_2 \quad \text{y} \quad H(p) = \frac{1}{2} (k_1 + k_2). $$
+
+>[!Definition] Vector asintótico
+>Un vector $Z \neq 0$ en $T_pM$ que satisface $\langle A_p(Z), Z \rangle = 0$ se dice un **vector asintótico** en $p$
 
 >[!Example]- Calculando alguna curvatura media y Gaussiana 
 >Sea $M$ la silla de montar, gráfico de la función $f : \mathbb{R}^2 \to \mathbb{R}$ dada por $f(x, y) = x^2 - 3y^2$ y sea $p = (0, 0, 0)$.
@@ -1161,7 +1170,7 @@
 
 ^d6595a
 
->[!Remark]-
+>[!Remark]
 >Las direcciones $X$ y $Y$ son aquellas donde la superficie más se curva (respectivamente, menos se curva) cerca de $p$.
 >En la dirección de los vectores asintóticos en $p$ es donde, a nivel infinitesimal, la superficie corta al plano tangente afín en $p$.
 
@@ -1247,14 +1256,22 @@
 >Sea $M$ una superficie regular y sea $\alpha : (-\varepsilon, \varepsilon) \to M$ una curva suave de rapidez unitaria con $\alpha(0) = p$. Se define la **curvatura normal** de $\alpha$ en $M$ en $p$ como la componente de la aceleración de $\alpha$ en cero según $n(p)$, o sea,
 >$$ \langle \alpha''(0), n(p) \rangle. $$
 
->[!Proposition]
+>[!Proposition] Direccion asintotica y curvatura normal
 >Se cumple que
 >$$ \langle \alpha''(0), n(p) \rangle = \langle A_p(\alpha'(0)), \alpha'(0) \rangle. $$
 >>[!Proof]-
 >>1. Como la curva $\alpha$ está en $M$, su velocidad es tangente, o sea $$ \langle \alpha'(s), n(\alpha(s)) \rangle = 0 $$para todo $s$. 
 >>2. Derivando miembro a miembro y evaluando en $s = 0$ obtenemos $$ \langle \alpha''(0), n(\alpha(0)) \rangle + \langle \alpha'(0), (n \circ \alpha)'(0) \rangle = 0 $$para todo $s$, o equivalentemente $$ \langle \alpha''(0), n(p) \rangle = - \langle \alpha'(0), dn_p(\alpha'(0)) \rangle = \langle \alpha'(0), A_p(\alpha'(0)) \rangle, $$como queríamos.
 
+^9c84b1
+
 ^852d07
+
+>[!Remark]
+>Estas dos afirmaciones se podrian escribir mas general
+>$$k_{n,p_{0}}=\langle\alpha ''(t_{0}),n(p_{0})\rangle$$
+>Donde $\alpha (t_{0})=p_{0}$
+>Y por lo tanto $$k_{n,p_{0}}=\langle A_{p_{0}}(\alpha '(t_{0})),\alpha '(t_{0})\rangle$$     
 
 >[!Corollary]
 >Dado un vector unitario $v \in T_pM$, todas las curvas $\beta$ en $M$ con rapidez unitaria tales que $\beta(0) = p$ y $\beta'(0) = v$ tienen la misma curvatura normal en $p$.
@@ -1270,14 +1287,22 @@
 >Sean $X, Y$ direcciones principales en un punto $p$ de una superficie $M$, y sean $k_1, k_2$ las correspondientes curvaturas principales en $p$. Entonces
 >$$ \kappa_{n, p}(\cos \theta X + \sin \theta Y) = k_1 \cos^2 \theta + k_2 \sin^2 \theta \quad (18) $$
 >para todo $\theta \in \mathbb{R}$.
+>Mas aun $$k_{n,p}(aX+bY)=k_{1}a^{2}+k_{2}b^{2}$$  
 >>[!Proof]-
->>1. El miembro izquierdo es por definición $$ \langle A_p(\cos \theta X + \sin \theta Y), \cos \theta X + \sin \theta Y \rangle = \langle \cos \theta k_1 X + \sin \theta k_2 Y, \cos \theta X + \sin \theta Y \rangle, $$que coincide con el segundo miembro de (18) pues $\{X, Y\}$ es una base ortonormal.
+>>1. El miembro izquierdo es por definición $$ \langle A_p(\cos \theta X + \sin \theta Y), \cos \theta X + \sin \theta Y \rangle = \langle \cos \theta k_1 X + \sin \theta k_2 Y, \cos \theta X + \sin \theta Y \rangle, $$ que coincide con el segundo miembro de (18) pues $\{X, Y\}$ es una base ortonormal.
 
->[!Corollary]
+^b7dfa0
+
+>[!Corollary] Curvaturas principales son normales
 >Se cumple que $\kappa_{n, p}(X) = k_1$, $\kappa_{n, p}(Y) = k_2$ y
 >$$ k_2 \le \kappa_{n, p}(\cos \theta X + \sin \theta Y) \le k_1 $$
 >para todo $\theta$.
 >Esto provee una justificación a un enunciado informal anterior que afirmaba que las direcciones principales son aquellas partiendo de $p$ donde la superficie más se curva y menos se curva.
+>>[!Proof]-
+>>1. Las dos igualdades salen de la [[Definiciones#^b7dfa0]]
+>>2. La desigualdades salen primero notando que $k_{2}\leq k_{1}$ por definicion y $$k_{1}\cos^{2}\theta+k_{2}\sin^{2}\theta=k_{2}(\cos^{2}\theta+\sin^{2}\theta)+(k_{1}-k_{2})\cos^{2}\theta=k_{2}+(k_{1}-k_{2})\cos^{2}\theta$$ y notando $0 \leq \cos^{2}\theta\leq 1$   
+
+^c069c2
 
 >[!Proposition]
 >Si la trayectoria de la recta $\alpha(t) = p + tu$ (con $\|u\| = 1$) está contenida en una superficie $M$, entonces $\alpha$ es una línea asintótica de $M$.
@@ -1369,7 +1394,13 @@
 
 >[!Remark] Comentarios finales sobre curvatura
 >1. Las superficies regladas tienen curvatura gaussiana $K \le 0$. ¿Con qué resultado de la página 57 se puede justificar la afirmación? En la curva de estrechez (si existe) la curvatura negativa es más pronunciada (o sea, menor). En otras palabras, para cada recta de la regla, la curvatura alcanza el mínimo al intersecar la curva guía.
->2. Las superficies con curvatura media idénticamente nula, $H = 0$, se denominan **superficies mínimas**. Entre los ejemplos tenemos el plano, el helicoide y la catenoide. Si sumergimos un alambre en agua jabonosa obtenemos una superficie mínima. Además, una región pequeña de una superficie mínima tiene área mínima entre la cercanas que comparten el borde con ella.
+
+>[!Definition] Superficie minima
+>Las superficies con curvatura media idénticamente nula, $H = 0$, se denominan **superficies mínimas**. 
+>Entre los ejemplos tenemos el plano, el helicoide y la catenoide. 
+
+>[!Remark]
+>Si sumergimos un alambre en agua jabonosa obtenemos una superficie mínima. Además, una región pequeña de una superficie mínima tiene área mínima entre la cercanas que comparten el borde con ella.
 
 # Geodésicas
 
@@ -1670,7 +1701,7 @@
 >[!Remark]
 >Ahora vemos otra aplicación de la existencia y unicidad de geodésicas.
 
->[!Proposition]
+>[!Proposition] Caso reflexion preserva geodesicas
 >Sea $M$ una superficie regular y sea $P$ un plano que intersecta a $M$ en la trayectoria de una curva $\alpha$ de rapidez unitaria. Si la reflexión respecto de $P$ lleva $M$ en $M$, entonces $\alpha$ es una geodésica de $M$.
 >>[!Proof]-
 >>6. Sin pérdida de generalidad podemos suponer que $P = \{(x, y, 0) \mid x, y \in \mathbb{R}\}$ y $\alpha(t) = (u(t), v(t), 0)$. (Notar que el enunciado nos dice que $\alpha \subseteq P$) 
@@ -1686,6 +1717,8 @@
 >>16. Por lo tanto, $z(t) = 0$ para todo $t$ y así ambas curvas están en $P$, y en particular en la intersección de $P$ con $M$, que es la trayectoria de $\alpha$.
 >>17. Finalmente, como además $\alpha, \gamma$ y $\beta$ tienen rapidez unitaria, el mismo punto incial y la misma velocidad inicial, las tres curvas son iguales en un intervalo cerca del $0$. 
 >>18. Obviamente esto lo podriamos haber hecho para cualqueir punto no necesariamente el $0$. Así, $\alpha$ es una geodésica en $M$.
+
+^2bbc2c
 
 # Distancia en una superficie y propiedades minimizantes de las geodésicas
 
