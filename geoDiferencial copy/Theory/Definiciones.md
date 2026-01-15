@@ -90,9 +90,6 @@
 >>	9. Luego $$ \langle B(t), n \rangle = \langle \varepsilon(t) n, n \rangle = \varepsilon(t) \langle n, n \rangle = \varepsilon(t) $$
 >>	10. Como $\varepsilon$ es continua (por que $B$ lo es, porque $N$ y $T$ los son porque $\alpha$ es suave), por el teorema de los valores intermedios resulta que $\varepsilon$ es constante, igual a $1$ o a $-1$. 
 >>	11. En el primer caso, $B = n$, con lo cual $0 = B' = -\tau N$, de donde $\tau = 0$. Si $B = -n$, el argumento es similar.
->> [!Summary] Resumen de la prueba
->> - **(⇐)** Si la torsión es nula, el vector binormal $B$ es constante, lo que implica que la curva vive en un plano ortogonal a ese vector.
->> - **(⇒)** Si la curva es plana, su vector tangente y normal son ortogonales al vector normal del plano. Por tanto, el vector binormal $B$ debe ser constante (salvo signo), lo que implica que su derivada y la torsión son nulas.
 >
 
 >[!Remark]
@@ -125,10 +122,7 @@
 >>	4. Así, $u$ es un vector constante. Además $$ \|u\|^2 = \cos^2 \theta + \sin^2 \theta = 1, $$por lo que $u$ es unitario. 
 >>	5. Finalmente $$ \langle \alpha'(t), u \rangle = \langle T(t), (\cos \theta) T(t) + (\sin \theta) B(t) \rangle = \cos \theta, $$que es constante. 
 >>	6. Por definición, $\alpha$ es una hélice. $\square$
->> [!Summary] Resumen de la prueba
->> - **(⇒)** Derivando la condición de hélice ($\langle T, u \rangle = \text{cte}$) se llega a que $N$ es ortogonal a un vector fijo $u$. Derivando nuevamente y usando las ecuaciones de Frenet, se obtiene una relación lineal entre $\kappa$ y $\tau$ que implica que su cociente es constante.
->> - **(⇐)** Si $\tau/\kappa$ es constante, se puede construir un vector $u$ como combinación de $T$ y $B$ tal que su derivada sea cero (usando Frenet). Esto demuestra que $u$ es un vector fijo y que la curva cumple la definición de hélice.
->
+
 >[!Definition] Curvatura de reparametrizacion
 >Sea $\alpha : [a, b] \to \mathbb{R}^3$ una curva regular de longitud $L$. Se define la **curvatura** de $\alpha$ en el instante $t$ mediante
 > $$\kappa_{\alpha}(t) = \kappa_{\beta}(\sigma(t)),$$
@@ -195,9 +189,6 @@
 >>3. Se cumple que $$ \alpha(a) = p \quad \text{y} \quad \alpha'(s) = (\cos \theta(s), \sin \theta(s))$$
 >>4. Necesitamos que $\tilde{k}(s) = k(s)$, o equivalentemente, por [[Definiciones#^bb97e8]], que $\tilde{k}(s) = \theta'(s)$.
 >>5. Luego, tomando $$ \theta(s) = \theta_o + \int_a^s \tilde{k}(t) \, dt $$la curva $\alpha$ satisface lo requerido
->> [!Summary] Resumen de la prueba
->> Se construye explícitamente la curva integrando un vector tangente unitario cuyo ángulo $\theta$ es la integral de la curvatura signada dada. Este procedimiento garantiza que la curva tenga la curvatura prescrita y cumpla las condiciones iniciales de posición y dirección.
->
 
 >[!Theorem] Teorema fundamental de las curvas espaciales
 >Sea $\kappa : (a, b) \to \mathbb{R}$ una función positiva de clase $C^2$ y sea $\tau : (a, b) \to \mathbb{R}$ una función de clase $C^1$. Dados $t_o \in (a, b)$, $p \in \mathbb{R}^3$ y una base ortonormal $\{t, n, t \times n\}$ de $\mathbb{R}^3$, existe una única curva suave de rapidez unitaria $\alpha : (a, b) \to \mathbb{R}^3$ tal que su curvatura y su torsión son $\kappa$ y $\tau$, respectivamente, y además $\alpha(t_o) = p$, $T(t_o) = t$, $N(t_o) = n$ y $B(t_o) = t \times n$ 
@@ -213,9 +204,6 @@
 >>6. Escribimos $$ q - p = \alpha(b) - \alpha(a) = \int_a^b \alpha'(t) \, dt $$
 >>7. Hacemos producto escalar contra $q - p$ miembro a miembro y obtenemos $$ \begin{align}\|q - p\|^2 & = \left\langle \int_a^b \alpha'(t) \, dt, q - p \right\rangle \\ & = \int_a^b \langle \alpha'(t), q - p \rangle \, dt\\& \le \int_a^b \|\alpha'(t)\| \|q - p\| \, dt \\& = \|q - p\| \int_a^b \|\alpha'(t)\| \, dt \end{align}$$ (hemos usado la desigualdad de Schwarz).
 >>8. Ahora, si $q = p$, el enunciado es claramente verdadero. Si $q \ne p$, tenemos $\|q - p\| \ne 0$ y así $$ \|q - p\| \le \int_a^b \|\alpha'(t)\| \, dt = \text{long}(\alpha), $$como queríamos.
->> [!Summary] Resumen de la prueba
->> Se expresa el vector desplazamiento $q-p$ como la integral del vector velocidad. Al proyectar este desplazamiento sobre sí mismo (producto escalar) y aplicar la desigualdad de Cauchy-Schwarz dentro de la integral, se concluye que la distancia en línea recta es siempre menor o igual que la longitud del camino recorrido (integral de la rapidez).
->
 
 >[!Definition] Circunferencia osculatriz y Evoluta
 >Sea $\alpha : (a, b) \to \mathbb{R}^2$ una curva de rapidez unitaria y curvatura signada $k : (a, b) \to \mathbb{R}$ positiva.
@@ -262,10 +250,11 @@
 >b) $C$ preserva productos internos.
 >c) $C$ preserva normas.
 >>[!Proof]-
+>>- a) $\Rightarrow$ b) $\langle Cx, Cy \rangle = (Cx)^T Cy = x^T C^T C y = x^T I y = x^T y = \langle x, y \rangle$.
+>>- b) $\Rightarrow$ c) $\|Cx\|^2 = \langle Cx, Cx \rangle = \langle x, x \rangle = \|x\|^2$.
+>>- c) $\Rightarrow$ b) Ejercicio. Se deduce de la identidad de polarización:
+>>$$ 4 \langle x, y \rangle = \|x + y\|^2 - \|x - y\|^2. $$
 >>- b) $\Rightarrow$ a) Resulta de que si $C$ preserva poductos internos, entonces lleva la base canónica (que es ortonormal) en una base ortonormal. $\square$
->> [!Summary] Resumen de la prueba
->> - **(a ⇔ b):** La definición de matriz ortogonal ($C^T C = I$) es equivalente a decir que la transformación preserva el producto interno.
->> - **(b ⇔ c):** La preservación del producto interno implica la de la norma; el recíproco se demuestra mediante la identidad de polarización, que expresa el producto interno en términos de normas.
 
 ^8d0719
 
@@ -282,9 +271,6 @@
 >>4. Eso es lo mismo que ver que
 >>$$ \det(C(x, y, z)) = \det(C) \det(x, y, z) $$
 >>que es verdadero. $\square$
->> [!Summary] Resumen de la prueba
->> Se utiliza la propiedad del determinante de una composición de transformaciones. Al expresar el producto mixto de tres vectores transformados como el determinante de la matriz formada por ellos, se relaciona directamente con el determinante de la matriz de transformación y el producto mixto original.
->
 
 >[!Proposition]
 >Sea $C$ una transformación ortogonal de $\mathbb{R}^3$. Entonces la matriz de $C$ respecto de alguna base ortonormal de $\mathbb{R}^3$ tiene la forma
@@ -356,8 +342,6 @@
 >> 3. Veamos que si $\varepsilon = -1$, entonces $T$ es la reflexión en $u/2$. 
 >> 4. En efecto notemos que $$ -\left(x - \frac{u}{2}\right) + \frac{u}{2} = -x + \frac{u}{2} + \frac{u}{2} = -x + u=T(x) $$
 >> 5. Pero $-\left( x-\frac{u}{2} \right)+\frac{u}{2}$ es mover el origen a $\frac{u}{2}$ $x\mapsto x-\frac{u}{2}$ compuesto con hacer reflexion respecto del origen $x\mapsto -x$ compuesta con mover el origen a su punto original nuevamente $x\mapsto x+\frac{u}{2}$. Entonces esto es una reflexion respecto de $\frac{u}{2}$ 
->> [!Summary] Resumen de la prueba
->> Se analiza la forma general $T(x) = \pm x + u$. Si el coeficiente es $1$, es una traslación pura. Si es $-1$, la expresión se puede reorganizar para mostrar que es una reflexión simétrica respecto al punto medio del desplazamiento.
 
 >[!Definition] Caso $n=2$
 >Denotamos por $R_{z, \theta}$ la rotación en ángulo $\theta$ alrededor del punto $z \in \mathbb{R}^2$. Se obtiene de conjugar $R_\theta$ por la traslación $x \mapsto x + z$, o sea,
@@ -384,8 +368,6 @@
 >>5. Si no, tenemos que $$ T(x) = \begin{pmatrix} R_\theta & 0 \\ 0 & 1 \end{pmatrix} \begin{pmatrix} x' \\ a \end{pmatrix} + \begin{pmatrix} u' \\ b \end{pmatrix} = \begin{pmatrix} R_\theta x' + u' \\ a + b \end{pmatrix}. $$
 >>6. Luego, $x' \mapsto R_\theta x' + u'$ es una transformación rígida del plano que no es una traslación. Sabemos que es la rotación en el mismo ángulo $\theta$ alrededor de cierto $z \in \mathbb{R}^2$. Entonces $$ T(x) = \begin{pmatrix} R_{z, \theta} x' \\ a + b \end{pmatrix} = \begin{pmatrix} R_\theta (x' - z) + z \\ a \end{pmatrix} + \begin{pmatrix} 0 \\ b \end{pmatrix}. $$
 >>7. El primer término representa la rotación alrededor de la recta vertical $\{z\} \times \mathbb{R}$ y el segundo, la traslación vertical en $b$. $\square$
->> [!Summary] Resumen de la prueba
->> Se descompone la transformación rígida en una parte de rotación y otra de traslación. Utilizando una base adecuada, la rotación se reduce a un plano, y se demuestra que el movimiento total equivale a rotar sobre un eje y desplazarse simultáneamente a lo largo de este, que es la definición de tirabuzón.
 
 # Repaso de cálculo en varias variables
 
@@ -460,8 +442,6 @@
 >>7. Se cumple que $$ \Phi(\varphi(u, v)) = \Phi(u, v, f(u, v)) = (u, v). $$
 >>8. La comprobación del siguiente hecho queda como ejercicio: $$ \varphi(U) = \mathcal{V} \cap S. $$
 >>9. Como $U=A$ entonces $S\subseteq \mathcal{V}$ entonces es ver que $\varphi(U)=S$ que es evidente por definicion  
->> [!Summary] Resumen de la prueba
->> Se construye una parametrización natural proyectando sobre el plano del dominio. La inyectividad de la diferencial se garantiza porque la matriz jacobiana contiene una matriz identidad $2\times 2$. La existencia de la inversa suave $\Phi$ se asegura mediante la proyección ortogonal sobre las primeras dos coordenadas.
 
 >[!Remark]
 >El punto (2) de la definición de superficie regular requiere la existencia de inversas a derecha continuas locales $\Phi$. Las necesitamos para excluir subconjuntos como el siguiente:
@@ -500,8 +480,6 @@
 >>10. Para mostrar que $S$ es una superficie regular, para cada $q \in S$ tomamos $$ \varphi : U \to \mathbb{R}^3, \quad \varphi(u, v) = (u, v, f(u, v)), $$ con $U$ y $f$ como arriba.
 >>11. La verificación de los apartados (1) y (2) de la definición de superficie regular es la misma de que los gráficos de funciones son superficies regulares, con $\mathcal{V}$ también como arriba.
 >>12. Osea que para cada $q\in S$ tengo un entorno donde puedo armar una carta. Entonces $S$ es superficie 
->> [!Summary] Resumen de la prueba
->> El requisito de gradiente no nulo permite aplicar el Teorema de la Función Implícita del cálculo avanzado. Esto garantiza que, localmente, la superficie se puede expresar como el gráfico de una función suave de dos variables, lo cual ya se demostró que constituye una superficie regular.
 
 ^14271e
 
@@ -533,8 +511,6 @@
 >>14. Como $z$ es continua, $z(a) = -1$ y $z(b) = 1$, por el Teorema de los Valores Intermedios existe $t_o \in [a, b]$ tal que $z(t_o) = 0$.
 >>15. Entonces $\alpha(t_o) = (x(t_o), y(t_o), 0)$.
 >>16. Como $\alpha(t_o) \in S$ resulta que $0 - x(t_o)^2 - y(t_o)^2 = 1$, con lo que llegamos a un absurdo.
->> [!Summary] Resumen de la prueba
->> Se utiliza el Teorema de los Valores Intermedios aplicado a la función altura $z$. Si existiera una curva que une las dos hojas del hiperboloide (una con $z \ge 1$ y otra con $z \le -1$), debería pasar por $z=0$, lo cual es imposible según la ecuación de la superficie.
 
 # Funciones suaves definidas en superficies
 
@@ -551,8 +527,6 @@
 >>4. En efecto, debemos ver que $$ \varphi^{-1}(f(z)) = \Phi(f(z)) $$ para todo $z \in A$.
 >>5. Como $f(A) \subset \varphi(U)$, tenemos que $f(z) = \varphi(q)$ para cierto $q \in U$.
 >>6. Entonces la igualdad anterior equivale a $\varphi^{-1}(\varphi(q)) = \Phi(\varphi(q))$, que es verdadera para todo $q \in U$ (pues ambas son iguales a $q$).
->> [!Summary] Resumen de la prueba
->> La suavidad de la inversa de la carta $\varphi^{-1}$ (cuando se compone adecuadamente) se hereda de la función $\Phi$ garantizada por la definición de superficie regular. Al ser $f$ suave al espacio ambiente y $\Phi$ suave, su composición también lo es.
 
 ^408c1f
 
@@ -573,8 +547,6 @@
 >>3. Así resulta que $U' = \varphi^{-1}(\mathcal{U} \cap \mathcal{V})$ y que este es un subconjunto abierto de $\mathbb{R}^2$. Notar que $\varphi ^{-1}(\mathcal{U}\cap\mathcal{V})=\varphi ^{-1}(S\cap\mathcal{U}\cap\mathcal{V})$ por que $\varphi(U)\subseteq S$ 
 >>4. Con $V'$ se procede análogamente.
 >>5. Finalmente, $\psi^{-1} \circ \varphi$ es suave por [[Definiciones#^408c1f]] recordando que $\varphi$ es suave por ser carta de coordenadas 
->> [!Summary] Resumen de la prueba
->> Se demuestra que el cambio de coordenadas es la composición de una carta con la inversa de otra. Aplicando el lema del diagrama triangular, se concluye que esta transición entre mapas es suave, asegurando que la estructura diferenciable de la superficie es consistente.
 
 >[!Definition] Suavidad para funciones con superficie en dominio
 >Sea $S\subseteq \mathbb{R}^{3}$ una superficie regular y sea $p \in S$. Una función $f : S \to \mathbb{R}^n$ se dice **suave en** $p$ si existe una carta coordenada $\varphi : U \to \mathbb{R}^3$ de $S$ con $p \in \varphi(U)$ tal que $f \circ \varphi : U \to \mathbb{R}^n$ es suave en $\varphi^{-1}(p)$.
@@ -673,8 +645,6 @@
 >>	1. Dado $(a, b) \in \mathbb{R}^2$, escribimos $$ d\varphi_q(a, b) = d\varphi_q\left(\frac{d}{dt}\Big|_0 (q + t(a, b))\right) = \frac{d}{dt}\Big|_0 \varphi(q + t(a, b)) = \alpha'(0), $$donde $\alpha(t) = \varphi(q + t(a, b))$, que es una curva suave en $S$ con $\alpha(0) = \varphi(q) = p$ (Notar $d\varphi_{q}$ es la diferencial y usamos regla de cadena notar que diferencial de $\varphi$ evaluada $q+t(a,b)=\alpha (t)$ evaluada en $0$ que es $q$ todo eso multiplicado por $\frac{d}{dt}\Big|_0 (q + t(a, b))$   pero multiplicar matriz por vector es lo mismo que evaluar la transformacion lineal dada por la matriz)  
 >>- Base
 >>	1. Notar que $d\varphi_{q}(e_{1}),d\varphi_{q}(e_{2})$ es base del $T_{p}S$ por que por ser lineal $d\varphi_{q}$ manda vectores li en vectores li y ademas $T_{p}S$ tiene dimension 2.
->> [!Summary] Resumen de la prueba
->> Se muestra que cualquier vector tangente (velocidad de una curva) puede expresarse como combinación lineal de las derivadas parciales de la carta mediante la regla de la cadena. Esto establece que el espacio tangente es la imagen de la diferencial de la parametrización.
 
 ^095a44
 
