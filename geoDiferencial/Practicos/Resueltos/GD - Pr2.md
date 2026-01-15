@@ -22,11 +22,16 @@
 >Si una curva parametrizada por longitud de arco se recorre en sentido opuesto, ¿cambian la curvatura y la torsión?
 >>[!Proof]-
 >>1. Sea $\alpha(s)$ unit-speed y sea $\beta(s)=\alpha(-s)$. 
->>2. Entonces $$\beta'(s)=-\alpha'(-s)=-T(-s)$$y por tanto $T_{\beta}(s)=-T_{\alpha}(-s)$. 
+>>2. Entonces $$\beta'(s)=-\alpha'(-s)=-T_{\alpha }(-s)$$y por tanto $T_{\beta}(s)=-T_{\alpha}(-s)$. 
 >>3. La curvatura se define como $\kappa=\|dT/ds\|$, por lo que $$\kappa_{\beta}(s)=\Big\|\frac{d}{ds}T_{\beta}(s)\Big\|=\Big\|\frac{d}{ds}(-T_{\alpha}(-s))\Big\|=\|T'_{\alpha}(-s)\|=\kappa_{\alpha}(-s)$$
 >>4. En particular, en el mismo punto geométrico la curvatura no cambia (valor absoluto).
->>5. En cambio la torsión, que involucra la orientación del triedro, cambia de signo: si $B_{\beta}(s)=-B_{\alpha}(-s)$ entonces $\tau_{\beta}(s)=-\tau_{\alpha}(-s)$. 
->>6. Conclusión, curvatura invariante, torsión cambia de signo.
+>>5. Por 2. $T'_{\beta}(s)=(-T_{\alpha }(-s))'=T'_{\alpha }(-s)$ luego como $T'=\kappa N$ $$\kappa_\beta(s)N_\beta(s)=\kappa_\alpha(-s)N_\alpha(-s)$$Luego por 3. $$N_\beta(s)=N_\alpha(-s)$$   
+>>6. Por definición $B=T\times N$, entonces $$ \begin{aligned} B_\beta(s) &=T_\beta(s)\times N_\beta(s)\\ &=(-T_\alpha(-s))\times N_\alpha(-s)\\&=-(T_\alpha(-s)\times N_\alpha(-s))\\ &=-B_\alpha(-s).\end{aligned}$$
+>>7. Luego como $B=-\tau N$ entonces $-\frac{B}{N}=\tau$ y dado que $N_{\beta}=N_{\alpha }(-s)$ sucede $$\tau_{\beta}(s)=-\frac{B_{\beta}(s)}{N_{\beta}(s)}=\frac{B_{\alpha }(-s)}{N_{\alpha }(-s)}=-\tau_{\alpha }(-s)$$    
+>>
+>>- **Conclusión.** Al invertir el sentido de recorrido:
+>>	- la curvatura no cambia
+>>	- la torsión cambia de signo: $\tau_\beta(s)=-\tau_\alpha(-s)$.
 
 ---
 

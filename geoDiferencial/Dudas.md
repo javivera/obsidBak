@@ -1,2 +1,4 @@
 - Para calcular lineas de curvatura hay alguna manera?? usar el hessiano?? 
 - Ej 4 pr8 como verifico que no hay otro plano que genere invarianza por reflexion?
+- Ej9 , bien? 
+- Terminar ej 15

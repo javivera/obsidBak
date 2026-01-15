@@ -68,6 +68,8 @@
 >>		7. **Clasificación:** $K = 0, k_1=k_2=0$. Punto **Planar**.
 >>		8. **c)** $K = 0$, $H = 0$.
 
+^5a9dfd
+
 ---
 
 >[!Example] Ejercicio 2

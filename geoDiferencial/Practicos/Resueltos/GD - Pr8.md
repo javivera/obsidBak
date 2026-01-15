@@ -91,80 +91,41 @@
 >[!Example] Ejercicio 6
 >Sea $S$ la esfera de centro cero y radio 1 y sea $\alpha$ una parametrización por longitud de arco del paralelo de altura $1/2$. Sea $W$ un campo paralelo a lo largo de $\alpha$ con $W(0) = \alpha'(0)$. Indicar cuántas vueltas da $W$ respecto del marco móvil a lo largo de $\alpha$ cuando esta curva da una vuelta completa. ¿Cuánto gira realmente $W$ a lo largo de $\alpha$?
 >>[!Proof]-
->>1. **Datos:** Esfera radio $R=1$. Altura $z=1/2$.
->>   El ángulo de la latitud $\lambda$ cumple $\sin \lambda = 1/2 \implies \lambda = 30^\circ = \pi/6$.
->>   El ángulo de colatitud es $\varphi = \pi/2 - \pi/6 = \pi/3 = 60^\circ$.
->>   Radio del paralelo: $r = R \sin \varphi = \sin(\pi/3) = \sqrt{3}/2$.
->>2. **Cálculo de cambio de ángulo (Holonomía):**
->>   Usamos la fórmula de Gauss-Bonnet o la fórmula específica para conos tangentes.
->>   El ángulo $\Delta \psi$ que gira un campo paralelo respecto a la curva (o tangente) tras una vuelta cerrada es igual a la integral de la curvatura gaussiana en la región encerrada (teorema de GB).
->>   $\Delta \theta_{transporte} = \iint_{D} K dA$.
->>   $K=1$. Área del casquete esférico sobre el plano $z=1/2$:
->>   $Area = 2\pi R h = 2\pi(1)(1 - 1/2) = \pi$.
->>   Por tanto, el desplazamiento angular total debido a la curvatura es $\pi$.
->>3. **Interpretación:**
->>   El vector $W$ transportado paralelamente "retrocede" un ángulo $\pi$ respecto al vector tangente inicial si completamos el ciclo?
->>   Más preciso: El vector tangente $\alpha'$ *rota* $2\pi$ en el espacio (visto desde arriba) pero en la geometría intrínseca...
->>   Usemos la fórmula de variación de ángulo con el paralelo: $\Delta \beta = -2\pi \sin(\lambda)$? No.
->>   Desarrollo en cono: El perímetro del paralelo es $L = 2\pi r = 2\pi (\frac{\sqrt{3}}{2}) = \pi \sqrt{3}$.
->>   La generatriz del cono tangente es $d = R \cot \varphi$? No.
->>   Más simple: El ángulo que gira respecto a la base fija es $2\pi \cos \varphi$ o $2\pi \sin \lambda$.
->>   $\text{Angulo} = 2\pi (1 - \sin \lambda)$? No.
->>   La fórmula estándar para el ángulo que *rota* el vector respecto a la curva tangente es $2\pi - \iint K$.
->>   Osea $2\pi - \pi = \pi$.
->>   El vector $W$ (paralelo) termina formando un ángulo de $-\pi$ (o $\pi$) con el vector tangente $\alpha'(L)$ (que coincide con $\alpha'(0)$ geométricamente).
->>   **Respuesta:** Respecto al marco móvil (tangente), da media vuelta ($\pi$).
->>   "¿Cuánto gira realmente W?" Si se refiere a respecto a un sistema inercial fijo en el espacio 3D incrustado: El vector se mantiene "lo más constante posible", pero al volver no coincide.
->>   En el péndulo de Foucault, la rotación del plano de oscilación (campo paralelo) es $-2\pi \sin(\text{latitud})$.
->>   Aquí latitud $\pi/6$, $\sin = 1/2$. Rotación = $-\pi$.
->>   Da media vuelta en sentido de las agujas del reloj (si la Tierra gira antihorario).
+>>1. Usando [[Definiciones#^fe0320]] sabemos que $\theta(t)=-t\tan(y_{0})$ con $\sin(y_{0})=\frac{1}{2}$ que es la altura del circulo por lo tanto
+>>2. $t$ esta en el dominio de $\alpha$ que como esta parametrizada por longitud de arco es $[0,L]$ cuando dio toda la vuelta es $t=L$ y $L$ es la longitud de un circulo de altura $\frac{1}{2}$ 
+>>3. Dado que $z=\sin(y_{0})$ y $x^{2}+y^{2}+z^{2}=1$ tenemos $x^{2}+y^{2}=1-\sin^{2}(y_{0})$ osea $x^{2}+y^{2}=\cos^{2}(y_{0})$. Por lo tanto el radio del circulo es $\cos(y_{0})$ (usando raiz de ambos lados)
+>>4. Entonces $L=2\pi\cos(y_{0})$. Luego $$\theta_{f}=-2\pi\cos(y_{0})\tan(y_{0})=-2\pi\sin(y_{0})=-\pi$$
+>>5. Entonces el campo paralelo dio media vuelta con respecto al marco movil
+>>6. Supongo que cuando dice cuanto gira realmente se refiere a cuanto giro con respecto a la superficie.. da lo mismo decir $\pi$ o $-\pi$   
 
 ---
 
 >[!Example] Ejercicio 7
->Sea $M$ el helicoide, parametrizado por $\phi(u, v) = (u \cos v, u \text{sen } v, v)$.
->a) Calcular la curvatura geodésica de la hélice $\alpha(t) = (\cos(at), \text{sen}(at), at)$ ($a=1/\sqrt{2}$).
+>Sea $M$ el helicoide, parametrizado por $$\phi(u, v) = (u \cos v, u \sin v, v)$$
+>a) Calcular la curvatura geodésica de la hélice $$\alpha(t) = (\cos(at), \text{sen}(at), at)\qquad a=1/\sqrt{2}$$
 >b) Indicar si $\alpha$ minimiza la distancia entre algunos puntos de su trayectoria.
 >c) Encontrar el campo paralelo $W$ a lo largo de $\alpha$ con $W(0) = \alpha'(0)$.
 >>[!Proof]-
 >>- **a) Curvatura geodésica:**
->>	1. La curva $\alpha(t)$ corresponde en la parametrización a $u(t)=1, v(t)=at$? No.
->>	   $\phi(u, v) = (u\cos v, \dots)$. $\alpha(t)$ tiene radio 1? No.
->>	   En $\alpha(t) = (\cos(at), \sin(at), at)$, el radio $x^2+y^2=1$.
->>	   Por tanto $u=1$. $\phi(1, at) = (\cos(at), \sin(at), at)$.
->>	   Así que la curva en coordenadas es $u(t) = 1$ (constante), $v(t) = at$. Es una curva coordenada ($u$-constante).
->>	2. Curvatura geodésica $k_g$.
->>	   Fórmula general o cálculo directo: $k_g = \vec{N} \cdot (\alpha' \times \alpha'')$? No, eso es un lío con las normas.
->>	   Usemos la fórmula de Liouville o Christoffel.
->>	   Métrica del helicoide: $\phi_u = (\cos v, \sin v, 0)$, $\phi_v = (-u\sin v, u\cos v, 1)$.
->>	   $E = 1, F = 0, G = 1+u^2$.
->>	   Para $u=1$, $G=2$.
->>	   Curva $u=1, v=at$.
->>	   Fórmula $k_g = -\frac{E_u}{2E\sqrt{G}} v'$ (para curva $u=cte$)?
->>	   O mejor: La curva coordenada $v$ (con $u=cte$) es geodésica ssi $E_v = 0$ (si, $0=0$) y $G_u = 0$.
->>	   $G_u = 2u$. En $u=1$, $G_u = 2 \neq 0$.
->>	   Entonces NO es geodésica.
->>	   Cálculo de $k_g$ para curvas $u=cte$:
->>	   $k_g = \frac{\Gamma_{vv}^u (v')^2}{\dots}$??
->>	   Formula: $k_g = - \frac{1}{2\sqrt{G}E} \frac{\partial G}{\partial u}$. (Signo depende orientación).
->>	   $\frac{\partial G}{\partial u} = 2u$. En $u=1$, es 2.
->>	   $k_g = - \frac{2}{2\sqrt{2}(1)} = -\frac{1}{\sqrt{2}}$.
->>- **b) Minimización:**
->>	Como $k_g \neq 0$, la curva NO es una geodésica.
->>	Las curvas que minimizan distancia localmente son geodésicas.
->>	Por tanto, $\alpha$ **no minimiza la distancia** (ni siquiera localmente, salvo orden infinitesimal).
+>>	1. $\alpha$ ya es de rapidez unitaria. $$\alpha '(t)=(-a\sin(at),a\cos(at),a)$$$$\alpha ''(t)=(-a^{2}\cos(at),-a^{2}\sin(at),0)$$
+>>	2. Entonces es directo que $\kappa(t)=a^{2}$ 
+>>	3. Calculemos el campo normal $$\phi_u=(\cos v,\sin v,0) \qquad \phi_v=(-u\sin v,u\cos v,1)$$
+>>	4. Es trivial ver que $$N(\alpha(t))=(\sin(at),-\cos(at),1).$$ (No esta normalizado pero no pasa nada por que termina dando 0) 
+>>	5. Entonces ahora podemos calcular la curvatura normal en cada punto $\alpha (t)$: $$k_{n,\alpha (t)}=\langle N(\alpha (t)),\alpha ''(t)\rangle=-a^{2}\cos(at)\sin(at)+a^{2}\sin(at)\cos(at)=0$$
+>>	6. Entonces $a^{2}=k_{g,\alpha (t)}$ (usando $\kappa^{2}=k_{g}^{2}+k_{n}^{2}$ ) 
+>>- **b) Minimización:** Como $k_g \neq 0$, la curva NO es una geodésica.
+>>	Las curvas que minimizan distancia localmente son geodésicas. Por tanto, $\alpha$ **no minimiza la distancia** (ni siquiera localmente, salvo orden infinitesimal).
 >>- **c) Campo paralelo:**
->>	1. Ec. transporte paralelo para $W = A \phi_u + B \phi_v$. $\alpha'(t) = a \phi_v$.
->>	   $W(0) = \alpha'(0) = a \phi_v$.
->>	   $\nabla_{\alpha'}W = 0 \implies W' + \Gamma W = 0$.
->>	   Debido a $F=0$ y la simetría, las ecuaciones se simplifican.
->>	   Sistema de EDOs lineales. La solución suele girar con velocidad angular proporcional a $k_g$.
->>	   El ángulo $\theta$ que forma $W$ con $\alpha'$ satisface $\theta' = -k_g$.
->>	2. Como $k_g = -1/\sqrt{2}$ (cte).
->>	   $\theta(t) = -(-1/\sqrt{2}) t = t/\sqrt{2}$.
->>	   El campo gira uniformemente respecto a la tangente.
->>	   En $t=\sqrt{2}\pi$, $\theta = \pi$. Ha dado media vuelta (apunta opuesto).
-
+>>	1. Calculemos el marco ortonormal móvil del plano tangente $\alpha(t)=(\cos(at),\sin(at),at)$. Luego $$u(t)=\alpha '(t)=(-a\sin(at),a\cos(at),a)$$
+>>	2. Es trivial ver que $$N(\alpha(t))=(a\sin(at),-a\cos(at),a)$$
+>>	3. Entonces $$v(t)=N\times \alpha'=(-\cos(at),-\sin(at),0)$$
+>>	4. Ahora ademas sabemos que $W(t)=\cos(\theta(t))u(t)+\sin(\theta(t))v(t)$ entonces $$W'(t)=-\sin(\theta)\theta'u+\cos(\theta)u'+\cos(\theta)\theta'v+\sin(\theta)v'$$ 
+>>	5. Ahora pedimos $\langle W',u\rangle=0\quad\langle W',v\rangle=0$. Notar que $\langle u,u'\rangle=0$ por que que $\alpha$ es de rapidez unitaria analogo con $\langle v,v'\rangle$ por que $v$ es unitario y por haciendo los calculos (trivial) $\langle u',v\rangle=\frac{1}{2}$ y $\langle v',u\rangle=-\frac{1}{2}$. Por otro lado por ser marco ortogonal $\langle u,v\rangle=0$   
+>>	6. Luego las condiciones que pedimos son $$0=\langle W',u\rangle=-\theta'\sin\theta+\sin\theta\langle v',u\rangle=-\sin\theta(\theta'+\frac{1}{2})$$ $$0=\langle W',v\rangle=\cos\theta\left( \theta'+\frac{1}{2} \right)$$
+>>	7. Como $\sin\theta$ y $\cos\theta$ no se pueden anular simultaneamente tenemos $\theta'=-\frac{1}{2}$ por lo tanto $\theta =-\frac{t}{2}+C$
+>>	8. Ademas necesitamos $\theta(0)=0$ (por que $W(0) = \alpha'(0)$) por lo tanto $C=0$  
+>>	9. Finalmente $$\boxed{W=\cos\left( -\frac{t}{2} \right)u(t)+\sin\left( -\frac{t}{2} \right)v(t)}$$ 
+  
 ---
 
 >[!Example] Ejercicio 8
@@ -179,48 +140,30 @@
 >>   - Arco $NB$: Meridiano de longitud $\pi/2$. Ángulo en $B$: Perpendicular al ecuador. $\angle B = \pi/2$.
 >>   - Arco $AB$: Segmento del ecuador. El ángulo en $N$ entre los meridianos $x$ e $y$ es $\pi/2$.
 >>3. Suma de ángulos interiores:
->>   $\Sigma = \pi/2 + \pi/2 + \pi/2 = 3\pi/2$.
->>4. $3\pi/2 > \pi$.
->>5. (Esto es consistente con Gauss-Bonnet: $\int K dA = \Area(Triangulo) = 1/8 \text{esfera} = 4\pi/8 = \pi/2$. Exceso angular $\Sigma - \pi = \pi/2$).
+>>   $$\Sigma = \pi/2 + \pi/2 + \pi/2 = 3\pi/2$$
 
 ---
 
 >[!Example] Ejercicio 9
 >Sea $\gamma$ una geodésica de una superficie regular $M$. Probar que si $\gamma$ tiene curvatura nunca nula y está en un plano $P$, entonces $\gamma$ es una línea de curvatura de $M$.
->Sugerencia: Mostrar primero que si $N$ es normal a $P$, entonces $\{\gamma'(t), \gamma''(t), N\}$ es una base ortogonal de $\mathbb{R}^3$ para todo $t$. (Nota: La sugerencia parece referirse a $N_S$ normal superficie o $N_P$ normal plano? Texto dice N es normal a P. Pero necesitamos relacionar con normal superficie.)
+>Sugerencia: Mostrar primero que si $N$ es normal a $P$, entonces $\{\gamma'(t), \gamma''(t), N\}$ es una base ortogonal de $\mathbb{R}^3$ para todo $t$.
 >>[!Proof]-
->>1. Sea $\gamma(s)$ parametrizada por arco.
->>2. Como $\gamma$ es geodésica, su aceleración $\gamma''(s)$ es ortogonal al plano tangente $T_{\gamma(s)}M$ y colineal con el vector normal de la superficie $\mathcal{N}(s)$.
->>   $\gamma''(s) = k_n \mathcal{N}(s)$. (La curvatura geodésica es nula).
->>   Como la curvatura de la curva $\kappa = \|\gamma''\|$ no es nula, entonces $\gamma''(s) \neq 0$, y $\mathcal{N}(s) = \pm \frac{\gamma''(s)}{\kappa(s)}$.
->>3. Por otro lado, $\gamma$ es una curva plana contenida en $P$.
->>   Su vector binormal $B$ del triedro de Frenet es constante y perpendicular a $P$.
->>   $\gamma''(s) = \kappa n_{frenet}$. El vector $n_{frenet}$ está contenido en el plano $P$.
->>4. De (2), el vector normal a la superficie $\mathcal{N}$ es paralelo a $n_{frenet} = \gamma'' / \kappa$.
->>   Por lo tanto, $\mathcal{N}$ está contenido en el plano $P$.
->>   (Ojo: $\gamma''$ es normal a la superficie. $\gamma''$ está en el plano osculador = $P$. Así que la normal a la superficie está en el plano de la curva).
->>5. Veamos que $\gamma$ es línea de curvatura. Esto significa que $\gamma'$ es dirección principal.
->>   Equivalente: La derivada del normal $d\mathcal{N}(\gamma') = (\mathcal{N} \circ \gamma)'$ es colineal a $\gamma'$.
->>6. Sabemos que $\mathcal{N}(s) = \pm n_{frenet}(s)$.
->>   Derivamos: $\mathcal{N}' = \pm n'_{frenet} = \pm (-\kappa t + \tau b)$.
->>   Como la curva es plana, la torsión $\tau = 0$.
->>   $\mathcal{N}' = \mp \kappa \gamma'$.
->>7. Entonces $d\mathcal{N}(\gamma') = \lambda \gamma'$ (con $\lambda = \mp \kappa$).
->>8. Por tanto, $\gamma'$ es una dirección principal y $\gamma$ es una línea de curvatura.
+>>1. Como $\gamma$ esta en el plano $P$ y $N$ es la normal entonces la derivada (velocidad) y la segunda derivada (aceleracion) deben ser ortogonales con la normal del plano, de lo contrario la curva se saldria del plano.
+>>2. Ademas sabemos que $\gamma''(t)=\lambda(t) n(\gamma(t))$ entonces $$\gamma'''(t)=\lambda'(t)n(\gamma(t))+\lambda(t)dn_{\gamma(t)}(\gamma'(t))$$
+>>3. Entonces $$dn_{\gamma}(\gamma')=\frac{\gamma'''}{\lambda}-\frac{\lambda'n(\gamma)}{\lambda}$$  
+>>4. Pero notemos que $dn_{\gamma}(\gamma')\in T_{\gamma}M$ por lo tanto $\frac{\lambda'(t)}{\lambda(t)}=0$ para que se anule esa componente.
+>>5. Y por otro lado $\gamma'''\in P$ por la misma razon que $\gamma',\gamma''$ si no lo estuviera entonces eventualmente $\gamma''$ tampoco lo estaria, etc. Por lo tanto $\gamma'''\perp N$ 
+>>6. Y ademas como $\gamma$ es geodesica. $\gamma''\perp T_{\gamma}M$ por lo tanto $\gamma''\perp\gamma'''$
+>>7. Luego por definicion de base $dn_{\gamma}(\gamma')=\frac{1}{\lambda}\gamma''=c\gamma'$ 
 
 ---
 
 >[!Example] Ejercicio 10
 >Mostrar que una isometría local entre superficies no preserva necesariamente el módulo de la curvatura media. Comparar con la afirmación análoga para la curvatura gaussiana.
 >>[!Proof]-
->>1. **Curvatura Gaussiana:** El *Teorema Egregium* de Gauss afirma que la curvatura Gaussiana $K$ es un invariante intrínseco. Si $f: S_1 \to S_2$ es una isometría local, entonces $K_2(f(p)) = K_1(p)$.
->>2. **Curvatura Media:** La curvatura media $H = \frac{k_1+k_2}{2}$ es un invariante extrínseco (depende de cómo está inmersa la superficie en $\mathbb{R}^3$). No necesariamente se preserva.
->>3. **Contraejemplo:**
->>   - Superficie 1: Plano $P$ ($z=0$). Es isométrico a sí mismo. $k_1=0, k_2=0 \implies H=0$.
->>   - Superficie 2: Cilindro $C$ ($x^2+y^2=1$). Es localmente isométrico al plano (al desenrollarlo).
->>     Sus curvaturas principales son $k_1=0$ (generatriz) y $k_2=1$ (círculo).
->>     $H = \frac{0+1}{2} = 1/2$.
->>4. Como $0 \neq 1/2$, la isometría no preserva la curvatura media.
+>>1. Si tomamos el cilindro $\varphi(u,v)=(\cos u,\sin u,v)$ sabemos que es localmente isometrico con el plano. (Se ve facil comparando primeras formas fundamentales) 
+>>2. Sin embargo $k_{1}=1,k_{2}=0$ en el cilindro, pero $k_{1}=0=k_{2}$ en el plano.
+>>3. Esto muestra que preservan curvatura gaussiana (en ambos es $0$) pero no preservan curvatura media 
 
 ---
 
@@ -228,42 +171,39 @@
 >Considerar la esfera de radio uno, el cilindro y la silla de montar. Justificar por qué estas superficies no son localmente isométricas entre sí.
 >>[!Proof]-
 >>1. Por el Teorema Egregium, si dos superficies son localmente isométricas, deben tener la misma curvatura Gaussiana $K$ en los puntos correspondientes.
->>2. **Esfera ($S^2$):** $K = 1$ (constante positiva).
->>3. **Cilindro:** $K = 0$ (constante nula, pues es desarrollable).
->>4. **Silla de montar ($z = x^2 - y^2$ o similar):** $K < 0$ (negativa en todas partes salvo quizás el origen? En el paraboloide hiperbólico estándar $K = -1/(1+4u^2+4v^2)^2 < 0$. Silla mono $K$ varía pero es $\le 0$).
->>5. Como los signos (y valores) de $K$ son distintos ($1 \neq 0 \neq \text{negativo}$), no pueden existir isometrías locales entre ellas.
+>>2. **Esfera unitaria:** $K = 1$
+>>3. **Cilindro:** $K = 0$
+>>4. **Silla de montar ($z = x^2 - y^2$ o similar):** $K < 0$. Veamoslo 
+>>5. Recordamos por [[GD - Pr7#^5a9dfd]] tenemos que para un grafico $$dn_{(\varphi(x,y))}=\begin{pmatrix}-f_{xx}(x,y) & -f_{xy}(x,y) \\ -f_{xy}(x,y) &-f_{yy}(x,y) \end{pmatrix}$$
+>>6. Luego $f_{xx}(x,y)=2$, $f_{xy}(x,y)=0$ y $f_{yy}(x,y)=-2$
+>>7. Luego como $$K((x,y,f(x,y)))=det(dn_{\varphi(x,y)})=-4$$ 
 
 ---
-
+ 
 >[!Example] Ejercicio 12
 >Probar que no existe una carta $\phi$ de la esfera $S$ de centro cero y radio $r$ tal que para todo $(u, v)$ en el dominio de $\phi$ la base $\{\phi_u(u, v), \phi_v(u, v)\}$ de $T_{\phi(u, v)}S$ sea ortonormal.
 >>[!Proof]-
 >>1. Supongamos que existe tal carta.
 >>2. Que la base coordenada sea ortonormal significa $E = \|\phi_u\|^2 = 1$, $F = \langle \phi_u, \phi_v \rangle = 0$, $G = \|\phi_v\|^2 = 1$.
->>3. Esta es la métrica euclidiana $ds^2 = du^2 + dv^2$.
->>4. La curvatura Gaussiana de una métrica está determinada únicamente por $E, F, G$.
->>   Para la métrica euclidiana, $K \equiv 0$.
->>5. Sin embargo, sabemos que para la esfera de radio $r$, $K = 1/r^2 > 0$.
->>6. Contradicción ($1/r^2 \neq 0$).
->>7. Por lo tanto, tal carta no existe (la esfera no es localmente isométrica al plano).
+>>3. Y por otro lado tenemos $\varphi(u,v)=(u,v,0)$ parametrizacion del plano. Que obviamente tiene las misma metrica $\bar{E},\bar{F},\bar{G}$
+>>4. Entonces por [[Definiciones#^7286f3]] tenemos que $\phi\circ\varphi ^{-1}$ es una isometria entre el plano y la esfera
+>>5. Pero esto es absurdo por que la curvatura gaussiana de la esfera es $\frac{1}{r^{2}}$ y la del plano es $0$ 
 
 ---
 
 >[!Example] Ejercicio 13
 >Para cada $r > 0$, sea $C_r$ el cilindro $\{(x, y, z) \in \mathbb{R}^3 : x^2 + y^2 = r^2\}$. Probar $C_r$ no es isométrico al plano $z=0$ ni al cilindro $C_\rho$ si $\rho \neq r$. Sugerencia: Considerar las geodésicas periódicas.
 >>[!Proof]-
->>- **No isométrico al plano globalmente:**
->>	1. Localmente son isométricos ($K=0$). Pero globalmente no.
->>	2. En $C_r$, existen geodésicas cerradas simples (los paralelos o ecuadores) de longitud $2\pi r$.
->>	3. En el plano $\mathbb{R}^2$, las geodésicas son rectas infinitas. No existen geodésicas cerradas.
->>	4. Una isometría global (difeormorfismo que preserva métrica) mapearía geodésicas cerradas a geodésicas cerradas. Como el plano no tiene, no son isométricos.
+>>- **Isometria entre plano y cilindro:**
+>>	1. Notar que si fuese isometricos existiria $F:C_{r}\rightarrow P$ (donde $P$ es el plano) isometria (osea difeomorfismo)
+>>	2. Como $F$ es difeo entonces es biyectiva en particular inyectiva. Con lo cual si $a = b$ tenemos $F(a)=F(b)$
+>>	3. Aplicado a este ejercicio. Tomamos en el cilindro cualquier geodisca de paralelos horizontales por ejemplo $\alpha(t)=(\cos(t),\sin(t),z_{0})$ tenemos que $\alpha(0)=\alpha(2\pi)$ pero entonces $F(\alpha(0))\neq F(\alpha (2\pi))$ por que $F$ es isometria entonces manda geodesicas en geodesicas. Como $\alpha$ es geodesica entonces $F(\alpha )$ es geodesica y las geodesicas en el plano son rectas con lo cual imposible que tengan dos puntos iguales dado que no son ciclicas
+>>- **No isométrico al plano globalmente:** Localmente son isométricos ($K=0$). Pero globalmente no.
 >>- **No isométrico a $C_\rho$ ($\rho \neq r$):**
->>	1. Supongamos que existe una isometría $F: C_r \to C_\rho$.
->>	2. Las geodésicas cerradas simples de $C_r$ tienen longitud $2\pi r$.
->>	3. Las geodésicas cerradas simples de $C_\rho$ tienen longitud $2\pi \rho$.
->>	4. La imagen de una geodésica cerrada simple por una isometría debe ser una geodésica cerrada simple de la misma longitud.
->>	5. Entonces $2\pi r = 2\pi \rho \implies r = \rho$.
->>	6. Si $r \neq \rho$, no pueden ser isométricos.
+>>	1. Aca una idea similar. Supongamos que existe una isometría $F: C_r \to C_\rho$.
+>>	2. Tomamos una geodésicas cerradas simples de $C_r$ tienen longitud $2\pi r$.
+>>	3. Como $F$ isometria manda a otra geodesica. A rectas verticales y a helices no puede mandar por la misma razon que con el plano y el cilindro, no son cerradas. Por lo tanto solo puede mandar a los circulos.
+>>	4. Pero las geodesicas circulos del cilindro $C_{\rho}$ tienen longitud $2\pi\rho$. Lo cual es absurdo por que isometria preserva longitud
 
 ---
 
@@ -271,23 +211,15 @@
 >Sea $S$ el hiperboloide de revolución $x^2 + y^2 - z^2 = 1$, sea $p \in S$ con tercera coordenada mayor que dos ($z_0 > 2$), y sea $v \in T_pS$ un vector unitario que forma un ángulo de $\pi/3$ con el paralelo que pasa por $p$. Probar que la geodésica con velocidad inicial $v$ nunca tiene tercera coordenada negativa.
 >Sugerencia: Usar el Teorema de Clairaut.
 >>[!Proof]-
->>1. **Parametrización y Clairaut:**
->>   $S$ es superficie de revolución. Radio al eje $z$: $r(z) = \sqrt{1+z^2}$.
->>   Teorema de Clairaut: A lo largo de una geodésica, $r(t) \cos \theta(t) = C = \text{cte}$, donde $\theta$ es el ángulo con el paralelo.
->>2. **Condiciones iniciales:**
->>   En $p$, $z_0 > 2$. Radio inicial $r_0 = \sqrt{1+z_0^2} > \sqrt{1+4} = \sqrt{5}$.
+>>1. $S$ es superficie de revolución. Radio al eje $z$: $r(z) = \sqrt{1+z^2}$
+>>2. Teorema de Clairaut: A lo largo de una geodésica, $r(t) \cos \theta(t) = C = \text{cte}$, donde $\theta$ es el ángulo con el paralelo.
+>>3. En $z_0 > 2$. Radio inicial $r_0 = \sqrt{1+z_0^2} > \sqrt{1+4} = \sqrt{5}$.
 >>   Ángulo inicial $\theta_0 = \pi/3 \implies \cos \theta_0 = 1/2$.
->>   Constante de Clairaut: $C = r_0 \cos \theta_0 = r_0 / 2 > \sqrt{5}/2 \approx 1.118$.
->>3. **Análisis:**
->>   En cualquier punto de la geodésica, debe cumplirse $r(t) \cos \theta(t) = C$.
->>   Como $|\cos \theta| \le 1$, tenemos $r(t) \ge C$.
->>   Por tanto, la geodésica está confinada a la región donde el radio del paralelo $r(z) \ge C$.
->>   $r(z) = \sqrt{1+z^2} \ge C > 1.118$.
->>   El mínimo radio del hiperboloide ("cintura") ocurre en $z=0$ y es $r(0)=1$.
->>   Como $C > 1$, la geodésica nunca puede alcanzar la cintura $z=0$ (donde $r=1$), ya que requeriría $1 \cdot \cos \theta = C > 1$, imposible.
->>4. **Conclusión:**
->>   Como la curva empieza en $z > 2$ (hemisferio norte) y no puede cruzar la banda ecuatorial $z=0$ (donde el radio es muy pequeño para preservar el momento angular $C$), la geodésica permanece confinada en la región $z > 0$.
->>   Nunca tiene coordenada $z$ negativa.
+>>   Constante de Clairaut: $C = r_0 \cos \theta_0 = r_0 / 2 > \sqrt{5}/2 \approx 1.118>1$.
+>>4. Luego por Clairaut y considerando $|\cos \theta| \le 1$ debe cumplirse en cualquier punto de la geodésica $$r(z) = \sqrt{1+z^2} \ge \sqrt{ 1+z^{2} }\cos(\theta)= C > 1$$
+>>5. Pero el mínimo radio del hiperboloide ("cintura") ocurre en $z=0$ y es $r(0)=1$.
+>>6. Pero $r(z) > 1$ para toda geodésica dadas las condiciones iniciales que impusimos por ende nunca puede alcanzar la cintura $z=0$ (donde $r=1$). Entonces $z_{t}>0$ donde $z_{t}$ seria la componente altura de cualquer curva que cumpla las condiciones.
+>>7. Aclaramos un poco mas , si $z_{t}$ fuese menor que $0$ para algun $t$ entonces tuvo que ser $0$ para algun otro por que $z_{0}>2$ y obviamente la altura de cualquier curva continua, es continua y sabemos que esto no es posible por 6.   
 
 ---
 
@@ -296,17 +228,16 @@
 >$$ 2\pi r - \frac{\pi}{3} K(p) r^3, $$
 >donde $K(p)=1/R^2$.
 >>[!Proof]-
->>1. En la esfera de radio $R$, las geodésicas son círculos máximos.
->>2. Una circunferencia geodésica de radio intrínseco $r$ (distancia medida sobre la superficie desde el polo $p$) corresponde a un paralelo a distancia de arco $r$.
->>   El ángulo polar correspondiente es $\theta = r/R$.
->>3. El radio euclidiano de este paralelo (distancia al eje $z$) es $\rho = R \sin \theta = R \sin(r/R)$.
->>4. La longitud de esta circunferencia es $L(r) = 2\pi \rho = 2\pi R \sin(r/R)$.
->>5. Desarrollo de Taylor de $\sin(x)$ cerca de 0: $\sin(x) \approx x - \frac{x^3}{6} + \dots$
->>   Sustituyendo $x = r/R$:
->>   $L(r) \approx 2\pi R \left( \frac{r}{R} - \frac{1}{6} \frac{r^3}{R^3} \right)$.
->>   $L(r) \approx 2\pi r - \frac{\pi}{3} \frac{r^3}{R^2}$.
->>6. Como la curvatura gaussiana de la esfera es $K = 1/R^2$, sustituimos:
->>   $L(r) \approx 2\pi r - \frac{\pi}{3} K r^3$. (Nota: El enunciado dice $2\pi r - \frac{2\pi}{3!} K r^3$? $2\pi/6 = \pi/3$. Correcto. El enunciado dice $2\pi r - \frac{2\pi}{3!} K r^3$, que es lo mismo).
+>>1. Intuicion: Dado un punto $p_{0}$ cualquiera $C_{p_{0}}(r)$ van a ser "circulos" paralelos entre si que se van achicando al acercarse a $p_{0}$ que van a ser el resultado de mirar cualqueira de las geodesicas que pasan por $p_{0}$ (circulos mayores) y pararse en una rotacion determinada, luego agarrar otra geodesica (osea rotar la anterior) y pararse devuelta en esa misma rotacion y asi hasta tener todos los puntos
+>>2. Es drecto ver que $$C_{p_{0}}(r)=\{ q\in S^{2}:d_{S^{2}}(p,q)=r\}$$ donde $d_{S^{2}}$ es basicamente la distancia de $p$ a $q$ yendo por una geodesica, osea la longitud de ese arco que une ambos puntos que es $R.\theta$ donde $\theta$ es el angulo entre ambos puntos
+>>3. Pero ademas notemos que si tenemos ambos puntos sabemos que generan un plano que cuando interseca la esfera nos da la geodesica que los une y el arco de ese pedazo de geodesica cumple que es el angulo entre ambos vectores osea $$\langle p,q\rangle=\lVert p \rVert\lVert q \rVert\cos(\theta)=R^{2}\cos\theta$$
+>>4. Luego $$r=R\theta=R\arccos\left( \frac{\langle p,q\rangle}{R^{2}} \right)$$ que es el arco de la cincunferencia (pedazo de geodesica) que los une.   
+>>5. Luego $$q\in C_{p}(r)\iff \langle p,q\rangle=R^{2}\cos\left( \frac{r}{R} \right)$$
+>>6. Ademas $\Pi_{c}=\{ x:\langle p,x\rangle = c \}$ es un plano (el de las cosas que proyectadas sobre $p$ dan $c$) y se puede probar que dicho plano tiene distancia $\frac{\lvert c \rvert}{\lVert p \rVert}$ al origen 
+>>7. En este caso $\lVert p \rVert=R$ (radio de la esfera) y $$\lvert c \rvert=\left\lvert  \langle p,x\rangle\right\rvert=\left\lvert  R^{2}\cos\left( \frac{r}{R} \right)  \right\rvert$$Luego la distancia al origen es $R\cos\left( \frac{r}{R} \right)$ 
+>>8. Pero entonces el radio euclideo del circulo es $R\sin\left( \frac{r}{R} \right)$ 
+>>9. Con lo cual la longitud es $2\pi R\sin\left( \frac{r}{R} \right)$ y luego usando taylor para $\sin$ se llega al resultado  
+   
 
 ---
 
