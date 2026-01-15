@@ -85,8 +85,7 @@
               "title": "GD - Lista Teoremas"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -235,10 +234,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f14fe9fbec419477",
+  "active": "cdf7e498c295492a",
   "lastOpenFiles": [
-    "Lista_Teoremas_con_Pruebas.md",
     "Theory/GD - Lista Teoremas.pdf",
+    "Lista_Teoremas_con_Pruebas.md",
     "Theory/Definiciones.md",
     "Practicos/GD - Pr6.pdf",
     "Theorems_Summaries.md",
