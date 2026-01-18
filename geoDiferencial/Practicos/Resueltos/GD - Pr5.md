@@ -193,27 +193,20 @@
 > - Verificar que $\phi$ es una parametrización de $S$.
 > - Definir paralelos y meridianos.
 >>[!Proof]-
->>**1. Toro:**
->>El toro de revolución se genera rotando un círculo de radio $r$ centrado en $(R, 0)$ alrededor del eje $z$.
->>La curva generatriz en el plano $xz$ (o $rz$) es:
->>$\gamma(t) = (R + r \cos t, r \text{sen } t)$ para $t \in (0, 2\pi)$.
->>Aquí $r(t) = R + r \cos t$ y $h(t) = r \text{sen } t$.
->>Como $R > r$, $r(t) > 0$ siempre.
->>
->>**2. Parametrización:**
->>$\phi(s, t) = ((R + r \cos t)\cos s, (R + r \cos t)\text{sen } s, r \text{sen } t)$.
->>Jacobiana:
->>$\phi_s = (-r(t)\text{sen } s, r(t)\cos s, 0)$
->>$\phi_t = (r'(t)\cos s, r'(t)\text{sen } s, h'(t))$
->>Producto cruz:
->>$\phi_s \times \phi_t = (r(t)h'(t)\cos s, r(t)h'(t)\text{sen } s, -r(t)r'(t))$.
->>Norma al cuadrado: $r(t)^2 (h'(t)^2 + r'(t)^2) = r(t)^2 \|\gamma'(t)\|^2$.
->>Como $r(t) > 0$ y $\gamma$ es regular ($\|\gamma'\| \neq 0$), el producto cruz nunca es cero.
->>Es una inmersión local. Con las restricciones de dominio adecuadas para inyectividad, es una parametrización.
->>
->>**3. Paralelos y Meridianos:**
->>- **Paralelos:** Curvas con $t = \text{cte}$. Son circunferencias horizontales generadas por la rotación de un punto fijo de la generatriz.
->>- **Meridianos:** Curvas con $s = \text{cte}$. Son copias de la curva generatriz $\gamma$ (rotadas un ángulo $s$).
+>>- **1. Toro:**
+>>	1. El toro de revolución se genera rotando un círculo de radio $r$ centrado en $(R, 0)$ alrededor del eje $z$.
+>>	2. La curva generatriz en el plano $xz$ (o $rz$) es: $\gamma(t) = (R + r \cos t, r \text{sen } t)$ para $t \in (0, 2\pi)$. Aquí $r(t) = R + r \cos t$ y $h(t) = r \text{sen } t$.
+>>	3. Como $R > r$, $r(t) > 0$ siempre.
+>>- **2. Parametrización:**
+>>	1. $\phi(s, t) = ((R + r \cos t)\cos s, (R + r \cos t)\text{sen } s, r \text{sen } t)$.
+>>	2. Jacobiana: $\phi_s = (-r(t)\text{sen } s, r(t)\cos s, 0)$, $\phi_t = (r'(t)\cos s, r'(t)\text{sen } s, h'(t))$
+>>	3. Queremos ver que la jacobiana es inyectiva, para eso queremos ver que el producto cruz es distinto de cero.
+>>	4. Luego $\phi_s \times \phi_t = (r(t)h'(t)\cos s, r(t)h'(t)\text{sen } s, -r(t)r'(t))$. Norma al cuadrado: $r(t)^2 (h'(t)^2 + r'(t)^2) = r(t)^2 \|\gamma'(t)\|^2$.
+>>	5. Como $r(t) > 0$ y $\gamma$ es regular ($\|\gamma'\| \neq 0$), el producto cruz nunca es cero.
+>>	6. Es una inmersión local. Con las restricciones de dominio adecuadas ($t\in I$) para inyectividad del Jacobiano, es una parametrización.
+>>- **3. Paralelos y Meridianos:**
+>>	- **Paralelos:** Curvas con $t = \text{cte}$. Son circunferencias horizontales generadas por la rotación de un punto fijo de la generatriz.
+>>	- **Meridianos:** Curvas con $s = \text{cte}$. Son copias de la curva generatriz $\gamma$ (rotadas un ángulo $s$).
 
 ---
 

@@ -1,6 +1,6 @@
 # Curvas y parametrizaciones
 
->[!Definition] Reparametrización por longitud de arco *
+>[!Definition] Reparametrización por longitud de arco
 >Sea $\alpha : [a, b] \to \mathbb{R}^n$ una curva regular de longitud $L$, y sea $\sigma : [a, b] \to [0, L]$ definida por
 > $$ \sigma(t) = \text{long} \left( \alpha|_{[a, t]} \right) = \int_a^t \|\alpha'(u)\| \, du $$
 >Por el Teorema Fundamental del Cálculo, $\sigma'(t) = \|\alpha'(t)\| > 0$ (pues $\alpha$ es regular). Luego, $\sigma$ es creciente y resulta una biyección sobre el intervalo $[0, L]$.
@@ -13,13 +13,7 @@
 >>[!Proof]-
 >>1. Como $\alpha = \beta \circ \sigma$, tenemos que $\alpha' = (\beta' \circ \sigma) \sigma'$. Luego $$ \|\alpha'\| = \|\beta' \circ \sigma\| |\sigma'| = \|\beta' \circ \sigma\| \|\alpha'\| $$
 >>2. De allí, $\|\beta' \circ \sigma\| = 1$. 
->>3. Como $\sigma$ es sobre $[0, L]$, podemos pensar $\beta'\circ\sigma(t)=\beta'(s)$ y tenemos que $\|\beta'\| = 1$.
->
->>[!Resumen]-
->>- **Clave**
->>	1. Derivar $\alpha=\beta\circ\sigma$ y obtener $\alpha'=(\beta'\circ\sigma)\sigma'$.
->>	2. Tomar normas y usar $\sigma'=\|\alpha'\|$ para escribir $\|\alpha'\|=\|\beta'\circ\sigma\|\|\alpha'\|$.
->>	3. Cancelar $\|\alpha'\|>0$ y concluir $\|\beta'\circ\sigma\|=1$, luego $\|\beta'\|=1$.
+>>3. Como $\sigma$ es sobre $[0, L]$, tenemos que $\|\beta'\| = 1$.
 
 ^f2ee92
 
@@ -32,19 +26,12 @@
 >>7. La función norma $\|\cdot\|$ es suave en $\mathbb{R}^n \setminus \{0\}$.Por tanto, $\sigma'(t)$ es suave, lo que implica que $\sigma(t)$ es suave.
 >>8. Además, como $\sigma'(t) > 0$, por el Teorema de la Función Inversa (versión $C^\infty$), la función inversa $\sigma^{-1}$ es suave.
 >>9. Finalmente, $\beta = \alpha \circ \sigma^{-1}$ es composición de funciones suaves, luego $\beta$ es suave.
->
->
->>[!Resumen]-
->>- **Ruta**
->>	1. $\alpha$ suave $\Rightarrow$ $\alpha'$ suave y $\|\alpha'\|$ suave fuera de $0$.
->>	2. $\sigma'(t)=\|\alpha'(t)\|>0$ ⇒ $\sigma$ es suave.
->>	3. Por TFI, $\sigma^{-1}$ es suave y $\beta=\alpha\circ\sigma^{-1}$ también.
 
->[!Definition] Curvatura $\kappa$
+>[!Definition] Curvatura $\kappa$ 
 >Sea $\alpha : (a, b) \to \mathbb{R}^n$ una curva de rapidez unitaria. La **curvatura** de $\alpha$ es la función
 > $$ \kappa : (a, b) \to \mathbb{R}, \quad \kappa(s) = \|\alpha''(s)\|. $$
 
->[!Definition]- El triedro de Frenet
+>[!Definition] El triedro de Frenet
 > Sea $\alpha : (a,b) \to \mathbb{R}^3$ una curva suave de rapidez unitaria con curvatura nunca nula, es decir, $\|\alpha'(t)\| = 1$ y $\kappa(t) = \|\alpha''(t)\| \ne 0$ para todo $t$.
 > Entonces las funciones $T, N, B: (a,b) \to \mathbb{R}^3$ se definen mediante
 > $$T = \alpha', \quad N = \alpha''/\|\alpha''\| = \alpha''/\kappa \quad \text{y} \quad B = T \times N$$
@@ -53,13 +40,7 @@
 >>10. Como $\alpha$ tiene rapidez unitaria, $\|T\| = \|\alpha'\| = 1$. Claramente, $\|N\| = 1$.
 >>11. Derivando con respecto a $t$ la expresión $1 = \|\alpha'(t)\|^2 = \langle \alpha'(t), \alpha'(t) \rangle$ tenemos que $$ 0 = 2 \langle \alpha''(t), \alpha'(t) \rangle = 2 \langle N(t) \kappa(t), T(t) \rangle = 2\kappa(t) \langle N(t), T(t) \rangle $$que vale para todo $t$. 
 >>12. Como $\kappa$ nunca se anula por hipótesis, resulta que $\langle T, N \rangle = 0$
->>13. Además, $\langle B, T \rangle = \langle T\times N, T \rangle = 0$ analogo $\langle B,N\rangle=0$  y $$ \|B\| = \|T \times N\| = \|T\| \|N\|\sin\left( \frac{\pi}{2} \right) = 1.1.1=1 $$
->
->>[!Resumen]-
->>- **Idea**
->>	10. $T=\alpha'$ es unitario y $N=\alpha''/\|\alpha''\|$ también y $\|B\|=\|T\|\|N\|\sin(\pi/2)=1$ tambien
->>	11. Derivar $\|T\|^2=1$ da $\langle T,N\rangle=0$ (usa $\kappa\neq 0$).
->>	12. $B=T\times N$ es ortogonal a $T$ y $N$.
+>>13. Además, $\langle B, T \rangle = \langle T\times N, N \rangle = 0$ analogo $\langle B,N\rangle=0$  y $$ \|B\| = \|T \times N\| = \|T\| \|N\|\sin\left( \frac{\pi}{2} \right) = 1.1.1=1 $$
 
 >[!Proposition] Ecuaciones de Frenet
 >Se cumple que
@@ -69,25 +50,18 @@
 > Comentario. Las ecuaciones (1) a veces se escriben de la forma
 > $$\begin{cases} T' = & \kappa N \\ N' = & -\kappa T & +\tau B \\ B' = & & -\tau N \end{cases}$$
 >>[!Proof]-
->>1. Tenemos que $$ T' = (\alpha')' = \alpha'' = \|\alpha''\| \frac{\alpha''}{\|\alpha''\|} = \kappa N. $$
->>2. Como sabemos que $\{T, N, B\}$ es una base ortonormal, podemos escribir $$ N' = \langle N', T \rangle T + \langle N', N \rangle N + \langle N', B \rangle B. $$
->>3. $\langle N', N \rangle = 0$, pues $1=\|N\|^{2} = (N,N)$ y luego derivando 
->>4. "Integrando"podemos obtener $$ \langle N', T \rangle = \langle N, T \rangle' - \langle N, T' \rangle = 0 - \langle N, \kappa N \rangle = -\kappa \|N\|^2 = -\kappa. $$
->>5. De esta manera $$ N' = -\kappa T + 0.N + \tau B $$ Donde definimos $\langle N', B \rangle=\tau$.
->>6. Ahora escribimos $$ B' = \langle B', T \rangle T + \langle B', N \rangle N + \langle B', B \rangle B. $$
->>7. Tenemos que $\langle B', B \rangle = 0$, pues $\|B\| = \text{constante}$. 
->>8. También, $$ \langle B', N \rangle = \langle B, N \rangle' - \langle B, N' \rangle = 0 - \langle B, \kappa T + \tau B \rangle = -\tau \|B\|^2 = -\tau. $$
->>9. Analogamente $$\langle B', T \rangle=\langle B,T\rangle'-\langle B,T '\rangle=0-\langle B,\kappa N\rangle=0$$
->>10. Mostrando que $B'=-\tau N$ 
->
->>[!Resumen]-
->>- **Esqueleto**
->>	1. $T'=\alpha''=\kappa N$.
->>	2. Expandir $N'$ en la base $\{T,N,B\}$ y usar $\langle N',N\rangle=0$ por que $\lVert N \rVert=1$ 
->>	3. Calcular $\langle N',T\rangle=\langle N, T \rangle' - \langle N, T' \rangle=\ldots=\kappa$ usando y definir $\tau=\langle N',B\rangle$.
->>	4. Expandir $B'$ y usar $\langle B',B\rangle=0$, y con la misma tecnica $\langle B',T\rangle=0$, $\langle B',N\rangle=-\tau$
+>>14. Tenemos que $$ T' = (\alpha')' = \alpha'' = \|\alpha''\| \frac{\alpha''}{\|\alpha''\|} = \kappa N. $$
+>>15. Como sabemos que $\{T, N, B\}$ es una base ortonormal, podemos escribir $$ N' = \langle N', T \rangle T + \langle N', N \rangle N + \langle N', B \rangle B. $$
+>>16. $\langle N', N \rangle = 0$, pues $1=\|N\|^{2} = (N,N)$ y luego derivando 
+>>17. "Integrando"podemos obtener $$ \langle N', T \rangle = \langle N, T \rangle' - \langle N, T' \rangle = 0 - \langle N, \kappa N \rangle = -\kappa \|N\|^2 = -\kappa. $$
+>>18. De esta manera $$ N' = -\kappa T + 0.N + \tau B $$ Donde definimos $\langle N', B \rangle=\tau$.
+>>19. Ahora escribimos $$ B' = \langle B', T \rangle T + \langle B', N \rangle N + \langle B', B \rangle B. $$
+>>20. Tenemos que $\langle B', B \rangle = 0$, pues $\|B\| = \text{constante}$. 
+>>21. También, $$ \langle B', N \rangle = \langle B, N \rangle' - \langle B, N' \rangle = 0 - \langle B, \kappa T + \tau B \rangle = -\tau \|B\|^2 = -\tau. $$
+>>22. Analogamente $$\langle B', T \rangle=\langle B,T\rangle'-\langle B,T '\rangle=0-\langle B,\kappa N\rangle=0$$
+>>23. Mostrando que $B'=-\tau N$ 
 
->[!Definition]- Plano osculador, normal y osculador afín
+>[!Definition] Plano osculador, normal y osculador afín
 >Para cada $t$, el plano generado por $T(t)$ y $N(t)$, o sea,
 >$$ \text{span } \{T(t), N(t)\} = B(t)^\perp, $$
 >se llama **plano osculador** de $\alpha$ en el instante $t$ y el plano
@@ -104,7 +78,7 @@
 >>	2. Sea $t_o \in (a, b)$. Veamos que para todo $t$, $\alpha(t)$ está en el plano $P$ que pasa por $\alpha(t_o)$ y es ortogonal a $n$, o sea,$$ P = \{ q \in \mathbb{R}^3 \mid \langle q - \alpha(t_o), n \rangle = 0 \} . \quad (2) $$
 >>	3. Debemos mostrar que $\langle \alpha(t) - \alpha(t_o), n \rangle = 0$ para todo $t$. Sea $f : (a, b) \to \mathbb{R}$ definida por $f(t) = \langle \alpha(t) - \alpha(t_o), n \rangle$.
 >>	4. Calculamos $$ f'(t) = \langle \alpha'(t), n \rangle = \langle T(t), B(t) \rangle = 0. $$
->>	5. Luego $f$ es constante y $$f(t) = f(t_o) = \langle \alpha(t_o) - \alpha(t_o), n \rangle = 0$$
+>>	5. Luego $f$ es constante y $f(t) = f(t_o) = \langle \alpha(t_o) - \alpha(t_o), n \rangle = 0$.
 >>- $(\Longrightarrow)$ 
 >>	1. Llamamos $P$ al plano donde está contenida la trayectoria de $\alpha$. Sea $t_o \in (a, b)$. Como $\alpha(t_o) \in P$, entonces $P$ es de la forma (2) para cierto vector unitario $n$.
 >>	2. Tenemos que $\langle \alpha(t) - \alpha(t_o), n \rangle = 0$ para todo $t$. Derivamos miembro a miembro y obtenemos $$ \langle \alpha'(t), n \rangle = 0, \quad \text{o sea}, \quad \langle T(t), n \rangle = 0 $$para todo $t$. 
@@ -118,24 +92,32 @@
 >>	10. Como $\varepsilon$ es continua (por que $B$ lo es, porque $N$ y $T$ los son porque $\alpha$ es suave), por el teorema de los valores intermedios resulta que $\varepsilon$ es constante, igual a $1$ o a $-1$. 
 >>	11. En el primer caso, $B = n$, con lo cual $0 = B' = -\tau N$, de donde $\tau = 0$. Si $B = -n$, el argumento es similar.
 >
->>[!Resumen]-
->>- **(⇐) $\tau=0$ ⇒ planar**
->>	1. $\tau=0$ ⇒ $B'=0$ ⇒ $B$ constante, fijar $n:=B$.
->>	2. Definir el plano $P=\{q:\langle q-\alpha(t_0),n\rangle=0\}$.
->>	3. Considerar $f(t)=\langle\alpha(t)-\alpha(t_0),n\rangle$ y derivar $f'=0$.
->>	4. Usar $f(t_0)=0$ para concluir $\alpha(t)\in P$.
->>- **(⇒) planar ⇒ $\tau=0$**
->>	1. Si $\alpha$ está en $P$ con normal $n$, entonces $\langle\alpha(t)-\alpha(t_0),n\rangle=0$.
->>	2. Derivar: $\langle T,n\rangle=0$ y derivar de nuevo $0=\langle T',n\rangle=\kappa\langle N,n\rangle$.
->>	3. Como $\kappa\neq 0$, $\langle N,n\rangle=0$ ⇒ $n\perp T,N$ ⇒ $\epsilon(t)n=B(t)$.
->>	4. $B$ continua ($\alpha$ suave) entonces $B(t)=\pm n$ luego $0=B'=-\tau N$ (curvatura nunca nula entonces $\tau=0$) 
+>>[!Resumen]- Ayuda
+>>- **(⇐) $\tau=0 \Rightarrow$ planar**
+>>	1. $\tau=0 \Rightarrow B'=0 \Rightarrow B$ constante. Fijo $n:=B$ 
+>>	2. Definimos plano que pasa $\alpha(t_0)$:
+>> 	  $$P=\{q:\langle q-\alpha(t_0),n\rangle=0\}.$$
+>>	3. Let $f(t)=\langle\alpha(t)-\alpha(t_0),n\rangle$. Y derivando vemos que $f$ es constante y luego usamos $f(t_{0})=0$ 
+>>- **(⇒) planar $\Rightarrow \tau=0$**
+>>	1. $\alpha$ contained in plane $P$ with unit normal $n$.
+>>	2. $\langle\alpha(t)-\alpha(t_0),n\rangle=0\;\forall t$.
+>>	3. Differentiate:
+>> 	  - $\langle T,n\rangle=0$
+>> 	  - $\langle T',n\rangle=\kappa\langle N,n\rangle=0$
+>>	1. Since $\kappa\neq 0$: $\langle N,n\rangle=0$.
+>>	2. Thus $n\perp T$ and $n\perp N$.
+>>	3. Hence $n=\pm B$.
+>>	4. $B=\pm n$ is constant $\Rightarrow B'=0$.
+>>	5. From $B'=-\tau N$: $\tau=0$.
 >	
 
->[!Remark]-
+>[!Remark]
 >El signo de la torsión indica si la curva se parece al pasamanos de una escalera de caracol para diestros ($\tau > 0$) o zurdos ($\tau < 0$). O si se parece a la vid ($\tau > 0$) o al lúpulo ($\tau < 0$), por la manera en que se enroscan los tallos de estas plantas.
 
->[!Definition]- Helice
->Se dice que una curva $\alpha : (a, b) \to \mathbb{R}^3$ de rapidez unitaria y curvatura nunca nula es una hélice si existe un vector unitario $u \in \mathbb{R}^3$ tal que $\langle \alpha'(t), u \rangle = \text{cte}\quad\forall t$
+>[!Definition] Helice
+>Se dice que una curva $\alpha : (a, b) \to \mathbb{R}^3$ 
+>de rapidez unitaria y curvatura nunca nula es una hélice si existe
+> un vector unitario $u \in \mathbb{R}^3$ tal que $\langle \alpha'(t), u \rangle = \text{constante para todo } t$.
 
 >[!Theorem]
 >Si $\alpha : (a, b) \to \mathbb{R}^3$ es una hélice con curvatura $\kappa : (a, b) \to \mathbb{R}$ positiva y torsión $\tau : (a, b) \to \mathbb{R}$, entonces $\tau/\kappa$ es constante.
@@ -159,19 +141,10 @@
 >>	4. Así, $u$ es un vector constante. Además $$ \|u\|^2 = \cos^2 \theta + \sin^2 \theta = 1, $$por lo que $u$ es unitario. 
 >>	5. Finalmente $$ \langle \alpha'(t), u \rangle = \langle T(t), (\cos \theta) T(t) + (\sin \theta) B(t) \rangle = \cos \theta, $$que es constante. 
 >>	6. Por definición, $\alpha$ es una hélice. $\square$
+>> [!Summary] Resumen de la prueba
+>> - **(⇒)** Derivando la condición de hélice ($\langle T, u \rangle = \text{cte}$) se llega a que $N$ es ortogonal a un vector fijo $u$. Derivando nuevamente y usando las ecuaciones de Frenet, se obtiene una relación lineal entre $\kappa$ y $\tau$ que implica que su cociente es constante.
+>> - **(⇐)** Si $\tau/\kappa$ es constante, se puede construir un vector $u$ como combinación de $T$ y $B$ tal que su derivada sea cero (usando Frenet). Esto demuestra que $u$ es un vector fijo y que la curva cumple la definición de hélice.
 >
->>[!Resumen]-
->>- **(⇒) Hélice ⇒ $\tau/\kappa$ cte**
->>	1. $\langle T,u\rangle=\cos\theta$ constante.
->>	2. Derivar: $0=\kappa\langle N,u\rangle$ ⇒ $\langle N,u\rangle=0$.
->>	3. Derivar otra vez: $0=-\kappa\cos\theta+\tau\langle B,u\rangle$.
->>	4. $\langle B,u\rangle$ es constante porque $\langle B',u\rangle=-\tau\langle N,u\rangle=0$.
->>	5. Con $\|u\|^2=\cos^2\theta+\langle B,u\rangle^2$, concluir $\tau/\kappa=\pm\cot\theta$.
->>- **(⇐) $\tau/\kappa$ cte ⇒ hélice**
->>	1. Tomar $\theta$ con $\cot\theta=\tau/\kappa$ y definir $u=\cos\theta\,T+\sin\theta\,B$.
->>	2. Usar Frenet para ver $u'=0$.
->>	3. Entonces $\langle T,u\rangle=\cos\theta$ es constante.
-
 >[!Definition] Curvatura de reparametrizacion
 >Sea $\alpha : [a, b] \to \mathbb{R}^3$ una curva regular de longitud $L$. Se define la **curvatura** de $\alpha$ en el instante $t$ mediante
 > $$\kappa_{\alpha}(t) = \kappa_{\beta}(\sigma(t)),$$
@@ -186,13 +159,6 @@
 >>5. Como $\|\beta'\| = 1$, resulta que $\langle \beta', \beta'' \rangle = 0$ (Derivando) . Osea el angulo entre ellos es 90  
 >>6. Así por 5. , defincion de producto cruz y definicion de curvatura $$ \|\beta'(\sigma) \times \beta''(\sigma)\| = \|\beta'(\sigma)\| \|\beta''(\sigma)\|\left\lVert  \sin\left( \frac{\pi}{2} \right)  \right\rVert  = \lVert \beta''(\sigma) \rVert =\kappa_\beta(\sigma). $$
 >>7. En consecuencia $$ \kappa_\alpha = \kappa_\beta(\sigma) = \frac{\|\alpha' \times \alpha''\|}{\|\alpha'\|^3}$$como deseábamos.  
->
->>[!Resumen]-
->>- **Puntos clave**
->>	1. $\sigma'(t)=\|\alpha'(t)\|$ y $\alpha=\beta\circ\sigma$ ⇒ fórmulas para $\alpha'$ y $\alpha''$.
->>	2. Calcular $\alpha'\times\alpha''=(\beta'\times\beta'')(\sigma')^3$ (el término con $\beta'$ se anula).
->>	3. Tomar normas y usar $\|\beta'\|=1$ ⇒ $\|\beta'\times\beta''\|=\|\beta''\|=\kappa_\beta$.
->>	4. Concluir $\kappa_\alpha=\|\alpha'\times\alpha''\|/\|\alpha'\|^3$.
 
 ^f3efb8
 
@@ -216,12 +182,6 @@
 >>2. Veamoslo, si $u = (x, y)$ y $v = (\xi, \eta)$, tenemos $$ \det(u, v) = \det \begin{pmatrix} x & \xi \\ y & \eta \end{pmatrix} = x\eta - y\xi, $$
 >>3. Y por el otro lado
 >>$$ \langle I(x, y), (\xi, \eta) \rangle = \langle (-y, x), (\xi, \eta) \rangle = -y\xi + x\eta = x\eta - y\xi. $$
->
->>[!Resumen]-
->>- **Disparo**
->>	1. Recordar la identidad $\det(u,v)=\langle Iu,v\rangle$ en $\mathbb{R}^2$.
->>	2. Verificarla por coordenadas con $u=(x,y)$, $v=(\xi,\eta)$.
->>	3. Aplicarla a $u=\alpha'(s)$, $v=\alpha''(s)$.
 
 >[!Definition]
 >La curvatura signada de curvas regulares planas, no necesariamente de rapidez unitaria, se define de manera análoga a la curvatura de curvas regulares en $\mathbb{R}^2$.
@@ -234,12 +194,6 @@
 >>Calculamos
 >>$$ k(s) = \det(\alpha'(s), \alpha''(s)) = \det \begin{pmatrix} \cos \theta(s) & -\sin(\theta(s))\theta'(s) \\ \sin \theta(s) & \cos(\theta(s))\theta'(s) \end{pmatrix} $$
 >>$$ = (\cos^2 \theta(s) + \sin^2 \theta(s))\theta'(s) = \theta'(s). $$
->
->>[!Resumen]-
->>- **Trigger**
->>	1. Usar $\alpha'=(\cos\theta,\sin\theta)$ y derivar para obtener $\alpha''$.
->>	2. Calcular $k=\det(\alpha',\alpha'')$ como determinante $2\times2$.
->>	3. Simplificar con $\cos^2\theta+\sin^2\theta=1$ para concluir $k=\theta'$.
 
 ^bb97e8
 
@@ -260,13 +214,6 @@
 >> [!Summary] Resumen de la prueba
 >> Se construye explícitamente la curva integrando un vector tangente unitario cuyo ángulo $\theta$ es la integral de la curvatura signada dada. Este procedimiento garantiza que la curva tenga la curvatura prescrita y cumpla las condiciones iniciales de posición y dirección.
 >
->>[!Resumen]-
->>- **Construcción**
->>	1. Proponer $\alpha(s)=p+\int_a^s(\cos\theta,\sin\theta)\,dt$.
->>	2. Elegir $\theta(a)=\theta_0$ para que $\alpha'(a)=u$.
->>	3. Usar $k=\theta'$ y fijar $\theta(s)=\theta_0+\int_a^s\tilde{k}(t)\,dt$.
->>	4. Concluir rapidez unitaria y curvatura $\tilde{k}$.
->
 
 >[!Theorem] Teorema fundamental de las curvas espaciales
 >Sea $\kappa : (a, b) \to \mathbb{R}$ una función positiva de clase $C^2$ y sea $\tau : (a, b) \to \mathbb{R}$ una función de clase $C^1$. Dados $t_o \in (a, b)$, $p \in \mathbb{R}^3$ y una base ortonormal $\{t, n, t \times n\}$ de $\mathbb{R}^3$, existe una única curva suave de rapidez unitaria $\alpha : (a, b) \to \mathbb{R}^3$ tal que su curvatura y su torsión son $\kappa$ y $\tau$, respectivamente, y además $\alpha(t_o) = p$, $T(t_o) = t$, $N(t_o) = n$ y $B(t_o) = t \times n$ 
@@ -284,12 +231,6 @@
 >>8. Ahora, si $q = p$, el enunciado es claramente verdadero. Si $q \ne p$, tenemos $\|q - p\| \ne 0$ y así $$ \|q - p\| \le \int_a^b \|\alpha'(t)\| \, dt = \text{long}(\alpha), $$como queríamos.
 >> [!Summary] Resumen de la prueba
 >> Se expresa el vector desplazamiento $q-p$ como la integral del vector velocidad. Al proyectar este desplazamiento sobre sí mismo (producto escalar) y aplicar la desigualdad de Cauchy-Schwarz dentro de la integral, se concluye que la distancia en línea recta es siempre menor o igual que la longitud del camino recorrido (integral de la rapidez).
->
->>[!Resumen]-
->>- **Idea**
->>	1. Escribir $q-p=\int_a^b\alpha'(t)\,dt$.
->>	2. Tomar producto interno con $q-p$ y aplicar Cauchy-Schwarz.
->>	3. Cancelar $\|q-p\|$ si $q\neq p$ para obtener $\|q-p\|\le\int_a^b\|\alpha'(t)\|\,dt$.
 >
 
 >[!Definition] Circunferencia osculatriz y Evoluta
@@ -311,13 +252,6 @@
 >>12. Así, $\|c'(t)\| = r'(t)$ ($k$ es positiva por eso no hay modulo y rapidez unitaria) para todo $t$. 
 >>13. Luego si $t_1 < t_2$ están en $(a, b)$ resulta que
 >>$$ \text{long}\left( c|_{[t_1, t_2]} \right) =\int_{t_{1}}^{t_{2}}\lVert c'(t) \rVert dt  = \int_{t_1}^{t_2} r'(t) \, dt = r(t_2) - r(t_1), $$
->
->>[!Resumen]-
->>- **Pasos**
->>	1. $r=1/k$ y $k$ decreciente ⇒ $r'>0$.
->>	2. Usar $\alpha''=k I\alpha'$ (curva plana unitaria).
->>	3. Derivar $c=\alpha+r I\alpha'$ y simplificar con $I^2=-1$ ⇒ $c'=r' I\alpha'$.
->>	4. Entonces $\|c'\|=r'$ y la longitud es $r(t_2)-r(t_1)$.
 
 >[!Theorem] Teorema de Tait-Kneser
 >Sea $\alpha : (a, b) \to \mathbb{R}^2$ una curva de rapidez unitaria y curvatura signada $k : (a, b) \to \mathbb{R}$ positiva y estrictamente decreciente. Entonces las circunferencias osculatrices de $\alpha$ son disjuntas dos a dos y anidadas.
@@ -328,12 +262,6 @@
 >>$$ \begin{align} \|p - c(t_2)\| & = \|p - c(t_1) + c(t_1) - c(t_2)\| \\ & \le \|p - c(t_1)\| + \|c(t_1) - c(t_2)\| \\ & \le r(t_1) + r(t_2) - r(t_1) = r(t_2), \end{align} $$
 >>con lo cual $\|p - c(t_2)\| \le r(t_2)$.
 >>17. Como $r(t_1) < r(t_2)$, la inclusión es estricta y las circunferencias no se tocan. $\square$
->
->>[!Resumen]-
->>- **Esquema**
->>	1. Usar la proposición previa: $\|c(t_2)-c(t_1)\|\le r(t_2)-r(t_1)$.
->>	2. Para $p\in C_{t_1}$, aplicar desigualdad triangular a $\|p-c(t_2)\|$.
->>	3. Obtener $\|p-c(t_2)\|\le r(t_2)$ y como $r(t_1)<r(t_2)$, inclusión estricta.
 
 # Transformaciones Rigidas
 
@@ -354,12 +282,6 @@
 >> [!Summary] Resumen de la prueba
 >> - **(a ⇔ b):** La definición de matriz ortogonal ($C^T C = I$) es equivalente a decir que la transformación preserva el producto interno.
 >> - **(b ⇔ c):** La preservación del producto interno implica la de la norma; el recíproco se demuestra mediante la identidad de polarización, que expresa el producto interno en términos de normas.
->
->>[!Resumen]-
->>- **Equivalencias**
->>	1. (a ⇔ b) $C^T C=I$ equivale a preservar producto interno.
->>	2. (b ⇒ c) usar $\|x\|^2=\langle x,x\rangle$.
->>	3. (c ⇒ b) aplicar la identidad de polarización para recuperar $\langle x,y\rangle$.
 
 ^8d0719
 
@@ -379,12 +301,6 @@
 >> [!Summary] Resumen de la prueba
 >> Se utiliza la propiedad del determinante de una composición de transformaciones. Al expresar el producto mixto de tres vectores transformados como el determinante de la matriz formada por ellos, se relaciona directamente con el determinante de la matriz de transformación y el producto mixto original.
 >
->>[!Resumen]-
->>- **Idea**
->>	1. Comparar productos mixtos: $\langle Cx\times Cy, Cz\rangle$.
->>	2. Reescribir como determinantes $\det(Cx,Cy,Cz)$.
->>	3. Usar $\det(Cx,Cy,Cz)=\det(C)\det(x,y,z)$ y concluir.
->
 
 >[!Proposition]
 >Sea $C$ una transformación ortogonal de $\mathbb{R}^3$. Entonces la matriz de $C$ respecto de alguna base ortonormal de $\mathbb{R}^3$ tiene la forma
@@ -395,7 +311,12 @@
 >Una función $T : \mathbb{R}^n \to \mathbb{R}^n$ se llama **transformación euclidiana** de $\mathbb{R}^n$ si es de la forma $T(x) = Cx + u$, donde $C$ es una transformación ortogonal y $u \in \mathbb{R}^n$.
 >La transformación euclidiana se dice **rígida** (o que **preserva la orientación**) si $C$ es una rotación, o sea, si $\det C = 1$.
 
->[!Remark]-
+>[!Proposition]
+>Las transformaciones euclidianas de $\mathbb{R}^n$ preservan distancia.
+>>[!Proof]-
+>>$$ \|Tx - Ty\| = \|Cx + u - (Cy + u)\| = \|Cx - Cy\| = \|C(x - y)\| = \|x - y\|. $$
+
+>[!Remark]
 >Antes de enunciar el teorema que sigue, veamos que para derivar un producto de dos curvas matriciales vale una regla similar a la que usamos para derivar el producto de dos funciones.
 >
 >Sean $A : (a, b) \to \mathbb{R}^{n \times m}$ una función suave, es decir, $A_{i,j} : (a, b) \to \mathbb{R}$ es una función suave para todo $1 \le i \le n$, $1 \le j \le m$.
@@ -413,35 +334,19 @@
 >>5. Ahora verificamos que $I$ conmuta o anticonmuta con $C$, dependiendo de si $\varepsilon = 1$ o $-1$. En efecto, $$ IC = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \begin{pmatrix} \cos \theta & -\varepsilon \sin \theta \\ \sin \theta & \varepsilon \cos \theta \end{pmatrix} = \begin{pmatrix} -\sin \theta & -\varepsilon \cos \theta \\ \cos \theta & -\varepsilon \sin \theta \end{pmatrix}, $$ $$ CI = \begin{pmatrix} \cos \theta & -\varepsilon \sin \theta \\ \sin \theta & \varepsilon \cos \theta \end{pmatrix} \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} = \begin{pmatrix} -\varepsilon \sin \theta & -\cos \theta \\ \varepsilon \cos \theta & -\sin \theta \end{pmatrix}. $$
 >>6. Luego $IC = \varepsilon CI$.
 >>7. De 3. y usando que $C$ es rotar, si rotamos las dos componentes el producto interno no cambia. Resulta que $$ \bar{k}(t) = \langle I(C\alpha'(t)), C\alpha''(t) \rangle = \varepsilon \langle C(I\alpha'(t)), C\alpha''(t) \rangle = \varepsilon \langle I\alpha'(t), \alpha''(t) \rangle = \varepsilon k(t). $$
->
->>[!Resumen]-
->>- **Ruta**
->>	1. Derivar $\bar{\alpha}=C\alpha+u$ ⇒ $\bar{\alpha}'=C\alpha'$ y $\bar{\alpha}''=C\alpha''$.
->>	2. Ver que $IC=\varepsilon CI$ con $\varepsilon=\det(C)=\pm 1$.
->>	3. Concluir $\bar{k}=\varepsilon k$ y rapidez unitaria preservada.
-
->[!Proposition]
->Las transformaciones euclidianas de $\mathbb{R}^n$ preservan distancia. (Osea son isometrias)  
->>[!Proof]-
->>$$ \|Tx - Ty\| = \|Cx + u - (Cy + u)\| = \|Cx - Cy\| = \|C(x - y)\| = \|x - y\|. $$
->
->>[!Resumen]-
->>- **Cálculo directo**
->>	1. $Tx=Cx+u$ ⇒ $Tx-Ty=C(x-y)$.
->>	2. Como $C$ es ortogonal, $\|C(x-y)\|=\|x-y\|$.
 
 >[!Theorem]
->Sea $T : \mathbb{R}^n \to \mathbb{R}^n$ una función que preserva distancias (Osea isometria) , o sea,
+>Sea $T : \mathbb{R}^n \to \mathbb{R}^n$ una función que preserva distancias, o sea,
 >$$ \|Tx - Ty\| = \|x - y\| $$
 >para todo $x, y \in \mathbb{R}^n$. Entonces $T$ es euclidiana, o sea, de la forma
 >$$ T(x) = Cx + u, $$
 >donde $C$ es ortogonal, y en particular, lineal.
 >>[!Proof]-
->>1. Supongamos primero que $T(0) = 0$ y es una funcion que preserva distancias. Veamos que
+>>8. Supongamos primero que $T(0) = 0$ y es una funcion que preserva distancias. Veamos que
 >>	- $T$ Preserva normas
 >>		1. $\|T(x)\| = \|T(x) - 0\| = \|T(x) - T(0)\| = \|x - 0\| = \|x\|$ (en la penúltima igualdad usamos que $T$ preserva distancias).
 >>	- $T$ Preserva productos internos
->>		1. Probamos recien que $\|Tx - Ty\|^2 = \|x - y\|^2$, o sea, $$\langle Tx - Ty, Tx - Ty \rangle = \langle x - y, x - y \rangle$$
+>>		1. Sabemos que $\|Tx - Ty\|^2 = \|x - y\|^2$, o sea, $$\langle Tx - Ty, Tx - Ty \rangle = \langle x - y, x - y \rangle$$
 >>		2. Distribuyendo, $$ \|Tx\|^2 + \|Ty\|^2 - 2\langle Tx, Ty \rangle = \|x\|^2 + \|y\|^2 - 2\langle x, y \rangle. $$
 >>		3. Pero por preservar normas sabemos que $\|Tx\|^2 = \|x\|^2$ y $\|Ty\|^2 = \|y\|^2$, con lo cual, $\langle Tx, Ty \rangle = \langle x, y \rangle$.
 >>	- $T$ es lineal
@@ -453,13 +358,6 @@
 >>6. Luego, $C(0) = T(0) - u = u - u = 0$ y es fácil ver que $C$ preserva distancias. 
 >>7. Por lo anterior, $C$ es ortogonal y en consecuencia, $T(x) = C(x) + u$ con $C$ ortogonal
 >>8. Osea $T$ es euclidea 
->
->>[!Resumen]-
->>- **Plan**
->>	1. Caso $T(0)=0$: de preservación de distancias se obtiene preservación de normas y producto interno.
->>	2. Mostrar linealidad via $\|T(x+y)-(Tx+Ty)\|^2=0$.
->>	3. Concluir que $T$ es ortogonal.
->>	4. Caso general: $C(x)=T(x)-u$ reduce al caso previo y $T(x)=Cx+u$.
 
 ^427a25
 
@@ -476,12 +374,6 @@
 >> 5. Pero $-\left( x-\frac{u}{2} \right)+\frac{u}{2}$ es mover el origen a $\frac{u}{2}$ $x\mapsto x-\frac{u}{2}$ compuesto con hacer reflexion respecto del origen $x\mapsto -x$ compuesta con mover el origen a su punto original nuevamente $x\mapsto x+\frac{u}{2}$. Entonces esto es una reflexion respecto de $\frac{u}{2}$ 
 >> [!Summary] Resumen de la prueba
 >> Se analiza la forma general $T(x) = \pm x + u$. Si el coeficiente es $1$, es una traslación pura. Si es $-1$, la expresión se puede reorganizar para mostrar que es una reflexión simétrica respecto al punto medio del desplazamiento.
->
->>[!Resumen]-
->>- **Idea**
->>	1. Partir de $T(x)=\varepsilon x+u$ con $\varepsilon=\pm 1$.
->>	2. Si $\varepsilon=1$, es traslación.
->>	3. Si $\varepsilon=-1$, reescribir $T(x)=-(x-\frac{u}{2})+\frac{u}{2}$ para ver la reflexión en $\frac{u}{2}$.
 
 >[!Definition] Caso $n=2$
 >Denotamos por $R_{z, \theta}$ la rotación en ángulo $\theta$ alrededor del punto $z \in \mathbb{R}^2$. Se obtiene de conjugar $R_\theta$ por la traslación $x \mapsto x + z$, o sea,
@@ -510,13 +402,6 @@
 >>7. El primer término representa la rotación alrededor de la recta vertical $\{z\} \times \mathbb{R}$ y el segundo, la traslación vertical en $b$. $\square$
 >> [!Summary] Resumen de la prueba
 >> Se descompone la transformación rígida en una parte de rotación y otra de traslación. Utilizando una base adecuada, la rotación se reduce a un plano, y se demuestra que el movimiento total equivale a rotar sobre un eje y desplazarse simultáneamente a lo largo de este, que es la definición de tirabuzón.
->
->>[!Resumen]-
->>- **Eje + traslado**
->>	1. Escribir $T(x)=Cx+u$ con $C$ rotación y elegir base con $C=\mathrm{diag}(R_\theta,1)$.
->>	2. Separar $x=(x',a)$ y $u=(u',b)$.
->>	3. Si $R_\theta\neq I$, la parte plana es rotación alrededor de un punto $z$.
->>	4. Reescribir $T$ como rotación alrededor de la recta $\{z\}\times\mathbb{R}$ más traslación en esa recta.
 
 # Repaso de cálculo en varias variables
 
@@ -994,11 +879,6 @@
 
 >[!Exercise]
 >Si $f : M \to N$ es la restricción de una transformación euclidiana de $\mathbb{R}^3$, entonces $f$ es una isometría local.
->>[!Proof]-
->>1. Sea $F$ una isometria de $\mathbb{R}^{3}$ (osea tranformacion euclidea) tal que $f=F|_{M}$ 
->>2. Entonces $$f\circ\alpha(t)=F|_{M}(\alpha(t))=F(\alpha (t))=C(\alpha(t))+c$$ luego $(f\circ\alpha)' (t)=C\alpha'(t)$.
->>3. Por lo tanto $\lVert (f\circ\alpha )'(t) \rVert=\lVert C\alpha '(t) \rVert=\lVert \alpha '(t) \rVert$ 
->>4. Entonces $long(\alpha )=long(f\circ\alpha )$ mostrando que $f$ es isometria local
 
 >[!Example]- Ejemplo de isometria local
 >Sean $P = \{(x, y, 0) \mid x, y \in \mathbb{R}\}$ y $C = \{(x, y, z) \mid x^2 + y^2 = 1\}$ y sea
@@ -1028,8 +908,6 @@
 >>	2. Sea $\alpha : (-\varepsilon, \varepsilon) \to M$ una curva suave en $M$ con $\alpha(0) = p$ y $\alpha'(0) = u$.
 >>	3. Por hipótesis, para todo $0 \le s < \varepsilon$ se cumple que $$ \text{long}(\alpha|_{[0, s]}) = \text{long}(f \circ \alpha|_{[0, s]}), $$o equivalentemente,$$ \int_0^s \|\alpha'(t)\| \, dt = \int_0^s \|(f \circ \alpha)'(t)\| \, dt. $$
 >>	4. Derivando por derecha en ambos miembros con respecto a $s$ (Teorema Fundamental del Calculo) en $s=0$, obtenemos $$ \|\alpha'(0)\| = \|(f \circ \alpha)'(0)\| = \|df_p(\alpha'(0))\|, $$con lo cual $\|df_p(u)\| = \|u\|$, como queríamos.
-
-^c30e44
 
 >[!Definition] Coeficientes de la primera forma fundamental
 >Sea $\varphi : U \to M$ un sistema coordenado de una superficie $M$. Los **coeficientes de la primera forma fundamental** de $\varphi$ son las funciones

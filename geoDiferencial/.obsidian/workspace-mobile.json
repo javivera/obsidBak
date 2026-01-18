@@ -28,7 +28,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Definiciones.md",
+                "file": "Theory/Definiciones.md",
                 "mode": "preview",
                 "source": false,
                 "backlinks": false
@@ -37,7 +37,8 @@
               "title": "Definiciones"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -181,10 +182,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "81892f2baff01bb7",
+  "active": "52a2e8ed1cd0e03e",
   "lastOpenFiles": [
-    "Definiciones.md",
     "Practicos/Resueltos/GD - Pr8.md",
+    "Definiciones.md",
     "Practicos/Resueltos/GD - Pr7.md",
     "Practicos/Resueltos/GD - Pr6.md",
     "Examenes/GD - Examen Final 2.pdf",
