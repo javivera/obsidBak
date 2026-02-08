@@ -68,21 +68,17 @@
 ---
 
 >[!Example] Ejercicio 4
->Sea $S$ una superficie regular y $f : S \to \mathbb{R}$. Un punto $p \in S$ se dice crítico para $f$ si $df|_p = 0$.
+>Sea $S$ una superficie regular y $f : S \to \mathbb{R}$. Un punto $p \in S$ se dice crítico para $f$ si $df_p = 0$.
 >Sea $f(p) = |p - p_0|$ con $p_0$ fuera de $S$ fijo. Mostrar que $p$ es crítico para $f$ si y sólo si la recta que pasa por $p$ y $p_0$ es perpendicular a $S$ en $p$.
 >>[!Proof]-
->>Consideremos la función cuadrado de la distancia $g(p) = |p - p_0|^2 = \langle p - p_0, p - p_0 \rangle$.
->>Los puntos críticos de $f$ son los mismos que los de $g$ (pues $f = \sqrt{g}$ y $g > 0$, $df = \frac{1}{2\sqrt{g}} dg$, así que $df=0 \iff dg=0$).
->>Extendemos $g$ a todo $\mathbb{R}^3$ como $G(x) = |x - p_0|^2$.
->>El diferencial de $G$ en $p$ actuando sobre un vector $v \in \mathbb{R}^3$ es:
->>$dG_p(v) = 2 \langle p - p_0, v \rangle$.
->>Para la función restringida $g = G|_S$, el diferencial $dg_p$ es la restricción de $dG_p$ al espacio tangente $T_pS$.
->>$p$ es punto crítico de $g$ si $dg_p(v) = 0$ para todo $v \in T_pS$.
->>Esto equivale a:
->>$2 \langle p - p_0, v \rangle = 0 \quad \forall v \in T_pS$.
->>Esto significa que el vector $p - p_0$ es ortogonal a todo vector tangente a $S$ en $p$.
->>Es decir, $p - p_0$ es normal a $S$ en $p$.
->>Geométricamente, esto significa que la recta que une $p_0$ y $p$ (que tiene dirección $p - p_0$) es perpendicular al plano tangente $T_pS$.
+>>1. Consideremos la función cuadrado de la distancia $$g(p) = |p - p_0|^2 = \langle p - p_0, p - p_0 \rangle$$
+>>2. Los puntos críticos de $f$ son los mismos que los de $g$ (pues $f = \sqrt{g}$ y $g > 0$, $df = \frac{1}{2\sqrt{g}} dg$, así que $df=0 \iff dg=0$).
+>>3. Extendemos $g$ a todo $\mathbb{R}^3$ como $G(x) = |x - p_0|^2$.
+>>4. El diferencial de $G$ en $p$ actuando sobre un vector $v \in \mathbb{R}^3$ es:$$dG_p(v) = 2 \langle p - p_0, v \rangle$$
+>>5. Para la función restringida $g = G|_S$, el diferencial $dg_p$ es la restricción de $dG_p$ al espacio tangente $T_pS$.
+>>6. Entonces $p$ es punto crítico de $g$ si $dG_p(v) = 0$ para todo $v \in T_pS$. Esto equivale a: $$2 \langle p - p_0, v \rangle = 0 \quad \forall v \in T_pS$$
+>>7. Esto significa que el vector $p - p_0$ es ortogonal a todo vector tangente a $S$ en $p$. Es decir, $p - p_0$ es normal a $S$ en $p$.
+>>8. Geométricamente, esto significa que la recta que une $p_0$ y $p$ (que tiene dirección $p - p_0$) es perpendicular al plano tangente $T_pS$.
 
 ---
 

@@ -84,7 +84,7 @@
 >>2. Pero por definicion de campo paralelo $W(t)'\perp T_{\gamma(t)}M$ y obviamente $\gamma'\in T_{\gamma(t)}M$ entonces $\langle W',\gamma'\rangle=0$
 >>3. Por otro lado como $\gamma$ es geodesica sabemos que $\gamma''$ es multiplo del campo normal por lo tanto $\gamma''\perp T_{\gamma(t)}M$ y sabemos por definicion que $W\in T_{\gamma(t)}M$ por lo tanto $\langle W,\gamma''\rangle=0$  
 >>4. Aqui asumimos que $\gamma$ es parametrizada por longitud de arco (rapidez unitaria).
->>5. No lo voy a hacer pero la idea seria que $\gamma(\alpha(s)) =\beta(s)$ seria la reparametrizacion. Entonces tendrias $\tilde{W}(s)=W(\alpha (s))$ y apareceria la derivada de $\alpha$ cuando derivas $\tilde{W}$ y cuando derivas $\beta$ pero no cambia el angulo esto.
+>>5. No lo voy a hacer pero la idea seria que $\gamma(\sigma^{-1}(s)) =\beta(s)$ seria la reparametrizacion. Entonces tendrias $\tilde{W}(s)=W(\sigma^{-1} (s))$ y apareceria la derivada de $\alpha$ cuando derivas $\tilde{W}$ y cuando derivas $\beta$ pero no cambia el angulo esto. Recordar que $\sigma^{-1}:[0,L]\rightarrow[a,b]$ osea es escalar y se puede sacar afuera del producto 
 
 ---
 

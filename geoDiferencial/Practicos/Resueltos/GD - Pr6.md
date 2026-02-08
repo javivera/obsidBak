@@ -153,7 +153,7 @@
 >>[!Proof]-
 >>1. Notar que $df_{p}$ es isometria entonces $\lVert df_{p}(u) \rVert=\lVert u \rVert$ 
 >>2. Sea $\alpha (t):[a,b]\rightarrow M$ entonces $(f\circ\alpha)'(t)=df_{\alpha (t)}\alpha'(t)$ 
->>3. Por lo tanto $L(f(\alpha (t)))=\lVert (f\circ\alpha )'(t) \rVert=\lVert df_{\alpha (t)}\alpha'(t) \rVert=\lVert \alpha '(t) \rVert=L(\alpha (t))$ 
+>>3. Por lo tanto $long(f(\alpha (t)))=\lVert (f\circ\alpha )'(t) \rVert=\lVert df_{\alpha (t)}\alpha'(t) \rVert=\lVert \alpha '(t) \rVert=long(\alpha (t))$ 
 >>4. Por lo tanto preserva curvas entonces es isometria local
 >>5. Notar que si agregamos la hipotesis de que $f$ sea biyectiva entonces es facil probar usando isometria lineal que $df_{p}$ es isomorfismo por lo tanto $f$ seria un difeomorfismo (global) mostrando que $f$ es isometria global 
 
@@ -190,6 +190,8 @@
 >>3. Ahora calculamos las primeras formas de ambas $$E_{\varphi}=1\quad F_{\varphi}=0\quad G_{\varphi}=t^{2}$$$$E_{\tilde{\varphi}}=2\rho^{2}\quad F_{\tilde{\varphi}}=0\quad G_{\tilde{\varphi}}=\rho^{2}\lambda^{2}t^{2}$$
 >>4. Queremos que sean iguales entonces $\rho=\frac{1}{\sqrt{ 2 }}$ y $\lambda=\sqrt{ 2 }$
 >>5. Asi tenemos que $\tilde{\varphi}\circ\varphi ^{-1}=f$ es isometria local tomando los coeficientes de 4.
+
+^67ce31
 
 ---
 

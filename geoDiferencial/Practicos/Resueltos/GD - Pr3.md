@@ -113,8 +113,10 @@
 >>1. Sea $f(x) = Ax + b$ con $A \in SO(2)$ ($O$ de ortogonal y $S$ de determinante $1$ ósea $f$ es rígida).
 >>2. Si $A = I$, $f(x) = x+b$ es una traslación.
 >>3. Si $A \neq I$, $\det(I-A) \neq 0$. Pues 1 no es autovalor de rotación no trivial en el plano. Esto se puede ver calculado los auto valores a mano 
->>4. Entonces $I-A$ es inversible por lo tanto existe un único punto $p$ tal que $(I-A)p = b$. Ósea $p-Ap=b$ 
->>5. Entonces $f(x) = A(x-p) + p$. Que es por [[Definiciones#^ff0d1a]] una rotación alrededor de $p$.
+>>4. Entonces $I-A$ es inversible por lo tanto existe un único punto $p$ tal que $(I-A)p = b$. Ósea $-Ap=b-p$ 
+>>5. Entonces $$Ax+b=Ax+b-p+p=Ax -Ap+p = A(x-p) + p=R_{p,\theta}(x)$$Que es por [[Definiciones#^ff0d1a]] una rotación alrededor de $p$. (Recordar $A$ es ortogonal de determiannte $1$, por que $f$ es trasnformacion rigida) 
+
+^4d80f2
 
 ---
 
