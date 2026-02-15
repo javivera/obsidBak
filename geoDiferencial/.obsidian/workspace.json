@@ -11,12 +11,15 @@
             "id": "1e88ec94697733aa",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Apuntes/GeometriaDiferencial2025.pdf"
+                "file": "Theory/Definiciones.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
               },
-              "icon": "lucide-file-text",
-              "title": "GeometriaDiferencial2025"
+              "icon": "lucide-file",
+              "title": "Definiciones"
             }
           },
           {
@@ -93,21 +96,9 @@
               "icon": "lucide-file-text",
               "title": "GD - Lista Teoremas"
             }
-          },
-          {
-            "id": "72f5499798fea318",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.11.7"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.11.7"
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -164,7 +155,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "e4c509da46b3a57e",
@@ -256,26 +248,26 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "72f5499798fea318",
+  "active": "1e88ec94697733aa",
   "lastOpenFiles": [
-    "Apuntes/GeometriaDiferencial2025.pdf",
-    "Theory/Definiciones.md",
     "Theory/GD - Lista Teoremas.pdf",
+    "Theory/Definiciones.md",
+    "Apuntes/GeometriaDiferencial2025.pdf",
+    "Examenes/GD - Examen Final.md",
+    "Practicos/Resueltos/GD - Pr7.md",
+    "Dudas.md",
     "Theory/do Carmo - Differential Geometry of Curves and Surfaces.pdf",
     "ejercicio1.md",
     "Pasted image 20260205123459.png",
     "DefinicionesBak.md",
     "Examenes/GD - Examen Final.pdf",
-    "Examenes/GD - Examen Final.md",
     "Examenes/GD - Examen Final 2.md",
     "Examenes/GD - Examen Final 2.pdf",
     "Examenes/GD - 1erP (02-09-25).md",
-    "Practicos/Resueltos/GD - Pr7.md",
     "Practicos/Enunciados/GD - Pr1.pdf",
     "Practicos/Enunciados",
     "Practicos/Enunciados/GD - Pr7.pdf",
     "Practicos/Resueltos/GD - Pr6.md",
-    "Dudas.md",
     "Practicos/Resueltos/GD - Pr5.md",
     "Practicos/Resueltos/GD - Pr3.md",
     "Answers/examen-final-ej2.md",
