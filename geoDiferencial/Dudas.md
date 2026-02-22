@@ -6,4 +6,5 @@
 - [[GD - 2doP (04-11-25)#^1ca2d4]] se puede usar la curva sugerencia?? 
 - En lema de diagram triangular.. se deberia decir que $$\varphi ^{-1}=\Phi|_{\varphi(U)}$$ si no , no esta bien definida y si lo es los pasos 5 y 6 son irrelevante.
 - [[Definiciones#^5c0406]] la parte de continuidad
+- En la definicion de plano tangente por que no usar $\alpha(t_{0})=p$ 
  

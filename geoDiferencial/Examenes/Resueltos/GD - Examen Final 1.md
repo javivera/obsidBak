@@ -24,15 +24,35 @@
 >>	3. Derivadas: $\psi_u=\big(\tfrac{e^{\sqrt{u}}}{2\sqrt{u}},\ 0,\ 1\big)$, $\psi_v=(0,1,0)$; son LI en todo $U$. Por su segunda coordenada 
 >>	4. Luego es sistema coordenado
 >>- (b) 
->>	1. Use la parametrización del gráfico $\varphi(x,y)=(x,y,f(x,y))$ con $f(x,y)=(\log x)^2$; la base tangente es $\{\varphi_x,\varphi_y\}$ con $\varphi_x=(1,0,f_x)$, $\varphi_y=(0,1,f_y)$.
->>	2. Calcule derivadas: $f_x=\tfrac{2\log x}{x}$, $f_y=0$, $f_{xx}=\tfrac{2(1-\log x)}{x^2}$, $f_{xy}=0$, $f_{yy}=0$
->>	3. Luego como queremos ver el punto $\varphi(1,0)=(1,0,0)$ evaluamos en $(1,0)$ entonces se tiene $f_x=0$, $f_y=0$, $f_{xx}=2$, $f_{xy}=0$, $f_{yy}=0$.
->>	4. El normal unitario para un gráfico es $n=\dfrac{(-f_x,-f_y,1)}{\sqrt{1+f_x^2+f_y^2}}$ por [[GD - Pr7#^5a9dfd]] 
->>	5. 
->>	6. Calcule $n_x$ y $n_y$ a mano. Con $n=\dfrac{(-f_x,-f_y,1)}{\sqrt{1+f_x^2+f_y^2}}$, se tiene en general: $$n_x=\dfrac{(-f_{xx},-f_{xy},0)}{(1+f_x^2+f_y^2)^{3/2} }+\dfrac{(-f_x,-f_y,1)(f_xf_{xx}+f_yf_{yx})}{(1+f_x^2+f_y^2)^{5/2}}$$ y $$n_y=\dfrac{(-f_{xy},-f_{yy},0)}{(1+f_x^2+f_y^2)^{3/2} }+\dfrac{(-f_x,-f_y,1)(f_xf_{xy}+f_yf_{yy})}{(1+f_x^2+f_y^2)^{5/2}}$$
->>	7. En $(1,0)$, usando 3. llegamos a $$n_x(1,0)=(-2,0,0)\qquad n_y(1,0)=(0,0,0)$$
->>	8. Entonces $-dn_{(1,0,0)}=\begin{pmatrix}-2&0\\0&0\end{pmatrix}$.
->>	9. La curvatura gaussiana es: $$K=\det S=2\cdot 0-0^2=0$$Y la curvatura media es $$H=\tfrac{1}{2}\operatorname{tr} S=\tfrac{1}{2}(-2+0)=-1$$
+>>	1. Tomamos la parametrización natural del gráfico:
+>>	   $$\varphi(u,v)=(u,\ v,\ (\log u)^2),\qquad u>0.$$
+>>	   Entonces
+>>	   $$\varphi_u(u,v)=\left(1,\ 0,\ \frac{2\log u}{u}\right),\qquad \varphi_v(u,v)=(0,1,0).$$
+>>	2. En el punto pedido, $\varphi(1,0)=(1,0,0)$, queda
+>>	   $$\varphi_u(1,0)=(1,0,0),\qquad \varphi_v(1,0)=(0,1,0),$$
+>>	   que será la base tangente que usamos para la matriz de Weingarten.
+>>	3. Definimos el normal unitario por producto cruz:
+>>	   $$N(u,v)=\frac{\varphi_u\times\varphi_v}{\|\varphi_u\times\varphi_v\|}
+>>	   =\frac{\left(-\frac{2\log u}{u},\,0,\,1\right)}
+>>	   {\sqrt{1+\left(\frac{2\log u}{u}\right)^2}}.$$
+>>	   Escribimos $a(u)=\dfrac{2\log u}{u}$, así
+>>	   $$N(u,v)=\frac{(-a(u),0,1)}{\sqrt{1+a(u)^2}}.$$
+>>	4. Derivamos respecto de $u$ y $v$:
+>>	   $$N_v(u,v)=(0,0,0),$$
+>>	   y
+>>	   $$N_u(u,v)=\left(\frac{-a'(u)}{(1+a(u)^2)^{3/2}},\ 0,\ \frac{-a(u)a'(u)}{(1+a(u)^2)^{3/2}}\right).$$
+>>	   Además
+>>	   $$a'(u)=\frac{2(1-\log u)}{u^2},\qquad a(1)=0,\qquad a'(1)=2.$$
+>>	   Luego
+>>	   $$N_u(1,0)=(-2,0,0),\qquad N_v(1,0)=(0,0,0).$$
+>>	5. Por definición del operador de Weingarten $S=-dN$:
+>>	   $$S(\varphi_u)= -N_u(1,0)=(2,0,0)=2\,\varphi_u(1,0)+0\,\varphi_v(1,0),$$
+>>	   $$S(\varphi_v)= -N_v(1,0)=(0,0,0)=0\,\varphi_u(1,0)+0\,\varphi_v(1,0).$$
+>>	   En la base $\{\varphi_u(1,0),\varphi_v(1,0)\}$:
+>>	   $$[S]=\begin{pmatrix}2&0\\0&0\end{pmatrix}.$$
+>>	6. Entonces:
+>>	   $$K=\det[S]=0,\qquad H=\frac{1}{2}\operatorname{tr}[S]=\frac{1}{2}(2+0)=1.$$
+>>	   (Si se toma la orientación opuesta del normal, cambia el signo de $H$ y queda $H=-1$, pero $K$ no cambia.)
 >>- (c)
 >>	1. $F(x,y,z)=(1/x,\ y,\ z)$ mantiene $z=(\log x)^2=(\log(1/x))^2$, por lo que $F(M)\subset M$.
 >>	2. $F|_M$ es claramente la restriccion de una funcion suave, por ende suave, lo mismo para su inversa. Entonces es un diferomorfismo
@@ -42,7 +62,7 @@
 >>
  
 > [!Example] Ejercicio 3 (16 puntos)
-> - **(a)** Sean $w$ y $z$ dos puntos de $\mathbb{R}^2$. ¿Qué transformación rígida del plano se obtiene si se compone la rotación en $180^\circ$ alrededor de $z$ con la rotación en $180^\circ$ alrededor de $w$? Justificar la respuesta.
+> - **(a)** Sean $w$ y $p$ dos puntos de $\mathbb{R}^2$. ¿Qué transformación rígida del plano se obtiene si se compone la rotación en $180^\circ$ alrededor de $p$ con la rotación en $180^\circ$ alrededor de $w$? Justificar la respuesta.
 > - **(b)** Mostrar que un campo paralelo a lo largo de una geodésica $\gamma$ forma un ángulo constante con $\gamma'$
 >>[!Proof]-
 >>- (a)
@@ -92,4 +112,3 @@
 >>13. Sea $S$ una superficie de revolución con métrica $g=ds^2 + r(s)^2 d\theta^2$.
 >>14. Para cualquier geodésica $\gamma$, el momento angular $r(s)^2\,\theta'(s)$ es constante.
 >>15. Equivalentemente, el producto $r(s)\sin\varphi(s)$ es constante, donde $\varphi$ es el ángulo entre $\gamma'$ y la dirección meridiana.
-

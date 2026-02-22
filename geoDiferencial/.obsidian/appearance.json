@@ -6,10 +6,10 @@
   "textFontFamily": "Fira Code",
   "interfaceFontFamily": "CMU Sans Serif",
   "monospaceFontFamily": "CMU Sans Serif",
-  "baseFontSize": 26,
+  "baseFontSize": 20,
   "baseFontSizeAction": true,
   "translucency": false,
   "showRibbon": false,
-  "theme": "system",
+  "theme": "obsidian",
   "accentColor": "#e06e72"
 }

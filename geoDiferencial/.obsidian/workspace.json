@@ -4,101 +4,106 @@
     "type": "split",
     "children": [
       {
-        "id": "746ca06c0bd74836",
+        "id": "a2d7a17f47f59dd9",
         "type": "tabs",
         "children": [
           {
-            "id": "1e88ec94697733aa",
+            "id": "2b32f6922f8c4263",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Theory/Definiciones.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
               "title": "Definiciones"
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "5b5cbd24943f39b1",
+        "type": "tabs",
+        "children": [
           {
-            "id": "a84755e20965c44a",
+            "id": "a856158f00c569c9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dudas.md",
+                "file": "Examenes/Resueltos/GD - Examen Final 3.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Dudas"
+              "title": "GD - Examen Final 3"
             }
           },
           {
-            "id": "72e89ef6fbcf3a59",
+            "id": "0c168578820a7656",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Practicos/Resueltos/GD - Pr7.md",
+                "file": "Examenes/Resueltos/GD - Examen Final 2.md",
                 "mode": "preview",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "GD - Pr7"
+              "title": "GD - Examen Final 2"
+            }
+          },
+          {
+            "id": "b58d80f94f577a88",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Examenes/Resueltos/GD - Examen Final 1.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "GD - Examen Final 1"
+            }
+          },
+          {
+            "id": "4fbafac2a2e714b0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Examenes/Resueltos/GD - 2doP (04-11-25).md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "GD - 2doP (04-11-25)"
+            }
+          },
+          {
+            "id": "89c59c03c8fc1e7e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Examenes/Resueltos/GD - 1erP (02-09-25).md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "GD - 1erP (02-09-25)"
             }
           }
         ]
-      },
-      {
-        "id": "a2d7a17f47f59dd9",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "e03d296fa24b6359",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Apuntes/GeometriaDiferencial2025.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "GeometriaDiferencial2025"
-            }
-          },
-          {
-            "id": "2fa4ebd792ca9325",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Examenes/GD - Examen Final.md",
-                "mode": "preview",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "GD - Examen Final"
-            }
-          },
-          {
-            "id": "2b32f6922f8c4263",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Theory/GD - Lista Teoremas.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "GD - Lista Teoremas"
-            }
-          }
-        ],
-        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -130,7 +135,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "revol",
+                "query": "basta ver",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -248,25 +253,29 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1e88ec94697733aa",
+  "active": "2b32f6922f8c4263",
   "lastOpenFiles": [
-    "Theory/GD - Lista Teoremas.pdf",
+    "Examenes/Resueltos/GD - Examen Final 3.md",
+    "Examenes/Resueltos/GD - Examen Final 2.md",
     "Theory/Definiciones.md",
-    "Apuntes/GeometriaDiferencial2025.pdf",
-    "Examenes/GD - Examen Final.md",
-    "Practicos/Resueltos/GD - Pr7.md",
+    "Examenes/Resueltos/GD - 1erP (02-09-25).md",
+    "Examenes/Resueltos/GD - 2doP (04-11-25).md",
+    "Examenes/GD - Examen Final 2.pdf",
+    "Examenes/Resueltos/GD - Examen Final 1.md",
     "Dudas.md",
+    "Theory/GD - Lista Teoremas.pdf",
+    "Practicos/Resueltos/GD - Pr7.md",
+    "Apuntes/GeometriaDiferencial2025.pdf",
+    "Examenes/GD - Examen Final 1.pdf",
+    "Examenes/GD - Examen Final 3.pdf",
+    "Examenes/GD - 1er Parcial.pdf",
+    "Examenes/GD - 2do Parcial.pdf",
+    "Examenes/25Ex1GD.pdf",
     "Theory/do Carmo - Differential Geometry of Curves and Surfaces.pdf",
     "ejercicio1.md",
     "Pasted image 20260205123459.png",
     "DefinicionesBak.md",
-    "Examenes/GD - Examen Final.pdf",
-    "Examenes/GD - Examen Final 2.md",
-    "Examenes/GD - Examen Final 2.pdf",
-    "Examenes/GD - 1erP (02-09-25).md",
     "Practicos/Enunciados/GD - Pr1.pdf",
-    "Practicos/Enunciados",
-    "Practicos/Enunciados/GD - Pr7.pdf",
     "Practicos/Resueltos/GD - Pr6.md",
     "Practicos/Resueltos/GD - Pr5.md",
     "Practicos/Resueltos/GD - Pr3.md",
@@ -278,15 +287,11 @@
     "Answers/ejercicio1.md",
     "Answers/ejercicio1-solucion.md",
     "Answers/ejercicio2.md",
-    "Untitled",
     "AGENTS.md",
-    "ejercicio1.txt",
-    "Examenes/GD - 2doP (04-11-25).md",
     "Answers/analogia_auto_geodesicas.md",
     "Answers/GD_Pr7_Ejercicio2.md",
     "Practicos/Resueltos/GD - Pr4.md",
     "Answers/importancia-triedro-frenet.md",
-    "Answers/curvatura-torsion-frenet.md",
     "Pasted image 20260112220516.png",
     "Imagenes/Pasted image 20251205225053.png",
     "Pasted image 20251205225053.png",
