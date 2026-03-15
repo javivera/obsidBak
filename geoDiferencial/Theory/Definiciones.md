@@ -1096,7 +1096,7 @@
 >$$ \text{long}(\alpha) = \text{long}(f \circ \alpha). $$
 >El dominio no tiene por que ser todo $M$ puede ser solo una parte del dominio a una parte del codominio
 
->[!Exercise]- Esta bueno leerlo
+>[!Example]- Esta bueno leerlo
 >Si $f : M \to N$ es la restricción de una transformación euclidiana de $\mathbb{R}^3$, entonces $f$ es una isometría local.
 >>[!Proof]-
 >>1. Sea $F$ una isometria de $\mathbb{R}^{3}$ (osea tranformacion euclidea) tal que $f=F|_{M}$ 
