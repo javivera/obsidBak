@@ -36,7 +36,7 @@
 ## El espacio proyectivo real
 
 >[!Definition] Presentación de $\mathbb{RP}^n$ como cociente de la esfera
->Veamos que $\mathbb{R}\mathbb{P}^{n}$ es variedad topologica
+>Veamos que $\mathbb{R}\mathbb{P}^{n}$ es variedad topologica de dimension $n$ 
 >>[!Proof]-
 >>- Definimos $\mathbb{R}\mathbb{P}^{n}$
 >>	1. En $S^n$ consideramos la relación de equivalencia $$ p\sim q\iff q=\pm p.$$es decir, identificamos puntos antipodales.
@@ -87,7 +87,7 @@
 
 ## El toro
 
->[!Exercise] Una presentación del toro
+>[!Exercise] Una presentación del toro REVISAR
 >Ver a $\mathbb{R}^n$ como grupo abeliano con la suma. Entonces $\mathbb{Z}^n$ es subgrupo de $\mathbb{R}^n$. Se denota por
 >$$
 >\mathbb{T}^n:=\mathbb{R}^n/\mathbb{Z}^n
@@ -101,7 +101,7 @@
 >\pi:\mathbb{R}^n\longrightarrow \mathbb{T}^n,\qquad x\longmapsto [x].
 >$$
 >Ver que $\mathbb{T}^n$ es una variedad topológica de dimensión $n$.
->>[!Proof]
+>>[!Proof]-
 >>- Definimos la relación de equivalencia
 >>	1. Para $x,y\in \mathbb{R}^n$, tenemos $$x\sim y \iff x-y\in \mathbb{Z}^n.$$
 >>	2. Es decir, $x$ e $y$ son equivalentes si difieren en un vector con coordenadas enteras.

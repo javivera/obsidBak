@@ -1,36 +1,38 @@
-# Soluciones de `Pr1CF.pdf`
-
-Estas soluciones están pensadas como guía breve. En los ejercicios opcionales, cuando la cuenta es larga, dejo un esbozo suficientemente preciso para reconstruir la prueba.
-
----
-
-### Ejercicio 1
-
 >[!Exercise]
 >- Mostrar que $$\{(x,y)\in\mathbb R^2:xy=0\}$$ no es un espacio topológico localmente euclídeo.
 >- Sea $X$ el cociente $$(\mathbb R\times\{0,1\})/{\sim}$$ de dos copias de $\mathbb R$, donde $(x,0)\sim(x,1)$ para $x\neq 0$. Mostrar que $X$ es un espacio topológico tal que todo punto tiene un entorno abierto homeomorfo a un abierto de $\mathbb R$, pero no es Hausdorff.
 >>[!Proof]-
->>**1.a** Sea $$X=\{(x,y)\in\mathbb R^2:xy=0\},$$ la unión de los dos ejes coordenados. En el origen, cualquier entorno abierto $U\subset X$ cumple que $U\setminus\{(0,0)\}$ tiene cuatro componentes conexas.
->>Si $X$ fuera localmente euclídeo en $(0,0)$, existiría un entorno $U$ de $(0,0)$ homeomorfo a un abierto $V\subset\mathbb R^n$. Entonces $V\setminus\{p\}$ debería tener cuatro componentes conexas.
->>- Si $n=1$, al quitar un punto quedan a lo sumo dos componentes.
->>- Si $n\ge 2$, un abierto pequeño menos un punto sigue siendo conexo por caminos.
->>Contradicción. Luego $X$ no es localmente euclídeo.
->>
->>**1.b** Sea $q:\mathbb R\times\{0,1\}\to X$ la proyección cociente. Los puntos $q(x,0)=q(x,1)$ para $x\ne 0$ son puntos comunes, mientras que $q(0,0)$ y $q(0,1)$ son dos orígenes distintos.
+>>- **1.a** 
+>>1. Sea $X=\{(x,y)\in\mathbb R^2:xy=0\},$ la unión de los dos ejes coordenados. En el origen, cualquier entorno abierto $U\subset X$ cumple que $U\setminus\{(0,0)\}$ tiene cuatro componentes conexas.
+>>2. Si $X$ fuera localmente euclídeo en $(0,0)$, existiría un entorno $U$ de $(0,0)$ homeomorfo a un abierto $V\subset\mathbb R^n$. Entonces $V\setminus\{p\}$ (con $p$ la imagen del homeo en $(0,0)$) debería tener cuatro componentes conexas.
+>>3. Si $n=1$, al quitar un punto quedan a lo sumo dos componentes.
+>>4. Si $n\ge 2$, un abierto pequeño spd una bola menos un punto es conexo por caminos por lo tanto es conexa
+>>5. Luego no puede mas de una componente conexa (el mismo) si no no seria conexo 
+>>6. Contradicción. Luego $X$ no es localmente euclídeo.
+>>- **1.b** 
+>>	1. Sea $q:\mathbb R\times\{0,1\}\to X$ la proyección cociente. Los puntos $q(x,0)=q(x,1)$ para $x\ne 0$ son puntos comunes, mientras que $q(0,0)$ y $q(0,1)$ son dos orígenes distintos.
 >>- Si $x\ne 0$, un entorno pequeño de $q(x,0)$ es homeomorfo a un intervalo abierto.
 >>- Un entorno de $q(0,0)$ del tipo $q((-\varepsilon,\varepsilon)\times\{0\})$ también es homeomorfo a $(-\varepsilon,\varepsilon)$.
 >>- Lo mismo vale para $q(0,1)$.
 >>Por lo tanto, todo punto tiene un entorno abierto homeomorfo a un abierto de $\mathbb R$.
 >>Sin embargo, $X$ no es Hausdorff: si $U\ni q(0,0)$ y $V\ni q(0,1)$ son abiertos, entonces contienen imágenes de intervalos $(-\varepsilon,\varepsilon)\times\{0\}$ y $(-\delta,\delta)\times\{1\}$. Sus imágenes intersectan en todos los puntos $q(x,0)=q(x,1)$ con $0<|x|<\min\{\varepsilon,\delta\}$. Entonces no se pueden separar los dos orígenes.
-
 ### Ejercicio 2
 
 >[!Exercise]
 >Mostrar que para todo punto $p$ de una variedad diferenciable de dimensión $n$ existe un sistema coordenado $(U,\varphi)$ tal que $\varphi(p)=0$ y $\varphi(U)=\mathbb R^n$.
 >>[!Proof]-
->>Sea $p\in M$, donde $M$ es una variedad de dimensión $n$. Tomamos una carta $(U,\varphi)$ con $p\in U$. Como $\varphi(U)\subset\mathbb R^n$ es abierto y contiene $\varphi(p)$, existe $r>0$ tal que $$B_r(\varphi(p))\subset\varphi(U).$$
->>Reemplazando $U$ por $U\cap \varphi^{-1}(B_r(\varphi(p)))$, podemos suponer $\varphi(U)=B_r(\varphi(p))$.
->>Componemos con la traslación $\tau(x)=x-\varphi(p)$, y luego con el difeomorfismo $$h:B_r(0)\to\mathbb R^n,\qquad h(x)=\frac{x}{\sqrt{r^2-\|x\|^2}}.$$ Entonces $$\psi=h\circ\tau\circ\varphi$$ es una carta con $$\psi(p)=0,\qquad \psi(U)=\mathbb R^n.$$
+>>1. Sea $p\in M$, donde $M$ es una variedad de dimensión $n$. Tomamos una carta $(U,\varphi)$ con $p\in U$. Como $\varphi(U)\subset\mathbb R^n$ es abierto y contiene $\varphi(p)$, existe $r>0$ tal que $$B_r(\varphi(p))\subset\varphi(U).$$
+>>2. Reemplazando $U$ por $U\cap \varphi^{-1}(B_r(\varphi(p)))$, podemos suponer $\varphi(U)=B_r(\varphi(p))$.
+>>3. Componemos con la traslación $\tau(x)=x-\varphi(p)$ (que es homemorfismo, trivial) y luego con $$h:B_r(0)\to\mathbb R^n,\qquad h(x)=\frac{x}{\sqrt{r^2-\|x\|^2}}.$$
+>>4. Veamos que $h$ es inversible con inversa continua (obviamente es continua)  
+>>5. **Paso 1: cálculo de la norma.** Sea $y=h(x)$. Entonces considerando que el divisor es un escalar $$\|y\|=\left\|\frac{x}{\sqrt{r^2-\|x\|^2}}\right\|=\frac{\|x\|}{\sqrt{r^2-\|x\|^2}}\iff \|y\|^2=\frac{\|x\|^2}{r^2-\|x\|^2}.$$  
+>>6. Despejamos $\lVert x \rVert$: $$\|y\|^2(r^2-\|x\|^2)=\|x\|^2\iff r^2\|y\|^2=\|x\|^2(1+\|y\|^2)\iff \|x\|^2=\frac{r^2\|y\|^2}{1+\|y\|^2}.$$  
+>>  
+>>7. De la definición tenemos $x=y\cdot\sqrt{r^2-\|x\|^2}.$ y sustituyendo tenemos: $$r^2-\|x\|^2=r^2-\frac{r^2\|y\|^2}{1+\|y\|^2}=\frac{r^2}{1+\|y\|^2}.$$
+>>8. Entonces $$x=\frac{r\,y}{\sqrt{1+\|y\|^2}}.$$
+>>9. Luego la inversa es: $$h^{-1}(y)=\frac{r\,y}{\sqrt{1+\|y\|^2}},\qquad y\in\mathbb{R}^n.$$  que obviamente es continua. Y es directo verificar que esta es la inversa y que su imagen caen en $B_{r}(0)$ 
+>>10. Concluimos que $h$ es homeomorfismo.
+>>11. Entonces $$\psi=h\circ\tau\circ\varphi$$ es composicion de homeomorfismos por lo tanto una carta y cumple obviamente $$\psi(p)=0,\qquad \psi(U)=\mathbb R^n.$$
 
 ### Ejercicio 3
 

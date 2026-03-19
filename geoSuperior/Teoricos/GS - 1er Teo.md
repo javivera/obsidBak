@@ -56,9 +56,10 @@
 
 >[!Definition] Aproximacion afin
 >Sea $F \colon I \subseteq V \to W$ es diferenciable en $p$. Podemos definir $$\begin{align} R(v)&= F(p+v)-F(p)-Tv\\ & =  F(p+v)-F(p)-(dF)_{p}(v)\\&=F(p+v)-\bigg(F(p)+(dF)_{p}(v)\bigg)\end{align}$$
->El término $R(v)$ es el error al aproximar $F(p+v)$ por la *aproximación afín de $F$ en $p$* $$A_{p}(v)=F(p)+(\mathrm{d}F)_p(v).$$
->Osea podemos pensar $$F(p+v)\approx A_{p}(v)$$
->O podemos pensar $$F(p+v)=A_{p}(v)+R(v)$$ donde $R(v)$ cumple $\lim\limits_{ v \to 0 }\lVert R(v) \rVert=0$. Mas aún, lo hace mas rapido que lineal   $$\lim_{v\to 0}\frac{\|R(v)\|}{\|v\|}=0.$$
+>Sustituyendo llegamos a que $$R(x-p)=F(x)-\bigg(F(p)+(dF)_{p}(x-p)\bigg)$$ 
+>El término $R(v)$ es el error al aproximar $F(p+v)$ por la *aproximación afín de $F$ en $p$* $$A_{p}(x)=F(p)+(\mathrm{d}F)_p(x-p).$$
+>Osea podemos pensar $$F(x)\approx A_{p}(x)$$
+>O podemos pensar $$F(x)=A_{p}(x)+R(x-p)$$ donde $R(x-p)$ cumple $\lim\limits_{ x \to p }\lVert R(x-p) \rVert=0$. Mas aún, lo hace mas rapido que lineal   $$\lim_{x\to p}\frac{\|R(x-p)\|}{\|x-p\|}=0.$$
 
 > [!Lemma] Lema
 > Toda transformación lineal $T \colon V \to W$ entre espacios vectoriales reales normados de dimensión finita es acotada. Es decir, existe $\mu \ge 0$ tal que

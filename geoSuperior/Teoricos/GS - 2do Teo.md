@@ -93,7 +93,7 @@
 ^4a5257
 
 >[!Example] La esfera $S^n$
->La esfera $S^{n}$ es una [[GS - 2do Teo#^5bf2ca]]
+>La esfera $S^{n}$ es una [[GS - 2do Teo#^5bf2ca]] de dimension $n$ 
 >>[!Proof]-
 >>1. Consideremos $$S^n:=\left\{(x_1,\dots,x_{n+1})\in \mathbb{R}^{n+1}:x_1^2+\cdots+x_{n+1}^2=1\right\}.$$La dotamos de la topología relativa inducida por $\mathbb{R}^{n+1}$. Por lo tanto es Hausdorff y es $N_{2}$ por que $\mathbb{R}^{n+1}$ lo es  
 >>2. Veamos que es localmente euclídea. Sea $$p=(x_1,\dots,x_{n+1})\in S^n.$$entonces existe algún índice $i$ tal que $x_i\neq 0$. Sin pérdida de generalidad, supongamos $x_i>0$.
